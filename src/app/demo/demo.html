@@ -1,0 +1,61 @@
+<div class="c-sidebar">
+  <div class="c-sidebar__container">
+    <nav class="c-sidebar__nav">
+      <div class="c-sidebar__section-container">
+        <brand-logo theme="washed" link="/styleguide"></brand-logo>
+      </div>
+
+      <div class="c-sidebar__section-container c-sidebar__section-container--sm">
+        <ul class="c-menu">
+          <li *ngFor="let section of sections">
+            <a class="c-menu__item" routerLinkActive="c-menu__item--active" [routerLink]="section.url">
+              {{section.title}}
+              <sup *ngIf="section.newItems" class="c-round-badge"></sup>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <footer class="c-sidebar__footer">
+        <div class="c-user-panel">
+          <img [src]="user.picture.large" alt="User logo" class="c-user-panel__avatar">
+          <span class="c-user-panel__name">
+            Hi, <span class="c-user-panel__name-container u-text-capitalize">{{user.name.first + ' ' + user.name.last}}</span>
+          </span>
+          <span class="c-user-panel__controls">
+            <span class="u-relative">
+              <pure-button theme="iconic transparent">
+                <i class="c-icon">more_vert</i>
+              </pure-button> 
+
+              <pure-dropdown #dropdown="pureDropdown" yPosition="before" xPosition="above">
+                <div pureDropdownItem>
+                  <div class="u-flex-row u-align-items-center">
+                    <i class="c-icon u-margin-right-4s">person</i>
+                    Profile
+                  </div>
+                </div>
+                <div pureDropdownItem>
+                  <div class="u-flex-row u-align-items-center">
+                    <i class="c-icon u-margin-right-4s">settings</i>
+                    Settings
+                  </div>
+                </div>
+                <div pureDropdownItem>
+                  <div class="u-flex-row u-align-items-center">
+                    <i class="c-icon u-margin-right-4s">power_settings_new</i>
+                    Log Out
+                  </div>
+                </div>
+              </pure-dropdown>
+            </span>
+          </span>
+        </div>
+      </footer>
+    </nav>
+
+    <main class="c-sidebar__content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

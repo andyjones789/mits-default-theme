@@ -1,0 +1,67 @@
+/* ==========================================================================
+   MENU
+   ========================================================================== */
+
+
+
+$menu-item-transform-active = scale(.98, .95)
+
+
+.c-menu
+  flex-shrink 0
+  display flex
+  flex-direction column
+  padding 0
+  margin 0
+  list-style none
+
+
+  &__item
+    display block
+    padding $unit-4s $unit-lg
+    border-radius $global-radius
+    font-weight normal
+    color $body-color
+    cursor pointer
+    user-select none
+    transition $global-duration-out
+
+    &:not(.c-menu__item--active):hover
+      background $color-accent-washed
+      transition $global-duration-in
+    
+    &:not(.c-menu__item--disabled):active
+      transform $menu-item-transform-active
+      transition $global-duration-in
+
+
+    &--active
+      background $color-accent
+      color $body-color-inverse
+      transition $global-duration-in
+      animation menu-item-select $global-duration
+    
+
+    &--disabled
+      background transparent
+      color $body-color-light
+      cursor default
+      
+      &:not(.c-menu__item--active):hover
+        color @color
+        background @background
+    
+
+    .c-icon
+      margin-left -.2rem
+      margin-right $unit-4s
+      margin-bottom .2rem
+      opacity (1 / $golden)
+
+
+@keyframes menu-item-select
+  0%
+    transform $menu-item-transform-active
+    
+  100%
+    transform none

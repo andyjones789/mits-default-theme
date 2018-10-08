@@ -1,0 +1,80 @@
+// =============================================================================
+// INPUT
+// =============================================================================
+
+
+
+// 1. Add .1rem to get even value — better for aligning with Button.
+
+$input-height            = $unit-4x + .1rem // [1]
+$input-padding-h         = $unit-sm
+$input-border-width      = 0
+$input-border            = 0
+$input-border-radius     = $global-radius
+
+$input-font-size         = $font-size
+$input-font-weight       = 400
+
+$input-color             = $body-color-strong
+$input-bg-color          = $color-primary-soft
+$input-box-shadow        = none
+
+$input-placeholder-color = mix($input-color, $input-bg-color, 39%)
+
+
+
+
+
+// States
+// =============================================================================
+
+$input-hover-bg-color             = lighten($input-bg-color, 20%)
+
+$input-focus-bg-color             = $input-hover-bg-color
+
+$input-readonly-color             = $body-color
+
+$input-disabled-bg-color          = $input-bg-color
+$input-disabled-color             = $body-color
+$input-disabled-placeholder-color = rgba($input-placeholder-color, .38)
+$input-disabled-label-color       = $body-color-light
+
+$input-outline-width              = .2rem
+$input-outline-color              = $color-accent-bright
+
+
+
+
+
+// Size Variants
+// =============================================================================
+
+$input-sm-height = $unit-4x
+
+
+
+
+
+// Label
+// =============================================================================
+
+$input-label-color = $body-color
+
+
+
+
+
+// Prefix & Suffix
+// =============================================================================
+
+$input-prefix-width = $unit-4x
+$input-suffix-width = $unit-4x
+
+
+
+
+
+// Icon
+// =============================================================================
+
+$input-icon-color = $input-placeholder-color

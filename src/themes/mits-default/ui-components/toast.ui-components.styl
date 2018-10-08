@@ -1,0 +1,94 @@
+/* ==========================================================================
+   PURE TOAST
+   ========================================================================== */
+
+
+
+
+
+/* Toast Container
+   ========================================================================== */
+
+.c-pure-toast-container
+  position absolute
+  display flex
+  visibility hidden
+  animation toast-disappear $global-duration-lg
+  animation-timing-function $ease-in-quad
+  transition visibility $global-duration-lg
+  transform-origin center
+  
+
+  &--v-top
+    top $unit-xl
+  
+  &--h-right
+    right $unit-xl
+  
+
+  &--visible
+    visibility visible
+    animation toast-appear $global-duration-lg
+    animation-timing-function $ease-out-back
+
+
+@keyframes toast-appear
+  0%
+    opacity 0
+    transform translateX(30%) scale(.85)
+    
+  90%
+    opacity 1
+    
+  100%
+    transform translateY(0) scale(1)
+
+
+@keyframes toast-disappear
+  0%
+    opacity 1
+    transform translateY(0) scale(1)
+    
+  100%
+    opacity 0
+    transform translateX(30%)  scale(.92)
+
+
+
+
+
+/* Toast
+   ========================================================================== */
+
+.c-pure-toast
+  display flex
+  align-items center
+  justify-content space-between
+  width $unit-7x * 4
+  height ($unit-6x + $unit-4s)
+  padding $unit $unit-xs $unit $unit
+  border-radius ($global-radius + .2rem)
+  color $body-color-inverse
+  background $color-primary-darken
+  box-shadow $box-shadow-model-level20 rgba(mix($color-accent, $box-shadow-color-black, 30%), .3)
+  pointer-events auto
+  overflow hidden
+  
+
+  &__content
+    display flex
+    flex-direction column
+    overflow hidden
+
+
+  &__message
+    margin-bottom 0
+    font-size $font-size-sm
+    text-overflow ellipsis
+    overflow hidden
+    max-width 100%
+  
+
+  &__action-panel
+    margin-left $unit
+  

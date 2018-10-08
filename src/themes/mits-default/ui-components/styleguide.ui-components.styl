@@ -1,0 +1,252 @@
+/* ==========================================================================
+   STYLEGUIDE
+   ========================================================================== */
+
+/*
+ * Elements that only appear on Styleguide pages.
+ */
+
+
+
+
+
+/* Color Well
+   ========================================================================== */
+
+_style-color-well($bg-color, $text-color = null)
+  $text-color = (light($bg-color) ? $body-color-strong : $body-color-inverse) unless $text-color
+  $box-shadow-color = lightness($bg-color) > 80 ? darken($bg-color, 12%) : $bg-color
+
+  background $bg-color
+  color $text-color
+
+  &:not(.c-color-well--distinct)
+    box-shadow $box-shadow-model-level10 rgba($box-shadow-color, .35)
+
+  &.c-color-well--distinct
+    box-shadow $box-shadow-model-level20 rgba($box-shadow-color, .3)
+
+    &:hover
+      box-shadow $box-shadow-model-level20-hover rgba($box-shadow-color, .3)
+      transform translateY(.1rem) scale(1.01)
+
+
+.c-color-well
+  position relative
+  display inline-flex
+  flex-direction column
+  justify-content flex-end
+  width 100%
+  height $unit-9x * 1.5
+  padding $unit-sm $unit-xl
+  border-radius $global-radius-lg
+  color $body-color-inverse
+  transition $global-duration
+
+
+  &__name
+    style-h2()
+    color inherit
+    margin-bottom 0
+
+
+  &__hex
+    margin-bottom 0
+    font-size $font-size-sm
+    font-weight 600
+    text-transform uppercase
+    opacity .8
+    letter-spacing $letter-spacing-lg
+
+
+  /*
+   * Colors
+   */
+
+  &--primary-black
+    _style-color-well($color-primary-black)
+
+  &--primary-darken
+    _style-color-well($color-primary-darken)
+
+  &--primary-dark
+    _style-color-well($color-primary-dark)
+
+  &--primary
+    _style-color-well($color-primary, $body-color-inverse)
+
+  &--primary-soft
+    _style-color-well($color-primary-soft)
+
+  &--primary-light
+    _style-color-well($color-primary-light)
+
+  &--primary-white
+    _style-color-well($color-primary-white)
+
+
+  &--accent
+    _style-color-well($color-accent)
+
+  &--accent-washed
+    _style-color-well($color-accent-washed)
+
+  &--accent-bright
+    _style-color-well($color-accent-bright)
+
+
+  &--accent-positive
+    _style-color-well($color-accent-positive, $body-color-inverse)
+
+  &--accent-positive-washed
+    _style-color-well($color-accent-positive-washed)
+    
+  &--accent-positive-bright
+    _style-color-well($color-accent-positive-bright)
+
+
+  &--accent-negative
+    _style-color-well($color-accent-negative, $body-color-inverse)
+
+  &--accent-negative-washed
+    _style-color-well($color-accent-negative-washed)
+    
+  &--accent-negative-bright
+    _style-color-well($color-accent-negative-bright)
+
+
+  /*
+   * Sizes
+   */
+
+  &--sm
+    align-items center
+    justify-content center
+    width $unit-6x * 2
+    height $unit-5x
+    padding $unit-sm
+    margin-top $unit
+    border-radius (@height / 2)
+
+
+    .c-color-well__hex
+      opacity 1
+      font-weight 400
+
+
+    .c-color-well__name
+      position absolute
+      bottom 100%
+      margin-bottom $unit-4s
+      font-weight 400
+      font-size $font-size-sm
+      color $body-color-strong
+
+
+
+
+
+/* Component
+   ========================================================================== */
+
+.c-component
+  margin-bottom $unit-4x
+
+
+  &__heading
+    style-h2()
+
+
+  &__container
+    display inline-block
+    padding $unit 0
+    margin-right $unit-6x
+    vertical-align top
+    
+
+    &.o-cell
+      margin-right 0
+
+
+    &--full-width
+      width 100%
+      margin-right 0
+  
+
+  &__desc
+    max-width $unit-9x * 6
+
+
+
+
+
+/* Item Container
+   ========================================================================== */
+
+.c-item-container
+  padding $unit-3x $unit-5x
+
+
+  &__header
+    display flex
+    flex-direction column
+    margin-bottom $unit-4x
+
+
+  &__heading
+    style-h1()
+  
+
+  &__desc
+    max-width $unit-9x * 6
+
+
+
+
+
+/* Grid Demo
+   ========================================================================== */
+
+.c-grid-demo
+  
+  .o-cell
+    height 6.1rem
+    border-radius $global-radius
+    background $color-accent-positive
+    opacity .4
+    transition $global-duration
+    
+    &:hover
+      opacity 1
+
+
+
+
+
+/* Base Unit Demo
+   ========================================================================== */
+
+.c-unit-demo
+  display inline-flex
+  margin-right $unit-lg
+  opacity .4
+  transition $global-duration
+    
+  &:hover
+    opacity 1
+  
+
+  $sizes = ('9x' $unit-9x $unit-em-9x) ('8x' $unit-8x $unit-em-8x) ('7x' $unit-7x $unit-em-7x) ('6x' $unit-6x $unit-em-6x) ('5x' $unit-5x $unit-em-5x) ('4x' $unit-4x $unit-em-4x) ('3x' $unit-3x $unit-em-3x) ('2x' $unit-2x $unit-em-2x) ('xl' $unit-xl $unit-em-xl) ('lg' $unit-lg $unit-em-lg) ('md' $unit $unit-em) ('sm' $unit-sm $unit-em-sm) ('xs' $unit-xs $unit-em-xs) ('sm' $unit-sm $unit-em-sm) ('2s' $unit-2s $unit-em-2s) ('3s' $unit-3s $unit-em-3s) ('4s' $unit-4s $unit-em-4s) ('5s' $unit-5s $unit-em-5s) ('6s' $unit-6s $unit-em-6s) ('7s' $unit-7s $unit-em-7s) ('8s' $unit-8s $unit-em-8s) ('9s' $unit-9s $unit-em-9s) 
+  
+  for $size in $sizes
+    
+    &--{$size[0]}
+      height $size[1]
+      width @height
+      background $color-accent-positive
+      
+
+    &--em-{$size[0]}
+      height $size[2]
+      width @height
+      background $color-accent-negative

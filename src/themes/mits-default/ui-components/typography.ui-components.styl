@@ -1,0 +1,82 @@
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+
+
+
+
+
+/* Headings
+   ========================================================================== */
+
+.c-h1
+  style-h1()
+
+.c-h2
+  style-h2()
+
+.c-h3
+  style-h3()
+
+
+
+
+
+/* Blockquote
+   ========================================================================== */
+
+.c-blockquote
+  display block
+  padding $unit-em-lg $unit-em-2x
+  border-left $unit-4s solid $color-accent
+  border-radius $global-radius-sm
+  background $color-accent-washed
+  color $body-color-strong
+
+
+  &--success
+    border-left-color $color-accent-positive
+    background $color-accent-positive-washed
+
+
+  &--warning
+    border-left-color $color-accent-negative
+    background $color-accent-negative-washed
+
+
+
+
+
+/* Pure Label
+   ========================================================================== */
+
+/*
+ * 1. Prevent text selecting since label is clickable element.
+ */
+
+.c-pure-label
+  color $input-label-color
+  user-select none /* [1] */
+
+
+
+
+
+/* Pure Message
+   ========================================================================== */
+
+.c-pure-message
+  color $body-color
+  transition $global-duration
+  
+
+  &--success
+    color $color-accent-positive
+    
+
+  &--warning
+    color $color-accent-negative
+  
+
+  &--hint
+    color $body-color-light

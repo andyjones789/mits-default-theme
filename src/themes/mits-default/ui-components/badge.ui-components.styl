@@ -1,0 +1,54 @@
+/* ==========================================================================
+   BADGE
+   ========================================================================== */
+   
+
+
+$badge-padding-v = 0
+$badge-padding-h = $unit-em-sm
+
+
+_badge-theme($color)
+  color $color
+  border-color $color
+
+
+.c-badge
+  display inline-flex
+  align-items center
+  max-width 100%
+  padding $badge-padding-v $badge-padding-h ($badge-padding-v + .1rem)
+  border .1rem solid
+  border-radius 999rem
+  font-size $font-size-sm
+  font-weight 400
+  font-style normal
+  white-space nowrap
+  overflow hidden
+  text-overflow ellipsis
+  text-decoration none
+  background transparent
+  box-shadow 0
+  text-shadow none
+  
+  _badge-theme($color-accent)
+
+
+
+
+
+/* Themes
+   ========================================================================== */
+
+.c-badge
+  
+  &--success
+    _badge-theme($color-accent-positive)
+    
+
+  &--warning
+    _badge-theme($color-accent-negative)
+  
+
+  &--neutral
+    _badge-theme($color-primary)

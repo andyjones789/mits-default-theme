@@ -1,0 +1,25 @@
+/* ==========================================================================
+   ROUND BADGE
+   ========================================================================== */
+
+
+
+_round-badge-theme($color)
+  background $color
+
+
+.c-round-badge
+  display inline-flex
+  align-items center
+  justify-content center
+  width $unit-4s
+  height @width
+  padding 0
+  border 0
+  border-radius 50%
+  overflow hidden
+  color transparent
+  box-shadow 0
+  pointer-events none
+  
+  _round-badge-theme($color-accent-negative)

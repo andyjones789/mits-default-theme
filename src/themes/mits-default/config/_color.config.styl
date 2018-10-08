@@ -1,0 +1,103 @@
+// =============================================================================
+// COLOR
+// =============================================================================
+
+
+
+
+
+// Brand Colors
+// =============================================================================
+
+// Private variables. Don't use them in places other than next section.
+
+
+// Main Colors
+
+_$cerulean-blue = #3751C5
+_$puerto-rico   = #3ECAA9
+_$burnt-sienna  = #EE7A68
+_$french-grey   = lighten(desaturate(_$cerulean-blue, 88%), 40%)
+
+
+// Cerulean Blue Shades
+
+_$white-lilac   = mix(_$cerulean-blue, white, 8%)
+_$malibu       = saturate(lighten(_$cerulean-blue, 60%), 100%)
+
+
+// Puerto Rico Shades
+
+_$off-green     = mix(_$puerto-rico, white, 13%)
+_$sharlotte     = saturate(lighten(_$puerto-rico, 65%), 55%)
+
+
+// Burnt Sienna Shades
+
+_$linen         = mix(_$burnt-sienna, white, 12%)
+_$melon         = saturate(lighten(_$burnt-sienna, 60%), 70%)
+
+
+// French Grey Shades
+
+_$shark         = darken(_$french-grey, 79%)
+_$shuttle-grey  = darken(_$french-grey, 43%)
+_$iron          = lighten(_$french-grey, 74%)
+_$iron          = lighten(_$french-grey, 79%)
+_$athens-grey   = lighten(_$french-grey, 93%)
+_$white         = lighten(_$french-grey, 100%)
+
+_$mako          = mix(_$shark, _$shuttle-grey)
+
+
+
+
+
+// Color Assignments
+// =============================================================================
+
+// Public variables. It's recommended to not use them often. Instead, create
+// one more abstraction level in `config/components` folder.
+
+
+// Primary Assignments (From Dark to Light)
+
+$color-primary-black          = _$shark
+$color-primary-darken         = _$mako
+$color-primary-dark           = _$shuttle-grey
+$color-primary                = _$french-grey
+$color-primary-soft           = _$iron
+$color-primary-light          = _$athens-grey
+$color-primary-white          = _$white
+
+
+// Accent (From Dark to Light)
+
+$color-accent                 = _$cerulean-blue
+$color-accent-bright          = _$malibu
+$color-accent-washed          = _$white-lilac
+
+
+// Accent Positive (From Dark to Light)
+
+$color-accent-positive        = _$puerto-rico
+$color-accent-positive-bright = _$sharlotte
+$color-accent-positive-washed = _$off-green
+
+
+// Accent Negative (From Dark to Light)
+
+$color-accent-negative        = _$burnt-sienna
+$color-accent-negative-bright = _$melon
+$color-accent-negative-washed = _$linen
+
+
+// Redefine Breeze.css Color State Variables
+//
+// Deprecated — use variables above.
+
+$color-success                = $color-accent-positive
+$color-warning                = $color-accent-negative
+$color-danger                 = $color-accent-negative
+$color-hint                   = $color-primary
+$color-disabled               = $color-primary

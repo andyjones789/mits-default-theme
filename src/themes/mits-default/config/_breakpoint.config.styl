@@ -1,0 +1,45 @@
+// =============================================================================
+// BREAKPOINT
+// =============================================================================
+
+
+
+$breakpoints = {
+  mobile:   0,
+  tablet-p: 600px,
+  tablet-l: 900px,
+  desktop:  1366px,
+  hd:       1800px
+}
+
+
+// The maximum scrollbar width across different OS's
+// (https://codepen.io/sambible/post/browser-scrollbar-widths).
+// Add one pixel to be more safe.
+
+$scollbar-max-width = 17px
+
+
+
+
+
+// Layout Breakpoints
+// =============================================================================
+
+// 1. To fit minimum width we need to minus the biggest scrollbar width possible,
+//    and one more pixel for safety.
+// 2. Breakpoint at which layout switches to value set in `$desktop-max-width`.
+//    We need to add some pixels to not cut section shadow.
+
+$desktop-min-width            = $breakpoints.desktop - $scollbar-max-width - 1px // [1]
+$desktop-max-width            = 1440px
+$desktop-max-width-breakpoint = $desktop-max-width + 60px // [2]
+
+
+
+
+
+// Rupture Settings
+// =============================================================================
+
+rupture.desktop-cutoff = $desktop-min-width

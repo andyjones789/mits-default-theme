@@ -1,0 +1,57 @@
+<div class="c-sidebar">
+  <div class="c-sidebar__container">
+    <nav class="c-sidebar__nav">
+      <div class="c-sidebar__section-container">
+        <brand-logo link="/styleguide"></brand-logo>
+      </div>
+
+      <div class="c-sidebar__section-container c-sidebar__section-container--sm">
+        <h3 class="c-sidebar__heading">Introduction</h3>
+        <ul class="c-menu">
+          <li>
+            <a class="c-menu__item" routerLinkActive="c-menu__item--active" routerLink="getting-started">
+              Getting Started
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="c-sidebar__section-container c-sidebar__section-container--sm">
+        <h3 class="c-sidebar__heading">Essentials</h3>
+        <ul class="c-menu">
+          <li *ngFor="let link of commonLinks">
+            <a class="c-menu__item" routerLinkActive="c-menu__item--active" [routerLink]="link.url">
+              {{link.title}}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="c-sidebar__section-container c-sidebar__section-container--sm">
+        <h3 class="c-sidebar__heading">Objects</h3>
+        <ul class="c-menu">
+          <li *ngFor="let link of objectsLinks">
+            <a class="c-menu__item" routerLinkActive="c-menu__item--active" [routerLink]="link.url">
+              {{link.title}}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="c-sidebar__section-container c-sidebar__section-container--sm">
+        <h3 class="c-sidebar__heading">Components</h3>
+        <ul class="c-menu">
+          <li *ngFor="let link of componentsLinks">
+            <a class="c-menu__item" routerLinkActive="c-menu__item--active" [routerLink]="link.url">
+              {{link.title}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="c-sidebar__content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

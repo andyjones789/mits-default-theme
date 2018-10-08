@@ -1,0 +1,108 @@
+<div class="c-item-container">
+  <header class="c-item-container__header">
+    <h1 class="c-item-container__heading">Dropdown</h1>
+    <p class="c-item-container__desc">Styles on top of the <a href="{{LibData.pureDemoLink}}dropdown" target="_blank" rel="noopener">Pure Dropdown</a> element.</p>
+  </header>
+
+  <div class="c-component">
+    <span class="c-component__container">
+
+      <div class="u-relative">
+        <pure-button [pureDropdownTriggerFor]="dropdown" 
+                     [class.js-active]="dropdown.show"
+                     theme="has-icon icon-caret">
+          Open Dropdown
+          <i class="c-icon">arrow_drop_down</i>
+        </pure-button>
+
+        <pure-dropdown #dropdown="pureDropdown">
+          <div pureDropdownItem>Option 1</div>
+          <div pureDropdownItem>Option 2</div>
+          <div pureDropdownItem [pureDropdownItemDisabled]="true">Disabled one</div>
+          <div pureDropdownItem>Option 4</div>
+        </pure-dropdown>
+      </div>
+
+    </span>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">Position Variants</h2>
+
+    <span class="c-component__container">
+
+      <div class="u-relative">
+        <pure-button [pureDropdownTriggerFor]="dropdownBelow" 
+                     [class.js-active]="dropdownBelow.show"
+                     theme="ghost has-icon icon-caret">
+          Below
+          <i class="c-icon">arrow_drop_down</i>
+        </pure-button>
+
+        <pure-dropdown #dropdownBelow="pureDropdown" yPosition="below">
+          <div pureDropdownItem>Option 1</div>
+          <div pureDropdownItem>Option 2</div>
+          <div pureDropdownItem>Option 3</div>
+        </pure-dropdown>
+      </div>
+
+    </span>
+
+    <span class="c-component__container">
+
+      <div class="u-relative">
+        <pure-button [pureDropdownTriggerFor]="dropdownAbove" 
+                     [class.js-active]="dropdownAbove.show"
+                     theme="ghost has-icon icon-caret">
+          Above
+          <i class="c-icon">arrow_drop_down</i>
+        </pure-button>
+
+        <pure-dropdown #dropdownAbove="pureDropdown" yPosition="above">
+          <div pureDropdownItem>Option 1</div>
+          <div pureDropdownItem>Option 2</div>
+          <div pureDropdownItem>Option 3</div>
+        </pure-dropdown>
+      </div>
+
+    </span>
+
+    <span class="c-component__container">
+
+      <div class="u-relative">
+        <pure-button [pureDropdownTriggerFor]="dropdownBefore" 
+                     [class.js-active]="dropdownBefore.show"
+                     theme="ghost has-icon icon-caret">
+          Before
+          <i class="c-icon">arrow_drop_down</i>
+        </pure-button>
+
+        <pure-dropdown #dropdownBefore="pureDropdown" xPosition="before">
+          <div pureDropdownItem>Option 1</div>
+          <div pureDropdownItem>Option 2</div>
+          <div pureDropdownItem>Option 3</div>
+        </pure-dropdown>
+      </div>
+
+    </span>
+
+    <span class="c-component__container">
+
+      <div class="u-relative">
+        <pure-button [pureDropdownTriggerFor]="dropdownAfter" 
+                     [class.js-active]="dropdownAfter.show"
+                     theme="ghost has-icon icon-caret">
+          After
+          <i class="c-icon">arrow_drop_down</i>
+        </pure-button>
+
+        <pure-dropdown #dropdownAfter="pureDropdown" xPosition="after">
+          <div pureDropdownItem>Option 1</div>
+          <div pureDropdownItem>Option 2</div>
+          <div pureDropdownItem>Option 3</div>
+        </pure-dropdown>
+      </div>
+
+    </span>
+  </div>
+</div>

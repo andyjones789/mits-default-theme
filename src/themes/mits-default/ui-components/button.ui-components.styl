@@ -1,0 +1,226 @@
+/* ==========================================================================
+   PURE BUTTON
+   ========================================================================== */
+
+
+
+$pure-button-padding-v        = $unit-5s
+$pure-button-padding-h        = $unit-xs
+$pure-button-font-size        = $font-size
+$pure-button-line-height      = $line-height
+$pure-button-color            = $body-color-inverse
+$pure-button-box-shadow-model = $box-shadow-model-level10
+
+
+_button-theme($background, $color, $box-shadow-color-opacity = 0)
+  background $background
+  color $color
+  box-shadow $pure-button-box-shadow-model rgba($background, $box-shadow-color-opacity)
+
+  &:hover
+    background saturate(lighten($background, 15%), 15%)
+
+  &:active,
+  /.js-active &
+    background desaturate(darken($background, 15%), 15%)
+
+  &[disabled]
+    background lighten(desaturate($background, 65%), 25%)
+    color mix($color, $background, 80%)
+
+
+// Flat Style 
+
+_button-flat()
+  box-shadow none
+
+
+
+
+
+/* Regular Button
+   ========================================================================== */
+
+.c-pure-button
+  flex-shrink 0
+  display inline-block
+  min-width $unit-8x
+  padding $pure-button-padding-v $pure-button-padding-h
+  border 0
+  border-radius $global-radius
+  line-height $pure-button-line-height
+  font-size $pure-button-font-size
+  text-align center
+  text-decoration none
+  white-space nowrap
+  overflow hidden
+  text-overflow ellipsis
+  font-weight 400
+  letter-spacing $letter-spacing-lg
+  transition $global-duration-lg
+  
+  _button-theme($color-accent, $pure-button-color, .38)
+
+  &:focus
+    outline none
+
+  &:active,
+  /.js-active &
+    transform translateY(.1rem) scale(.98)
+    transition 0
+
+  &[disabled]
+    _button-flat()
+
+    &:active,
+    /.js-active &
+      transform none
+      
+
+  .c-icon
+    font-size $font-size-xl
+
+
+
+
+
+/* Style Variants
+   ========================================================================== */
+
+.c-pure-button
+
+  &--success
+    _button-theme($color-accent-positive, $pure-button-color, .45)
+
+
+  &--warning
+    _button-theme($color-accent-negative, $pure-button-color, .45)
+
+
+  &--ghost
+    _button-theme($color-primary-white, $body-color)
+    box-shadow $pure-button-box-shadow-model rgba(mix($box-shadow-color-black, $color-accent, 50%), .1)
+
+    &:active,
+    /.js-active &
+      background darken(@background, 11%)
+
+    &[disabled]
+      background @background
+      color mix(@color, @background, 43%)
+
+
+
+
+
+/* Processing
+   ========================================================================== */
+
+$pure-button-processing-bg-width      = 1.8rem
+$pure-button-processing-bg-height     = 2.6rem
+$pure-button-processing-bg-color-1    = rgba(white, .15)
+$pure-button-processing-bg-color-2    = rgba(black, .05)
+$pure-button-processing-anim-duration = .7s
+
+
+.c-pure-button--processing
+  background-size $pure-button-processing-bg-width $pure-button-processing-bg-height
+  background-image linear-gradient(
+    -55deg,
+    $pure-button-processing-bg-color-1 25%,
+    $pure-button-processing-bg-color-2 25%,
+    $pure-button-processing-bg-color-2 50%,
+    $pure-button-processing-bg-color-1 50%,
+    $pure-button-processing-bg-color-1 75%,
+    $pure-button-processing-bg-color-2 75%,
+    $pure-button-processing-bg-color-2 80%
+  )
+  text-shadow 0 0 .2rem rgba(black, .3)
+  animation processing-bg-animate $pure-button-processing-anim-duration cubic-bezier(.5, .2, .5, .8) infinite
+  pointer-events none
+
+
+  &.c-pure-button--ghost
+    text-shadow none
+
+
+@keyframes processing-bg-animate
+  from
+    background-position 0 0
+
+  to
+    background-position $pure-button-processing-bg-width 0
+
+
+
+
+
+/* With Icon
+   ========================================================================== */
+
+.c-pure-button--has-icon
+
+  .c-icon
+    margin-right $unit-em-4s
+    transform translateY(-.1rem)
+
+
+  &.c-pure-button--icon-caret
+  
+    .c-icon
+      width 1.4rem
+      margin 0
+
+
+
+
+
+/* Iconic
+   ========================================================================== */
+ 
+/*
+ * 1. Make height equal to the height of regular button.
+ */
+ 
+.c-pure-button--iconic
+  height ($pure-button-font-size * $pure-button-line-height + ($pure-button-padding-v * $pure-button-font-size) * 2) /* [1] */
+  width @height
+  min-width @width
+  padding-left 0
+  padding-right 0
+  line-height 1
+
+
+
+
+
+/* Transparent
+   ========================================================================== */
+  
+.c-pure-button--transparent
+  _button-theme(transparent, $body-color-strong)
+  _button-flat()
+  
+  transition $global-duration
+
+  &:hover
+    color mix($color-accent-bright, $color-accent)
+
+
+
+
+
+/* Button for Pure Toast
+   ========================================================================== */
+
+.c-pure-button--toast
+  _button-theme(transparent, $color-accent-bright)
+  _button-flat()
+  
+  min-width 0
+  padding-left ($pure-button-padding-h / 2)
+  padding-right @padding-left
+  transition $global-duration
+  
+  &:hover
+    background rgba($color-primary-white, .08)

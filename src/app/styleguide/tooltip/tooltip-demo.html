@@ -1,0 +1,56 @@
+<div class="c-item-container">
+  <header class="c-item-container__header">
+    <h1 class="c-item-container__heading">Tooltip</h1>
+    <p class="c-item-container__desc">Styles on top of the <a href="{{LibData.pureDemoLink}}tooltip" target="_blank" rel="noopener">Pure Tooltip</a> element.</p>
+  </header>
+
+  <div class="c-component">
+    <span class="c-component__container">
+      <div class="u-relative">
+        <pure-message pureTooltip="Tooltip!">Hover me</pure-message>
+      </div>
+    </span>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">Custom Positioning</h2>
+
+    <span class="c-component__container">
+      <div class="u-relative">
+        <pure-message pureTooltip="Tooltip!" pureTooltipPosition="left">Left</pure-message>
+      </div>
+    </span>
+
+    <span class="c-component__container">
+      <div class="u-relative">
+        <pure-message pureTooltip="Tooltip!" pureTooltipPosition="bottom">Bottom</pure-message>
+      </div>
+    </span>
+
+    <span class="c-component__container">
+      <div class="u-relative">
+        <pure-message pureTooltip="Tooltip!" pureTooltipPosition="right">Right</pure-message>
+      </div>
+    </span>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">Template Based</h2>
+
+    <span class="c-component__container">
+      <div class="u-relative">
+        <pure-message [pureTooltip]="tooltipTpl">Hover me</pure-message>
+      </div>
+    </span>
+  </div>
+</div>
+
+<ng-template #tooltipTpl>
+  I can include any element, like:
+  <ul class="u-margin-bottom-0">
+    <li>Lists
+    <li>Images
+    <li>Paragraphs
+    <li>Etc.
+  </ul>
+</ng-template>

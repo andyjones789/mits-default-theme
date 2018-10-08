@@ -1,0 +1,36 @@
+/* ==========================================================================
+   USER PANEL
+   ========================================================================== */
+
+
+
+.c-user-panel
+  display flex
+  align-items center
+  padding-top $unit-5x
+  margin-right -($unit-4s)
+  margin-left @margin-right / 2
+  
+  
+  &__avatar
+    flex-shrink 0
+    width $unit-4x
+    height @width
+    min-width @width
+    margin-right $unit-xs
+    border-radius 50%
+    background $color-primary-soft
+    
+
+  &__name
+    font-size $font-size
+    color $color-primary
+    
+
+  &__name-container
+    color $color-primary-dark
+  
+
+  &__controls
+    display flex
+    margin-left auto

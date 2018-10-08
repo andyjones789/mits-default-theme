@@ -1,0 +1,89 @@
+/* ==========================================================================
+   TYPE
+   ========================================================================== */
+
+
+
+
+
+/* Headings
+   ========================================================================== */
+
+h1
+  style-h1()
+
+h2
+  style-h2()
+
+h3
+  style-h3()
+
+
+/*
+ * Theme only includes three heading levels. It's best to not use H4, H5 and H6.
+ */
+
+h4,
+h5,
+h6
+  style-h3()
+
+
+
+
+
+/* Inline Text Elements
+   ========================================================================== */
+
+a
+  color $color-accent
+  font-weight 600
+  transition $global-duration
+
+
+b,
+strong
+  font-weight 600
+
+
+sup,
+sub,
+small,
+figcaption
+  font-size $unit-em-xs
+
+
+mark
+  padding 0 $unit-em-7s
+  border-radius $global-radius-sm
+  color $body-color-strong
+  background $color-accent-positive-bright
+
+
+
+
+
+/* Lists
+   ========================================================================== */
+
+ul, ol, dd
+  margin-left 2.1rem
+
+
+ul
+  list-style circle
+
+
+
+
+
+/* Code
+   ========================================================================== */
+
+code,
+pre
+  font-size $font-size-sm
+
+
+pre
+  margin 0

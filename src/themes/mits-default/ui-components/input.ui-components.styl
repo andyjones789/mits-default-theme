@@ -1,0 +1,85 @@
+/* ==========================================================================
+   PURE INPUT
+   ========================================================================== */
+
+
+
+.c-pure-input
+  width 100%
+  height $input-height
+  padding 0 $input-padding-h
+  border $input-border
+  border-radius $input-border-radius
+  font-size $input-font-size
+  font-weight $input-font-weight
+  color $input-color
+  background $input-bg-color
+  box-shadow $input-box-shadow
+  transition background $global-duration, color $global-duration
+  
+  placeholder($input-placeholder-color, $input-disabled-placeholder-color)
+    
+  
+  /* Add `box-shadow` when input is autofilled by browser to add contrast. */
+    
+  &:-webkit-autofill
+    box-shadow inset 0 0 0 .1rem rgba(0,0,0, .14)
+    
+    &:focus
+      box-shadow none
+
+
+  &:focus
+    outline none /* Outline is implemented in Form Control. */  
+  
+  
+  &:not([readonly])
+    
+    /* Include `active` to avoid flickering during <textarea> resizing. */
+
+    &:hover,
+    &:active
+      background $input-hover-bg-color
+      
+    &:focus
+      background $input-focus-bg-color
+  
+
+  &[readonly]
+    color $input-readonly-color
+  
+
+  /*
+   * 1. Fix for Safari.
+   */
+
+  &[disabled]
+    background $input-disabled-bg-color
+    color $input-disabled-color
+    -webkit-text-fill-color @color /* [1] */
+    opacity 1 /* [1] */
+    
+    &:hover
+      background @background
+
+
+
+
+
+/* Based on <textarea>
+   ========================================================================== */
+
+$input-textarea-padding-h   = $input-padding-h
+$input-textarea-padding-v   = .9rem
+$input-textarea-line-height = $line-height
+$input-textarea-row-height  = $input-font-size * $input-textarea-line-height
+
+
+/*
+ * 1. Make it equal to the height of 3 text rows.
+ */
+
+textarea.c-pure-input
+  padding $input-textarea-padding-v $input-textarea-padding-h
+  min-height $input-textarea-padding-v * 2 + $input-textarea-row-height * 3 /* [1] */
+  line-height $input-textarea-line-height

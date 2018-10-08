@@ -1,0 +1,106 @@
+/* ==========================================================================
+   PURE SWITCHER
+   ========================================================================== */
+
+
+
+$switcher-toggle-container-height = $unit-2x
+$switcher-toggle-container-width  = $switcher-toggle-container-height * ($base-ratio ** 3)
+$switcher-border-width            = .1rem
+$switcher-toggle-height           = $switcher-toggle-container-height - $switcher-border-width * 2
+$switcher-toggle-width            = $switcher-toggle-height
+$switcher-transition-duration     = $global-duration
+
+
+.c-pure-switcher
+  display inline-flex
+  align-items center
+  user-select none
+  
+
+  &__input
+    hidden-visually()
+
+  
+
+
+
+/* Toggle
+   ========================================================================== */
+
+.c-pure-switcher
+
+  &__toggle-container
+    position relative
+    width $switcher-toggle-container-width
+    height $switcher-toggle-container-height
+    border-radius (@height / 2)
+    margin-right $unit-xs
+    background $color-primary-light
+    box-shadow inset 0 0 .1rem rgba($box-shadow-color-black, .44)
+    transition $switcher-transition-duration
+    will-change background
+  
+
+  &__toggle
+    position absolute
+    left $switcher-border-width
+    top $switcher-border-width
+    bottom $switcher-border-width
+    top $switcher-transition-duration
+    width $switcher-toggle-width
+    height $switcher-toggle-height
+    border-radius 50%
+    background $card-bg-color
+    box-shadow $box-shadow-model-level10 rgba($box-shadow-color-black, .19)
+    transition $switcher-transition-duration
+    transition-timing-function $ease-out-back
+    
+
+  &--checked
+    
+    .c-pure-switcher__toggle-container
+      background $color-accent-positive
+      
+
+    .c-pure-switcher__toggle
+      left auto
+      transform translateX($switcher-toggle-container-width - $switcher-toggle-width - $switcher-border-width)
+
+
+
+
+
+/* Label Content
+   ========================================================================== */
+
+.c-pure-switcher__label-content
+  color $input-label-color
+  transition $switcher-transition-duration
+
+
+
+
+
+/* Disabled
+   ========================================================================== */
+
+.c-pure-switcher--disabled
+  
+  .c-pure-switcher__toggle-container
+    background $color-primary-soft
+    
+
+  .c-pure-switcher__toggle
+    background $color-primary-light
+    box-shadow 0 .1rem .2rem rgba($box-shadow-color-black, .19)
+  
+
+  .c-pure-switcher__label-content
+    color $input-disabled-label-color
+    
+
+  &.c-pure-switcher--checked
+    
+    .c-pure-switcher__toggle-container
+      background mix($color-primary-soft, $color-accent-positive)

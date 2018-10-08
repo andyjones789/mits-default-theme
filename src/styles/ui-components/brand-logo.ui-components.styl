@@ -1,0 +1,47 @@
+/* ==========================================================================
+   BRAND LOGO
+   ========================================================================== */
+
+
+
+.c-brand-logo
+  display flex
+  align-items center
+  transition $global-duration
+
+
+  &__link
+    flex-shrink 0
+    display block
+    
+    &:hover
+      text-decoration none
+
+
+  &__img
+    width $unit-4x
+    margin-left .2rem
+    margin-right $unit-sm
+    border-radius $global-radius-sm
+
+
+  p
+    margin-bottom 0
+    font-size $font-size-sm
+    color $body-color
+    transition $global-duration
+    
+
+  &:hover
+    
+    filter none
+    opacity 1
+  
+
+  &__span
+    padding-top .1rem
+  
+
+  &--washed
+    filter grayscale(.95)
+    opacity .62

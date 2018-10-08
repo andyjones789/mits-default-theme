@@ -1,0 +1,110 @@
+<div class="c-item-container">
+  <header class="c-item-container__header">
+    <h1 class="c-item-container__heading">Data Grid</h1>
+    <p class="c-item-container__desc">Styled plain HTML <code>&lt;table&gt;</code> element.</p>
+  </header>
+
+  <div class="c-component">
+    <span class="c-component__container c-component__container--full-width">
+
+      <table class="c-data-grid">
+        <thead class="c-data-grid__thead">
+          <tr class="c-data-grid__tr">
+            <th class="c-data-grid__th">Name</th>
+            <th class="c-data-grid__th">Status</th>
+            <th class="c-data-grid__th">Role</th>
+            <th class="c-data-grid__th"></th>
+          </tr>
+        </thead>
+        <tbody class="c-data-grid__tbody">
+          <tr class="c-data-grid__tr" *ngFor="let user of users.slice(7)">
+            <td class="c-data-grid__td">
+              <span class="u-text-capitalize">{{user.name.first + ' ' + user.name.last}}</span>
+            </td>
+            <td class="c-data-grid__td">{{user.id.value}}</td>
+            <td class="c-data-grid__td u-text-capitalize">{{user.role}}</td>
+            <td class="c-data-grid__td u-text-right">
+              <div class="c-data-grid__hover-content">
+                <pure-button theme="iconic transparent">
+                  <i class="c-icon">more_vert</i>
+                </pure-button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </span>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">Clickable Rows</h2>
+
+    <span class="c-component__container c-component__container--full-width">
+
+      <table class="c-data-grid c-data-grid--clickable">
+        <thead class="c-data-grid__thead">
+          <tr class="c-data-grid__tr">
+            <th class="c-data-grid__th">Name</th>
+            <th class="c-data-grid__th">Status</th>
+            <th class="c-data-grid__th">Role</th>
+            <th class="c-data-grid__th"></th>
+          </tr>
+        </thead>
+        <tbody class="c-data-grid__tbody">
+          <tr class="c-data-grid__tr" *ngFor="let user of users.slice(0, 3)" (click)="onRowClick(user)">
+            <td class="c-data-grid__td">
+              <span class="u-text-capitalize">{{user.name.first + ' ' + user.name.last}}</span>
+            </td>
+            <td class="c-data-grid__td">{{user.id.value}}</td>
+            <td class="c-data-grid__td u-text-capitalize">{{user.role}}</td>
+            <td class="c-data-grid__td u-text-right">
+              <div class="c-data-grid__hover-content">
+                <pure-button theme="iconic transparent">
+                  <i class="c-icon">more_vert</i>
+                </pure-button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </span>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">Align Data to Top</h2>
+
+    <span class="c-component__container c-component__container--full-width">
+
+      <table class="c-data-grid">
+        <thead class="c-data-grid__thead">
+          <tr class="c-data-grid__tr">
+            <th class="c-data-grid__th">Name</th>
+            <th class="c-data-grid__th">Status</th>
+            <th class="c-data-grid__th">Role</th>
+            <th class="c-data-grid__th"></th>
+          </tr>
+        </thead>
+        <tbody class="c-data-grid__tbody">
+          <tr class="c-data-grid__tr c-data-grid__tr--align-top" *ngFor="let user of users.slice(3, 6)">
+            <td class="c-data-grid__td">
+              <div class="u-text-capitalize">{{user.name.first}} {{user.name.last}}</div>
+              <div class="c-pure-message--hint">{{user.email}}</div>
+            </td>
+            <td class="c-data-grid__td">{{user.id.value}}</td>
+            <td class="c-data-grid__td u-text-capitalize">{{user.role}}</td>
+            <td class="c-data-grid__td u-text-right">
+              <div class="c-data-grid__hover-content">
+                <pure-button theme="iconic transparent">
+                  <i class="c-icon">more_vert</i>
+                </pure-button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </span>
+  </div>
+</div>

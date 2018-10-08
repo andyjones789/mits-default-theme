@@ -1,0 +1,116 @@
+/* ==========================================================================
+   PURE TOOLTIP
+   ========================================================================== */
+
+
+
+$tooltip-transition-duration = $global-duration
+
+
+.c-pure-tooltip
+  position absolute
+  z-index $z-index-tooltip
+  display flex
+  visibility hidden
+  transition $tooltip-transition-duration
+  
+
+  .c-pure-tooltip__container
+    flex-shrink 0
+    padding $unit-6s $unit-xs
+    margin $unit-3s
+    border-radius $global-radius
+    font-size $font-size-sm
+    white-space nowrap
+    word-break normal
+    word-wrap normal
+    text-overflow ellipsis
+    overflow hidden
+    color $body-color-inverse
+    background $color-primary-darken
+    box-shadow $box-shadow-model-level10 rgba($box-shadow-color-black, .2)
+    animation tooltip-hide $tooltip-transition-duration forwards
+    animation-timing-function ease-in
+
+
+
+
+
+/* Positioning
+   ========================================================================== */
+
+.c-pure-tooltip
+  
+  &--left,
+  &--right
+    top 50%
+    transform translateY(-50%)
+
+
+  &--right
+    left 100%
+    
+    .c-pure-tooltip__container
+      transform-origin left
+
+
+  &--left
+    right 100%
+    
+    .c-pure-tooltip__container
+      transform-origin right
+
+
+  &--top,
+  &--bottom
+    left 50%
+    transform translateX(-50%)
+
+
+  &--top
+    bottom 100%
+    
+    .c-pure-tooltip__container
+      transform-origin bottom
+
+
+  &--bottom
+    top 100%
+    
+    .c-pure-tooltip__container
+      transform-origin top
+
+
+
+
+
+/* Shown
+   ========================================================================== */
+
+.c-pure-tooltip--shown
+  visibility visible
+  
+    
+  .c-pure-tooltip__container
+    animation tooltip-show $tooltip-transition-duration forwards
+    animation-timing-function $ease-out-back
+
+
+@keyframes tooltip-show
+  0%
+    opacity 0
+    transform scale(.6)
+    
+  100%
+    opacity 1
+    transform scale(1)
+
+
+@keyframes tooltip-hide
+  0%
+    opacity 1
+    transform scale(1)
+    
+  100%
+    opacity 0
+    transform scale(.6)

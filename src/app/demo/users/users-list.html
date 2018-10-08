@@ -1,0 +1,66 @@
+<div class="c-section">
+  <header class="c-section__header">
+    <div class="u-flex-row u-align-items-center u-justify-between">
+      <h1 class="c-section__heading">Users</h1>
+
+      <span class="o-controls u-align-items-center">
+        <pure-form-control theme="">
+          <i class="c-icon" purePrefix>search</i>
+          <input type="search" placeholder="Search" pureInput>
+        </pure-form-control>
+        <pure-button theme="iconic">
+          <i class="c-icon">add</i>
+        </pure-button>
+      </span>
+    </div>
+  </header>
+
+  <main>
+    <table class="c-data-grid">
+      <colgroup>
+        <col width="64%">
+        <col width="16%">
+        <col width="16%">
+        <col width="2%">
+      </colgroup>
+      <thead class="c-data-grid__thead">
+        <tr class="c-data-grid__tr">
+          <th class="c-data-grid__th">Name</th>
+          <th class="c-data-grid__th">Status</th>
+          <th class="c-data-grid__th">Role</th>
+          <th class="c-data-grid__th"></th>
+        </tr>
+      </thead>
+      <tbody class="c-data-grid__tbody">
+        <tr class="c-data-grid__tr" *ngFor="let user of users">
+          <td class="c-data-grid__td">
+            <div class="u-flex-row u-align-items-center">
+              <img class="c-user-pic u-margin-right" [src]="user.picture.large" alt="User photo">
+              <div>
+                <div class="u-text-capitalize">{{user.name.first + ' ' + user.name.last}}</div>
+                <div class="u-color-hint u-font-sm">{{user.email}}</div>
+              </div>
+            </div>
+          </td>
+          <td class="c-data-grid__td">
+            <span class="c-badge u-text-capitalize" 
+                  [class.c-badge--success]="user.status === 'approved'"
+                  [class.c-badge--warning]="user.status === 'rejected'"
+                  [class.c-badge--neutral]="user.status === 'inactive'">
+              {{user.status}}
+            </span>
+          </td>
+          <td class="c-data-grid__td u-text-capitalize">{{user.role}}</td>
+          <td class="c-data-grid__td u-text-right">
+            <div class="c-data-grid__hover-content">
+              <pure-button theme="iconic transparent">
+                <i class="c-icon">more_vert</i>
+              </pure-button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</div>
+

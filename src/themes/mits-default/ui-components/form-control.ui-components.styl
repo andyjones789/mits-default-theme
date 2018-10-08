@@ -1,0 +1,361 @@
+/* ==========================================================================
+   PURE FORM CONTROL
+   ========================================================================== */
+
+
+
+
+
+// Mixins
+// =============================================================================
+
+// Round Corners
+
+_form-control-round-corners()
+
+  .c-pure-form-control__prefix-holder
+
+    > .c-icon
+      margin-left .5rem
+      
+  .c-pure-input
+    border-radius 999rem
+
+
+// Dynamic Width
+
+_form-control-dynamic-width($start-width, $expanded-width)
+
+  .c-pure-input
+    width $start-width
+    transition width $global-duration-lg
+    will-change width
+  
+  
+  &.c-pure-form-control--focused
+    
+    .c-pure-input
+      width $expanded-width
+
+
+
+
+
+/* Regular Form Control
+   ========================================================================== */
+
+.c-pure-form-control
+  position relative
+  display flex
+  flex-direction column
+
+
+  &__label-holder
+    margin-left .1rem
+    margin-bottom $unit-7s
+  
+
+  /*
+   * 1. Fix for <textarea>.
+   */
+     
+  &__input-holder
+    display flex /* [1] */
+    
+    
+  &__messages
+    
+    .c-pure-message
+      margin-bottom 0
+  
+
+  .c-icon
+    font-size $font-size-xl
+
+
+
+
+
+/* States
+   ========================================================================== */
+
+/* Correct */
+
+.c-pure-form-control--correct
+
+  .c-icon
+    color $color-accent-positive
+
+
+/* Wrong */
+
+.c-pure-form-control--wrong
+
+  .c-icon
+    color $color-accent-negative
+
+
+/* Empty */
+
+.c-pure-form-control:not(.c-pure-form-control--empty)
+  
+  .c-pure-asterisk
+    visibility hidden
+    opacity 0
+
+
+/* Disabled */
+
+.c-pure-form-control--disabled
+  
+  .c-pure-label
+    color $input-disabled-label-color
+
+
+/* Outline */
+
+.c-pure-form-control:not(.c-pure-form-control--readonly)
+  
+  .c-pure-form-control__input-holder
+    position relative
+    
+    &::after
+      content ''
+      position absolute
+      left -($input-outline-width) + .1rem
+      right @left
+      top @left
+      bottom @left
+      border $input-outline-width solid $input-outline-color
+      border-radius ($input-border-radius * 1.25)
+      pointer-events none
+      opacity 0
+      transform scale(1.06, 1.15)
+      transition $global-duration-lg
+      transition-timing-function $ease-out-back
+  
+
+  &.c-pure-form-control--focused
+  
+    .c-pure-form-control__input-holder
+      
+      &::after
+        opacity 1
+        transform scale(1)
+
+
+  &.c-pure-form-control--search
+
+    .c-pure-form-control__input-holder
+      
+      &::after
+        border-radius 999rem
+
+
+/* Has Message */
+
+.c-pure-form-control--has-message
+  
+  .c-pure-form-control__input-holder
+    margin-bottom $unit-5s
+
+
+/* Search */
+
+.c-pure-form-control--search
+  _form-control-dynamic-width($unit-7x * 3, $unit-3x * 8)
+  _form-control-round-corners()
+
+
+
+
+
+/* Prefix & Suffix
+   ========================================================================== */
+
+.c-pure-form-control
+
+  &__prefix-holder,
+  &__suffix-holder
+    position absolute
+    top 0
+    display flex
+    align-items center
+    justify-content center
+    height $input-height
+    line-height 1
+    
+
+    > .c-icon
+      pointer-events none
+  
+
+  &__prefix-holder
+    left $input-border-width
+    width $input-prefix-width
+
+
+    /*
+     * 1. Align icon a little bit nicer.
+     */
+       
+    > .c-icon
+      margin-left .2rem /* [1] */
+      color $input-icon-color
+
+
+  &__suffix-holder
+    right $input-border-width
+    width $input-suffix-width
+
+  
+  &--has-prefix
+    
+    .c-pure-input
+      padding-left $input-prefix-width
+      
+
+  &--has-suffix
+    
+    .c-pure-input
+      padding-right $input-suffix-width
+
+
+
+
+
+/* Radio & Checkbox
+   ========================================================================== */
+
+/*
+ * Common styles for type "radio" and "checkbox".
+ */
+
+// 1. Add more contrast with background since it's smaller element.
+
+$form-control-toggle-bg-color = darken($input-bg-color, 5%) // [1]
+
+
+.c-pure-form-control--checkbox,
+.c-pure-form-control--radio
+  margin-bottom $unit-5s
+  
+
+  .c-pure-input
+
+    /* Reset styles and hide completely. */  
+    visually-hidden()
+    display none
+    
+    &:checked + .c-pure-form-control__toggle
+      background $color-accent
+      box-shadow $pure-button-box-shadow-model rgba($color-accent, .38)
+      
+      &::after
+        transform scale(1)
+    
+    &:active + .c-pure-form-control__toggle
+      transform translateY(-50%) scale(.9)
+      
+    &:active:not(:checked) + .c-pure-form-control__toggle
+      background mix($color-accent, $form-control-toggle-bg-color, 13%)
+  
+
+  .c-pure-label
+    display inline-block
+  
+
+  .c-pure-form-control__toggle
+    background $form-control-toggle-bg-color
+
+
+  .c-pure-form-control__label-holder
+    margin 0
+
+
+  .c-pure-form-control__toggle
+    position absolute
+    top 50%
+    left 0
+    transform translateY(-50%)
+    display flex
+    justify-content center
+    align-items center
+    pointer-events none
+    transition $global-duration-lg
+    transition-timing-function $ease-out-expo
+    
+    &::after
+      content ''
+      background $color-primary-white
+      transition $global-duration-lg
+      transition-timing-function $ease-out-back
+
+
+  &:not(.c-pure-form-control--readonly) 
+    
+    .c-pure-form-control__input-holder
+      position static
+      
+      &::after
+        display none
+
+
+/*
+ * Radio-specific styles.
+ */
+
+$radio-width     = $unit-lg
+$radio-height    = $radio-width
+$radio-label-gap = $unit-2s - .1rem
+
+
+.c-pure-form-control--radio
+
+  .c-pure-label
+    padding-left ($radio-width + $radio-label-gap)
+
+
+  .c-pure-form-control__toggle
+    width $radio-width
+    height $radio-height
+    border-radius 50%
+    
+    &::after
+      transform scale(0)
+      width $unit-5s
+      height @width
+      border-radius 50%
+
+
+/*
+ * Checkbox-specific styles.
+ */
+ 
+$checkbox-width     = $unit-lg
+$checkbox-height    = $checkbox-width
+$checkbox-label-gap = $unit-2s
+
+
+.c-pure-form-control--checkbox
+  
+  .c-pure-input
+
+    &:active:checked + .c-pure-form-control__toggle
+      background mix($form-control-toggle-bg-color, $color-accent, 13%)
+
+
+  .c-pure-label
+    padding-left ($checkbox-width + $checkbox-label-gap)
+  
+
+  .c-pure-form-control__toggle
+    width $checkbox-width
+    height $checkbox-height
+    border-radius .3rem
+    
+    &::after
+      transform scale(0)
+      width $unit-5s
+      height @width
+      border-radius .1rem

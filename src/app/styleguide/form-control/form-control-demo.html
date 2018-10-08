@@ -1,0 +1,208 @@
+<div class="c-item-container">
+  <header class="c-item-container__header">
+    <h1 class="c-item-container__heading">Form Control</h1>
+    <p class="c-item-container__desc">Styles on top of the <a href="{{LibData.pureDemoLink}}form-control" target="_blank" rel="noopener">Pure Form Control</a> and <a href="{{LibData.pureDemoLink}}input" target="_blank" rel="noopener">Pure Input</a> elements.</p>
+  </header>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">Input Based</h2>
+
+    <div class="o-grid o-grid--no-outer-gap">
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control>
+          <input type="text" placeholder="Enter something" pureInput>
+        </pure-form-control>
+
+      </span>
+    </div>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">Textarea Based</h2>
+
+    <div class="o-grid o-grid--no-outer-gap">
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control label="Story">
+          <textarea placeholder="Write some story here" pureInput></textarea>
+        </pure-form-control>
+
+      </span>
+    </div>
+  </div>
+
+<!--   <div class="c-component">
+    <h2 class="c-component__heading">Select</h2>
+
+    <span class="c-component__container">
+      <pure-form-control label="Email">
+        <select placeholder="Email" pureInput>
+          <option value="UK">UK</option>
+          <option value="USA">USA</option>
+        </select>
+      </pure-form-control>
+    </span>
+  </div> -->
+
+  <div class="c-component">
+    <h2 class="c-component__heading">Radio & Checkbox</h2>
+
+    <div class="o-grid o-grid--no-outer-gap">
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control label="Coffee">
+          <input type="radio" name="drink" checked pureInput>
+        </pure-form-control>
+        <pure-form-control label="Tea">
+          <input type="radio" name="drink" pureInput>
+        </pure-form-control>
+        <pure-form-control label="Cacao">
+          <input type="radio" name="drink" pureInput>
+        </pure-form-control>
+        <pure-form-control label="Milk">
+          <input type="radio" name="drink" disabled pureInput>
+        </pure-form-control>
+
+      </span>
+
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control label="Cookies">
+          <input type="checkbox" name="desert" checked pureInput>
+        </pure-form-control>
+        <pure-form-control label="Waffles">
+          <input type="checkbox" name="desert" pureInput>
+        </pure-form-control>
+        <pure-form-control label="Jam">
+          <input type="checkbox" name="desert" pureInput>
+        </pure-form-control>
+        <pure-form-control label="Fruits">
+          <input type="checkbox" name="desert" disabled pureInput>
+        </pure-form-control>
+
+      </span>
+    </div>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">Required</h2>
+
+    <div class="o-grid o-grid--no-outer-gap">
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control label="National ID">
+          <input type="text" placeholder="Enter ID" required pureInput>
+        </pure-form-control>
+
+      </span>
+    </div>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">Readonly</h2>
+
+    <div class="o-grid o-grid--no-outer-gap">
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control>
+          <input type="text" placeholder="You can not edit me" readonly value="You can not edit me" pureInput>
+        </pure-form-control>
+
+      </span>
+    </div>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">States</h2>
+
+    <div class="o-grid o-grid--no-outer-gap">
+      <span class="o-cell o-cell--1/4 c-component__container">
+        
+        <pure-form-control theme="correct">
+          <input type="text" placeholder="Correct" pureInput>
+          <i class="c-icon" pureSuffix>done</i>
+        </pure-form-control>
+
+      </span>
+
+      <span class="o-cell o-cell--1/4 c-component__container">
+        
+        <pure-form-control theme="wrong">
+          <input type="text" placeholder="Wrong" pureInput>
+          <i class="c-icon" pureSuffix>clear</i>
+        </pure-form-control>
+
+      </span>
+
+      <span class="o-cell o-cell--1/4 c-component__container">
+  
+        <pure-form-control>
+          <input type="text" placeholder="Disabled" disabled pureInput>
+        </pure-form-control>
+  
+      </span>
+    </div>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">With Icon</h2>
+
+    <div class="o-grid o-grid--no-outer-gap">
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control>
+          <i class="c-icon" purePrefix>email</i>
+          <input type="email" placeholder="Email" pureInput>
+        </pure-form-control>
+
+      </span>
+    </div>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">With Button</h2>
+
+    <div class="o-grid o-grid--no-outer-gap">
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control>
+          <input type="text" placeholder="Filter" pureInput>
+          <pure-button theme="iconic transparent" pureSuffix>
+            <i class="c-icon">more_vert</i>
+          </pure-button>
+        </pure-form-control>
+
+      </span>
+    </div>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">With Hint</h2>
+
+    <div class="o-grid o-grid--no-outer-gap">
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control>
+          <input type="password" placeholder="Password" pureInput>
+          <pure-message>Password should contain at least one number and capital letter.</pure-message>
+        </pure-form-control>
+      
+      </span>
+    </div>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">With Label</h2>
+
+    <div class="o-grid o-grid--no-outer-gap">
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control label="Label">
+          <input type="text" placeholder="I have a label on top" pureInput>
+        </pure-form-control>
+
+      </span>
+    </div>
+  </div>
+</div>

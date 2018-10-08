@@ -1,0 +1,24 @@
+<div class="c-item-container">
+  <header class="c-item-container__header">
+    <h1 class="c-item-container__heading">Menu</h1>
+  </header>
+
+  <div class="c-component">
+    <div class="o-grid o-grid--flush">
+      <span class="o-cell o-cell--2/12 c-component__container">
+
+        <ul class="c-menu">
+          <li *ngFor="let link of links">
+            <a class="c-menu__item" 
+              [class.c-menu__item--active]="activeItem === link" 
+              [class.c-menu__item--disabled]="link.disabled"
+              (click)="!link.disabled ? activeItem = link : null">
+              <i *ngIf="link.icon" class="c-icon">{{link.icon}}</i>{{link.title}}
+            </a>
+          </li>
+        </ul>
+
+      </span>
+    </div>
+  </div>
+</div>

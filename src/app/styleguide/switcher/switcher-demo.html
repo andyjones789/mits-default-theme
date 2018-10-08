@@ -1,0 +1,22 @@
+<div class="c-item-container">
+  <header class="c-item-container__header">
+    <h1 class="c-item-container__heading">Switcher</h1>
+    <p class="c-item-container__desc">Styles on top of the <a href="{{LibData.pureDemoLink}}switcher" target="_blank" rel="noopener">Pure Switcher</a> element.</p>
+  </header>
+
+  <div class="c-component">
+    <span class="c-component__container">
+      <pure-switcher [checked]="true">Click me</pure-switcher>
+    </span>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">States</h2>
+    <span class="c-component__container">
+      <pure-switcher [disabled]="true" [checked]="true">Disabled checked</pure-switcher>
+    </span>
+    <span class="c-component__container">
+      <pure-switcher [disabled]="true">Disabled</pure-switcher>
+    </span>
+  </div>
+</div>

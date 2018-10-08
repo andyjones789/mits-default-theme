@@ -1,0 +1,64 @@
+/* ==========================================================================
+   LOADING
+   ========================================================================== */
+
+
+
+$loading-dot-size  = $unit-xs
+$loading-dot-gap   = $unit-2s
+$loading-dot-slide = $unit
+
+
+.c-loading
+  display flex
+  justify-content center
+  align-items center
+  width 100%
+  height 100%
+  padding $unit
+  
+
+  &__dots
+    position relative
+    width ($loading-dot-size * 3 + $loading-dot-gap * 2)
+    height ($loading-dot-size + $loading-dot-slide)
+  
+
+  &__dot
+    top 0
+    position absolute
+    width $loading-dot-size
+    height @width 
+    border-radius 50%
+    animation loading-dot 1s infinite
+    animation-timing-function $ease-out-quad
+    
+    &:nth-child(1)
+      left 0
+      background $color-accent
+
+    &:nth-child(2)
+      left ($loading-dot-size + $loading-dot-gap)
+      background $color-accent-positive
+      animation-delay .15s
+
+    &:nth-child(3)
+      left ($loading-dot-size + $loading-dot-gap) * 2
+      background $color-accent-negative
+      animation-delay .25s
+
+
+@keyframes loading-dot
+  0%
+    transform translateY(0) scale(.97, 1.03)
+  
+  30%
+    transform translateY(0) scale(.97, 1.03)
+    opacity 1
+
+  50%
+    transform translateY($loading-dot-slide) scale(1.08, .92)
+    opacity .8
+
+  70%
+    opacity 1

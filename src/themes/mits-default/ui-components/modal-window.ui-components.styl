@@ -1,0 +1,275 @@
+/* ==========================================================================
+   PURE MODAL WINDOW
+   ========================================================================== */
+
+
+
+$pure-modal-content-padding = $unit-xl
+
+
+.c-pure-modal-window
+  position fixed
+  left 0
+  right 0
+  top 0
+  bottom 0
+  z-index $z-index-modal-background
+  visibility hidden
+  opacity 0
+  transition $global-duration-lg
+
+
+  &__backdrop
+    position absolute
+    left 0
+    right 0
+    bottom 0
+    top 0
+    background rgba($shadow-color-black, .132)
+
+
+  &__content
+    position absolute
+    left 0
+    right 0
+    bottom 0
+    top 0
+    display flex
+    padding $pure-modal-content-padding
+    pointer-events none
+
+
+  /*
+   * Shown
+   */
+
+  &--shown
+    visibility visible
+    opacity 1
+
+
+
+
+
+/* Modal Dialog
+   ========================================================================== */
+
+$modal-dialog-padding-h  = $unit-4x
+$modal-dialog-padding-v  = $unit-2x
+$modal-dialog-max-height = $unit-8x * 7 / $base-ratio
+$modal-dialog-max-width  = $unit-8x * 7
+$modal-dialog-min-width  = $unit-8x * 6
+$modal-dialog-offsetY    = -($unit-7x)
+
+
+.c-modal-dialog
+  display flex
+  flex-direction column
+  max-width $modal-dialog-max-width
+  min-width $modal-dialog-min-width
+  max-height $modal-dialog-max-height
+  margin auto
+  border-radius $global-radius-lg
+  overflow hidden
+  background $modal-bg-color
+  box-shadow $modal-box-shadow
+  pointer-events auto
+  animation modal-dialog-disappear $global-duration-lg
+
+
+  &__container
+    flex-grow 1
+    display flex
+    flex-direction column
+    z-index 1
+    box-shadow $modal-container-box-shadow
+
+
+  &__header
+    padding $modal-dialog-padding-v $modal-dialog-padding-h ($modal-dialog-padding-v / 2)
+    
+
+  &__heading
+    style-h1()
+    margin 0
+
+
+  &__content
+    flex-grow 1
+    padding ($modal-dialog-padding-v / 2) $modal-dialog-padding-h ($modal-dialog-padding-v * 1.5)
+    overflow-y auto
+    overflow-x hidden
+
+
+  &__footer
+    display flex
+    align-items center
+    justify-content flex-end
+    padding $modal-dialog-padding-v $modal-dialog-padding-h
+    background $modal-footer-bg-color
+
+
+/*
+ * Shown
+ */
+
+.c-pure-modal-window--shown
+
+  .c-modal-dialog
+    animation modal-dialog-appear $global-duration-lg forwards
+    animation-timing-function $ease-out-back
+
+
+@keyframes modal-dialog-appear
+  0%
+    transform translateY($modal-dialog-offsetY + ($modal-dialog-max-height / 2)) scale(.9)
+  100%
+    transform translateY($modal-dialog-offsetY) scale(1)
+
+
+@keyframes modal-dialog-disappear
+  0%
+    transform translateY($modal-dialog-offsetY)
+
+  100%
+    opacity 0
+    transform translateY($modal-dialog-offsetY + ($modal-dialog-max-height / 4)) scale(.9)
+
+
+
+
+
+/* Modal Window
+   ========================================================================== */
+
+// 1. Convert `px` value to `rem`.
+// 2. Extra width needed to fill the gap on the right when animation is
+//    processing.
+// 3. Add yet more width so it will be a little bit more than half of browser
+//    window width.
+
+$desktop-max-width-rem    = unit($desktop-max-width / 10, 'rem') // [1]
+
+$modal-window-padding-h   = $unit-6x
+$modal-window-padding-v   = $unit-xl
+
+$modal-window-extra-width = $unit-8x // [2]
+$modal-window-space-left  = $unit-3x * 8 // [3]
+
+
+/* 
+ * 1. Stick to the right edge.
+ * 2. Change `rem` value to percents to make modal window fluid on large
+ *    resolutions.
+ */
+
+.c-modal-window
+  display flex
+  flex-direction column
+  max-width ($desktop-max-width-rem / 2 + $modal-window-extra-width + $modal-window-space-left)
+  width 100%
+  height 100%
+  margin auto -($pure-modal-content-padding) auto auto /* [1] */
+  border-left-radius($global-radius-huge)
+  overflow hidden
+  background $modal-bg-color
+  box-shadow $modal-box-shadow
+  pointer-events auto
+  animation modal-window-disappear $global-duration-xl
+  animation-timing-function ease-in
+  
+  +above($desktop-max-width-breakpoint)
+    width s("calc(50% + %s + %s)", $modal-window-extra-width, $modal-window-space-left) /* [2] */
+    max-width 100%
+
+
+  &__content-container
+    display flex
+    flex-direction column
+    z-index 1
+    overflow-y auto
+    box-shadow $modal-container-box-shadow
+    
+      
+  &__content-container,
+  &__footer-container
+    padding-right $modal-window-extra-width
+    
+
+  &__content-container,
+  &__footer
+    flex-grow 1
+    
+    /*
+     * 1. Set `max-width` so modal's content will never go further than the edge
+     *    of the Section component.
+     */ 
+       
+    +above($desktop-max-width-breakpoint)
+      max-width ($desktop-max-width-rem / 2 + $modal-window-space-left - $pure-modal-content-padding) /* [1] */
+      width 100%
+      padding-right 0
+    
+
+  &__footer-container
+    flex-shrink 0
+    display flex
+    z-index -1
+    width 100%
+    background $modal-footer-bg-color
+        
+
+  &__header
+    padding ($modal-window-padding-v * 1.5) $modal-window-padding-h ($modal-window-padding-v / 2)
+    
+
+  &__heading
+    style-h1()
+    margin 0
+
+
+  &__content
+    flex-grow 1
+    padding ($modal-window-padding-v / 2) $modal-window-padding-h ($modal-window-padding-v * 1.5)
+    overflow-y auto
+    overflow-x hidden
+
+
+  &__footer
+    display flex
+    align-items center
+    justify-content flex-end
+    padding $modal-window-padding-v $modal-window-padding-h
+
+
+/*
+ * Shown
+ */
+
+.c-pure-modal-window--shown
+
+  .c-modal-window
+    animation modal-window-appear $global-duration-xl forwards
+    animation-timing-function $ease-out-back
+
+
+$modal-window-transform = perspective(400rem) rotateY(40deg) scale(1.26) translateX("calc(30% + %s)" % $modal-window-extra-width)
+
+@keyframes modal-window-appear
+  0%
+    opacity 0
+    transform $modal-window-transform
+  
+  100%
+    opacity 1
+    transform translateX($modal-window-extra-width)
+
+
+@keyframes modal-window-disappear
+  0%
+    opacity 1
+    transform translateX($modal-window-extra-width)
+
+  100%
+    opacity 0
+    transform $modal-window-transform

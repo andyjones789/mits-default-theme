@@ -1,0 +1,113 @@
+/* ==========================================================================
+   PURE DROPDOWN
+   ========================================================================== */
+
+
+
+$dropdown-y-position = calc(100% + .1rem)
+$dropdown-x-position = .1rem
+
+
+.c-pure-dropdown
+  visibility hidden
+  transition $global-duration
+
+
+  &__backdrop
+    position fixed
+    left 0
+    right 0
+    top 0
+    bottom 0
+    z-index $z-index-dropdown
+    background rgba($color-primary-dark, .04)
+    opacity 0
+    transition $global-duration
+    transition-timing-function ease-in-out
+  
+
+  &__menu
+    position absolute
+    z-index $z-index-dropdown
+    width $unit-5x * 4
+    max-height $unit-8x * 3
+    overflow-y auto
+    overflow-x hidden
+    padding $unit-4s 0
+    border-radius $global-radius
+    background $card-bg-color
+    box-shadow $box-shadow-model-level10 rgba(mix($color-accent, $box-shadow-color-black, 25%), .15)
+    animation dropdown-menu-disappear $global-duration
+    animation-timing-function $ease-in-quad
+    
+    
+    &--below
+      top $dropdown-y-position
+    
+    &--above
+      bottom $dropdown-y-position
+    
+    &--before
+      right $dropdown-x-position
+      
+    &--after
+      left $dropdown-x-position
+
+
+  /*
+   * Shown
+   */
+     
+  &--shown
+    visibility visible
+    
+
+    .c-pure-dropdown__backdrop
+      opacity 1
+      
+
+    .c-pure-dropdown__menu
+      animation dropdown-menu-appear $global-duration-lg
+      animation-timing-function $ease-out-back
+
+
+@keyframes dropdown-menu-appear
+  0%
+    opacity 0
+    transform translateY($unit-3x) scale(.94)
+    
+  100%
+    opacity 1
+    transform translateY(0) scale(1)
+
+
+@keyframes dropdown-menu-disappear
+  0%
+    opacity 1
+    transform translateY(0) scale(1)
+    
+  100%
+    opacity 0
+    transform translateY($unit-3x) scale(.96)
+
+
+
+
+
+// Dropdown Item
+// =============================================================================
+
+.c-pure-dropdown-item
+  padding $unit-5s $unit-sm
+  color $body-color
+  user-select none
+  cursor default
+  transition opacity $global-duration
+  
+    
+  &--disabled
+    color rgba(@color, .38)
+  
+
+  &--focused
+    background $color-accent-washed

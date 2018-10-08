@@ -1,0 +1,5 @@
+Module contains settings for different components that share the same look & feel and therefore should have common variables. For example, you have some textfield that has a height equal to 40px and some third-party library for dropdown select that should have the same height equal to 40px, then it is reasonable to create an abstract component named 'input' that has a height of 40px and assign its variable to both textfield and dropdown select to give them consistent look and flexible contol on all components with similar appearance.
+
+One more example — imagine your design has a concept of card, that is a set of elements that look similar to real-world card, e.g. modal window, block with user data, dropdown menu, etc. In such case, it is also make sense to use abstraction for all these elements.
+
+Since it's time-consuming to keep every property in variables, they are only creating when it's needed to use the same property for more than one place.

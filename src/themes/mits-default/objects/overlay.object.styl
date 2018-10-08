@@ -1,0 +1,29 @@
+/* ==========================================================================
+   OVERLAY
+   ========================================================================== */
+
+/*
+ * Styles for Angular CDK's Overlay component. Read more at
+ * https://material.angular.io/cdk/overlay/overview.
+ */
+
+
+
+.cdk-overlay-container
+  position fixed
+  z-index $z-index-overlay
+  top 0
+  bottom 0
+  left 50%
+  transform translateX(-50%)
+  max-width $desktop-max-width
+  width 100%
+  pointer-events none
+
+
+.cdk-overlay-pane
+  position absolute
+  left 0
+  right 0
+  top 0
+  bottom 0

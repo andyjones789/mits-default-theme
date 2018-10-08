@@ -1,0 +1,93 @@
+<div class="c-item-container">
+  <header class="c-item-container__header">
+    <h1 class="c-item-container__heading">Modal</h1>
+    <p class="c-item-container__desc">Uses <a href="{{LibData.pureDemoLink}}modal-window" target="_blank" rel="noopener">Pure Modal</a> as a base for both Dialog and Window.</p>
+  </header>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">Modal Dialog</h2>
+    <span class="c-component__container">
+
+      <pure-button (onClick)="showDialog = !showDialog">Open Dialog</pure-button>
+      <pure-modal-window [(show)]="showDialog">
+        <div class="c-modal-dialog">
+          <div class="c-modal-dialog__container">
+            <header class="c-modal-dialog__header">
+              <h1 class="c-modal-dialog__heading">Dectivate account?</h1>
+            </header>
+            <div class="c-modal-dialog__content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, repellat saepe cumque. Itaque laborum dolore, consequatur atque beatae officiis ut.
+            </div>
+          </div>
+          <footer class="c-modal-dialog__footer">
+            <div class="o-controls">
+              <pure-button theme="ghost" (onClick)="showDialog = false">Cancel</pure-button>
+              <pure-button theme="warning" (onClick)="deactivate()">Deactivate</pure-button>
+            </div>
+          </footer>
+        </div>
+      </pure-modal-window>
+
+    </span>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">Modal Window</h2>
+    <span class="c-component__container">
+
+      <pure-button (onClick)="showWindow = !showWindow">Open Window</pure-button>
+      <pure-modal-window [(show)]="showWindow">
+        <div class="c-modal-window">
+          <div class="c-modal-window__content-container">
+            <header class="c-modal-window__header">
+              <h1 class="c-modal-window__heading">New User</h1>
+            </header>
+            <div class="c-modal-window__content">
+              <div class="o-grid o-grid--no-outer-gap">
+                <div class="o-cell o-cell--1/3">
+                  <pure-form-control label="First name">
+                    <input type="text" placeholder="Enter first name" autofocus pureInput>
+                  </pure-form-control>
+                </div>
+                <div class="o-cell o-cell--1/3">
+                  <pure-form-control label="Last name">
+                    <input type="text" placeholder="Enter last name" pureInput>
+                  </pure-form-control>
+                </div>
+                <div class="o-cell o-cell--1/3"></div>
+
+                <div class="o-cell o-cell--2/3">
+                  <pure-form-control label="Biography">
+                    <textarea placeholder="Enter biography" pureInput></textarea>
+                  </pure-form-control>
+                </div>
+                <div class="o-cell o-cell--1/3">
+                </div>
+
+                <div class="o-cell o-cell--1/3">
+                  <pure-form-control label="Title">
+                    <input type="text" placeholder="Enter title" pureInput>
+                  </pure-form-control>
+                </div>
+                <div class="o-cell o-cell--1/3">
+                  <pure-form-control label="Date of birth">
+                    <input type="date" placeholder="Enter date" pureInput>
+                  </pure-form-control>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-modal-window__footer-container">
+            <footer class="c-modal-window__footer">
+              <div class="o-controls">
+                <pure-button theme="ghost" (onClick)="showWindow = false">Cancel</pure-button>
+                <pure-button theme="success" (onClick)="create()">Create</pure-button>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </pure-modal-window>
+
+    </span>
+  </div>
+</div>

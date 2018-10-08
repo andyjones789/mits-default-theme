@@ -1,0 +1,88 @@
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+
+
+
+$sidebar-nav-width     = $unit-6x ** 2
+$sidebar-nav-padding-h = $unit-xl
+$sidebar-nav-padding-v = $unit-lg
+
+
+.c-sidebar
+  display flex
+  justify-content center
+  min-width $desktop-min-width
+  
+  
+  &__container
+    flex-shrink 0
+    display flex
+    align-items flex-start
+    width 100%
+    margin 0 auto
+    
+    +above($desktop-max-width-breakpoint)
+      max-width $desktop-max-width
+      
+
+
+
+
+/* Navigation Panel
+   ========================================================================== */
+
+.c-sidebar
+  
+  &__nav
+    position sticky
+    position -webkit-sticky
+    top 0
+    flex-shrink 0
+    display flex
+    flex-direction column
+    width $sidebar-nav-width
+    min-height 100vh
+    padding $sidebar-nav-padding-v $sidebar-nav-padding-h
+    background $body-bg-color
+    
+
+  &__section-container
+    margin-bottom $unit-5x
+    
+
+    &--sm
+      margin-bottom $unit-4x
+
+
+  &__logo
+    flex-shrink 0
+    display block
+
+    a:hover
+      text-decoration none
+
+
+  &__heading
+    style-h3()
+    margin-bottom $unit-xs
+    
+
+  &__footer
+    margin-top auto
+
+
+
+
+
+/* Content
+   ========================================================================== */
+
+.c-sidebar__content
+  flex-grow 1
+  flex-shrink 1
+  min-height 100vh
+  height 100%
+  z-index 1
+  background $body-bg-color
+  box-shadow $box-shadow-model-level30-straight rgba($box-shadow-color-black, .1)

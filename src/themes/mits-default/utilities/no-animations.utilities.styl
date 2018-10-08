@@ -1,0 +1,21 @@
+/* ==========================================================================
+   NO ANIMATIONS
+   ========================================================================== */
+
+/*
+ * Utility used to add to body before all content is loaded to prevent firing
+ * animations until it's needed.
+ */
+ 
+.u-no-animations
+  
+  *, &
+    -webkit-animation-duration 0 !important
+    -moz-animation-duration 0 !important
+    -o-animation-duration 0 !important
+    animation-duration 0 !important
+    
+    -webkit-transition-duration 0 !important
+    -moz-transition-duration 0 !important
+    -o-transition-duration 0 !important
+    transition-duration 0 !important
