@@ -19,7 +19,7 @@ $input-color             = $body-color-strong
 $input-bg-color          = $color-primary-soft
 $input-box-shadow        = none
 
-$input-placeholder-color = mix($input-color, $input-bg-color, 39%)
+$input-placeholder-color = rgba($input-color, .44)
 
 
 
@@ -28,15 +28,15 @@ $input-placeholder-color = mix($input-color, $input-bg-color, 39%)
 // States
 // =============================================================================
 
-$input-hover-bg-color             = lighten($input-bg-color, 20%)
+$input-hover-bg-color             = lighten($input-bg-color, 25%)
 
-$input-focus-bg-color             = $input-hover-bg-color
+$input-focus-bg-color             = lighten($input-hover-bg-color, 20%)
 
 $input-readonly-color             = $body-color
 
 $input-disabled-bg-color          = $input-bg-color
 $input-disabled-color             = $body-color
-$input-disabled-placeholder-color = rgba($input-placeholder-color, .45)
+$input-disabled-placeholder-color = rgba($input-color, .28)
 $input-disabled-label-color       = $body-color-light
 
 $input-outline-width              = .2rem

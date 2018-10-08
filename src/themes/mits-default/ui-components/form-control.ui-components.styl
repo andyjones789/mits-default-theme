@@ -28,7 +28,7 @@ _form-control-dynamic-width($start-width, $expanded-width)
 
   .c-pure-input
     width $start-width
-    transition width $global-duration-lg
+    transition $global-duration-lg
     will-change width
   
   
@@ -165,6 +165,8 @@ _form-control-dynamic-width($start-width, $expanded-width)
 .c-pure-form-control--search
   _form-control-dynamic-width($unit-7x * 3, $unit-3x * 8)
   _form-control-round-corners()
+  
+
 
 
 
