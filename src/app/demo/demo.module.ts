@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { PureElements } from '../pure-elements';
+import { PureElements } from 'pure-elements';
 import { BrandLogoModule } from '../brand-logo/brand-logo.module';
 
 import { DemoRoutingModule } from './demo-routing.module';

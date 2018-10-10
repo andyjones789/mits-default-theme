@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { PureToast } from '../../pure-elements';
+import { PureToast } from 'pure-elements';
 import { LibData } from '../../lib-data';
 
 @Component({

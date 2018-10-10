@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { PureElements } from './pure-elements';
+import { PureElements } from 'pure-elements';
 
 import { AppComponent } from './app.component';
 

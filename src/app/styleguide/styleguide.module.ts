@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-import { PureElements, PureToastDefaultOptions, PureToastConfig } from '../pure-elements';
+import { PureElements, PureToastDefaultOptions, PureToastConfig } from 'pure-elements';
 import { BrandLogoModule } from '../brand-logo/brand-logo.module';
 
 import { StyleguideRoutingModule } from './styleguide-routing.module';
