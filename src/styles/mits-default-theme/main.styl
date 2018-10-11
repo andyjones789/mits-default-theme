@@ -1,0 +1,104 @@
+/* ==========================================================================
+   MITS DEFAULT THEME
+   ========================================================================== */
+
+
+
+
+// Config
+// =============================================================================
+
+// Global settings files that contain project-wide variables; things that need
+// to be made available to the entire codebase.
+
+@import './../../node_modules/rupture/rupture'
+@import './config'
+@import './../../node_modules/breeze.css/config'
+
+
+
+
+
+// Functions
+// =============================================================================
+
+// Globally used functions and mixins.
+
+@import './../../node_modules/breeze.css/functions'
+@import './functions'
+
+
+
+
+
+/* Generic
+ * ========================================================================== */
+
+/*
+ * Low-specific & far-reaching rulesets: reset, normalize, box-sizing
+ * definition, etc. This is the first layer which generates actual CSS.
+ */
+
+@import './../../node_modules/normalize.css'
+@import './../../node_modules/breeze.css/generic'
+@import './generic'
+
+
+
+
+
+/* HTML Tags
+ * ========================================================================== */
+
+/*
+ * Styles for unclassed HTML elements (e.g. <h1>, <input>). These come with
+ * default styling from the browser so we can redefine them there.
+ */
+
+@import './../../node_modules/breeze.css/html-tags'
+@import './html-tags'
+
+
+
+
+
+/* Objects
+ * ========================================================================== */
+
+/*
+ * Class-based selectors which define objects, abstractions, and design
+ * patterns.
+ */
+
+@import './../../node_modules/breeze.css/objects'
+@import './objects'
+
+
+
+
+
+/* UI Components
+ * ========================================================================== */
+
+/*
+ * Discrete, complete chunks of UI. This is where majority of designed
+ * components/chunks of UI are injected.
+ */
+
+@import './../../node_modules/breeze.css/ui-components'
+@import './ui-components'
+
+
+
+
+
+/* Utilities
+ * ========================================================================== */
+
+/*
+ * Utilities and helper classes with ability to override anything which goes
+ * before.
+ */
+
+@import './../../node_modules/breeze.css/utilities'
+@import './utilities'
