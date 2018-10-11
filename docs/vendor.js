@@ -70822,6 +70822,5141 @@ var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.1.7')
 
 /***/ }),
 
+/***/ "./node_modules/pure-elements/dist/asterisk/asterisk-config-token.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/asterisk/asterisk-config-token.js ***!
+  \***************************************************************************/
+/*! exports provided: PureAsteriskConfigToken */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskConfigToken", function() { return PureAsteriskConfigToken; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+const PureAsteriskConfigToken = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('PureAsteriskConfig');
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/asterisk/asterisk-config.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/asterisk/asterisk-config.js ***!
+  \*********************************************************************/
+/*! exports provided: PureAsteriskDefaultConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskDefaultConfig", function() { return PureAsteriskDefaultConfig; });
+;
+const PureAsteriskDefaultConfig = {
+    content: '*'
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/asterisk/asterisk-content.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/asterisk/asterisk-content.js ***!
+  \**********************************************************************/
+/*! exports provided: PureAsteriskContent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskContent", function() { return PureAsteriskContent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+/** Custom content to substitute the default one. */
+let PureAsteriskContent = class PureAsteriskContent {
+};
+PureAsteriskContent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({
+        selector: '[pureAsteriskContent]',
+    })
+], PureAsteriskContent);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/asterisk/asterisk.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/asterisk/asterisk.js ***!
+  \**************************************************************/
+/*! exports provided: PureAsterisk */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureAsterisk", function() { return PureAsterisk; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _asterisk_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./asterisk-config */ "./node_modules/pure-elements/dist/asterisk/asterisk-config.js");
+/* harmony import */ var _asterisk_config_token__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./asterisk-config-token */ "./node_modules/pure-elements/dist/asterisk/asterisk-config-token.js");
+/* harmony import */ var _asterisk_content__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./asterisk-content */ "./node_modules/pure-elements/dist/asterisk/asterisk-content.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+let PureAsterisk = class PureAsterisk extends _core__WEBPACK_IMPORTED_MODULE_1__["PureComponent"] {
+    constructor(elementRef, componentNamer, config) {
+        super(elementRef, componentNamer);
+        this.elementRef = elementRef;
+        this.componentNamer = componentNamer;
+        this.config = config;
+        this.elementName = 'Asterisk';
+        const finalConfig = Object.assign(_asterisk_config__WEBPACK_IMPORTED_MODULE_2__["PureAsteriskDefaultConfig"], config);
+        this.applyConfig(finalConfig);
+    }
+    applyConfig(config) {
+        for (let key in config) {
+            this[key] = config[key];
+        }
+    }
+    ngOnInit() {
+        super.ngOnInit();
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChildren"])(_asterisk_content__WEBPACK_IMPORTED_MODULE_4__["PureAsteriskContent"]),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["QueryList"])
+], PureAsterisk.prototype, "asteriskContentChildren", void 0);
+PureAsterisk = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'pure-asterisk',
+        template: `
+    <span [ngClass]="elementClasses">
+      <ng-container *ngIf="content && !asteriskContentChildren.length">
+        {{content}}
+      </ng-container>
+
+      <ng-content 
+        *ngIf="asteriskContentChildren.length" 
+        select="[pureAsteriskContent]">
+      </ng-content>
+    </span>
+  `
+    }),
+    __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_asterisk_config_token__WEBPACK_IMPORTED_MODULE_3__["PureAsteriskConfigToken"])),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
+        _core__WEBPACK_IMPORTED_MODULE_1__["ComponentNamer"], Object])
+], PureAsterisk);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/asterisk/asterisk.module.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/asterisk/asterisk.module.js ***!
+  \*********************************************************************/
+/*! exports provided: PureAsteriskModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskModule", function() { return PureAsteriskModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _asterisk__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./asterisk */ "./node_modules/pure-elements/dist/asterisk/asterisk.js");
+/* harmony import */ var _asterisk_content__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./asterisk-content */ "./node_modules/pure-elements/dist/asterisk/asterisk-content.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+let PureAsteriskModule = class PureAsteriskModule {
+};
+PureAsteriskModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _core__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerModule"].forRoot()],
+        declarations: [_asterisk__WEBPACK_IMPORTED_MODULE_3__["PureAsterisk"], _asterisk_content__WEBPACK_IMPORTED_MODULE_4__["PureAsteriskContent"]],
+        exports: [_asterisk__WEBPACK_IMPORTED_MODULE_3__["PureAsterisk"], _asterisk_content__WEBPACK_IMPORTED_MODULE_4__["PureAsteriskContent"]]
+    })
+], PureAsteriskModule);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/asterisk/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/asterisk/index.js ***!
+  \***********************************************************/
+/*! exports provided: PureAsteriskConfigToken, PureAsteriskDefaultConfig, PureAsteriskModule, PureAsterisk */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/asterisk/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskConfigToken", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureAsteriskConfigToken"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskDefaultConfig", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureAsteriskDefaultConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureAsteriskModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsterisk", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureAsterisk"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/asterisk/public-api.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/asterisk/public-api.js ***!
+  \****************************************************************/
+/*! exports provided: PureAsteriskConfigToken, PureAsteriskDefaultConfig, PureAsteriskModule, PureAsterisk */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _asterisk_config_token__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./asterisk-config-token */ "./node_modules/pure-elements/dist/asterisk/asterisk-config-token.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskConfigToken", function() { return _asterisk_config_token__WEBPACK_IMPORTED_MODULE_0__["PureAsteriskConfigToken"]; });
+
+/* harmony import */ var _asterisk_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./asterisk-config */ "./node_modules/pure-elements/dist/asterisk/asterisk-config.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskDefaultConfig", function() { return _asterisk_config__WEBPACK_IMPORTED_MODULE_1__["PureAsteriskDefaultConfig"]; });
+
+/* harmony import */ var _asterisk_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./asterisk.module */ "./node_modules/pure-elements/dist/asterisk/asterisk.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskModule", function() { return _asterisk_module__WEBPACK_IMPORTED_MODULE_2__["PureAsteriskModule"]; });
+
+/* harmony import */ var _asterisk__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./asterisk */ "./node_modules/pure-elements/dist/asterisk/asterisk.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsterisk", function() { return _asterisk__WEBPACK_IMPORTED_MODULE_3__["PureAsterisk"]; });
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/button/button.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/button/button.js ***!
+  \**********************************************************/
+/*! exports provided: PureButton */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureButton", function() { return PureButton; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+let PureButton = class PureButton extends _core__WEBPACK_IMPORTED_MODULE_1__["PureComponent"] {
+    constructor(elementRef, componentNamer) {
+        super(elementRef, componentNamer);
+        this.elementRef = elementRef;
+        this.componentNamer = componentNamer;
+        this.elementName = 'Button';
+        this.renderAs = 'button';
+        this.onClick = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this._disabled = false;
+        this.disabledClassName = this.componentNamer.generateClassName(this.elementName, '', 'disabled');
+    }
+    get disabled() {
+        return this._disabled;
+    }
+    set disabled(value) {
+        this._disabled = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceBooleanProperty"])(value);
+        this.elementClasses[this.disabledClassName] = this._disabled;
+    }
+    setElAttrs() {
+        switch (this.renderAs) {
+            case 'a':
+                this.href = this.href || '';
+                this.download = this.download || '';
+                this.rel = this.rel || '';
+                this.target = this.target || '';
+            case 'input':
+                this.autofocus = this.autofocus || undefined;
+                this.src = this.src || '';
+                this.alt = this.alt || '';
+            case 'button' || 'input':
+                this.name = this.name || '';
+            default:
+                this.type = this.type || 'button';
+                break;
+        }
+    }
+    click() {
+        this.onClick.emit();
+    }
+    ngOnInit() {
+        super.ngOnInit();
+        this.setElAttrs();
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureButton.prototype, "type", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureButton.prototype, "name", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureButton.prototype, "autofocus", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureButton.prototype, "renderAs", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureButton.prototype, "href", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureButton.prototype, "download", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureButton.prototype, "rel", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureButton.prototype, "target", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureButton.prototype, "alt", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Number)
+], PureButton.prototype, "height", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureButton.prototype, "src", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Number)
+], PureButton.prototype, "width", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+], PureButton.prototype, "onClick", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureButton.prototype, "disabled", null);
+PureButton = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'pure-button',
+        template: `
+    <button 
+      *ngIf="!renderAs || renderAs === 'button'"
+      [type]="type"
+      [disabled]="disabled"
+      [name]="name"
+      [autofocus]="autofocus"
+      [ngClass]="elementClasses"
+      (click)="click($event)">
+      <ng-container 
+        *ngTemplateOutlet="content">
+      </ng-container>
+    </button>
+
+    <a 
+      *ngIf="renderAs === 'a'"
+      [ngClass]="elementClasses"
+      [href]="href"
+      [download]="download"
+      [rel]="rel"
+      [target]="target"
+      (click)="click($event)">
+      <ng-container 
+        *ngTemplateOutlet="content">
+      </ng-container>
+    </a>
+
+    <input 
+      *ngIf="renderAs === 'input'"
+      [autofocus]="autofocus"
+      [type]="type"
+      [disabled]="disabled"
+      [name]="name"
+      [alt]="alt"
+      [height]="height"
+      [src]="src"
+      [width]="width"
+      [ngClass]="elementClasses"
+      (click)="click($event)"/>
+
+    <ng-template 
+      #content>
+      <ng-content></ng-content>
+    </ng-template>
+  `
+    }),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"], _core__WEBPACK_IMPORTED_MODULE_1__["ComponentNamer"]])
+], PureButton);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/button/button.module.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/button/button.module.js ***!
+  \*****************************************************************/
+/*! exports provided: PureButtonModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureButtonModule", function() { return PureButtonModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./button */ "./node_modules/pure-elements/dist/button/button.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+let PureButtonModule = class PureButtonModule {
+};
+PureButtonModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _core__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerModule"].forRoot()],
+        declarations: [_button__WEBPACK_IMPORTED_MODULE_3__["PureButton"]],
+        exports: [_button__WEBPACK_IMPORTED_MODULE_3__["PureButton"]]
+    })
+], PureButtonModule);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/button/index.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/button/index.js ***!
+  \*********************************************************/
+/*! exports provided: PureButtonModule, PureButton */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/button/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureButtonModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureButtonModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureButton", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureButton"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/button/public-api.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/button/public-api.js ***!
+  \**************************************************************/
+/*! exports provided: PureButtonModule, PureButton */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _button_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./button.module */ "./node_modules/pure-elements/dist/button/button.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureButtonModule", function() { return _button_module__WEBPACK_IMPORTED_MODULE_0__["PureButtonModule"]; });
+
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./button */ "./node_modules/pure-elements/dist/button/button.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureButton", function() { return _button__WEBPACK_IMPORTED_MODULE_1__["PureButton"]; });
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/collapse/collapse-config-token.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/collapse/collapse-config-token.js ***!
+  \***************************************************************************/
+/*! exports provided: PureCollapseConfigToken */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureCollapseConfigToken", function() { return PureCollapseConfigToken; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+const PureCollapseConfigToken = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('PureCollapseConfig');
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/collapse/collapse-config.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/collapse/collapse-config.js ***!
+  \*********************************************************************/
+/*! exports provided: PureCollapseDefaultConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureCollapseDefaultConfig", function() { return PureCollapseDefaultConfig; });
+const PureCollapseDefaultConfig = {
+    collapseOnClick: false,
+    collapseOnHeaderClick: true,
+    collapseOnFooterClick: false,
+    collapsedOnInit: true,
+    openAnimationDuration: 0,
+    closeAnimationDuration: 0
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/collapse/collapse-footer.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/collapse/collapse-footer.js ***!
+  \*********************************************************************/
+/*! exports provided: PureCollapseFooter */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureCollapseFooter", function() { return PureCollapseFooter; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+let PureCollapseFooter = class PureCollapseFooter {
+};
+PureCollapseFooter = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({
+        selector: '[pureCollapseFooter]'
+    })
+], PureCollapseFooter);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/collapse/collapse-header.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/collapse/collapse-header.js ***!
+  \*********************************************************************/
+/*! exports provided: PureCollapseHeader */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureCollapseHeader", function() { return PureCollapseHeader; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+let PureCollapseHeader = class PureCollapseHeader {
+};
+PureCollapseHeader = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({
+        selector: '[pureCollapseHeader]'
+    })
+], PureCollapseHeader);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/collapse/collapse.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/collapse/collapse.js ***!
+  \**************************************************************/
+/*! exports provided: PureCollapse */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureCollapse", function() { return PureCollapse; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _collapse_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./collapse-header */ "./node_modules/pure-elements/dist/collapse/collapse-header.js");
+/* harmony import */ var _collapse_footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./collapse-footer */ "./node_modules/pure-elements/dist/collapse/collapse-footer.js");
+/* harmony import */ var _collapse_config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./collapse-config */ "./node_modules/pure-elements/dist/collapse/collapse-config.js");
+/* harmony import */ var _collapse_config_token__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./collapse-config-token */ "./node_modules/pure-elements/dist/collapse/collapse-config-token.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+let PureCollapse = class PureCollapse extends _core__WEBPACK_IMPORTED_MODULE_1__["PureComponent"] {
+    constructor(elementRef, componentNamer, userConfig) {
+        super(elementRef, componentNamer);
+        this.elementRef = elementRef;
+        this.componentNamer = componentNamer;
+        this.userConfig = userConfig;
+        this.elementName = 'Collapse';
+        this.headerName = 'Header';
+        this.contentName = 'Content';
+        this.footerName = 'Footer';
+        this.headerClasses = {};
+        this.contentClasses = {};
+        this.footerClasses = {};
+        this.open = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.close = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.collapsedClassName = this.componentNamer.generateClassName(this.elementName, '', 'collapsed');
+        this.disabledClassName = this.componentNamer.generateClassName(this.elementName, '', 'disabled');
+        this.config = Object.assign({}, _collapse_config__WEBPACK_IMPORTED_MODULE_4__["PureCollapseDefaultConfig"], userConfig);
+        this.collapsedOnInit = this.config.collapsedOnInit;
+        this.openAnimationDuration = this.config.openAnimationDuration;
+        this.closeAnimationDuration = this.config.closeAnimationDuration;
+    }
+    get disabled() {
+        return this._disabled;
+    }
+    set disabled(value) {
+        this._disabled = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceBooleanProperty"])(value);
+        this.elementClasses[this.collapsedClassName] = this._disabled;
+    }
+    get collapse() {
+        return this._collapse;
+    }
+    set collapse(value) {
+        const previousValue = this.collapse;
+        this._collapse = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceBooleanProperty"])(value);
+        this.elementClasses[this.collapsedClassName] = this._collapse;
+        if (this._collapse) {
+            setTimeout(() => {
+                this.open.emit();
+            }, this.openAnimationDuration);
+        }
+        else {
+            // Prevent close event emitting on initialisation when falsy value is set
+            if (previousValue) {
+                setTimeout(() => {
+                    this.close.emit();
+                }, this.closeAnimationDuration);
+            }
+        }
+    }
+    ;
+    onClick() {
+        if (this.config.collapseOnClick && !this.disabled) {
+            this.collapse = !this.collapse;
+        }
+    }
+    onHeaderClick() {
+        if (this.config.collapseOnHeaderClick && !this.config.collapseOnClick && !this.disabled) {
+            this.collapse = !this.collapse;
+        }
+    }
+    onFooterClick() {
+        if (this.config.collapseOnFooterClick && !this.config.collapseOnClick && !this.disabled) {
+            this.collapse = !this.collapse;
+        }
+    }
+    setChildElementsClasses(flag = true) {
+        this.headerClasses[this.componentNamer.generateClassName(this.elementName, this.headerName)] = flag;
+        this.contentClasses[this.componentNamer.generateClassName(this.elementName, this.contentName)] = flag;
+        this.footerClasses[this.componentNamer.generateClassName(this.elementName, this.footerName)] = flag;
+    }
+    ngOnInit() {
+        super.ngOnInit();
+        this.setChildElementsClasses();
+        /** If `this.collapse` wasn't set through attribute — set it automatically. */
+        if (this.collapse === undefined) {
+            this.collapse = this.collapsedOnInit;
+        }
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean)
+], PureCollapse.prototype, "collapsedOnInit", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChild"])(_collapse_header__WEBPACK_IMPORTED_MODULE_2__["PureCollapseHeader"]),
+    __metadata("design:type", _collapse_header__WEBPACK_IMPORTED_MODULE_2__["PureCollapseHeader"])
+], PureCollapse.prototype, "headerChild", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChild"])(_collapse_footer__WEBPACK_IMPORTED_MODULE_3__["PureCollapseFooter"]),
+    __metadata("design:type", _collapse_footer__WEBPACK_IMPORTED_MODULE_3__["PureCollapseFooter"])
+], PureCollapse.prototype, "footerChild", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+], PureCollapse.prototype, "open", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+], PureCollapse.prototype, "close", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Number)
+], PureCollapse.prototype, "openAnimationDuration", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Number)
+], PureCollapse.prototype, "closeAnimationDuration", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureCollapse.prototype, "disabled", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureCollapse.prototype, "collapse", null);
+PureCollapse = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'pure-collapse',
+        template: `
+    <div 
+      [ngClass]="elementClasses"
+      (click)="onClick()">
+
+      <div
+        *ngIf="headerChild"
+        [ngClass]="headerClasses"
+        (click)="onHeaderClick()">
+
+        <ng-content 
+          select="[pureCollapseHeader]">
+         </ng-content>
+      </div>
+
+      <div 
+        [ngClass]="contentClasses">
+        <ng-content></ng-content>
+      </div>
+      
+      <div
+        *ngIf="footerChild"
+        [ngClass]="footerClasses"
+        (click)="onFooterClick()">
+
+        <ng-content 
+          select="[pureCollapseFooter]">
+         </ng-content>
+      </div>
+    </div>
+  `
+    }),
+    __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_collapse_config_token__WEBPACK_IMPORTED_MODULE_5__["PureCollapseConfigToken"])),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
+        _core__WEBPACK_IMPORTED_MODULE_1__["ComponentNamer"], Object])
+], PureCollapse);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/collapse/collapse.module.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/collapse/collapse.module.js ***!
+  \*********************************************************************/
+/*! exports provided: PureCollapseModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureCollapseModule", function() { return PureCollapseModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _collapse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./collapse */ "./node_modules/pure-elements/dist/collapse/collapse.js");
+/* harmony import */ var _collapse_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./collapse-header */ "./node_modules/pure-elements/dist/collapse/collapse-header.js");
+/* harmony import */ var _collapse_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./collapse-footer */ "./node_modules/pure-elements/dist/collapse/collapse-footer.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+let PureCollapseModule = class PureCollapseModule {
+};
+PureCollapseModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _core__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerModule"].forRoot()],
+        declarations: [_collapse__WEBPACK_IMPORTED_MODULE_3__["PureCollapse"], _collapse_header__WEBPACK_IMPORTED_MODULE_4__["PureCollapseHeader"], _collapse_footer__WEBPACK_IMPORTED_MODULE_5__["PureCollapseFooter"]],
+        exports: [_collapse__WEBPACK_IMPORTED_MODULE_3__["PureCollapse"], _collapse_header__WEBPACK_IMPORTED_MODULE_4__["PureCollapseHeader"], _collapse_footer__WEBPACK_IMPORTED_MODULE_5__["PureCollapseFooter"]]
+    })
+], PureCollapseModule);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/collapse/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/collapse/index.js ***!
+  \***********************************************************/
+/*! exports provided: PureCollapseModule, PureCollapse, PureCollapseHeader, PureCollapseFooter */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/collapse/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapseModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureCollapseModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapse", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureCollapse"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapseHeader", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureCollapseHeader"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapseFooter", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureCollapseFooter"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/collapse/public-api.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/collapse/public-api.js ***!
+  \****************************************************************/
+/*! exports provided: PureCollapseModule, PureCollapse, PureCollapseHeader, PureCollapseFooter */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _collapse_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./collapse.module */ "./node_modules/pure-elements/dist/collapse/collapse.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapseModule", function() { return _collapse_module__WEBPACK_IMPORTED_MODULE_0__["PureCollapseModule"]; });
+
+/* harmony import */ var _collapse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./collapse */ "./node_modules/pure-elements/dist/collapse/collapse.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapse", function() { return _collapse__WEBPACK_IMPORTED_MODULE_1__["PureCollapse"]; });
+
+/* harmony import */ var _collapse_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./collapse-header */ "./node_modules/pure-elements/dist/collapse/collapse-header.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapseHeader", function() { return _collapse_header__WEBPACK_IMPORTED_MODULE_2__["PureCollapseHeader"]; });
+
+/* harmony import */ var _collapse_footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./collapse-footer */ "./node_modules/pure-elements/dist/collapse/collapse-footer.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapseFooter", function() { return _collapse_footer__WEBPACK_IMPORTED_MODULE_3__["PureCollapseFooter"]; });
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/coercion/boolean.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/coercion/boolean.js ***!
+  \******************************************************************/
+/*! exports provided: coerceBooleanProperty */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "coerceBooleanProperty", function() { return coerceBooleanProperty; });
+/** Coerces a data-bound value (typically a string) to a boolean. */
+function coerceBooleanProperty(value) {
+    return value != null && `${value}` !== 'false';
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/coercion/index.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/coercion/index.js ***!
+  \****************************************************************/
+/*! exports provided: coerceBooleanProperty, coerceModelValue */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _boolean__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./boolean */ "./node_modules/pure-elements/dist/core/coercion/boolean.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceBooleanProperty", function() { return _boolean__WEBPACK_IMPORTED_MODULE_0__["coerceBooleanProperty"]; });
+
+/* harmony import */ var _model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model */ "./node_modules/pure-elements/dist/core/coercion/model.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceModelValue", function() { return _model__WEBPACK_IMPORTED_MODULE_1__["coerceModelValue"]; });
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/coercion/model.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/coercion/model.js ***!
+  \****************************************************************/
+/*! exports provided: coerceModelValue */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "coerceModelValue", function() { return coerceModelValue; });
+/** Coerces a form model value to a string. */
+function coerceModelValue(value) {
+    switch (typeof value) {
+        case 'string':
+            break;
+        case 'number':
+            if (Number.isNaN(value)) {
+                value = '';
+            }
+            else {
+                value = '' + value;
+            }
+            break;
+        case 'boolean':
+            value = String(value);
+            break;
+        default:
+            value = '';
+    }
+    return value;
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/common-behaviors/index.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/common-behaviors/index.js ***!
+  \************************************************************************/
+/*! exports provided: PureComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _pure_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pure-component */ "./node_modules/pure-elements/dist/core/common-behaviors/pure-component.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureComponent", function() { return _pure_component__WEBPACK_IMPORTED_MODULE_0__["PureComponent"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/common-behaviors/pure-component.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/common-behaviors/pure-component.js ***!
+  \*********************************************************************************/
+/*! exports provided: PureComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureComponent", function() { return PureComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+class PureComponent {
+    constructor(elementRef, componentNamer) {
+        this.elementRef = elementRef;
+        this.componentNamer = componentNamer;
+        this.isInitialised = false;
+        this.elementClasses = {};
+    }
+    get extraClass() {
+        return this._extraClass;
+    }
+    set extraClass(value) {
+        this._extraClass = value;
+        if (value) {
+            let extraClasses = value.split(' ');
+            extraClasses.forEach((extraClass) => {
+                if (extraClass) {
+                    this.elementClasses[extraClass] = true;
+                }
+                ;
+            });
+        }
+        ;
+    }
+    get theme() {
+        return this._theme;
+    }
+    set theme(value) {
+        this._theme = value;
+        if (value) {
+            let themes = value.split(' ');
+            themes.forEach((theme) => {
+                if (theme) {
+                    this.elementClasses[this.componentNamer.generateClassName(this.elementName, '', theme)] = true;
+                }
+                ;
+            });
+        }
+        ;
+    }
+    setElClasses(flag = true) {
+        this.elementClasses[this.componentNamer.generateClassName(this.elementName)] = flag;
+    }
+    ngOnInit() {
+        this.isInitialised = true;
+        this.setElClasses();
+    }
+}
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String),
+    __metadata("design:paramtypes", [String])
+], PureComponent.prototype, "extraClass", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String),
+    __metadata("design:paramtypes", [String])
+], PureComponent.prototype, "theme", null);
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/component-namer/component-namer-config-token.js":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/component-namer/component-namer-config-token.js ***!
+  \**********************************************************************************************/
+/*! exports provided: ComponentNamerConfigToken */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComponentNamerConfigToken", function() { return ComponentNamerConfigToken; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+const ComponentNamerConfigToken = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]("ComponentNamerConfig");
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/component-namer/component-namer-config.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/component-namer/component-namer-config.js ***!
+  \****************************************************************************************/
+/*! exports provided: ComponentNamerDefaultConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComponentNamerDefaultConfig", function() { return ComponentNamerDefaultConfig; });
+/**
+ * Use BEM class names by default. See more about BEM at http://getbem.com.
+ *
+ * Class name example using options below:
+ *   '.c-pure-modal-window__content--sm'.
+ */
+const ComponentNamerDefaultConfig = {
+    classPrefix: 'c',
+    classPrefixDelimiter: '-',
+    blockNamePrefix: 'pure',
+    blockNamePrefixDelimiter: '-',
+    elementDelimiter: '__',
+    modificatorDelimiter: '--',
+    namingConvention: 'kebab',
+    idDelimiter: '-'
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/component-namer/component-namer.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/component-namer/component-namer.js ***!
+  \*********************************************************************************/
+/*! exports provided: ComponentNamer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComponentNamer", function() { return ComponentNamer; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _string_formatter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../string-formatter */ "./node_modules/pure-elements/dist/core/string-formatter/index.js");
+/* harmony import */ var _component_namer_config_token__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component-namer-config-token */ "./node_modules/pure-elements/dist/core/component-namer/component-namer-config-token.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+let ComponentNamer = class ComponentNamer {
+    constructor(config, stringFormatter) {
+        this.config = config;
+        this.stringFormatter = stringFormatter;
+    }
+    /**
+     * Generate class name for component.
+     *
+     * @param blockName       Name of component block — e.g: 'Textfield',
+     *                        'Modal Window'.
+     * @param elementName     Name of element of component block — e.g:
+     *                        'Input', 'Content' (optional).
+     * @param modificatorName Name of component modification — e.g:
+     *                        'Dark', 'Small' (optional).
+     *
+     * Working example:
+     *
+     * 1) Case config.namingConvention === 'kebab':
+     *    generateClassName('Modal Window') => 'c-pure-modal-window'
+     *    generateClassName('Modal Window', 'Content', 'Extra Wide') => 'c-pure-modal-window__content--extra-wide'
+     *
+     * 2) Case config.namingConvention === 'camel':
+     *    generateClassName('Modal Window', '', 'Extra Wide') => 'c-pure-modalWindow--extraWide'
+     *    generateClassName('modal-window', 'content', 'extra-wide') => 'c-pure-modalWindow__content--extraWide'
+     */
+    generateClassName(blockName, elementName, modificatorName) {
+        blockName = this.formatNamePart(blockName);
+        elementName = elementName ? this.formatNamePart(elementName) : '';
+        modificatorName = modificatorName ? this.formatNamePart(modificatorName) : '';
+        return (this.config.classPrefix ? this.config.classPrefix + this.config.classPrefixDelimiter : '') +
+            (this.config.blockNamePrefix ? this.config.blockNamePrefix + this.config.blockNamePrefixDelimiter : '') +
+            (blockName) +
+            (elementName ? this.config.elementDelimiter + elementName : '') +
+            (modificatorName ? this.config.modificatorDelimiter + modificatorName : '');
+    }
+    /**
+     * Generate ID name for component.
+     *
+     * @param count           Count of component — e.g. 1, 2, 3. Made to
+     *                        avoid IDs duplications.
+     * @param blockName       Name of component block — e.g: 'Textfield',
+     *                        'Modal Window' (optional).
+     * @param elementName     Name of element of component block — e.g:
+     *                        'Input', 'Content' (optional).
+     */
+    generateId(count, blockName, elementName) {
+        blockName = blockName ? this.formatNamePart(blockName) : '';
+        elementName = elementName ? this.formatNamePart(elementName) : '';
+        return (blockName ? (blockName + this.config.idDelimiter) : '') +
+            (elementName ? (elementName + this.config.idDelimiter) : '') +
+            (String(count));
+    }
+    formatNamePart(namePart) {
+        let namePartConverted;
+        switch (this.config.namingConvention) {
+            case 'kebab':
+                namePartConverted = this.stringFormatter.toKebabCase(namePart);
+                break;
+            case 'camel':
+                namePartConverted = this.stringFormatter.toCamelCase(namePart);
+                break;
+            default:
+                namePartConverted = namePart;
+                break;
+        }
+        return namePartConverted;
+    }
+};
+ComponentNamer = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+    }),
+    __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_component_namer_config_token__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerConfigToken"])),
+    __metadata("design:paramtypes", [Object, _string_formatter__WEBPACK_IMPORTED_MODULE_1__["StringFormatter"]])
+], ComponentNamer);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/component-namer/component-namer.module.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/component-namer/component-namer.module.js ***!
+  \****************************************************************************************/
+/*! exports provided: ComponentNamerModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComponentNamerModule", function() { return ComponentNamerModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _component_namer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./component-namer */ "./node_modules/pure-elements/dist/core/component-namer/component-namer.js");
+/* harmony import */ var _component_namer_config_token__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component-namer-config-token */ "./node_modules/pure-elements/dist/core/component-namer/component-namer-config-token.js");
+/* harmony import */ var _component_namer_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component-namer-config */ "./node_modules/pure-elements/dist/core/component-namer/component-namer-config.js");
+/* harmony import */ var _string_formatter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../string-formatter */ "./node_modules/pure-elements/dist/core/string-formatter/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var ComponentNamerModule_1;
+
+
+
+
+
+let ComponentNamerModule = ComponentNamerModule_1 = class ComponentNamerModule {
+    static forRoot(componentNamerConfig = {}) {
+        const finalConfig = Object.assign(_component_namer_config__WEBPACK_IMPORTED_MODULE_3__["ComponentNamerDefaultConfig"], componentNamerConfig);
+        return {
+            ngModule: ComponentNamerModule_1,
+            providers: [
+                _string_formatter__WEBPACK_IMPORTED_MODULE_4__["StringFormatter"],
+                _component_namer__WEBPACK_IMPORTED_MODULE_1__["ComponentNamer"],
+                {
+                    provide: _component_namer_config_token__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerConfigToken"],
+                    useValue: finalConfig
+                }
+            ]
+        };
+    }
+};
+ComponentNamerModule = ComponentNamerModule_1 = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])()
+], ComponentNamerModule);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/component-namer/index.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/component-namer/index.js ***!
+  \***********************************************************************/
+/*! exports provided: ComponentNamer, ComponentNamerConfigToken, ComponentNamerDefaultConfig, ComponentNamerModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _component_namer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./component-namer */ "./node_modules/pure-elements/dist/core/component-namer/component-namer.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentNamer", function() { return _component_namer__WEBPACK_IMPORTED_MODULE_0__["ComponentNamer"]; });
+
+/* harmony import */ var _component_namer_config_token__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./component-namer-config-token */ "./node_modules/pure-elements/dist/core/component-namer/component-namer-config-token.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentNamerConfigToken", function() { return _component_namer_config_token__WEBPACK_IMPORTED_MODULE_1__["ComponentNamerConfigToken"]; });
+
+/* harmony import */ var _component_namer_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component-namer-config */ "./node_modules/pure-elements/dist/core/component-namer/component-namer-config.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentNamerDefaultConfig", function() { return _component_namer_config__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerDefaultConfig"]; });
+
+/* harmony import */ var _component_namer_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component-namer.module */ "./node_modules/pure-elements/dist/core/component-namer/component-namer.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentNamerModule", function() { return _component_namer_module__WEBPACK_IMPORTED_MODULE_3__["ComponentNamerModule"]; });
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/event-handler/event-handler.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/event-handler/event-handler.js ***!
+  \*****************************************************************************/
+/*! exports provided: EventHandler */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventHandler", function() { return EventHandler; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Represents a service that controls all global events (`document`, `window`)
+ * that Pure components need to use. Made with aim to avoid double listeners
+ * for the same event (e.g. page contains several tooltips that need to listen
+ * for `keydown` method) and thus increasing overall performance.
+ *
+ * Example usage:
+ *
+ *   this.eventHandler.onKeydown().subscribe(
+ *     (event: KeyboardEvent) => this.onKeydown(event),
+ *     (err) => this.eventHandler.handleErrorFromSubscriber(err)
+ *   )
+ *
+ * Don't forget to unsubscribe on component destroy.
+ */
+let EventHandler = class EventHandler {
+    constructor() {
+        this.keydown$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(document, 'keydown');
+    }
+    handleErrorFromSubscriber(err) {
+        console.error(err);
+    }
+    onKeydown() {
+        return this.keydown$;
+    }
+};
+EventHandler = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+    __metadata("design:paramtypes", [])
+], EventHandler);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/event-handler/index.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/event-handler/index.js ***!
+  \*********************************************************************/
+/*! exports provided: EventHandler */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _event_handler__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./event-handler */ "./node_modules/pure-elements/dist/core/event-handler/event-handler.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EventHandler", function() { return _event_handler__WEBPACK_IMPORTED_MODULE_0__["EventHandler"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/index.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/index.js ***!
+  \*******************************************************/
+/*! exports provided: coerceBooleanProperty, coerceModelValue, PureComponent, ComponentNamer, ComponentNamerConfigToken, ComponentNamerDefaultConfig, ComponentNamerModule, KEY_CODES, EventHandler, StringFormatter */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/core/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceBooleanProperty", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["coerceBooleanProperty"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceModelValue", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["coerceModelValue"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureComponent", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureComponent"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentNamer", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["ComponentNamer"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentNamerConfigToken", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["ComponentNamerConfigToken"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentNamerDefaultConfig", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["ComponentNamerDefaultConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentNamerModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["ComponentNamerModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "KEY_CODES", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["KEY_CODES"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EventHandler", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["EventHandler"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StringFormatter", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["StringFormatter"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/keycodes/index.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/keycodes/index.js ***!
+  \****************************************************************/
+/*! exports provided: KEY_CODES */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _keycodes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./keycodes */ "./node_modules/pure-elements/dist/core/keycodes/keycodes.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "KEY_CODES", function() { return _keycodes__WEBPACK_IMPORTED_MODULE_0__["KEY_CODES"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/keycodes/keycodes.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/keycodes/keycodes.js ***!
+  \*******************************************************************/
+/*! exports provided: KEY_CODES */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KEY_CODES", function() { return KEY_CODES; });
+const KEY_CODES = {
+    MAC_ENTER: 3,
+    ENTER: 13,
+    BACKSPACE: 8,
+    TAB: 9,
+    ESCAPE: 27,
+    SPACE: 32,
+    SHIFT: 16,
+    CONTROL: 17,
+    ALT: 18,
+    DELETE: 46,
+    LEFT_ARROW: 37,
+    UP_ARROW: 38,
+    RIGHT_ARROW: 39,
+    DOWN_ARROW: 40
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/public-api.js":
+/*!************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/public-api.js ***!
+  \************************************************************/
+/*! exports provided: coerceBooleanProperty, coerceModelValue, PureComponent, ComponentNamer, ComponentNamerConfigToken, ComponentNamerDefaultConfig, ComponentNamerModule, KEY_CODES, EventHandler, StringFormatter */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _coercion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./coercion */ "./node_modules/pure-elements/dist/core/coercion/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceBooleanProperty", function() { return _coercion__WEBPACK_IMPORTED_MODULE_0__["coerceBooleanProperty"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceModelValue", function() { return _coercion__WEBPACK_IMPORTED_MODULE_0__["coerceModelValue"]; });
+
+/* harmony import */ var _common_behaviors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./common-behaviors */ "./node_modules/pure-elements/dist/core/common-behaviors/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureComponent", function() { return _common_behaviors__WEBPACK_IMPORTED_MODULE_1__["PureComponent"]; });
+
+/* harmony import */ var _component_namer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component-namer */ "./node_modules/pure-elements/dist/core/component-namer/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentNamer", function() { return _component_namer__WEBPACK_IMPORTED_MODULE_2__["ComponentNamer"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentNamerConfigToken", function() { return _component_namer__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerConfigToken"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentNamerDefaultConfig", function() { return _component_namer__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerDefaultConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentNamerModule", function() { return _component_namer__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerModule"]; });
+
+/* harmony import */ var _keycodes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./keycodes */ "./node_modules/pure-elements/dist/core/keycodes/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "KEY_CODES", function() { return _keycodes__WEBPACK_IMPORTED_MODULE_3__["KEY_CODES"]; });
+
+/* harmony import */ var _event_handler__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./event-handler */ "./node_modules/pure-elements/dist/core/event-handler/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EventHandler", function() { return _event_handler__WEBPACK_IMPORTED_MODULE_4__["EventHandler"]; });
+
+/* harmony import */ var _string_formatter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./string-formatter */ "./node_modules/pure-elements/dist/core/string-formatter/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StringFormatter", function() { return _string_formatter__WEBPACK_IMPORTED_MODULE_5__["StringFormatter"]; });
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/string-formatter/index.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/string-formatter/index.js ***!
+  \************************************************************************/
+/*! exports provided: StringFormatter */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _string_formatter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./string-formatter */ "./node_modules/pure-elements/dist/core/string-formatter/string-formatter.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StringFormatter", function() { return _string_formatter__WEBPACK_IMPORTED_MODULE_0__["StringFormatter"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/core/string-formatter/string-formatter.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/string-formatter/string-formatter.js ***!
+  \***********************************************************************************/
+/*! exports provided: StringFormatter */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StringFormatter", function() { return StringFormatter; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+let StringFormatter = class StringFormatter {
+    toKebabCase(str) {
+        return str.toLowerCase().replace(/ /g, '-');
+    }
+    toCamelCase(str) {
+        let wordsArr = [], index = 0, strConverted = '';
+        if (!str) {
+            return str;
+        }
+        str = str.replace('-', ' ');
+        wordsArr = str.split(' ');
+        wordsArr.forEach((word) => {
+            let wordArr = word.split('');
+            if (index > 0) {
+                wordArr[0] = wordArr[0].toUpperCase();
+            }
+            else {
+                wordArr[0] = wordArr[0].toLowerCase();
+            }
+            strConverted += wordArr.join('');
+            index++;
+        });
+        return strConverted;
+    }
+};
+StringFormatter = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])()
+], StringFormatter);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/dropdown/dropdown-item.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/dropdown/dropdown-item.js ***!
+  \*******************************************************************/
+/*! exports provided: PureDropdownItem */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureDropdownItem", function() { return PureDropdownItem; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+let PureDropdownItem = class PureDropdownItem extends _core__WEBPACK_IMPORTED_MODULE_2__["PureComponent"] {
+    constructor(elementRef, componentNamer) {
+        super(elementRef, componentNamer);
+        this.elementRef = elementRef;
+        this.componentNamer = componentNamer;
+        this.elementName = 'Dropdown Item';
+        this._disabled = false;
+        this._focused = false;
+        this.onClickChanges = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
+        this.onMousedownChanges = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
+        this.disabledClassName = this.componentNamer.generateClassName(this.elementName, '', 'disabled');
+        this.focusedClassName = this.componentNamer.generateClassName(this.elementName, '', 'focused');
+    }
+    get disabled() {
+        return this._disabled;
+    }
+    set disabled(value) {
+        this._disabled = Object(_core__WEBPACK_IMPORTED_MODULE_2__["coerceBooleanProperty"])(value);
+        this.elementClasses[this.disabledClassName] = this._disabled;
+    }
+    get focused() {
+        return this._focused;
+    }
+    set focused(value) {
+        this._focused = Object(_core__WEBPACK_IMPORTED_MODULE_2__["coerceBooleanProperty"])(value);
+        this.elementClasses[this.focusedClassName] = this._focused;
+    }
+    onClick(event) {
+        if (this.disabled) {
+            event.preventDefault();
+            event.stopPropagation();
+            return;
+        }
+        this.onClickChanges.next();
+    }
+    onMousedown(event) {
+        if (this.disabled) {
+            event.preventDefault();
+            event.stopPropagation();
+            return;
+        }
+        this.onMousedownChanges.next();
+    }
+    /** Performs the same action as on mouse click. */
+    click() {
+        this.elementRef.nativeElement.click();
+    }
+    ngOnInit() {
+        super.ngOnInit();
+    }
+    ngOnDestroy() {
+        this.onClickChanges.complete();
+        this.onMousedownChanges.complete();
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('pureDropdownItemDisabled'),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Boolean])
+], PureDropdownItem.prototype, "disabled", null);
+PureDropdownItem = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: '[pureDropdownItem]',
+        template: `
+    <div [ngClass]="elementClasses" 
+         (click)="onClick($event)" 
+         (mousedown)="onMousedown($event)">
+      <ng-content></ng-content>
+    </div>
+  `,
+        host: {
+            'attr.disabled': 'disabled'
+        }
+    }),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
+        _core__WEBPACK_IMPORTED_MODULE_2__["ComponentNamer"]])
+], PureDropdownItem);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/dropdown/dropdown-trigger.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/dropdown/dropdown-trigger.js ***!
+  \**********************************************************************/
+/*! exports provided: PureDropdownTrigger */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureDropdownTrigger", function() { return PureDropdownTrigger; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dropdown */ "./node_modules/pure-elements/dist/dropdown/dropdown.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+let PureDropdownTrigger = class PureDropdownTrigger {
+    constructor() {
+        this.isOpened = false;
+    }
+    onClick() {
+        this.openMenu();
+    }
+    onKeydown(event) {
+        if (event.which === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].ESCAPE && this.isOpened) {
+            this.closeMenu();
+        }
+    }
+    openMenu() {
+        this.menu.show = true;
+        this.isOpened = true;
+    }
+    closeMenu() {
+        this.menu.show = false;
+        this.isOpened = false;
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('pureDropdownTriggerFor'),
+    __metadata("design:type", _dropdown__WEBPACK_IMPORTED_MODULE_2__["PureDropdown"])
+], PureDropdownTrigger.prototype, "menu", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('document:keydown', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [KeyboardEvent]),
+    __metadata("design:returntype", void 0)
+], PureDropdownTrigger.prototype, "onKeydown", null);
+PureDropdownTrigger = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({
+        selector: '[pureDropdownTriggerFor]',
+        host: {
+            '(click)': 'onClick($event)'
+        },
+        exportAs: 'pureDropdownTrigger'
+    })
+], PureDropdownTrigger);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/dropdown/dropdown.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/dropdown/dropdown.js ***!
+  \**************************************************************/
+/*! exports provided: PureDropdown */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureDropdown", function() { return PureDropdown; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _dropdown_item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dropdown-item */ "./node_modules/pure-elements/dist/dropdown/dropdown-item.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+let PureDropdown = class PureDropdown extends _core__WEBPACK_IMPORTED_MODULE_1__["PureComponent"] {
+    constructor(elementRef, componentNamer) {
+        super(elementRef, componentNamer);
+        this.elementRef = elementRef;
+        this.componentNamer = componentNamer;
+        this.elementName = 'Dropdown';
+        this.backdropName = 'Backdrop';
+        this.menuName = 'Menu';
+        this.appendixName = 'Appendix';
+        this.backdropClasses = {};
+        this.menuClasses = {};
+        this.appendixClasses = {};
+        this.focusedItemNumber = 0;
+        this._show = false;
+        this.shownClassName = this.componentNamer.generateClassName(this.elementName, '', 'shown');
+        this.yPosition = 'below';
+        this.xPosition = 'after';
+    }
+    get yPosition() {
+        return this._yPosition;
+    }
+    set yPosition(value) {
+        this._yPosition = value;
+        this.menuClasses[this._yPositionClassname] = false;
+        this._yPositionClassname = this.componentNamer.generateClassName(this.elementName, this.menuName, this._yPosition);
+        this.menuClasses[this._yPositionClassname] = true;
+    }
+    get xPosition() {
+        return this._xPosition;
+    }
+    set xPosition(value) {
+        this._xPosition = value;
+        this.menuClasses[this._xPositionClassname] = false;
+        this._xPositionClassname = this.componentNamer.generateClassName(this.elementName, this.menuName, this._xPosition);
+        this.menuClasses[this._xPositionClassname] = true;
+    }
+    get show() {
+        return this._show;
+    }
+    set show(value) {
+        this._show = value;
+        this.elementClasses[this.shownClassName] = this._show;
+        if (this._show) {
+            this.setItemFocus(this.focusedItemNumber);
+        }
+    }
+    onBackdropClick() {
+        this.show = false;
+    }
+    onDocumentKeyup(event) {
+        if (this.show) {
+            event.preventDefault();
+            event.stopPropagation();
+            if (event.which === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].DOWN_ARROW) {
+                this.setItemFocus(++this.focusedItemNumber, 'down');
+            }
+            else if (event.which === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].UP_ARROW) {
+                this.setItemFocus(--this.focusedItemNumber, 'up');
+            }
+            if (event.which === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].SPACE || event.which === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].ENTER) {
+                this.clickItem(this.focusedItemNumber);
+            }
+        }
+    }
+    /**
+     * Unfocuses all items and sets focus to the given one. 'Direction' argument
+     * specifies which item to focus next in case specified item is disabled.
+     */
+    setItemFocus(item, direction = 'down') {
+        const itemsArray = this.items.toArray();
+        let itemNumber;
+        if (typeof item !== 'number') {
+            itemNumber = itemsArray.indexOf(item);
+        }
+        else {
+            itemNumber = item;
+        }
+        if (itemNumber > itemsArray.length - 1)
+            itemNumber = 0;
+        if (itemNumber < 0)
+            itemNumber = itemsArray.length - 1;
+        this.unfocusItems();
+        if (!itemsArray[itemNumber].disabled) {
+            itemsArray[itemNumber].focused = true;
+        }
+        else {
+            if (direction === 'up') {
+                this.setItemFocus(--itemNumber, direction);
+            }
+            else {
+                this.setItemFocus(++itemNumber, direction);
+            }
+            return;
+        }
+        this.focusedItemNumber = itemNumber;
+    }
+    clickItem(item) {
+        if (this.show) {
+            const itemsArray = this.items.toArray();
+            let itemNumber;
+            if (typeof item !== 'number') {
+                itemNumber = itemsArray.indexOf(item);
+            }
+            else {
+                itemNumber = item;
+            }
+            itemsArray[itemNumber].click();
+            this.show = false;
+        }
+    }
+    unfocusItems() {
+        const itemsArray = this.items.toArray();
+        for (const item of itemsArray) {
+            item.focused = false;
+        }
+    }
+    setInnerElementsClasses(flag = true) {
+        this.backdropClasses[this.componentNamer.generateClassName(this.elementName, this.backdropName)] = flag;
+        this.menuClasses[this.componentNamer.generateClassName(this.elementName, this.menuName)] = flag;
+        this.appendixClasses[this.componentNamer.generateClassName(this.elementName, this.appendixName)] = flag;
+    }
+    ngOnInit() {
+        super.ngOnInit();
+        this.setInnerElementsClasses();
+    }
+    ngAfterContentInit() {
+        this.items.forEach((item) => {
+            /** Close menu on item click. */
+            item.onClickChanges.subscribe(() => {
+                this.show = false;
+            });
+            /** Focus item on mousedown. */
+            item.onMousedownChanges.subscribe(() => {
+                this.setItemFocus(item);
+            });
+        });
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChildren"])(_dropdown_item__WEBPACK_IMPORTED_MODULE_2__["PureDropdownItem"]),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["QueryList"])
+], PureDropdown.prototype, "items", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String),
+    __metadata("design:paramtypes", [String])
+], PureDropdown.prototype, "yPosition", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String),
+    __metadata("design:paramtypes", [String])
+], PureDropdown.prototype, "xPosition", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('document:keydown', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [KeyboardEvent]),
+    __metadata("design:returntype", void 0)
+], PureDropdown.prototype, "onDocumentKeyup", null);
+PureDropdown = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'pure-dropdown',
+        template: `
+    <div [ngClass]="elementClasses">
+      <div [ngClass]="backdropClasses" (click)="onBackdropClick()"></div>
+
+      <div [ngClass]="menuClasses">
+        <ng-content select="[pureDropdownItem]"></ng-content>
+        <span [ngClass]="appendixClasses"></span>
+      </div>
+    </div>
+  `,
+        exportAs: 'pureDropdown'
+    }),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
+        _core__WEBPACK_IMPORTED_MODULE_1__["ComponentNamer"]])
+], PureDropdown);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/dropdown/dropdown.module.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/dropdown/dropdown.module.js ***!
+  \*********************************************************************/
+/*! exports provided: PureDropdownModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureDropdownModule", function() { return PureDropdownModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dropdown */ "./node_modules/pure-elements/dist/dropdown/dropdown.js");
+/* harmony import */ var _dropdown_trigger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./dropdown-trigger */ "./node_modules/pure-elements/dist/dropdown/dropdown-trigger.js");
+/* harmony import */ var _dropdown_item__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dropdown-item */ "./node_modules/pure-elements/dist/dropdown/dropdown-item.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+let PureDropdownModule = class PureDropdownModule {
+};
+PureDropdownModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _core__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerModule"].forRoot()],
+        declarations: [_dropdown__WEBPACK_IMPORTED_MODULE_3__["PureDropdown"], _dropdown_trigger__WEBPACK_IMPORTED_MODULE_4__["PureDropdownTrigger"], _dropdown_item__WEBPACK_IMPORTED_MODULE_5__["PureDropdownItem"]],
+        exports: [_dropdown__WEBPACK_IMPORTED_MODULE_3__["PureDropdown"], _dropdown_trigger__WEBPACK_IMPORTED_MODULE_4__["PureDropdownTrigger"], _dropdown_item__WEBPACK_IMPORTED_MODULE_5__["PureDropdownItem"]]
+    })
+], PureDropdownModule);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/dropdown/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/dropdown/index.js ***!
+  \***********************************************************/
+/*! exports provided: PureDropdown, PureDropdownTrigger, PureDropdownItem, PureDropdownModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/dropdown/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdown", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureDropdown"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdownTrigger", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureDropdownTrigger"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdownItem", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureDropdownItem"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdownModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureDropdownModule"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/dropdown/public-api.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/dropdown/public-api.js ***!
+  \****************************************************************/
+/*! exports provided: PureDropdown, PureDropdownTrigger, PureDropdownItem, PureDropdownModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dropdown */ "./node_modules/pure-elements/dist/dropdown/dropdown.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdown", function() { return _dropdown__WEBPACK_IMPORTED_MODULE_0__["PureDropdown"]; });
+
+/* harmony import */ var _dropdown_trigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dropdown-trigger */ "./node_modules/pure-elements/dist/dropdown/dropdown-trigger.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdownTrigger", function() { return _dropdown_trigger__WEBPACK_IMPORTED_MODULE_1__["PureDropdownTrigger"]; });
+
+/* harmony import */ var _dropdown_item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dropdown-item */ "./node_modules/pure-elements/dist/dropdown/dropdown-item.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdownItem", function() { return _dropdown_item__WEBPACK_IMPORTED_MODULE_2__["PureDropdownItem"]; });
+
+/* harmony import */ var _dropdown_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dropdown.module */ "./node_modules/pure-elements/dist/dropdown/dropdown.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdownModule", function() { return _dropdown_module__WEBPACK_IMPORTED_MODULE_3__["PureDropdownModule"]; });
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/form-control/form-control-config-token.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/form-control/form-control-config-token.js ***!
+  \***********************************************************************************/
+/*! exports provided: PureFormControlConfigToken */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureFormControlConfigToken", function() { return PureFormControlConfigToken; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+const PureFormControlConfigToken = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]("PureFormControlConfig");
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/form-control/form-control-config.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/form-control/form-control-config.js ***!
+  \*****************************************************************************/
+/*! exports provided: PureFormControlDefaultConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureFormControlDefaultConfig", function() { return PureFormControlDefaultConfig; });
+const PureFormControlDefaultConfig = {
+    asteriskPosition: 'label'
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/form-control/form-control.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/form-control/form-control.js ***!
+  \**********************************************************************/
+/*! exports provided: PureFormControl */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureFormControl", function() { return PureFormControl; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _form_control_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./form-control-config */ "./node_modules/pure-elements/dist/form-control/form-control-config.js");
+/* harmony import */ var _form_control_config_token__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./form-control-config-token */ "./node_modules/pure-elements/dist/form-control/form-control-config-token.js");
+/* harmony import */ var _label__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../label */ "./node_modules/pure-elements/dist/label/index.js");
+/* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../input */ "./node_modules/pure-elements/dist/input/index.js");
+/* harmony import */ var _prefix__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./prefix */ "./node_modules/pure-elements/dist/form-control/prefix.js");
+/* harmony import */ var _suffix__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./suffix */ "./node_modules/pure-elements/dist/form-control/suffix.js");
+/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../message */ "./node_modules/pure-elements/dist/message/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+
+
+
+
+let nextUniqueId = 0;
+let PureFormControl = class PureFormControl extends _core__WEBPACK_IMPORTED_MODULE_2__["PureComponent"] {
+    constructor(elementRef, componentNamer, config) {
+        super(elementRef, componentNamer);
+        this.elementRef = elementRef;
+        this.componentNamer = componentNamer;
+        this.config = config;
+        this.elementName = 'Form Control';
+        this.labelContainerName = 'Label Holder';
+        this.inputContainerName = 'Input Holder';
+        this.toggleName = 'Toggle';
+        this.prefixContainerName = 'Prefix Holder';
+        this.suffixContainerName = 'Suffix Holder';
+        this.messagesContainerName = 'Messages';
+        this.labelContainerClasses = {};
+        this.inputContainerClasses = {};
+        this.toggleClasses = {};
+        this.prefixContainerClasses = {};
+        this.suffixContainerClasses = {};
+        this.messageContainerClasses = {};
+        this.inputStateClasses = {
+            disabled: this.componentNamer.generateClassName(this.elementName, '', 'disabled'),
+            required: this.componentNamer.generateClassName(this.elementName, '', 'required'),
+            readonly: this.componentNamer.generateClassName(this.elementName, '', 'readonly'),
+            placeholder: this.componentNamer.generateClassName(this.elementName, '', 'has-placeholder'),
+            empty: this.componentNamer.generateClassName(this.elementName, '', 'empty'),
+            focused: this.componentNamer.generateClassName(this.elementName, '', 'focused')
+        };
+        this.formControlStateClasses = {
+            label: this.componentNamer.generateClassName(this.elementName, '', 'has-label'),
+            prefix: this.componentNamer.generateClassName(this.elementName, '', 'has-prefix'),
+            suffix: this.componentNamer.generateClassName(this.elementName, '', 'has-suffix'),
+            message: this.componentNamer.generateClassName(this.elementName, '', 'has-message')
+        };
+        const finalConfig = Object.assign({}, _form_control_config__WEBPACK_IMPORTED_MODULE_3__["PureFormControlDefaultConfig"], config);
+        this.applyConfig(finalConfig);
+    }
+    get label() {
+        return this._label;
+    }
+    ;
+    set label(value) {
+        const oldLabel = this.label;
+        this._label = String(value);
+        this.elementClasses[this.formControlStateClasses.label] = !!this._label;
+        if (!oldLabel && this._label) {
+            this.setIds();
+        }
+    }
+    updateInputStateClasses() {
+        this.elementClasses[this.inputStateClasses.empty] = this.inputChild.empty;
+        this.elementClasses[this.inputStateClasses.focused] = this.inputChild.focused;
+        this.elementClasses[this.inputStateClasses.disabled] = this.inputChild.disabled;
+        this.elementClasses[this.inputStateClasses.required] = this.inputChild.required;
+        this.elementClasses[this.inputStateClasses.readonly] = this.inputChild.readonly;
+        this.elementClasses[this.inputStateClasses.placeholder] = !!this.inputChild.placeholder;
+    }
+    setChildrenClasses(flag = true) {
+        this.labelContainerClasses[this.componentNamer.generateClassName(this.elementName, this.labelContainerName)] = flag;
+        this.inputContainerClasses[this.componentNamer.generateClassName(this.elementName, this.inputContainerName)] = flag;
+        this.toggleClasses[this.componentNamer.generateClassName(this.elementName, this.toggleName)] = flag;
+        this.prefixContainerClasses[this.componentNamer.generateClassName(this.elementName, this.prefixContainerName)] = flag;
+        this.suffixContainerClasses[this.componentNamer.generateClassName(this.elementName, this.suffixContainerName)] = flag;
+        this.messageContainerClasses[this.componentNamer.generateClassName(this.elementName, this.messagesContainerName)] = flag;
+    }
+    setStaticStateClasses() {
+        this.elementClasses[this.componentNamer.generateClassName(this.elementName, '', this.inputChild.nodeName)] = true;
+        this.elementClasses[this.componentNamer.generateClassName(this.elementName, '', this.inputChild.type)] = true;
+        this.elementClasses[this.formControlStateClasses.prefix] = this.prefixChildren.length > 0;
+        this.elementClasses[this.formControlStateClasses.suffix] = this.suffixChildren.length > 0;
+        this.elementClasses[this.formControlStateClasses.message] = this.messageChildren.length > 0;
+    }
+    applyConfig(config) {
+        for (let key in config) {
+            this[key] = config[key];
+        }
+    }
+    getId() {
+        // If PureInput has id — use it. Otherwise, generate new unique ID.
+        if (this.inputChild.id) {
+            return this.inputChild.id;
+        }
+        else {
+            return this.componentNamer.generateId(nextUniqueId++, this.elementName);
+        }
+    }
+    setIds() {
+        // Get ID from PureInput or generate one.
+        this.id = this.getId();
+        // Set ID in case PureInput doesn't have it.
+        if (this.inputChild.id !== this.id) {
+            this.inputChild.id = this.id;
+        }
+    }
+    ngOnInit() {
+        super.ngOnInit();
+        this.setChildrenClasses();
+    }
+    ngAfterContentInit() {
+        this.setStaticStateClasses();
+        if (this.label) {
+            this.setIds();
+        }
+        this.inputChild.stateChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["startWith"])(null)).subscribe(() => {
+            this.updateInputStateClasses();
+        });
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String),
+    __metadata("design:paramtypes", [Object])
+], PureFormControl.prototype, "label", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_label__WEBPACK_IMPORTED_MODULE_5__["PureLabel"]),
+    __metadata("design:type", _label__WEBPACK_IMPORTED_MODULE_5__["PureLabel"])
+], PureFormControl.prototype, "labelChild", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChild"])(_input__WEBPACK_IMPORTED_MODULE_6__["PureInput"]),
+    __metadata("design:type", _input__WEBPACK_IMPORTED_MODULE_6__["PureInput"])
+], PureFormControl.prototype, "inputChild", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChildren"])(_prefix__WEBPACK_IMPORTED_MODULE_7__["PurePrefix"]),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["QueryList"])
+], PureFormControl.prototype, "prefixChildren", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChildren"])(_suffix__WEBPACK_IMPORTED_MODULE_8__["PureSuffix"]),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["QueryList"])
+], PureFormControl.prototype, "suffixChildren", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChildren"])(_message__WEBPACK_IMPORTED_MODULE_9__["PureMessage"]),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["QueryList"])
+], PureFormControl.prototype, "messageChildren", void 0);
+PureFormControl = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'pure-form-control',
+        template: `
+    <div [ngClass]="elementClasses">
+
+      <pure-label 
+        *ngIf="label"
+        [for]="id"
+        [ngClass]="labelContainerClasses"
+        theme="form-control">
+        {{label}}
+
+        <ng-container *ngIf="inputChild.required && asteriskPosition === 'label'">
+          <ng-container *ngTemplateOutlet="asterisk"></ng-container>
+        </ng-container>
+      </pure-label>
+      
+
+      <div [ngClass]="inputContainerClasses">
+        <div *ngIf="prefixChildren.length" [ngClass]="prefixContainerClasses">
+          <ng-content select="[purePrefix]"></ng-content>
+        </div>
+
+        <ng-content select="[pureInput]"></ng-content>
+
+        <span *ngIf="inputChild.type === 'checkbox' || inputChild.type === 'radio'" [ngClass]="toggleClasses"></span>
+
+        <div *ngIf="suffixChildren.length" [ngClass]="suffixContainerClasses">
+          <ng-content select="[pureSuffix]"></ng-content>
+        </div>
+
+        <ng-container *ngIf="inputChild.required && asteriskPosition === 'input'">
+          <ng-container *ngTemplateOutlet="asterisk"></ng-container>
+        </ng-container>
+      </div>
+
+
+      <ng-container *ngIf="inputChild.required && asteriskPosition === 'parent'">
+        <ng-container *ngTemplateOutlet="asterisk"></ng-container>
+      </ng-container>
+
+      <div *ngIf="messageChildren.length" [ngClass]="messageContainerClasses">
+        <ng-content select="pure-message"></ng-content>
+      </div>
+    </div>
+
+
+    <ng-template #asterisk>
+      <pure-asterisk theme="form-control"></pure-asterisk>
+    </ng-template>
+`
+    }),
+    __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_form_control_config_token__WEBPACK_IMPORTED_MODULE_4__["PureFormControlConfigToken"])),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
+        _core__WEBPACK_IMPORTED_MODULE_2__["ComponentNamer"], Object])
+], PureFormControl);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/form-control/form-control.module.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/form-control/form-control.module.js ***!
+  \*****************************************************************************/
+/*! exports provided: PureFormControlModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureFormControlModule", function() { return PureFormControlModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _form_control__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./form-control */ "./node_modules/pure-elements/dist/form-control/form-control.js");
+/* harmony import */ var _prefix__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./prefix */ "./node_modules/pure-elements/dist/form-control/prefix.js");
+/* harmony import */ var _suffix__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./suffix */ "./node_modules/pure-elements/dist/form-control/suffix.js");
+/* harmony import */ var _asterisk_asterisk_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../asterisk/asterisk.module */ "./node_modules/pure-elements/dist/asterisk/asterisk.module.js");
+/* harmony import */ var _label_label_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../label/label.module */ "./node_modules/pure-elements/dist/label/label.module.js");
+/* harmony import */ var _message_message_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../message/message.module */ "./node_modules/pure-elements/dist/message/message.module.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+let PureFormControlModule = class PureFormControlModule {
+};
+PureFormControlModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        imports: [
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
+            _core__WEBPACK_IMPORTED_MODULE_3__["ComponentNamerModule"].forRoot(),
+            _asterisk_asterisk_module__WEBPACK_IMPORTED_MODULE_7__["PureAsteriskModule"],
+            _label_label_module__WEBPACK_IMPORTED_MODULE_8__["PureLabelModule"],
+            _message_message_module__WEBPACK_IMPORTED_MODULE_9__["PureMessageModule"]
+        ],
+        declarations: [_form_control__WEBPACK_IMPORTED_MODULE_4__["PureFormControl"], _prefix__WEBPACK_IMPORTED_MODULE_5__["PurePrefix"], _suffix__WEBPACK_IMPORTED_MODULE_6__["PureSuffix"]],
+        providers: [_core__WEBPACK_IMPORTED_MODULE_3__["StringFormatter"]],
+        exports: [_form_control__WEBPACK_IMPORTED_MODULE_4__["PureFormControl"], _prefix__WEBPACK_IMPORTED_MODULE_5__["PurePrefix"], _suffix__WEBPACK_IMPORTED_MODULE_6__["PureSuffix"]]
+    })
+], PureFormControlModule);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/form-control/index.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/form-control/index.js ***!
+  \***************************************************************/
+/*! exports provided: PureFormControlConfigToken, PureFormControlDefaultConfig, PureFormControlModule, PureFormControl, PurePrefix, PureSuffix */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/form-control/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlConfigToken", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureFormControlConfigToken"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlDefaultConfig", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureFormControlDefaultConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureFormControlModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControl", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureFormControl"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PurePrefix", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PurePrefix"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSuffix", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureSuffix"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/form-control/prefix.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/form-control/prefix.js ***!
+  \****************************************************************/
+/*! exports provided: PurePrefix */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PurePrefix", function() { return PurePrefix; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+/** Prefix to be placed at the beginning of the form control. */
+let PurePrefix = class PurePrefix {
+};
+PurePrefix = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({
+        selector: '[purePrefix]',
+    })
+], PurePrefix);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/form-control/public-api.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/form-control/public-api.js ***!
+  \********************************************************************/
+/*! exports provided: PureFormControlConfigToken, PureFormControlDefaultConfig, PureFormControlModule, PureFormControl, PurePrefix, PureSuffix */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _form_control_config_token__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-control-config-token */ "./node_modules/pure-elements/dist/form-control/form-control-config-token.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlConfigToken", function() { return _form_control_config_token__WEBPACK_IMPORTED_MODULE_0__["PureFormControlConfigToken"]; });
+
+/* harmony import */ var _form_control_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form-control-config */ "./node_modules/pure-elements/dist/form-control/form-control-config.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlDefaultConfig", function() { return _form_control_config__WEBPACK_IMPORTED_MODULE_1__["PureFormControlDefaultConfig"]; });
+
+/* harmony import */ var _form_control_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./form-control.module */ "./node_modules/pure-elements/dist/form-control/form-control.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlModule", function() { return _form_control_module__WEBPACK_IMPORTED_MODULE_2__["PureFormControlModule"]; });
+
+/* harmony import */ var _form_control__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./form-control */ "./node_modules/pure-elements/dist/form-control/form-control.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControl", function() { return _form_control__WEBPACK_IMPORTED_MODULE_3__["PureFormControl"]; });
+
+/* harmony import */ var _prefix__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./prefix */ "./node_modules/pure-elements/dist/form-control/prefix.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PurePrefix", function() { return _prefix__WEBPACK_IMPORTED_MODULE_4__["PurePrefix"]; });
+
+/* harmony import */ var _suffix__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./suffix */ "./node_modules/pure-elements/dist/form-control/suffix.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSuffix", function() { return _suffix__WEBPACK_IMPORTED_MODULE_5__["PureSuffix"]; });
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/form-control/suffix.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/form-control/suffix.js ***!
+  \****************************************************************/
+/*! exports provided: PureSuffix */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureSuffix", function() { return PureSuffix; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+/** Suffix to be placed at the end of the form control. */
+let PureSuffix = class PureSuffix {
+};
+PureSuffix = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({
+        selector: '[pureSuffix]',
+    })
+], PureSuffix);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/index.js":
+/*!**************************************************!*\
+  !*** ./node_modules/pure-elements/dist/index.js ***!
+  \**************************************************/
+/*! exports provided: PureElements, PureAsteriskConfigToken, PureAsteriskDefaultConfig, PureAsteriskModule, PureAsterisk, PureButtonModule, PureButton, PureCollapseModule, PureCollapse, PureCollapseHeader, PureCollapseFooter, PureDropdown, PureDropdownTrigger, PureDropdownItem, PureDropdownModule, PureFormControlConfigToken, PureFormControlDefaultConfig, PureFormControlModule, PureFormControl, PurePrefix, PureSuffix, PureMessageModule, PureMessage, PureLabelModule, PureLabel, PureModalWindowModule, PureModalWindow, PureSwitcherModule, PureSwitcher, PureToastModule, PureToastDefaultOptions, PureToastDefaultOptionsFactory, PureToast, PureToastContainer, PureToastData, PureToastConfig, PureToastRef, PureSimpleToast, PureTooltipModule, PureTooltipDefaultConfig, PureTooltipConfigToken, PureTooltipConfigFactory, PureTooltip, PureTooltipComponent, coerceBooleanProperty, coerceModelValue, PureComponent, ComponentNamer, ComponentNamerConfigToken, ComponentNamerDefaultConfig, ComponentNamerModule, KEY_CODES, EventHandler, StringFormatter */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceBooleanProperty", function() { return _core__WEBPACK_IMPORTED_MODULE_0__["coerceBooleanProperty"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceModelValue", function() { return _core__WEBPACK_IMPORTED_MODULE_0__["coerceModelValue"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureComponent", function() { return _core__WEBPACK_IMPORTED_MODULE_0__["PureComponent"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentNamer", function() { return _core__WEBPACK_IMPORTED_MODULE_0__["ComponentNamer"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentNamerConfigToken", function() { return _core__WEBPACK_IMPORTED_MODULE_0__["ComponentNamerConfigToken"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentNamerDefaultConfig", function() { return _core__WEBPACK_IMPORTED_MODULE_0__["ComponentNamerDefaultConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentNamerModule", function() { return _core__WEBPACK_IMPORTED_MODULE_0__["ComponentNamerModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "KEY_CODES", function() { return _core__WEBPACK_IMPORTED_MODULE_0__["KEY_CODES"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EventHandler", function() { return _core__WEBPACK_IMPORTED_MODULE_0__["EventHandler"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StringFormatter", function() { return _core__WEBPACK_IMPORTED_MODULE_0__["StringFormatter"]; });
+
+/* harmony import */ var _asterisk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./asterisk */ "./node_modules/pure-elements/dist/asterisk/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskConfigToken", function() { return _asterisk__WEBPACK_IMPORTED_MODULE_1__["PureAsteriskConfigToken"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskDefaultConfig", function() { return _asterisk__WEBPACK_IMPORTED_MODULE_1__["PureAsteriskDefaultConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskModule", function() { return _asterisk__WEBPACK_IMPORTED_MODULE_1__["PureAsteriskModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsterisk", function() { return _asterisk__WEBPACK_IMPORTED_MODULE_1__["PureAsterisk"]; });
+
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./button */ "./node_modules/pure-elements/dist/button/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureButtonModule", function() { return _button__WEBPACK_IMPORTED_MODULE_2__["PureButtonModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureButton", function() { return _button__WEBPACK_IMPORTED_MODULE_2__["PureButton"]; });
+
+/* harmony import */ var _collapse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./collapse */ "./node_modules/pure-elements/dist/collapse/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapseModule", function() { return _collapse__WEBPACK_IMPORTED_MODULE_3__["PureCollapseModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapse", function() { return _collapse__WEBPACK_IMPORTED_MODULE_3__["PureCollapse"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapseHeader", function() { return _collapse__WEBPACK_IMPORTED_MODULE_3__["PureCollapseHeader"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapseFooter", function() { return _collapse__WEBPACK_IMPORTED_MODULE_3__["PureCollapseFooter"]; });
+
+/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./dropdown */ "./node_modules/pure-elements/dist/dropdown/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdown", function() { return _dropdown__WEBPACK_IMPORTED_MODULE_4__["PureDropdown"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdownTrigger", function() { return _dropdown__WEBPACK_IMPORTED_MODULE_4__["PureDropdownTrigger"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdownItem", function() { return _dropdown__WEBPACK_IMPORTED_MODULE_4__["PureDropdownItem"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdownModule", function() { return _dropdown__WEBPACK_IMPORTED_MODULE_4__["PureDropdownModule"]; });
+
+/* harmony import */ var _form_control__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./form-control */ "./node_modules/pure-elements/dist/form-control/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlConfigToken", function() { return _form_control__WEBPACK_IMPORTED_MODULE_5__["PureFormControlConfigToken"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlDefaultConfig", function() { return _form_control__WEBPACK_IMPORTED_MODULE_5__["PureFormControlDefaultConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlModule", function() { return _form_control__WEBPACK_IMPORTED_MODULE_5__["PureFormControlModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControl", function() { return _form_control__WEBPACK_IMPORTED_MODULE_5__["PureFormControl"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PurePrefix", function() { return _form_control__WEBPACK_IMPORTED_MODULE_5__["PurePrefix"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSuffix", function() { return _form_control__WEBPACK_IMPORTED_MODULE_5__["PureSuffix"]; });
+
+/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./message */ "./node_modules/pure-elements/dist/message/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureMessageModule", function() { return _message__WEBPACK_IMPORTED_MODULE_6__["PureMessageModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureMessage", function() { return _message__WEBPACK_IMPORTED_MODULE_6__["PureMessage"]; });
+
+/* harmony import */ var _label__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./label */ "./node_modules/pure-elements/dist/label/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureLabelModule", function() { return _label__WEBPACK_IMPORTED_MODULE_7__["PureLabelModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureLabel", function() { return _label__WEBPACK_IMPORTED_MODULE_7__["PureLabel"]; });
+
+/* harmony import */ var _modal_window__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modal-window */ "./node_modules/pure-elements/dist/modal-window/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModalWindowModule", function() { return _modal_window__WEBPACK_IMPORTED_MODULE_8__["PureModalWindowModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModalWindow", function() { return _modal_window__WEBPACK_IMPORTED_MODULE_8__["PureModalWindow"]; });
+
+/* harmony import */ var _switcher__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./switcher */ "./node_modules/pure-elements/dist/switcher/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSwitcherModule", function() { return _switcher__WEBPACK_IMPORTED_MODULE_9__["PureSwitcherModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSwitcher", function() { return _switcher__WEBPACK_IMPORTED_MODULE_9__["PureSwitcher"]; });
+
+/* harmony import */ var _toast__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./toast */ "./node_modules/pure-elements/dist/toast/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastModule", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureToastModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastDefaultOptions", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureToastDefaultOptions"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastDefaultOptionsFactory", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureToastDefaultOptionsFactory"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToast", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureToast"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastContainer", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureToastContainer"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastData", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureToastData"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastConfig", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureToastConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastRef", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureToastRef"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSimpleToast", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureSimpleToast"]; });
+
+/* harmony import */ var _tooltip__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./tooltip */ "./node_modules/pure-elements/dist/tooltip/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipModule", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_11__["PureTooltipModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipDefaultConfig", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_11__["PureTooltipDefaultConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipConfigToken", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_11__["PureTooltipConfigToken"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipConfigFactory", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_11__["PureTooltipConfigFactory"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltip", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_11__["PureTooltip"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipComponent", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_11__["PureTooltipComponent"]; });
+
+/* harmony import */ var _pure_elements_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pure-elements.module */ "./node_modules/pure-elements/dist/pure-elements.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureElements", function() { return _pure_elements_module__WEBPACK_IMPORTED_MODULE_12__["PureElements"]; });
+
+/** Export core code */
+
+/** Export elements */
+
+
+
+
+
+
+
+
+
+
+
+/** Export main module */
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/input/index.js":
+/*!********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/input/index.js ***!
+  \********************************************************/
+/*! exports provided: PureInput, PureInputModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/input/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureInput", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureInput"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureInputModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureInputModule"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/input/input-errors.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/input/input-errors.js ***!
+  \***************************************************************/
+/*! exports provided: getPureInputUnsupportedTypeError */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPureInputUnsupportedTypeError", function() { return getPureInputUnsupportedTypeError; });
+function getPureInputUnsupportedTypeError(type) {
+    return Error(`Input type "${type}" isn't supported by PureInput.`);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/input/input.js":
+/*!********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/input/input.js ***!
+  \********************************************************/
+/*! exports provided: PureInput */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureInput", function() { return PureInput; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _input_errors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./input-errors */ "./node_modules/pure-elements/dist/input/input-errors.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+// Invalid input type. Using one of these will throw an MatInputUnsupportedTypeError.
+const PureInputIvalidTypes = [
+    'button',
+    'file',
+    'hidden',
+    'image',
+    'range',
+    'reset',
+    'submit'
+];
+/** Directive that allows a native input to work inside a Pure Form Control. */
+let PureInput = class PureInput extends _core__WEBPACK_IMPORTED_MODULE_3__["PureComponent"] {
+    constructor(elementRef, componentNamer, ngControl) {
+        super(elementRef, componentNamer);
+        this.elementRef = elementRef;
+        this.componentNamer = componentNamer;
+        this.ngControl = ngControl;
+        this.elementName = 'Input';
+        this.neverEmptyInputTypes = [
+            'date',
+            'datetime',
+            'datetime-local',
+            'month',
+            'time',
+            'week'
+        ];
+        this.stateChanges = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this._disabled = false;
+        /** Whether element is focused. */
+        this.focused = false;
+        this._required = false;
+        this._readonly = false;
+        this._checked = false;
+    }
+    /** Whether element is disabled. */
+    get disabled() {
+        if (this.ngControl && this.ngControl.disabled !== null) {
+            return this.ngControl.disabled;
+        }
+        return this._disabled;
+    }
+    set disabled(value) {
+        this._disabled = Object(_core__WEBPACK_IMPORTED_MODULE_3__["coerceBooleanProperty"])(value);
+        this.stateChanges.next();
+    }
+    focus() {
+        this.elementRef.nativeElement.focus();
+        this.onFocusChange(true);
+    }
+    ;
+    blur() {
+        this.elementRef.nativeElement.blur();
+        this.onFocusChange(false);
+    }
+    /** Whether element is required. */
+    get required() {
+        return this._required;
+    }
+    set required(value) {
+        this._required = Object(_core__WEBPACK_IMPORTED_MODULE_3__["coerceBooleanProperty"])(value);
+        this.stateChanges.next();
+    }
+    /** Whether element is readonly. */
+    get readonly() {
+        return this._readonly;
+    }
+    set readonly(value) {
+        this._readonly = Object(_core__WEBPACK_IMPORTED_MODULE_3__["coerceBooleanProperty"])(value);
+        this.stateChanges.next();
+    }
+    /** Value of the element. */
+    get value() {
+        return this.elementRef.nativeElement.value;
+    }
+    set value(value) {
+        if (value !== this.value) {
+            this.elementRef.nativeElement.value = value;
+        }
+        this.stateChanges.next();
+    }
+    /** Checks whether current element has value. */
+    get empty() {
+        return !this.isNeverEmpty() && !this.value;
+    }
+    /** Checked state for checkbox & radio types. */
+    get checked() {
+        return this._checked;
+    }
+    set checked(value) {
+        this._checked = value;
+    }
+    /** Input type of the element. */
+    get type() {
+        return this._type;
+    }
+    set type(value) {
+        this._type = value || 'text';
+        if (PureInputIvalidTypes.indexOf(this._type) > -1) {
+            throw Object(_input_errors__WEBPACK_IMPORTED_MODULE_4__["getPureInputUnsupportedTypeError"])(this._type);
+        }
+        // When using Angular inputs, developers are no longer able to set the properties on the native
+        // input element. To ensure that bindings for `type` work, we need to sync the setter
+        // with the native property. Textarea & Select don't support the type attribute.
+        if (this.isInput()) {
+            this.elementRef.nativeElement.type = this._type;
+        }
+        this.stateChanges.next();
+    }
+    get nodeName() {
+        return this.elementRef.nativeElement.nodeName.toLowerCase();
+    }
+    onFocusChange(value) {
+        if (value !== this.focused) {
+            this.focused = value;
+            this.stateChanges.next();
+        }
+    }
+    onInput() {
+        this.stateChanges.next();
+    }
+    /** Checks whether the input type is one of the types that are never empty. */
+    isNeverEmpty() {
+        return this.neverEmptyInputTypes.indexOf(this.type) > -1;
+    }
+    isInput() {
+        return this.nodeName === 'input';
+    }
+    isSelect() {
+        return this.nodeName === 'select';
+    }
+    setClassesForHost() {
+        for (let elementClass in this.elementClasses) {
+            if (this.elementClasses[elementClass]) {
+                this.elementRef.nativeElement.classList.add(elementClass);
+            }
+            else {
+                this.elementRef.nativeElement.classList.remove(elementClass);
+            }
+        }
+    }
+    ngOnChanges() {
+        if (this.isInitialised) {
+            this.stateChanges.next();
+        }
+    }
+    ngOnInit() {
+        super.ngOnInit();
+        this.setClassesForHost();
+    }
+    ngOnDestroy() {
+        this.stateChanges.complete();
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureInput.prototype, "placeholder", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureInput.prototype, "id", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureInput.prototype, "disabled", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureInput.prototype, "required", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureInput.prototype, "readonly", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String),
+    __metadata("design:paramtypes", [String])
+], PureInput.prototype, "value", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Boolean])
+], PureInput.prototype, "checked", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String),
+    __metadata("design:paramtypes", [String])
+], PureInput.prototype, "type", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('input'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], PureInput.prototype, "onInput", null);
+PureInput = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({
+        selector: 'input[pureInput], textarea[pureInput], select[pureInput]',
+        exportAs: 'pureInput',
+        host: {
+            // Native input properties that are overwritten by Angular inputs need to be synced with
+            // the native input element. Otherwise property bindings for those don't work.
+            '[attr.id]': 'id',
+            '[attr.placeholder]': 'placeholder',
+            '[disabled]': 'disabled',
+            '[required]': 'required',
+            '[attr.readonly]': 'readonly && !isSelect() || null',
+            '(focus)': 'onFocusChange(true)',
+            '(blur)': 'onFocusChange(false)'
+        }
+    }),
+    __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Self"])()),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
+        _core__WEBPACK_IMPORTED_MODULE_3__["ComponentNamer"],
+        _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControl"]])
+], PureInput);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/input/input.module.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/input/input.module.js ***!
+  \***************************************************************/
+/*! exports provided: PureInputModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureInputModule", function() { return PureInputModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./input */ "./node_modules/pure-elements/dist/input/input.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+let PureInputModule = class PureInputModule {
+};
+PureInputModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        declarations: [
+            _input__WEBPACK_IMPORTED_MODULE_3__["PureInput"]
+        ],
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+            _core__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerModule"].forRoot()
+        ],
+        exports: [
+            _input__WEBPACK_IMPORTED_MODULE_3__["PureInput"]
+        ]
+    })
+], PureInputModule);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/input/public-api.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/input/public-api.js ***!
+  \*************************************************************/
+/*! exports provided: PureInput, PureInputModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./input */ "./node_modules/pure-elements/dist/input/input.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureInput", function() { return _input__WEBPACK_IMPORTED_MODULE_0__["PureInput"]; });
+
+/* harmony import */ var _input_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input.module */ "./node_modules/pure-elements/dist/input/input.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureInputModule", function() { return _input_module__WEBPACK_IMPORTED_MODULE_1__["PureInputModule"]; });
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/label/index.js":
+/*!********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/label/index.js ***!
+  \********************************************************/
+/*! exports provided: PureLabelModule, PureLabel */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/label/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureLabelModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureLabelModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureLabel", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureLabel"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/label/label.js":
+/*!********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/label/label.js ***!
+  \********************************************************/
+/*! exports provided: PureLabel */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureLabel", function() { return PureLabel; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+let PureLabel = class PureLabel extends _core__WEBPACK_IMPORTED_MODULE_1__["PureComponent"] {
+    constructor(elementRef, componentNamer) {
+        super(elementRef, componentNamer);
+        this.elementRef = elementRef;
+        this.componentNamer = componentNamer;
+        this.elementName = 'Label';
+    }
+    ngOnInit() {
+        super.ngOnInit();
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureLabel.prototype, "for", void 0);
+PureLabel = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'pure-label',
+        template: `
+    <label 
+      [for]="for"
+      [ngClass]="elementClasses">
+      <ng-content></ng-content>
+    </label>
+  `
+    }),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"], _core__WEBPACK_IMPORTED_MODULE_1__["ComponentNamer"]])
+], PureLabel);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/label/label.module.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/label/label.module.js ***!
+  \***************************************************************/
+/*! exports provided: PureLabelModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureLabelModule", function() { return PureLabelModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _label__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./label */ "./node_modules/pure-elements/dist/label/label.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+let PureLabelModule = class PureLabelModule {
+};
+PureLabelModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _core__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerModule"].forRoot()],
+        declarations: [_label__WEBPACK_IMPORTED_MODULE_3__["PureLabel"]],
+        exports: [_label__WEBPACK_IMPORTED_MODULE_3__["PureLabel"]]
+    })
+], PureLabelModule);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/label/public-api.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/label/public-api.js ***!
+  \*************************************************************/
+/*! exports provided: PureLabelModule, PureLabel */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _label_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./label.module */ "./node_modules/pure-elements/dist/label/label.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureLabelModule", function() { return _label_module__WEBPACK_IMPORTED_MODULE_0__["PureLabelModule"]; });
+
+/* harmony import */ var _label__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./label */ "./node_modules/pure-elements/dist/label/label.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureLabel", function() { return _label__WEBPACK_IMPORTED_MODULE_1__["PureLabel"]; });
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/message/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/message/index.js ***!
+  \**********************************************************/
+/*! exports provided: PureMessageModule, PureMessage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/message/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureMessageModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureMessageModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureMessage", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureMessage"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/message/message.js":
+/*!************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/message/message.js ***!
+  \************************************************************/
+/*! exports provided: PureMessage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureMessage", function() { return PureMessage; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+let PureMessage = class PureMessage extends _core__WEBPACK_IMPORTED_MODULE_1__["PureComponent"] {
+    constructor(elementRef, componentNamer) {
+        super(elementRef, componentNamer);
+        this.elementRef = elementRef;
+        this.componentNamer = componentNamer;
+        this.elementName = 'Message';
+    }
+    ngOnInit() {
+        super.ngOnInit();
+    }
+};
+PureMessage = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'pure-message',
+        template: `
+    <p 
+      [ngClass]="elementClasses">
+      <ng-content></ng-content>
+    </p>
+  `
+    }),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"], _core__WEBPACK_IMPORTED_MODULE_1__["ComponentNamer"]])
+], PureMessage);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/message/message.module.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/message/message.module.js ***!
+  \*******************************************************************/
+/*! exports provided: PureMessageModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureMessageModule", function() { return PureMessageModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./message */ "./node_modules/pure-elements/dist/message/message.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+let PureMessageModule = class PureMessageModule {
+};
+PureMessageModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _core__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerModule"].forRoot()],
+        declarations: [_message__WEBPACK_IMPORTED_MODULE_3__["PureMessage"]],
+        exports: [_message__WEBPACK_IMPORTED_MODULE_3__["PureMessage"]]
+    })
+], PureMessageModule);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/message/public-api.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/message/public-api.js ***!
+  \***************************************************************/
+/*! exports provided: PureMessageModule, PureMessage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _message_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./message.module */ "./node_modules/pure-elements/dist/message/message.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureMessageModule", function() { return _message_module__WEBPACK_IMPORTED_MODULE_0__["PureMessageModule"]; });
+
+/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./message */ "./node_modules/pure-elements/dist/message/message.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureMessage", function() { return _message__WEBPACK_IMPORTED_MODULE_1__["PureMessage"]; });
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/modal-window/index.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/modal-window/index.js ***!
+  \***************************************************************/
+/*! exports provided: PureModalWindowModule, PureModalWindow */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/modal-window/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModalWindowModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureModalWindowModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModalWindow", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureModalWindow"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/modal-window/modal-window-config-token.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/modal-window/modal-window-config-token.js ***!
+  \***********************************************************************************/
+/*! exports provided: PureModalWindowConfigToken */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureModalWindowConfigToken", function() { return PureModalWindowConfigToken; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+const PureModalWindowConfigToken = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('PureModalWindowConfig');
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/modal-window/modal-window-config.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/modal-window/modal-window-config.js ***!
+  \*****************************************************************************/
+/*! exports provided: PureModalWindowDefaultConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureModalWindowDefaultConfig", function() { return PureModalWindowDefaultConfig; });
+;
+const PureModalWindowDefaultConfig = {
+    closeOnEsc: true,
+    openAnimationDuration: 0,
+    closeAnimationDuration: 0
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/modal-window/modal-window.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/modal-window/modal-window.js ***!
+  \**********************************************************************/
+/*! exports provided: PureModalWindow */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureModalWindow", function() { return PureModalWindow; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _modal_window_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modal-window-config */ "./node_modules/pure-elements/dist/modal-window/modal-window-config.js");
+/* harmony import */ var _modal_window_config_token__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modal-window-config-token */ "./node_modules/pure-elements/dist/modal-window/modal-window-config-token.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+let PureModalWindow = class PureModalWindow extends _core__WEBPACK_IMPORTED_MODULE_1__["PureComponent"] {
+    constructor(elementRef, componentNamer, userConfig) {
+        super(elementRef, componentNamer);
+        this.elementRef = elementRef;
+        this.componentNamer = componentNamer;
+        this.userConfig = userConfig;
+        this.elementName = 'Modal Window';
+        this.backdropName = 'Backdrop';
+        this.contentName = 'Content';
+        this.contentContainerName = 'Content Container';
+        this.backdropClasses = {};
+        this.contentClasses = {};
+        this.showChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.open = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.close = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this._show = false;
+        this.shownClassName = this.componentNamer.generateClassName(this.elementName, '', 'shown');
+        this.keyListenerBound = this.keyListener.bind(this);
+        this.config = Object.assign({}, _modal_window_config__WEBPACK_IMPORTED_MODULE_2__["PureModalWindowDefaultConfig"], userConfig);
+        this.closeOnEsc = this.config.closeOnEsc;
+        this.openAnimationDuration = this.config.openAnimationDuration;
+        this.closeAnimationDuration = this.config.closeAnimationDuration;
+    }
+    set show(value) {
+        const previousValue = this.show;
+        this._show = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceBooleanProperty"])(value);
+        this.elementClasses[this.shownClassName] = this._show;
+        this.showChange.emit(value);
+        if (this._show) {
+            setTimeout(() => {
+                this.open.emit();
+            }, this.openAnimationDuration);
+        }
+        else {
+            // Prevent close event emitting on initialisation when falsy value is set
+            if (previousValue) {
+                setTimeout(() => {
+                    this.close.emit();
+                }, this.closeAnimationDuration);
+            }
+        }
+    }
+    get show() {
+        return this._show;
+    }
+    keyListener(event) {
+        if (this.closeOnEsc && this.show && event.which === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].ESCAPE) {
+            this.show = false;
+        }
+    }
+    setBackdropClasses(flag = true) {
+        this.backdropClasses[this.componentNamer.generateClassName(this.elementName, this.backdropName)] = flag;
+    }
+    setContentClasses(flag = true) {
+        this.contentClasses[this.componentNamer.generateClassName(this.elementName, this.contentName)] = flag;
+    }
+    ngOnInit() {
+        super.ngOnInit();
+        this.setBackdropClasses();
+        this.setContentClasses();
+    }
+    ngAfterViewInit() {
+        document.addEventListener('keyup', this.keyListenerBound);
+    }
+    ngOnDestroy() {
+        document.removeEventListener('keyup', this.keyListenerBound);
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean)
+], PureModalWindow.prototype, "closeOnEsc", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Number)
+], PureModalWindow.prototype, "openAnimationDuration", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Number)
+], PureModalWindow.prototype, "closeAnimationDuration", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+], PureModalWindow.prototype, "showChange", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+], PureModalWindow.prototype, "open", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+], PureModalWindow.prototype, "close", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureModalWindow.prototype, "show", null);
+PureModalWindow = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'pure-modal-window',
+        template: `
+    <div 
+      [ngClass]="elementClasses">
+      
+      <div 
+        [ngClass]="backdropClasses" 
+        (click)="show = false">
+      </div>
+
+      <div 
+        [ngClass]="contentClasses">
+      
+        <input 
+          autofocus="true" 
+          hidden/>
+      
+        <ng-content></ng-content>
+      </div>
+    </div>
+  `
+    }),
+    __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_modal_window_config_token__WEBPACK_IMPORTED_MODULE_3__["PureModalWindowConfigToken"])),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
+        _core__WEBPACK_IMPORTED_MODULE_1__["ComponentNamer"], Object])
+], PureModalWindow);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/modal-window/modal-window.module.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/modal-window/modal-window.module.js ***!
+  \*****************************************************************************/
+/*! exports provided: PureModalWindowModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureModalWindowModule", function() { return PureModalWindowModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _modal_window__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modal-window */ "./node_modules/pure-elements/dist/modal-window/modal-window.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+let PureModalWindowModule = class PureModalWindowModule {
+};
+PureModalWindowModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _core__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerModule"].forRoot()],
+        declarations: [_modal_window__WEBPACK_IMPORTED_MODULE_3__["PureModalWindow"]],
+        exports: [_modal_window__WEBPACK_IMPORTED_MODULE_3__["PureModalWindow"]]
+    })
+], PureModalWindowModule);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/modal-window/public-api.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/modal-window/public-api.js ***!
+  \********************************************************************/
+/*! exports provided: PureModalWindowModule, PureModalWindow */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modal_window_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modal-window.module */ "./node_modules/pure-elements/dist/modal-window/modal-window.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModalWindowModule", function() { return _modal_window_module__WEBPACK_IMPORTED_MODULE_0__["PureModalWindowModule"]; });
+
+/* harmony import */ var _modal_window__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal-window */ "./node_modules/pure-elements/dist/modal-window/modal-window.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModalWindow", function() { return _modal_window__WEBPACK_IMPORTED_MODULE_1__["PureModalWindow"]; });
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/pure-elements.module.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/pure-elements.module.js ***!
+  \*****************************************************************/
+/*! exports provided: PureElements */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureElements", function() { return PureElements; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _asterisk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./asterisk */ "./node_modules/pure-elements/dist/asterisk/index.js");
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./button */ "./node_modules/pure-elements/dist/button/index.js");
+/* harmony import */ var _collapse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./collapse */ "./node_modules/pure-elements/dist/collapse/index.js");
+/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./dropdown */ "./node_modules/pure-elements/dist/dropdown/index.js");
+/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./message */ "./node_modules/pure-elements/dist/message/index.js");
+/* harmony import */ var _label__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./label */ "./node_modules/pure-elements/dist/label/index.js");
+/* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./input */ "./node_modules/pure-elements/dist/input/index.js");
+/* harmony import */ var _modal_window__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modal-window */ "./node_modules/pure-elements/dist/modal-window/index.js");
+/* harmony import */ var _form_control__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./form-control */ "./node_modules/pure-elements/dist/form-control/index.js");
+/* harmony import */ var _switcher__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./switcher */ "./node_modules/pure-elements/dist/switcher/index.js");
+/* harmony import */ var _toast__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./toast */ "./node_modules/pure-elements/dist/toast/index.js");
+/* harmony import */ var _tooltip__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./tooltip */ "./node_modules/pure-elements/dist/tooltip/index.js");
+/* harmony import */ var _core_component_namer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./core/component-namer */ "./node_modules/pure-elements/dist/core/component-namer/index.js");
+/* harmony import */ var _core_string_formatter__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./core/string-formatter */ "./node_modules/pure-elements/dist/core/string-formatter/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let PureElements = class PureElements {
+};
+PureElements = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        imports: [
+            _core_component_namer__WEBPACK_IMPORTED_MODULE_13__["ComponentNamerModule"].forRoot()
+        ],
+        exports: [
+            _asterisk__WEBPACK_IMPORTED_MODULE_1__["PureAsteriskModule"],
+            _button__WEBPACK_IMPORTED_MODULE_2__["PureButtonModule"],
+            _collapse__WEBPACK_IMPORTED_MODULE_3__["PureCollapseModule"],
+            _dropdown__WEBPACK_IMPORTED_MODULE_4__["PureDropdownModule"],
+            _message__WEBPACK_IMPORTED_MODULE_5__["PureMessageModule"],
+            _label__WEBPACK_IMPORTED_MODULE_6__["PureLabelModule"],
+            _modal_window__WEBPACK_IMPORTED_MODULE_8__["PureModalWindowModule"],
+            _form_control__WEBPACK_IMPORTED_MODULE_9__["PureFormControlModule"],
+            _switcher__WEBPACK_IMPORTED_MODULE_10__["PureSwitcherModule"],
+            _toast__WEBPACK_IMPORTED_MODULE_11__["PureToastModule"],
+            _tooltip__WEBPACK_IMPORTED_MODULE_12__["PureTooltipModule"],
+            _input__WEBPACK_IMPORTED_MODULE_7__["PureInputModule"]
+        ],
+        providers: [
+            _core_string_formatter__WEBPACK_IMPORTED_MODULE_14__["StringFormatter"],
+            _toast__WEBPACK_IMPORTED_MODULE_11__["PureToast"]
+        ]
+    })
+], PureElements);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/switcher/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/switcher/index.js ***!
+  \***********************************************************/
+/*! exports provided: PureSwitcherModule, PureSwitcher */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/switcher/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSwitcherModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureSwitcherModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSwitcher", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureSwitcher"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/switcher/public-api.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/switcher/public-api.js ***!
+  \****************************************************************/
+/*! exports provided: PureSwitcherModule, PureSwitcher */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _switcher_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./switcher.module */ "./node_modules/pure-elements/dist/switcher/switcher.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSwitcherModule", function() { return _switcher_module__WEBPACK_IMPORTED_MODULE_0__["PureSwitcherModule"]; });
+
+/* harmony import */ var _switcher__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./switcher */ "./node_modules/pure-elements/dist/switcher/switcher.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSwitcher", function() { return _switcher__WEBPACK_IMPORTED_MODULE_1__["PureSwitcher"]; });
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/switcher/switcher.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/switcher/switcher.js ***!
+  \**************************************************************/
+/*! exports provided: PureSwitcher */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureSwitcher", function() { return PureSwitcher; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+let nextUniqueId = 0;
+let PureSwitcher = class PureSwitcher extends _core__WEBPACK_IMPORTED_MODULE_1__["PureComponent"] {
+    constructor(elementRef, componentNamer) {
+        super(elementRef, componentNamer);
+        this.elementRef = elementRef;
+        this.componentNamer = componentNamer;
+        this.elementName = 'Switcher';
+        this.inputName = 'Input';
+        this.toggleContainerName = 'Toggle Container';
+        this.toggleName = 'Toggle';
+        this.labelContentName = 'Label Content';
+        this.inputClasses = {};
+        this.toggleContainerClasses = {};
+        this.toggleClasses = {};
+        this.labelContentClasses = {};
+        this.checkedClassName = this.componentNamer.generateClassName(this.elementName, '', 'checked');
+        this.disabledClassName = this.componentNamer.generateClassName(this.elementName, '', 'disabled');
+        this.requiredClassName = this.componentNamer.generateClassName(this.elementName, '', 'required');
+        this._checked = false;
+        this._disabled = false;
+        this._required = false;
+        this.change = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.id = this.componentNamer.generateId(nextUniqueId, this.elementName);
+    }
+    get checked() {
+        return this._checked;
+    }
+    set checked(value) {
+        this._checked = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceBooleanProperty"])(value);
+        this.elementClasses[this.checkedClassName] = this._checked;
+    }
+    get disabled() {
+        return this._disabled;
+    }
+    set disabled(value) {
+        this._disabled = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceBooleanProperty"])(value);
+        this.elementClasses[this.disabledClassName] = this._disabled;
+    }
+    get required() {
+        return this._required;
+    }
+    set required(value) {
+        this._required = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceBooleanProperty"])(value);
+        this.elementClasses[this.requiredClassName] = this._required;
+    }
+    toggle() {
+        this.checked = !this.checked;
+    }
+    onChange(event) {
+        event.stopPropagation();
+        this.checked = this.inputElement.nativeElement.checked;
+        this.change.emit(event);
+    }
+    setInnerElementsClasses(flag = true) {
+        this.inputClasses[this.componentNamer.generateClassName(this.elementName, this.inputName)] = flag;
+        this.toggleContainerClasses[this.componentNamer.generateClassName(this.elementName, this.toggleContainerName)] = flag;
+        this.toggleClasses[this.componentNamer.generateClassName(this.elementName, this.toggleName)] = flag;
+        this.labelContentClasses[this.componentNamer.generateClassName(this.elementName, this.labelContentName)] = flag;
+    }
+    ngOnInit() {
+        super.ngOnInit();
+        this.setInnerElementsClasses();
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('input'),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+], PureSwitcher.prototype, "inputElement", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureSwitcher.prototype, "id", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureSwitcher.prototype, "name", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureSwitcher.prototype, "checked", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureSwitcher.prototype, "disabled", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureSwitcher.prototype, "required", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+], PureSwitcher.prototype, "change", void 0);
+PureSwitcher = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'pure-switcher',
+        template: `
+    <label 
+      [for]="id"
+      [ngClass]="elementClasses">
+
+      <input 
+        type="checkbox"
+        [checked]="checked"
+        [disabled]="disabled"
+        [id]="id"
+        [attr.name]="name"
+        [required]="required"
+        [ngClass]="inputClasses"
+        (change)="onChange($event)"
+        #input>
+
+      <div
+        [ngClass]="toggleContainerClasses">
+
+        <div
+          [ngClass]="toggleClasses">
+        </div>
+      </div>
+
+      <span
+        [ngClass]="labelContentClasses">
+
+        <ng-content></ng-content>
+      </span>
+    </label>
+  `
+    }),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"], _core__WEBPACK_IMPORTED_MODULE_1__["ComponentNamer"]])
+], PureSwitcher);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/switcher/switcher.module.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/switcher/switcher.module.js ***!
+  \*********************************************************************/
+/*! exports provided: PureSwitcherModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureSwitcherModule", function() { return PureSwitcherModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _switcher__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./switcher */ "./node_modules/pure-elements/dist/switcher/switcher.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+let PureSwitcherModule = class PureSwitcherModule {
+};
+PureSwitcherModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _core__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerModule"].forRoot()],
+        declarations: [_switcher__WEBPACK_IMPORTED_MODULE_3__["PureSwitcher"]],
+        exports: [_switcher__WEBPACK_IMPORTED_MODULE_3__["PureSwitcher"]]
+    })
+], PureSwitcherModule);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/toast/index.js":
+/*!********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/toast/index.js ***!
+  \********************************************************/
+/*! exports provided: PureToastModule, PureToastDefaultOptions, PureToastDefaultOptionsFactory, PureToast, PureToastContainer, PureToastData, PureToastConfig, PureToastRef, PureSimpleToast */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/toast/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureToastModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastDefaultOptions", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureToastDefaultOptions"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastDefaultOptionsFactory", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureToastDefaultOptionsFactory"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToast", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureToast"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastContainer", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureToastContainer"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastData", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureToastData"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastConfig", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureToastConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastRef", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureToastRef"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSimpleToast", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureSimpleToast"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/toast/public-api.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/toast/public-api.js ***!
+  \*************************************************************/
+/*! exports provided: PureToastModule, PureToastDefaultOptions, PureToastDefaultOptionsFactory, PureToast, PureToastContainer, PureToastData, PureToastConfig, PureToastRef, PureSimpleToast */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _toast_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toast-module */ "./node_modules/pure-elements/dist/toast/toast-module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastModule", function() { return _toast_module__WEBPACK_IMPORTED_MODULE_0__["PureToastModule"]; });
+
+/* harmony import */ var _toast__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./toast */ "./node_modules/pure-elements/dist/toast/toast.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastDefaultOptions", function() { return _toast__WEBPACK_IMPORTED_MODULE_1__["PureToastDefaultOptions"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastDefaultOptionsFactory", function() { return _toast__WEBPACK_IMPORTED_MODULE_1__["PureToastDefaultOptionsFactory"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToast", function() { return _toast__WEBPACK_IMPORTED_MODULE_1__["PureToast"]; });
+
+/* harmony import */ var _toast_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./toast-container */ "./node_modules/pure-elements/dist/toast/toast-container.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastContainer", function() { return _toast_container__WEBPACK_IMPORTED_MODULE_2__["PureToastContainer"]; });
+
+/* harmony import */ var _toast_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./toast-config */ "./node_modules/pure-elements/dist/toast/toast-config.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastData", function() { return _toast_config__WEBPACK_IMPORTED_MODULE_3__["PureToastData"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastConfig", function() { return _toast_config__WEBPACK_IMPORTED_MODULE_3__["PureToastConfig"]; });
+
+/* harmony import */ var _toast_ref__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./toast-ref */ "./node_modules/pure-elements/dist/toast/toast-ref.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastRef", function() { return _toast_ref__WEBPACK_IMPORTED_MODULE_4__["PureToastRef"]; });
+
+/* harmony import */ var _simple_toast__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./simple-toast */ "./node_modules/pure-elements/dist/toast/simple-toast.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSimpleToast", function() { return _simple_toast__WEBPACK_IMPORTED_MODULE_5__["PureSimpleToast"]; });
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/toast/simple-toast.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/toast/simple-toast.js ***!
+  \***************************************************************/
+/*! exports provided: PureSimpleToast */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureSimpleToast", function() { return PureSimpleToast; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _toast_ref__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./toast-ref */ "./node_modules/pure-elements/dist/toast/toast-ref.js");
+/* harmony import */ var _toast_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./toast-config */ "./node_modules/pure-elements/dist/toast/toast-config.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+let PureSimpleToast = class PureSimpleToast extends _core__WEBPACK_IMPORTED_MODULE_3__["PureComponent"] {
+    constructor(elementRef, componentNamer, toastRef, data) {
+        super(elementRef, componentNamer);
+        this.elementRef = elementRef;
+        this.componentNamer = componentNamer;
+        this.toastRef = toastRef;
+        this.elementName = 'Toast';
+        this.contentName = 'Content';
+        this.titleName = 'Title';
+        this.messageName = 'Message';
+        this.actionPanelName = 'Action Panel';
+        this.contentClasses = {};
+        this.titleClasses = {};
+        this.messageClasses = {};
+        this.actionPanelClasses = {};
+        this.data = data;
+    }
+    action() {
+        this.toastRef.dismissWithAction();
+    }
+    /** If the action panel should be shown. */
+    get hasAction() {
+        return !!this.data.action;
+    }
+    ngOnInit() {
+        super.ngOnInit();
+        this.contentClasses[this.componentNamer.generateClassName(this.elementName, this.contentName)] = true;
+        this.titleClasses[this.componentNamer.generateClassName(this.elementName, this.titleName)] = true;
+        this.messageClasses[this.componentNamer.generateClassName(this.elementName, this.messageName)] = true;
+        this.actionPanelClasses[this.componentNamer.generateClassName(this.elementName, this.actionPanelName)] = true;
+    }
+};
+PureSimpleToast = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'pure-toast',
+        template: `
+    <div [ngClass]="elementClasses">
+      <span [ngClass]="contentClasses">
+        <h5 *ngIf="data.title" [ngClass]="titleClasses">{{data.title}}</h5>
+        <p *ngIf="data.message" [ngClass]="messageClasses">{{data.message}}</p>
+      </span>
+
+      <span *ngIf="hasAction" [ngClass]="actionPanelClasses">
+        <pure-button theme="toast" (onClick)="action()">{{data.action}}</pure-button>
+      </span>
+    </div>`
+    }),
+    __param(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_toast_config__WEBPACK_IMPORTED_MODULE_2__["PureToastData"])),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
+        _core__WEBPACK_IMPORTED_MODULE_3__["ComponentNamer"],
+        _toast_ref__WEBPACK_IMPORTED_MODULE_1__["PureToastRef"], Object])
+], PureSimpleToast);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/toast/toast-config.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/toast/toast-config.js ***!
+  \***************************************************************/
+/*! exports provided: PureToastData, PureToastConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureToastData", function() { return PureToastData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureToastConfig", function() { return PureToastConfig; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+const PureToastData = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('PureToastData');
+class PureToastConfig {
+    constructor() {
+        /** The length of time in milliseconds to wait before automatically dismissing the toast. */
+        this.duration = 3000;
+        /** The length of time in milliseconds to wait before CSS exit transition is done. */
+        this.cssTransitionDuration = 0;
+        /** Data being injected into the child component. */
+        this.data = null;
+        this.horizontalPosition = 'center';
+        this.verticalPosition = 'bottom';
+    }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/toast/toast-container.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/toast/toast-container.js ***!
+  \******************************************************************/
+/*! exports provided: PureToastContainer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureToastContainer", function() { return PureToastContainer; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/cdk/portal */ "./node_modules/@angular/cdk/esm5/portal.es5.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _toast_config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./toast-config */ "./node_modules/pure-elements/dist/toast/toast-config.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Internal component that wraps user-provided toast content.
+ */
+let PureToastContainer = class PureToastContainer extends _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["BasePortalOutlet"] {
+    constructor(ngZone, elementRef, changeDetectorRef, toastConfig, componentNamer) {
+        super();
+        this.ngZone = ngZone;
+        this.elementRef = elementRef;
+        this.changeDetectorRef = changeDetectorRef;
+        this.toastConfig = toastConfig;
+        this.componentNamer = componentNamer;
+        this.elementName = 'Toast Container';
+        this.isDestroyed = false;
+        this.elementClasses = {};
+        /** Subject for notifying that the toast has exited from view. */
+        this.onExit = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        /** Subject for notifying that the toast has finished entering the view. */
+        this.onEnter = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this.elementClasses[this.componentNamer.generateClassName(this.elementName)] = true;
+    }
+    /** Attach a component portal as content to this toast container. */
+    attachComponentPortal(portal) {
+        this.assertNotAttached();
+        this.applyToastClasses();
+        return this.portalOutlet.attachComponentPortal(portal);
+    }
+    /** Attach a template portal as content to this toast container. */
+    attachTemplatePortal(portal) {
+        this.assertNotAttached();
+        this.applyToastClasses();
+        return this.portalOutlet.attachTemplatePortal(portal);
+    }
+    /** Handle end of animations, updating the state of the toast. */
+    onAnimationEnd() {
+        this.completeExit();
+        const onEnter = this.onEnter;
+        this.ngZone.run(() => {
+            onEnter.next();
+            onEnter.complete();
+        });
+    }
+    /** Begin animation of toast entrance into view. */
+    enter() {
+        if (!this.isDestroyed) {
+            this.setElementVisibility(true);
+            this.changeDetectorRef.detectChanges();
+        }
+    }
+    /** Begin animation of the toast exiting from view. */
+    exit() {
+        this.setElementVisibility(false);
+        setTimeout(() => {
+            this.onAnimationEnd();
+        }, this.toastConfig.cssTransitionDuration);
+        return this.onExit;
+    }
+    setElementVisibility(flag) {
+        this.elementClasses[this.componentNamer.generateClassName(this.elementName, '', 'visible')] = flag;
+    }
+    /**
+     * Waits for the zone to settle before removing the element. Helps prevent
+     * errors where we end up removing an element which is in the middle of an animation.
+     */
+    completeExit() {
+        this.ngZone.onMicrotaskEmpty.asObservable().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1)).subscribe(() => {
+            this.onExit.next();
+            this.onExit.complete();
+        });
+    }
+    applyToastClasses() {
+        const element = this.elementRef.nativeElement;
+        const containerExtraClasses = this.toastConfig.containerExtraClass;
+        if (containerExtraClasses) {
+            if (Array.isArray(containerExtraClasses)) {
+                containerExtraClasses.forEach(cssClass => element.classList.add(cssClass));
+            }
+            else {
+                element.classList.add(containerExtraClasses);
+            }
+        }
+        this.setPositionClasses();
+    }
+    setPositionClasses(flag = true) {
+        this.elementClasses[this.componentNamer.generateClassName(this.elementName, '', 'h-' + this.toastConfig.horizontalPosition)] = flag;
+        this.elementClasses[this.componentNamer.generateClassName(this.elementName, '', 'v-' + this.toastConfig.verticalPosition)] = flag;
+    }
+    assertNotAttached() {
+        if (this.portalOutlet.hasAttached()) {
+            throw Error('Attempting to attach toast content after content is already attached');
+        }
+    }
+    ngOnDestroy() {
+        this.isDestroyed = true;
+        this.completeExit();
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["CdkPortalOutlet"]),
+    __metadata("design:type", _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["CdkPortalOutlet"])
+], PureToastContainer.prototype, "portalOutlet", void 0);
+PureToastContainer = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'pure-toast-container',
+        template: `
+    <div
+      [ngClass]="elementClasses">
+      <ng-container cdkPortalOutlet></ng-container>
+    </div>`
+    }),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"],
+        _toast_config__WEBPACK_IMPORTED_MODULE_4__["PureToastConfig"],
+        _core__WEBPACK_IMPORTED_MODULE_5__["ComponentNamer"]])
+], PureToastContainer);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/toast/toast-module.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/toast/toast-module.js ***!
+  \***************************************************************/
+/*! exports provided: PureToastModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureToastModule", function() { return PureToastModule; });
+/* harmony import */ var _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/cdk/overlay */ "./node_modules/@angular/cdk/esm5/overlay.es5.js");
+/* harmony import */ var _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/cdk/portal */ "./node_modules/@angular/cdk/esm5/portal.es5.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _simple_toast__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./simple-toast */ "./node_modules/pure-elements/dist/toast/simple-toast.js");
+/* harmony import */ var _toast_container__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./toast-container */ "./node_modules/pure-elements/dist/toast/toast-container.js");
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../button */ "./node_modules/pure-elements/dist/button/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+let PureToastModule = class PureToastModule {
+};
+PureToastModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
+        imports: [
+            _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_0__["OverlayModule"],
+            _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["PortalModule"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _button__WEBPACK_IMPORTED_MODULE_7__["PureButtonModule"],
+            _core__WEBPACK_IMPORTED_MODULE_4__["ComponentNamerModule"],
+        ],
+        exports: [_toast_container__WEBPACK_IMPORTED_MODULE_6__["PureToastContainer"], _core__WEBPACK_IMPORTED_MODULE_4__["ComponentNamerModule"]],
+        declarations: [_toast_container__WEBPACK_IMPORTED_MODULE_6__["PureToastContainer"], _simple_toast__WEBPACK_IMPORTED_MODULE_5__["PureSimpleToast"]],
+        entryComponents: [_toast_container__WEBPACK_IMPORTED_MODULE_6__["PureToastContainer"], _simple_toast__WEBPACK_IMPORTED_MODULE_5__["PureSimpleToast"]],
+    })
+], PureToastModule);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/toast/toast-ref.js":
+/*!************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/toast/toast-ref.js ***!
+  \************************************************************/
+/*! exports provided: PureToastRef */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureToastRef", function() { return PureToastRef; });
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+
+/**
+ * Reference to a toast dispatched from the toast service.
+ */
+class PureToastRef {
+    constructor(containerInstance, _overlayRef) {
+        this._overlayRef = _overlayRef;
+        /** Subject for notifying the user that the toast has been dismissed. */
+        this._afterDismissed = new rxjs__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
+        /** Subject for notifying the user that the toast has opened and appeared. */
+        this._afterOpened = new rxjs__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
+        /** Subject for notifying the user that the toast action was called. */
+        this._onAction = new rxjs__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
+        /** Whether the toast was dismissed using the action button. */
+        this._dismissedByAction = false;
+        this.containerInstance = containerInstance;
+        // Dismiss toast on action.
+        this.onAction().subscribe(() => this.dismiss());
+        containerInstance.onExit.subscribe(() => this.finishDismiss());
+    }
+    dismiss() {
+        if (!this._afterDismissed.closed) {
+            this.containerInstance.exit();
+        }
+        clearTimeout(this.durationTimeoutId);
+    }
+    /** Marks the toast action clicked. */
+    dismissWithAction() {
+        if (!this._onAction.closed) {
+            this._dismissedByAction = true;
+            this._onAction.next();
+            this._onAction.complete();
+        }
+    }
+    /** Dismisses the toast after some duration */
+    dismissAfter(duration) {
+        this.durationTimeoutId = setTimeout(() => {
+            this.dismiss();
+        }, duration);
+    }
+    /** Marks the toast as opened */
+    open() {
+        if (!this._afterOpened.closed) {
+            this._afterOpened.next();
+            this._afterOpened.complete();
+        }
+    }
+    /** Cleans up the DOM after closing. */
+    finishDismiss() {
+        this._overlayRef.dispose();
+        if (!this._onAction.closed) {
+            this._onAction.complete();
+        }
+        this._afterDismissed.next({ dismissedByAction: this._dismissedByAction });
+        this._afterDismissed.complete();
+        this._dismissedByAction = false;
+    }
+    /** Gets an observable that is notified when the toast is finished closing. */
+    afterDismissed() {
+        return this._afterDismissed.asObservable();
+    }
+    /** Gets an observable that is notified when the toast has opened and appeared. */
+    afterOpened() {
+        return this.containerInstance.onEnter;
+    }
+    /** Gets an observable that is notified when the toast action is called. */
+    onAction() {
+        return this._onAction.asObservable();
+    }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/toast/toast.js":
+/*!********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/toast/toast.js ***!
+  \********************************************************/
+/*! exports provided: PureToastDefaultOptions, PureToastDefaultOptionsFactory, PureToast */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureToastDefaultOptions", function() { return PureToastDefaultOptions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureToastDefaultOptionsFactory", function() { return PureToastDefaultOptionsFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureToast", function() { return PureToast; });
+/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm5/layout.es5.js");
+/* harmony import */ var _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/cdk/overlay */ "./node_modules/@angular/cdk/esm5/overlay.es5.js");
+/* harmony import */ var _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/cdk/portal */ "./node_modules/@angular/cdk/esm5/portal.es5.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _simple_toast__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./simple-toast */ "./node_modules/pure-elements/dist/toast/simple-toast.js");
+/* harmony import */ var _toast_config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./toast-config */ "./node_modules/pure-elements/dist/toast/toast-config.js");
+/* harmony import */ var _toast_container__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./toast-container */ "./node_modules/pure-elements/dist/toast/toast-container.js");
+/* harmony import */ var _toast_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./toast-module */ "./node_modules/pure-elements/dist/toast/toast-module.js");
+/* harmony import */ var _toast_ref__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./toast-ref */ "./node_modules/pure-elements/dist/toast/toast-ref.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+
+
+
+const PureToastDefaultOptions = new _angular_core__WEBPACK_IMPORTED_MODULE_3__["InjectionToken"]('pure-toast-default-options', {
+    providedIn: 'root',
+    factory: PureToastDefaultOptionsFactory,
+});
+function PureToastDefaultOptionsFactory() {
+    return new _toast_config__WEBPACK_IMPORTED_MODULE_5__["PureToastConfig"]();
+}
+/**
+ * Service to dispatch toast messages.
+ */
+let PureToast = class PureToast {
+    constructor(overlay, injector, breakpointObserver, parentToast, defaultConfig) {
+        this.overlay = overlay;
+        this.injector = injector;
+        this.breakpointObserver = breakpointObserver;
+        this.parentToast = parentToast;
+        this.defaultConfig = defaultConfig;
+        /**
+         * Reference to the current toast in the view *at this level* (in the Angular injector tree).
+         * If there is a parent toast service, all operations should delegate to that parent
+         * via `_openedToastRef`.
+         */
+        this._toastRefAtThisLevel = null;
+    }
+    /** Reference to the currently opened snackbar at *any* level. */
+    get _openedToastRef() {
+        const parent = this.parentToast;
+        return parent ? parent._openedToastRef : this._toastRefAtThisLevel;
+    }
+    set _openedToastRef(value) {
+        if (this.parentToast) {
+            this.parentToast._openedToastRef = value;
+        }
+        else {
+            this._toastRefAtThisLevel = value;
+        }
+    }
+    /**
+     * Creates and dispatches a toast with a custom component for the content, removing any
+     * currently opened toasts.
+     */
+    openFromComponent(component, config) {
+        return this.attach(component, config);
+    }
+    /**
+     * Creates and dispatches a toast with a custom template for the content, removing any
+     * currently opened toasts.
+     */
+    openFromTemplate(template, config) {
+        return this.attach(template, config);
+    }
+    /**
+     * Opens a snackbar with a message and an optional action.
+     */
+    open(message, action = '', config) {
+        const _config = Object.assign({}, this.defaultConfig, config);
+        _config.data = { message, action };
+        return this.openFromComponent(_simple_toast__WEBPACK_IMPORTED_MODULE_4__["PureSimpleToast"], _config);
+    }
+    /**
+     * Dismisses the currently-visible toast.
+     */
+    dismiss() {
+        if (this._openedToastRef) {
+            this._openedToastRef.dismiss();
+        }
+    }
+    /**
+     * Attaches the toast container component to the overlay.
+     */
+    attachToastContainer(overlayRef, config) {
+        const userInjector = config && config.viewContainerRef && config.viewContainerRef.injector;
+        const injector = new _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["PortalInjector"](userInjector || this.injector, new WeakMap([
+            [_toast_config__WEBPACK_IMPORTED_MODULE_5__["PureToastConfig"], config]
+        ]));
+        const containerPortal = new _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["ComponentPortal"](_toast_container__WEBPACK_IMPORTED_MODULE_6__["PureToastContainer"], config.viewContainerRef, injector);
+        const containerRef = overlayRef.attach(containerPortal);
+        containerRef.instance.toastConfig = config;
+        return containerRef.instance;
+    }
+    /**
+     * Places a new component or a template as the content of the toast container.
+     */
+    attach(content, userConfig) {
+        const config = Object.assign({}, new _toast_config__WEBPACK_IMPORTED_MODULE_5__["PureToastConfig"](), this.defaultConfig, userConfig);
+        const overlayRef = this.createOverlay(config);
+        const container = this.attachToastContainer(overlayRef, config);
+        const toastRef = new _toast_ref__WEBPACK_IMPORTED_MODULE_8__["PureToastRef"](container, overlayRef);
+        if (content instanceof _angular_core__WEBPACK_IMPORTED_MODULE_3__["TemplateRef"]) {
+            const portal = new _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["TemplatePortal"](content, null, {
+                $implicit: config.data,
+                toastRef
+            });
+            toastRef.instance = container.attachTemplatePortal(portal);
+        }
+        else {
+            const injector = this.createInjector(config, toastRef);
+            const portal = new _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["ComponentPortal"](content, undefined, injector);
+            const contentRef = container.attachComponentPortal(portal);
+            // We can't pass this via the injector, because the injector is created earlier.
+            toastRef.instance = contentRef.instance;
+        }
+        this.animateToast(toastRef, config);
+        this._openedToastRef = toastRef;
+        return this._openedToastRef;
+    }
+    /** Animates the old toast out and the new one in. */
+    animateToast(toastRef, config) {
+        // When the snackbar is dismissed, clear the reference to it.
+        toastRef.afterDismissed().subscribe(() => {
+            // Clear the snackbar ref if it hasn't already been replaced by a newer snackbar.
+            if (this._openedToastRef == toastRef) {
+                this._openedToastRef = null;
+            }
+        });
+        if (this._openedToastRef) {
+            // If a toast is already in view, dismiss it and enter the
+            // new toast after exit animation is complete.
+            this._openedToastRef.afterDismissed().subscribe(() => {
+                toastRef.containerInstance.enter();
+            });
+            this._openedToastRef.dismiss();
+        }
+        else {
+            // If no toast is in view, enter the new toast.
+            toastRef.containerInstance.enter();
+        }
+        // If a dismiss timeout is provided, set up dismiss based on after the snackbar is opened.
+        if (config.duration && config.duration > 0) {
+            toastRef.dismissAfter(config.duration);
+        }
+    }
+    /**
+     * Creates a new overlay and places it in the correct location.
+     */
+    createOverlay(config) {
+        const overlayConfig = new _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_1__["OverlayConfig"]();
+        let positionStrategy = this.overlay.position().global();
+        // Set horizontal position.
+        const isLeft = config.horizontalPosition === 'left';
+        const isRight = !isLeft && config.horizontalPosition !== 'center';
+        if (isLeft) {
+            positionStrategy.left('0');
+        }
+        else if (isRight) {
+            positionStrategy.right('0');
+        }
+        else {
+            positionStrategy.centerHorizontally();
+        }
+        // Set horizontal position.
+        if (config.verticalPosition === 'top') {
+            positionStrategy.top('0');
+        }
+        else {
+            positionStrategy.bottom('0');
+        }
+        overlayConfig.positionStrategy = positionStrategy;
+        return this.overlay.create(overlayConfig);
+    }
+    /**
+     * Creates an injector to be used inside of a toast component.
+     */
+    createInjector(config, toastRef) {
+        const userInjector = config && config.viewContainerRef && config.viewContainerRef.injector;
+        return new _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["PortalInjector"](userInjector || this.injector, new WeakMap([
+            [_toast_ref__WEBPACK_IMPORTED_MODULE_8__["PureToastRef"], toastRef],
+            [_toast_config__WEBPACK_IMPORTED_MODULE_5__["PureToastData"], config.data]
+        ]));
+    }
+};
+PureToast = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Injectable"])({
+        providedIn: _toast_module__WEBPACK_IMPORTED_MODULE_7__["PureToastModule"]
+    }),
+    __param(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Optional"])()), __param(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["SkipSelf"])()),
+    __param(4, Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Inject"])(PureToastDefaultOptions)),
+    __metadata("design:paramtypes", [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_1__["Overlay"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["Injector"],
+        _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_0__["BreakpointObserver"],
+        PureToast,
+        _toast_config__WEBPACK_IMPORTED_MODULE_5__["PureToastConfig"]])
+], PureToast);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/tooltip/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/tooltip/index.js ***!
+  \**********************************************************/
+/*! exports provided: PureTooltipModule, PureTooltipDefaultConfig, PureTooltipConfigToken, PureTooltipConfigFactory, PureTooltip, PureTooltipComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/tooltip/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureTooltipModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipDefaultConfig", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureTooltipDefaultConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipConfigToken", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureTooltipConfigToken"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipConfigFactory", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureTooltipConfigFactory"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltip", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureTooltip"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipComponent", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureTooltipComponent"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/tooltip/public-api.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/tooltip/public-api.js ***!
+  \***************************************************************/
+/*! exports provided: PureTooltipModule, PureTooltipDefaultConfig, PureTooltipConfigToken, PureTooltipConfigFactory, PureTooltip, PureTooltipComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _tooltip_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tooltip.module */ "./node_modules/pure-elements/dist/tooltip/tooltip.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipModule", function() { return _tooltip_module__WEBPACK_IMPORTED_MODULE_0__["PureTooltipModule"]; });
+
+/* harmony import */ var _tooltip_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tooltip-config */ "./node_modules/pure-elements/dist/tooltip/tooltip-config.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipDefaultConfig", function() { return _tooltip_config__WEBPACK_IMPORTED_MODULE_1__["PureTooltipDefaultConfig"]; });
+
+/* harmony import */ var _tooltip_config_token__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tooltip-config-token */ "./node_modules/pure-elements/dist/tooltip/tooltip-config-token.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipConfigToken", function() { return _tooltip_config_token__WEBPACK_IMPORTED_MODULE_2__["PureTooltipConfigToken"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipConfigFactory", function() { return _tooltip_config_token__WEBPACK_IMPORTED_MODULE_2__["PureTooltipConfigFactory"]; });
+
+/* harmony import */ var _tooltip__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tooltip */ "./node_modules/pure-elements/dist/tooltip/tooltip.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltip", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_3__["PureTooltip"]; });
+
+/* harmony import */ var _tooltip_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tooltip-component */ "./node_modules/pure-elements/dist/tooltip/tooltip-component.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipComponent", function() { return _tooltip_component__WEBPACK_IMPORTED_MODULE_4__["PureTooltipComponent"]; });
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/tooltip/tooltip-component.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/tooltip/tooltip-component.js ***!
+  \**********************************************************************/
+/*! exports provided: PureTooltipComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureTooltipComponent", function() { return PureTooltipComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+let PureTooltipComponent = class PureTooltipComponent extends _core__WEBPACK_IMPORTED_MODULE_1__["PureComponent"] {
+    constructor(elementRef, componentNamer, config) {
+        super(elementRef, componentNamer);
+        this.elementRef = elementRef;
+        this.componentNamer = componentNamer;
+        this.config = config;
+        this.elementName = 'Tooltip';
+        this.containerName = 'Container';
+        this.appendixName = 'Appendix';
+        this.containerClasses = {};
+        this.appendixClasses = {};
+        this.showClass = this.componentNamer.generateClassName(this.elementName, '', 'shown');
+        this._show = false;
+        if (config) {
+            this.elementClasses[this.componentNamer.generateClassName(this.elementName, '', this.config.position)] = true;
+        }
+    }
+    get show() {
+        return this._show;
+    }
+    set show(value) {
+        this._show = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceBooleanProperty"])(value);
+        this.elementClasses[this.showClass] = this._show;
+    }
+    setContainerClasses(flag = true) {
+        this.containerClasses[this.componentNamer.generateClassName(this.elementName, this.containerName)] = flag;
+    }
+    setAppendixClasses(flag = true) {
+        this.appendixClasses[this.componentNamer.generateClassName(this.elementName, this.appendixName)] = flag;
+    }
+    ngOnInit() {
+        super.ngOnInit();
+        this.setContainerClasses();
+        this.setAppendixClasses();
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('container'),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+], PureTooltipComponent.prototype, "container", void 0);
+PureTooltipComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        template: `
+    <div [ngClass]="elementClasses">
+      <div
+        [ngClass]="containerClasses"
+        #container>
+        <ng-content></ng-content>
+      </div>
+      <div [ngClass]="appendixClasses"></div>
+    </div>
+  `
+    }),
+    __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])('pureTooltipConfig')),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
+        _core__WEBPACK_IMPORTED_MODULE_1__["ComponentNamer"], Object])
+], PureTooltipComponent);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/tooltip/tooltip-config-token.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/tooltip/tooltip-config-token.js ***!
+  \*************************************************************************/
+/*! exports provided: PureTooltipConfigToken, PureTooltipConfigFactory */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureTooltipConfigToken", function() { return PureTooltipConfigToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureTooltipConfigFactory", function() { return PureTooltipConfigFactory; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _tooltip_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tooltip-config */ "./node_modules/pure-elements/dist/tooltip/tooltip-config.js");
+
+
+const PureTooltipConfigToken = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('PureTooltipConfig', {
+    providedIn: 'root',
+    factory: PureTooltipConfigFactory
+});
+function PureTooltipConfigFactory() {
+    return _tooltip_config__WEBPACK_IMPORTED_MODULE_1__["PureTooltipDefaultConfig"];
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/tooltip/tooltip-config.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/tooltip/tooltip-config.js ***!
+  \*******************************************************************/
+/*! exports provided: PureTooltipDefaultConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureTooltipDefaultConfig", function() { return PureTooltipDefaultConfig; });
+const PureTooltipDefaultConfig = {
+    showDelay: 0,
+    hideDelay: 0,
+    touchendHideDelay: 1500,
+    position: 'top',
+    triggerEvent: 'hover',
+    closeOnEsc: true
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/tooltip/tooltip.js":
+/*!************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/tooltip/tooltip.js ***!
+  \************************************************************/
+/*! exports provided: PureTooltip */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureTooltip", function() { return PureTooltip; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _tooltip_config_token__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tooltip-config-token */ "./node_modules/pure-elements/dist/tooltip/tooltip-config-token.js");
+/* harmony import */ var _tooltip_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tooltip-config */ "./node_modules/pure-elements/dist/tooltip/tooltip-config.js");
+/* harmony import */ var _tooltip_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tooltip-component */ "./node_modules/pure-elements/dist/tooltip/tooltip-component.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+let PureTooltip = class PureTooltip {
+    constructor(elementRef, renderer, injector, cfResolver, viewContainerRef, eventHandler, customConfig) {
+        this.elementRef = elementRef;
+        this.renderer = renderer;
+        this.injector = injector;
+        this.cfResolver = cfResolver;
+        this.viewContainerRef = viewContainerRef;
+        this.eventHandler = eventHandler;
+        this.showTimeoutId = null;
+        this.hideTimeoutId = null;
+        this._disabled = false;
+        this.triggeredToShow = false;
+        this.config = customConfig ? Object.assign(_tooltip_config__WEBPACK_IMPORTED_MODULE_3__["PureTooltipDefaultConfig"], customConfig) : _tooltip_config__WEBPACK_IMPORTED_MODULE_3__["PureTooltipDefaultConfig"];
+        this.showDelay = this.config.showDelay;
+        this.hideDelay = this.config.hideDelay;
+        this.touchendHideDelay = this.config.touchendHideDelay;
+        this.position = this.config.position;
+        this.triggerEvent = this.config.triggerEvent;
+        this.closeOnEsc = this.config.closeOnEsc;
+    }
+    get content() {
+        return this._content;
+    }
+    set content(value) {
+        this._content = value;
+        if (!this._content && this.componentRef) {
+            this.destroyTooltip();
+        }
+    }
+    get disabled() {
+        return this._disabled;
+    }
+    set disabled(value) {
+        this._disabled = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceBooleanProperty"])(value);
+        if (this._disabled && this.isTooltipVisible()) {
+            this.hide(0);
+        }
+        if (!this._disabled && this.triggeredToShow) {
+            this.show(0);
+        }
+    }
+    get theme() {
+        return this._theme;
+    }
+    set theme(value) {
+        this._theme = value;
+        if (this.componentRef) {
+            this.componentRef.instance.theme = value;
+        }
+    }
+    get extraClass() {
+        return this._theme;
+    }
+    set extraClass(value) {
+        this._theme = value;
+        if (this.componentRef) {
+            this.componentRef.instance.extraClass = value;
+        }
+    }
+    get triggerEvent() {
+        return this._triggerEvent;
+    }
+    set triggerEvent(value) {
+        this._triggerEvent = value;
+        if (this.isTooltipVisible()) {
+            this.triggeredToShow = false;
+            this.hide(0);
+        }
+    }
+    onMouseenter() {
+        if (this.triggerEvent === 'hover') {
+            this.triggeredToShow = true;
+            this.show();
+        }
+    }
+    onMouseout() {
+        if (this.triggerEvent === 'hover') {
+            this.triggeredToShow = false;
+            if (this.isTooltipVisible()) {
+                this.hide();
+            }
+        }
+    }
+    onLongpress() {
+        if (this.triggerEvent === 'hover') {
+            this.triggeredToShow = true;
+            this.show();
+        }
+    }
+    onTouchend() {
+        if (this.triggerEvent === 'hover') {
+            this.triggeredToShow = false;
+            if (this.isTooltipVisible())
+                this.hide(this.touchendHideDelay);
+        }
+    }
+    onFocus() {
+        if (this.triggerEvent === 'focus') {
+            this.triggeredToShow = true;
+            this.show();
+        }
+    }
+    onBlur() {
+        if (this.triggerEvent === 'focus') {
+            this.triggeredToShow = false;
+            if (this.isTooltipVisible())
+                this.hide();
+        }
+    }
+    /**
+     * When trigger event is `hover` — body interactions should immediately cancel the tooltip if
+     * there is a delay in hiding.
+     */
+    onBodyClick() {
+        if (this.triggerEvent === 'hover') {
+            if (this.isTooltipVisible())
+                this.hide(0);
+        }
+    }
+    onKeydown(event) {
+        if (event.keyCode === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].ESCAPE) {
+            if (this.closeOnEsc) {
+                if (this.isTooltipVisible())
+                    this.hide(0);
+            }
+        }
+    }
+    isTooltipVisible() {
+        return this.componentRef && this.componentRef.instance.show;
+    }
+    toggle() {
+        this.isTooltipVisible() ? this.hide(0) : this.show(0);
+    }
+    show(delay = this.showDelay) {
+        if (this.disabled)
+            return;
+        if (this.hideTimeoutId) {
+            clearTimeout(this.hideTimeoutId);
+        }
+        else {
+            this.showTimeoutId = setTimeout(() => {
+                if (!this.componentRef)
+                    this.createTooltip();
+                this.componentRef.instance.show = true;
+                this.showTimeoutId = null;
+            }, delay);
+        }
+    }
+    hide(delay = this.hideDelay) {
+        if (this.showTimeoutId) {
+            clearTimeout(this.showTimeoutId);
+        }
+        else {
+            this.hideTimeoutId = setTimeout(() => {
+                this.componentRef.instance.show = false;
+                this.hideTimeoutId = null;
+            }, delay);
+        }
+    }
+    createTooltip() {
+        const factory = this.cfResolver.resolveComponentFactory(_tooltip_component__WEBPACK_IMPORTED_MODULE_4__["PureTooltipComponent"]), componentConfig = {
+            host: this.elementRef.nativeElement,
+            position: this.position
+        }, injector = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ReflectiveInjector"].resolveAndCreate([{
+                provide: 'pureTooltipConfig',
+                useValue: componentConfig
+            }]);
+        this.componentRef = this.viewContainerRef.createComponent(factory, 0, injector, this.generateNgContent());
+        this.componentRef.instance.theme = this.theme;
+    }
+    destroyTooltip() {
+        this.componentRef && this.componentRef.destroy();
+        this.componentRef = null;
+    }
+    generateNgContent() {
+        if (typeof this.content === 'string') {
+            const element = this.renderer.createText(this.content);
+            return [[element]];
+        }
+        else if (this.content instanceof _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"]) {
+            const context = {}, viewRef = this.content.createEmbeddedView(context);
+            return [viewRef.rootNodes];
+        }
+        else {
+            // Else it's a component
+            const factory = this.cfResolver.resolveComponentFactory(this.content), componentRef = factory.create(this.injector);
+            return [[componentRef.location.nativeElement]];
+        }
+    }
+    ngOnInit() {
+        this.onKeydownSub = this.eventHandler.onKeydown().subscribe((event) => this.onKeydown(event), (err) => this.eventHandler.handleErrorFromSubscriber(err));
+    }
+    ngOnDestroy() {
+        this.onKeydownSub.unsubscribe();
+        this.destroyTooltip();
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('pureTooltipShowDelay'),
+    __metadata("design:type", Number)
+], PureTooltip.prototype, "showDelay", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('pureTooltipHideDelay'),
+    __metadata("design:type", Number)
+], PureTooltip.prototype, "hideDelay", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('pureTooltipPosition'),
+    __metadata("design:type", String)
+], PureTooltip.prototype, "position", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('pureTooltip'),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [Object])
+], PureTooltip.prototype, "content", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('pureTooltipDisabled'),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Boolean])
+], PureTooltip.prototype, "disabled", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('pureTooltipTheme'),
+    __metadata("design:type", String),
+    __metadata("design:paramtypes", [String])
+], PureTooltip.prototype, "theme", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('pureTooltipExtraClass'),
+    __metadata("design:type", String),
+    __metadata("design:paramtypes", [String])
+], PureTooltip.prototype, "extraClass", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('pureTooltipTriggerEvent'),
+    __metadata("design:type", String),
+    __metadata("design:paramtypes", [String])
+], PureTooltip.prototype, "triggerEvent", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('mouseenter'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], PureTooltip.prototype, "onMouseenter", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('mouseout'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], PureTooltip.prototype, "onMouseout", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('longpress'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], PureTooltip.prototype, "onLongpress", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('touchend'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], PureTooltip.prototype, "onTouchend", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('focus'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], PureTooltip.prototype, "onFocus", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('blur'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], PureTooltip.prototype, "onBlur", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('body:click'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], PureTooltip.prototype, "onBodyClick", null);
+PureTooltip = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({
+        selector: '[pureTooltip]',
+        exportAs: 'pureTooltip'
+    }),
+    __param(6, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), __param(6, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_tooltip_config_token__WEBPACK_IMPORTED_MODULE_2__["PureTooltipConfigToken"])),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"],
+        _core__WEBPACK_IMPORTED_MODULE_1__["EventHandler"], Object])
+], PureTooltip);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/tooltip/tooltip.module.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/tooltip/tooltip.module.js ***!
+  \*******************************************************************/
+/*! exports provided: PureTooltipModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureTooltipModule", function() { return PureTooltipModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _tooltip__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tooltip */ "./node_modules/pure-elements/dist/tooltip/tooltip.js");
+/* harmony import */ var _tooltip_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tooltip-component */ "./node_modules/pure-elements/dist/tooltip/tooltip-component.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+let PureTooltipModule = class PureTooltipModule {
+};
+PureTooltipModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _core__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerModule"].forRoot()],
+        declarations: [_tooltip_component__WEBPACK_IMPORTED_MODULE_4__["PureTooltipComponent"], _tooltip__WEBPACK_IMPORTED_MODULE_3__["PureTooltip"]],
+        exports: [_tooltip_component__WEBPACK_IMPORTED_MODULE_4__["PureTooltipComponent"], _tooltip__WEBPACK_IMPORTED_MODULE_3__["PureTooltip"]],
+        providers: [_core__WEBPACK_IMPORTED_MODULE_2__["EventHandler"]],
+        entryComponents: [_tooltip_component__WEBPACK_IMPORTED_MODULE_4__["PureTooltipComponent"]]
+    })
+], PureTooltipModule);
+
+
+
+/***/ }),
+
 /***/ "./node_modules/rxjs/_esm5/index.js":
 /*!******************************************!*\
   !*** ./node_modules/rxjs/_esm5/index.js ***!

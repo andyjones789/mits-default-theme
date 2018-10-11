@@ -527,7 +527,7 @@ var IconDemo = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"c-item-container\">\n  <header class=\"c-item-container__header\">\n    <h1 class=\"c-item-container__heading\">MITS Default Theme</h1>\n    <p class=\"c-item-container__desc\">Design system &amp; styled components set for Make I.T. Simple projects.</p>\n  </header>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Installation</h2>\n    <span class=\"c-component__container c-component__container--full-width\">\n      <ol>\n        <li>Download <a rel=\"noopener\" target=\"blank\" href=\"https://github.com/MakeITSimpleUK/mits-default-theme\">repository.</a></li>\n        <li>Copy <code>/styles</code> and <code>/theme</code> folders to your project.</li>\n      </ol>\n    </span>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Dependencies</h2>\n    <span class=\"c-component__container c-component__container--full-width\">\n      <ul>\n        <li>Uses <a rel=\"noopener\" target=\"blank\" href=\"http://stylus-lang.com\">Stylus</a> preprocessor.</li>\n        <li>Does makeup for <a rel=\"noopener\" target=\"blank\" href=\"https://makeitsimpleuk.github.io/pure-elements/#/\">Pure Elements 1.0</a>.</li>\n        <li>Has <a rel=\"noopener\" target=\"blank\" href=\"https://github.com/antonskyba/Breeze.css\">Breeze.css 1.7</a> as a CSS core.</li>\n      </ul>\n    </span>\n  </div>\n</div>\n"
+module.exports = "<div class=\"c-item-container\">\n  <header class=\"c-item-container__header\">\n    <h1 class=\"c-item-container__heading\">MITS Default Theme</h1>\n    <p class=\"c-item-container__desc\">Design system &amp; styled components set for Make I.T. Simple projects.</p>\n  </header>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Installation</h2>\n    <span class=\"c-component__container c-component__container--full-width\">\n      <ol>\n        <li>Install theme: <code>npm i mits-default-theme --save</code>.</li>\n        <li>Import Rupture, Normalize.css, Breeze.css and theme files into your main <code>styl</code> file. See the <a rel=\"noopener\" target=\"blank\" href=\"https://github.com/MakeITSimpleUK/mits-default-theme/blob/master/example.app.styl\">example file</a> in repository root.</li>\n        <li>Install <a rel=\"noopener\" target=\"blank\" href=\"https://makeitsimpleuk.github.io/pure-elements/#/\">Pure Elements</a>.</li>\n      </ol>\n    </span>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Dependencies</h2>\n    <span class=\"c-component__container c-component__container--full-width\">\n      <ul>\n        <li><a rel=\"noopener\" target=\"blank\" href=\"http://stylus-lang.com\">Stylus</a></li>\n        <li><a rel=\"noopener\" target=\"blank\" href=\"https://github.com/antonskyba/Breeze.css\">Breeze.css 2</a></li>\n        <li><a rel=\"noopener\" target=\"blank\" href=\"https://github.com/jescalan/rupture\">Rupture</a></li>\n        <li><a rel=\"noopener\" target=\"blank\" href=\"https://necolas.github.io/normalize.css\">Normalize.css</a></li>\n        <li><a rel=\"noopener\" target=\"blank\" href=\"https://makeitsimpleuk.github.io/pure-elements/#/\">Pure Elements 1</a></li>\n      </ul>\n    </span>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -907,7 +907,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _pure_elements__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pure-elements */ "./src/app/pure-elements/index.ts");
+/* harmony import */ var pure_elements__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! pure-elements */ "./node_modules/pure-elements/dist/index.js");
 /* harmony import */ var _brand_logo_brand_logo_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../brand-logo/brand-logo.module */ "./src/app/brand-logo/brand-logo.module.ts");
 /* harmony import */ var _styleguide_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styleguide-routing.module */ "./src/app/styleguide/styleguide-routing.module.ts");
 /* harmony import */ var _styleguide__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styleguide */ "./src/app/styleguide/styleguide.ts");
@@ -979,7 +979,7 @@ var StyleguideModule = /** @class */ (function () {
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
                 _styleguide_routing_module__WEBPACK_IMPORTED_MODULE_5__["StyleguideRoutingModule"],
-                _pure_elements__WEBPACK_IMPORTED_MODULE_3__["PureElements"],
+                pure_elements__WEBPACK_IMPORTED_MODULE_3__["PureElements"],
                 _brand_logo_brand_logo_module__WEBPACK_IMPORTED_MODULE_4__["BrandLogoModule"]
             ],
             declarations: [
@@ -1007,7 +1007,7 @@ var StyleguideModule = /** @class */ (function () {
             ],
             providers: [
                 {
-                    provide: _pure_elements__WEBPACK_IMPORTED_MODULE_3__["PureToastDefaultOptions"],
+                    provide: pure_elements__WEBPACK_IMPORTED_MODULE_3__["PureToastDefaultOptions"],
                     useValue: toastConfig
                 }
             ],
@@ -1204,7 +1204,7 @@ module.exports = "<div class=\"c-item-container\">\n  <header class=\"c-item-con
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToastDemo", function() { return ToastDemo; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _pure_elements__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../pure-elements */ "./src/app/pure-elements/index.ts");
+/* harmony import */ var pure_elements__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! pure-elements */ "./node_modules/pure-elements/dist/index.js");
 /* harmony import */ var _lib_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../lib-data */ "./src/app/lib-data.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1236,7 +1236,7 @@ var ToastDemo = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             template: __webpack_require__(/*! ./toast-demo.html */ "./src/app/styleguide/toast/toast-demo.html")
         }),
-        __metadata("design:paramtypes", [_pure_elements__WEBPACK_IMPORTED_MODULE_1__["PureToast"]])
+        __metadata("design:paramtypes", [pure_elements__WEBPACK_IMPORTED_MODULE_1__["PureToast"]])
     ], ToastDemo);
     return ToastDemo;
 }());

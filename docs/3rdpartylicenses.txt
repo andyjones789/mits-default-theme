@@ -119,6 +119,10 @@ MIT
 MIT
 MIT
 
+pure-elements@1.0.12
+ISC
+ISC
+
 rxjs@6.3.2
 Apache-2.0
 Apache License

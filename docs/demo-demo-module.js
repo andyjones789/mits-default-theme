@@ -78,7 +78,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DemoModule", function() { return DemoModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _pure_elements__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../pure-elements */ "./src/app/pure-elements/index.ts");
+/* harmony import */ var pure_elements__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! pure-elements */ "./node_modules/pure-elements/dist/index.js");
 /* harmony import */ var _brand_logo_brand_logo_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../brand-logo/brand-logo.module */ "./src/app/brand-logo/brand-logo.module.ts");
 /* harmony import */ var _demo_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./demo-routing.module */ "./src/app/demo/demo-routing.module.ts");
 /* harmony import */ var _demo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./demo */ "./src/app/demo/demo.ts");
@@ -108,7 +108,7 @@ var DemoModule = /** @class */ (function () {
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                 _demo_routing_module__WEBPACK_IMPORTED_MODULE_4__["DemoRoutingModule"],
-                _pure_elements__WEBPACK_IMPORTED_MODULE_2__["PureElements"],
+                pure_elements__WEBPACK_IMPORTED_MODULE_2__["PureElements"],
                 _brand_logo_brand_logo_module__WEBPACK_IMPORTED_MODULE_3__["BrandLogoModule"]
             ]
         })
