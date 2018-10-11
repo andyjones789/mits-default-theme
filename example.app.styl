@@ -1,0 +1,129 @@
+/* ==========================================================================
+   <-- PUT PROJECT NAME HERE -->
+   ========================================================================== */
+
+/*
+ * This is an example of main app's Stylus file with theme & all its
+ * dependencies imported in right way.
+ *
+ * NOTE: This example uses ITCSS methodology for CSS-code organisation.
+ */
+
+
+
+
+
+// Config
+// =============================================================================
+
+// Global settings files that contain project-wide variables; things that need
+// to be made available to the entire codebase.
+//
+// 1. Import third-party libs like Rupture first.
+// 2. Import Breeze's config module but place it before theme's config module
+//    because Breeze uses conditional assignment operator (see Stylus docs:
+//    http://stylus-lang.com/docs/operators.html#conditional-assignment--),
+//    so in such way we're overriding some of its variables like font sizes
+//    and leaving rest of variables with their default values.
+// 3. Finally, import theme's config module.
+
+@import './../../node_modules/rupture/rupture'; // [1]
+@import './../../node_modules/mits-default-theme/config'; // [3]
+@import './../../node_modules/breeze.css/config'; // [2]
+
+
+
+
+
+// Functions
+// =============================================================================
+
+// Globally used functions and mixins.
+//
+// 1. Import Breeze's functions module.
+// 2. Import theme's functions module. Placed after Breeze's one in case we
+//    want to override some functions.
+
+@import './../../node_modules/breeze.css/functions'; // [1]
+@import './../../node_modules/mits-default-theme/functions'; // [2]
+
+
+
+
+
+/* Generic
+ * ========================================================================== */
+
+/*
+ * Low-specific & far-reaching rulesets: reset, normalize, box-sizing
+ * definition, etc. This is the first layer which generates actual CSS.
+ *
+ * 1. Import Normalize.css.
+ * 2. Import Breeze's generic module.
+ * 3. Import theme's generic module. Placed after Breeze's one to override its
+ *    styles (here and below).
+ */
+
+@import './../../node_modules/normalize.css'; /* [1] */
+@import './../../node_modules/breeze.css/generic'; /* [2] */
+@import './../../node_modules/mits-default-theme/generic'; /* [3] */
+
+
+
+
+
+/* HTML Tags
+ * ========================================================================== */
+
+/*
+ * Styles for unclassed HTML elements (e.g. <h1>, <input>). These come with
+ * default styling from the browser so we can redefine them there.
+ */
+
+@import './../../node_modules/breeze.css/html-tags'
+@import './../../node_modules/mits-default-theme/html-tags'
+
+
+
+
+
+/* Objects
+ * ========================================================================== */
+
+/*
+ * Class-based selectors which define objects, abstractions, and design
+ * patterns.
+ */
+
+@import './../../node_modules/breeze.css/objects'
+@import './../../node_modules/mits-default-theme/objects'
+
+
+
+
+
+/* UI Components
+ * ========================================================================== */
+
+/*
+ * Discrete, complete chunks of UI. This is where majority of designed
+ * components/chunks of UI are injected.
+ */
+
+@import './../../node_modules/breeze.css/ui-components'
+@import './../../node_modules/mits-default-theme/ui-components'
+
+
+
+
+
+/* Utilities
+ * ========================================================================== */
+
+/*
+ * Utilities and helper classes with ability to override anything which goes
+ * before.
+ */
+
+@import './../../node_modules/breeze.css/utilities'
+@import './../../node_modules/mits-default-theme/utilities'

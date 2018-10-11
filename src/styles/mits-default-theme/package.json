@@ -1,0 +1,26 @@
+{
+  "name": "mits-default-theme",
+  "version": "1.1.0",
+  "description": "Styled components set for Make I.T. Simple projects",
+  "main": "main.styl",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MakeITSimpleUK/mits-default-theme.git"
+  },
+  "author": "Anton Skyba <“inbox@antonskyba.me”>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MakeITSimpleUK/mits-default-theme/issues"
+  },
+  "homepage": "https://github.com/MakeITSimpleUK/mits-default-theme#readme",
+  "dependencies": {
+    "breeze.css": "^2.1.0",
+    "normalize.css": "^8.0.0"
+  },
+  "devDependencies": {
+    "rupture": "^0.7.1"
+  }
+}

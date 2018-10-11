@@ -9,19 +9,22 @@ Design system & styled components set for Make I.T. Simple projects.
 
 #### Installation
 
-1. Clone or download repository.
-2. Copy `/styles` and `/theme` folders to your project.
+1. Install theme: `npm i mits-default-theme --save`.
+2. Import Rupture, Normalize.css, Breeze.css and theme files into your main `styl` file. See the [example file](https://github.com/MakeITSimpleUK/mits-default-theme/blob/master/example.app.styl) in repository root.
+3. Install [Pure Elements](https://makeitsimpleuk.github.io/pure-elements/#/).
 
 #### Dependencies
 
-- Uses [Stylus](http://stylus-lang.com) preprocessor.
-- Does makeup for [Pure Elements 1.0](https://makeitsimpleuk.github.io/pure-elements/#/).
-- Has [Breeze.css 1.7](https://github.com/antonskyba/Breeze.css) as a CSS core.
+- [Stylus](http://stylus-lang.com)
+- [Breeze.css 2](https://github.com/antonskyba/Breeze.css)
+- [Rupture](https://github.com/jescalan/rupture)
+- [Normalize.css](https://necolas.github.io/normalize.css)
+- [Pure Elements 1](https://makeitsimpleuk.github.io/pure-elements/#/)
 
 
 ## Source
 
-Theme sources are located in the `src/themes/` directory.
+Theme sources are located in the `src/styles/mits-default-theme/` directory.
 
 
 ## Local Usage
