@@ -1,6 +1,6 @@
 {
   "name": "mits-default-theme",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Styled components set for Make I.T. Simple projects",
   "main": "main.styl",
   "scripts": {
@@ -18,9 +18,8 @@
   "homepage": "https://github.com/MakeITSimpleUK/mits-default-theme#readme",
   "dependencies": {
     "breeze.css": "^2.1.0",
-    "normalize.css": "^8.0.0"
-  },
-  "devDependencies": {
+    "normalize.css": "^8.0.0",
     "rupture": "^0.7.1"
-  }
+  },
+  "devDependencies": {}
 }
