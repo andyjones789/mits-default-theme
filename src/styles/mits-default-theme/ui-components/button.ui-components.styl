@@ -17,9 +17,6 @@ _button-theme($background, $color, $box-shadow-color-opacity = 0)
   color $color
   box-shadow $pure-button-box-shadow-model rgba($background, $box-shadow-color-opacity)
 
-  &:hover
-    background saturate(lighten($background, 15%), 15%)
-
   &:active,
   /.js-active &
     background desaturate(darken($background, 15%), 15%)
@@ -57,7 +54,7 @@ _button-flat()
   text-overflow ellipsis
   font-weight 400
   letter-spacing $letter-spacing-lg
-  transition $global-duration-lg
+  transition $global-duration 
   
   _button-theme($color-accent, $pure-button-color, .38)
 
@@ -77,8 +74,12 @@ _button-flat()
       transform none
       
 
+  /*
+   * 1. Fix bug with icon select on click in Chrome.
+   */
   .c-icon
     font-size $font-size-xl
+    pointer-events none /* [1] */
 
 
 
