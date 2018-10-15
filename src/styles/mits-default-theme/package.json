@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/MakeITSimpleUK/mits-default-theme#readme",
   "dependencies": {
-    "breeze.css": "^2.1.0",
+    "breeze.css": "^2.1.2",
     "normalize.css": "^8.0.0",
     "rupture": "^0.7.1"
   },
