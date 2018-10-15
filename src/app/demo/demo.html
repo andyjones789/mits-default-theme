@@ -24,11 +24,11 @@
           </span>
           <span class="c-user-panel__controls">
             <span class="u-relative">
-              <pure-button theme="iconic transparent">
+              <pure-button theme="iconic transparent" [pureDropdownTriggerFor]="userDropdown">
                 <i class="c-icon">more_vert</i>
               </pure-button> 
 
-              <pure-dropdown #dropdown="pureDropdown" yPosition="before" xPosition="above">
+              <pure-dropdown #userDropdown="pureDropdown" yPosition="before" xPosition="above">
                 <div pureDropdownItem>
                   <div class="u-flex-row u-align-items-center">
                     <i class="c-icon u-margin-right-4s">person</i>
