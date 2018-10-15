@@ -80,7 +80,8 @@ _button-flat()
   .c-icon
     font-size $font-size-xl
     pointer-events none /* [1] */
-    line-height @font-size
+    height @font-size
+    line-height @height
 
 
 
@@ -169,9 +170,13 @@ $pure-button-processing-anim-duration = .7s
 
   &.c-pure-button--icon-caret
   
+    /*
+     * 1. Fix for Edge.
+     */
     .c-icon
       width 1.4rem
       margin 0
+      overflow visible /* [1] */
 
 
 
