@@ -221,6 +221,28 @@ _form-control-dynamic-width($start-width, $expanded-width)
     
     .c-pure-input
       padding-right $input-suffix-width
+      
+
+
+
+
+/* Select
+   ========================================================================== */
+
+.c-pure-form-control--select
+  
+  .c-pure-form-control__input-holder
+    
+    &::before
+      content 'arrow_drop_down'
+      y-centered()
+      right .4rem
+      style-icon()
+      pointer-events none
+      
+
+    select.c-pure-input
+      appearance none
 
 
 

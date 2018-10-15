@@ -1,0 +1,41 @@
+// =============================================================================
+// ICON
+// =============================================================================
+
+
+
+
+
+// Style Icon
+// =============================================================================
+
+// Mixin for applying Icon styles in case we want to put icon via CSS, e.g. in
+// ::before of ::after pseudoelement.
+
+/*
+ * 1. Prevent icon transforming to triple dot when lack of space.
+ * 2. Support for all WebKit browsers.
+ * 3. Support for Safari and Chrome.
+ * 4. Support for Firefox.
+ * 5. Support for IE.
+ */
+
+style-icon()
+  display inline-block
+  vertical-align middle
+  line-height 1
+  font-family 'Material Icons'
+  font-weight normal
+  font-style normal
+  font-size $unit-em-lg
+  letter-spacing normal
+  text-transform none
+  white-space nowrap
+  word-wrap normal
+  direction ltr
+  overflow auto /* [1] */
+  text-overflow unset /* [1] */
+  -webkit-font-smoothing antialiased /* [2] */
+  text-rendering optimizeLegibility /* [3] */
+  -moz-osx-font-smoothing grayscale /* [4] */
+  font-feature-settings 'liga' /* [5] */
