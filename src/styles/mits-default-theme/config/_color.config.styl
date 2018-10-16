@@ -14,40 +14,42 @@
 
 // Main Colors
 
-_$cerulean-blue = #3751C5
-_$puerto-rico   = #3ECAA9
-_$burnt-sienna  = #EE7A68
-_$french-grey   = lighten(desaturate(_$cerulean-blue, 88%), 28%)
+_$cerulean-blue   = #3751C5
+_$puerto-rico     = #3ECAA9
+_$burnt-sienna    = #EE7A68
+_$french-grey     = lighten(desaturate(_$cerulean-blue, 88%), 28%)
 
 
 // Cerulean Blue Shades
 
-_$white-lilac   = mix(_$cerulean-blue, white, 8%)
-_$malibu        = saturate(lighten(_$cerulean-blue, 60%), 100%)
+_$white-lilac     = mix(_$cerulean-blue, white, 8%)
+_$malibu          = saturate(lighten(_$cerulean-blue, 60%), 100%)
 
 
 // Puerto Rico Shades
 
-_$off-green     = mix(_$puerto-rico, white, 13%)
-_$sharlotte     = saturate(lighten(_$puerto-rico, 65%), 55%)
+_$mountain-meadow = saturate(darken(_$puerto-rico, 25%), 44%)
+_$off-green       = mix(_$puerto-rico, white, 13%)
+_$sharlotte       = saturate(lighten(_$puerto-rico, 65%), 55%)
 
 
 // Burnt Sienna Shades
 
-_$linen         = mix(_$burnt-sienna, white, 12%)
-_$melon         = saturate(lighten(_$burnt-sienna, 60%), 70%)
+_$cinnabar        = darken(_$burnt-sienna, 20%)
+_$linen           = mix(_$burnt-sienna, white, 12%)
+_$melon           = saturate(lighten(_$burnt-sienna, 60%), 70%)
 
 
 // French Grey Shades
 
-_$shark         = darken(_$french-grey, 79%)
-_$shuttle-grey  = darken(_$french-grey, 43%)
-_$iron          = lighten(_$french-grey, 74%)
-_$iron          = lighten(_$french-grey, 79%)
-_$athens-grey   = lighten(_$french-grey, 95%)
-_$white         = lighten(_$french-grey, 100%)
+_$shark           = darken(_$french-grey, 79%)
+_$shuttle-grey    = darken(_$french-grey, 43%)
+_$iron            = lighten(_$french-grey, 74%)
+_$iron            = lighten(_$french-grey, 79%)
+_$athens-grey     = lighten(_$french-grey, 95%)
+_$white           = lighten(_$french-grey, 100%)
 
-_$mako          = mix(_$shark, _$shuttle-grey)
+_$mako            = mix(_$shark, _$shuttle-grey)
 
 
 
@@ -80,6 +82,7 @@ $color-accent-washed          = _$white-lilac
 
 // Accent Positive (From Dark to Light)
 
+$color-accent-positive-dark   = _$mountain-meadow
 $color-accent-positive        = _$puerto-rico
 $color-accent-positive-bright = _$sharlotte
 $color-accent-positive-washed = _$off-green
@@ -87,6 +90,7 @@ $color-accent-positive-washed = _$off-green
 
 // Accent Negative (From Dark to Light)
 
+$color-accent-negative-dark   = _$cinnabar
 $color-accent-negative        = _$burnt-sienna
 $color-accent-negative-bright = _$melon
 $color-accent-negative-washed = _$linen

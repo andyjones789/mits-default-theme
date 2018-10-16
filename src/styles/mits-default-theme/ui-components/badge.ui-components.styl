@@ -5,7 +5,7 @@
 
 
 $badge-padding-v = 0
-$badge-padding-h = $unit-em-sm
+$badge-padding-h = $unit-em-3s
 
 
 _badge-theme($color)
@@ -17,19 +17,21 @@ _badge-theme($color)
   display inline-flex
   align-items center
   max-width 100%
-  padding $badge-padding-v $badge-padding-h ($badge-padding-v + .1rem)
+  padding $badge-padding-v $badge-padding-h
   border .1rem solid
   border-radius 999rem
-  font-size $font-size-sm
-  font-weight 400
+  font-size $font-size-xs
+  font-weight 600
   font-style normal
+  letter-spacing $letter-spacing
   white-space nowrap
   overflow hidden
   text-overflow ellipsis
   text-decoration none
-  background transparent
-  box-shadow 0
+  text-transform uppercase
   text-shadow none
+  background transparent
+  box-shadow none
   
   _badge-theme($color-accent)
 
@@ -43,12 +45,12 @@ _badge-theme($color)
 .c-badge
   
   &--success
-    _badge-theme($color-accent-positive)
+    _badge-theme($color-accent-positive-dark)
     
 
   &--warning
-    _badge-theme($color-accent-negative)
+    _badge-theme($color-accent-negative-dark)
   
 
   &--neutral
-    _badge-theme($color-primary)
+    _badge-theme($color-primary-dark)
