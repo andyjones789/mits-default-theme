@@ -18,6 +18,50 @@ var LibData = {
 
 /***/ }),
 
+/***/ "./src/app/styleguide/a11y/a11y.html":
+/*!*******************************************!*\
+  !*** ./src/app/styleguide/a11y/a11y.html ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"c-item-container\">\n  <header class=\"c-item-container__header\">\n    <h1 class=\"c-item-container__heading\">Accessibility</h1>\n    <p class=\"c-item-container__desc\">The whole theme was developed with accessibility in mind and that's why each component has a visual focus indicator for navigating throughout the page using a Tab button. For aesthetic & usability reasons it is recommended to only enable focus indicator once the Tab key was pressed. In fact, this provides the same UX as with default browser styling.</p>\n    <p class=\"c-item-container__desc\">Theme doesn't provide such functionality to keep it simple and not include JavaScript in its package. If you are developer, you can investigate how it's made in the app's source.</p>\n  </header>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/styleguide/a11y/a11y.ts":
+/*!*****************************************!*\
+  !*** ./src/app/styleguide/a11y/a11y.ts ***!
+  \*****************************************/
+/*! exports provided: A11y */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A11y", function() { return A11y; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var A11y = /** @class */ (function () {
+    function A11y() {
+    }
+    A11y = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            template: __webpack_require__(/*! ./a11y.html */ "./src/app/styleguide/a11y/a11y.html")
+        })
+    ], A11y);
+    return A11y;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/styleguide/badge/badge-demo.html":
 /*!**************************************************!*\
   !*** ./src/app/styleguide/badge/badge-demo.html ***!
@@ -788,28 +832,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _base_unit_base_unit_demo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./base-unit/base-unit-demo */ "./src/app/styleguide/base-unit/base-unit-demo.ts");
 /* harmony import */ var _colour_scheme_colour_scheme_demo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./colour-scheme/colour-scheme-demo */ "./src/app/styleguide/colour-scheme/colour-scheme-demo.ts");
 /* harmony import */ var _typography_typography_demo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./typography/typography-demo */ "./src/app/styleguide/typography/typography-demo.ts");
-/* harmony import */ var _controls_controls_demo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./controls/controls-demo */ "./src/app/styleguide/controls/controls-demo.ts");
-/* harmony import */ var _grid_grid_demo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./grid/grid-demo */ "./src/app/styleguide/grid/grid-demo.ts");
-/* harmony import */ var _badge_badge_demo__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./badge/badge-demo */ "./src/app/styleguide/badge/badge-demo.ts");
-/* harmony import */ var _button_button_demo__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./button/button-demo */ "./src/app/styleguide/button/button-demo.ts");
-/* harmony import */ var _card_card_demo__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./card/card-demo */ "./src/app/styleguide/card/card-demo.ts");
-/* harmony import */ var _data_grid_data_grid_demo__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./data-grid/data-grid-demo */ "./src/app/styleguide/data-grid/data-grid-demo.ts");
-/* harmony import */ var _dropdown_dropdown_demo__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./dropdown/dropdown-demo */ "./src/app/styleguide/dropdown/dropdown-demo.ts");
-/* harmony import */ var _icon_icon_demo__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./icon/icon-demo */ "./src/app/styleguide/icon/icon-demo.ts");
-/* harmony import */ var _form_control_form_control_demo__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./form-control/form-control-demo */ "./src/app/styleguide/form-control/form-control-demo.ts");
-/* harmony import */ var _loading_loading_demo__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./loading/loading-demo */ "./src/app/styleguide/loading/loading-demo.ts");
-/* harmony import */ var _menu_menu_demo__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./menu/menu-demo */ "./src/app/styleguide/menu/menu-demo.ts");
-/* harmony import */ var _modal_modal_demo__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modal/modal-demo */ "./src/app/styleguide/modal/modal-demo.ts");
-/* harmony import */ var _round_badge_round_badge_demo__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./round-badge/round-badge-demo */ "./src/app/styleguide/round-badge/round-badge-demo.ts");
-/* harmony import */ var _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./switcher/switcher-demo */ "./src/app/styleguide/switcher/switcher-demo.ts");
-/* harmony import */ var _toast_toast_demo__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./toast/toast-demo */ "./src/app/styleguide/toast/toast-demo.ts");
-/* harmony import */ var _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./tooltip/tooltip-demo */ "./src/app/styleguide/tooltip/tooltip-demo.ts");
+/* harmony import */ var _a11y_a11y__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./a11y/a11y */ "./src/app/styleguide/a11y/a11y.ts");
+/* harmony import */ var _controls_controls_demo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./controls/controls-demo */ "./src/app/styleguide/controls/controls-demo.ts");
+/* harmony import */ var _grid_grid_demo__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./grid/grid-demo */ "./src/app/styleguide/grid/grid-demo.ts");
+/* harmony import */ var _badge_badge_demo__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./badge/badge-demo */ "./src/app/styleguide/badge/badge-demo.ts");
+/* harmony import */ var _button_button_demo__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./button/button-demo */ "./src/app/styleguide/button/button-demo.ts");
+/* harmony import */ var _card_card_demo__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./card/card-demo */ "./src/app/styleguide/card/card-demo.ts");
+/* harmony import */ var _data_grid_data_grid_demo__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./data-grid/data-grid-demo */ "./src/app/styleguide/data-grid/data-grid-demo.ts");
+/* harmony import */ var _dropdown_dropdown_demo__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./dropdown/dropdown-demo */ "./src/app/styleguide/dropdown/dropdown-demo.ts");
+/* harmony import */ var _icon_icon_demo__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./icon/icon-demo */ "./src/app/styleguide/icon/icon-demo.ts");
+/* harmony import */ var _form_control_form_control_demo__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./form-control/form-control-demo */ "./src/app/styleguide/form-control/form-control-demo.ts");
+/* harmony import */ var _loading_loading_demo__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./loading/loading-demo */ "./src/app/styleguide/loading/loading-demo.ts");
+/* harmony import */ var _menu_menu_demo__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./menu/menu-demo */ "./src/app/styleguide/menu/menu-demo.ts");
+/* harmony import */ var _modal_modal_demo__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modal/modal-demo */ "./src/app/styleguide/modal/modal-demo.ts");
+/* harmony import */ var _round_badge_round_badge_demo__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./round-badge/round-badge-demo */ "./src/app/styleguide/round-badge/round-badge-demo.ts");
+/* harmony import */ var _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./switcher/switcher-demo */ "./src/app/styleguide/switcher/switcher-demo.ts");
+/* harmony import */ var _toast_toast_demo__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./toast/toast-demo */ "./src/app/styleguide/toast/toast-demo.ts");
+/* harmony import */ var _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./tooltip/tooltip-demo */ "./src/app/styleguide/tooltip/tooltip-demo.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -842,22 +888,23 @@ var routes = [
             { path: 'sizes', component: _base_unit_base_unit_demo__WEBPACK_IMPORTED_MODULE_4__["BaseUnitDemo"] },
             { path: 'colour-scheme', component: _colour_scheme_colour_scheme_demo__WEBPACK_IMPORTED_MODULE_5__["ColourSchemeDemo"] },
             { path: 'typography', component: _typography_typography_demo__WEBPACK_IMPORTED_MODULE_6__["TypographyDemo"] },
-            { path: 'controls', component: _controls_controls_demo__WEBPACK_IMPORTED_MODULE_7__["ControlsDemo"] },
-            { path: 'grid', component: _grid_grid_demo__WEBPACK_IMPORTED_MODULE_8__["GridDemo"] },
-            { path: 'badge', component: _badge_badge_demo__WEBPACK_IMPORTED_MODULE_9__["BadgeDemo"] },
-            { path: 'button', component: _button_button_demo__WEBPACK_IMPORTED_MODULE_10__["ButtonDemo"] },
-            { path: 'card', component: _card_card_demo__WEBPACK_IMPORTED_MODULE_11__["CardDemo"] },
-            { path: 'data-grid', component: _data_grid_data_grid_demo__WEBPACK_IMPORTED_MODULE_12__["DataGridDemo"] },
-            { path: 'dropdown', component: _dropdown_dropdown_demo__WEBPACK_IMPORTED_MODULE_13__["DropdownDemo"] },
-            { path: 'icon', component: _icon_icon_demo__WEBPACK_IMPORTED_MODULE_14__["IconDemo"] },
-            { path: 'form-control', component: _form_control_form_control_demo__WEBPACK_IMPORTED_MODULE_15__["FormControlDemo"] },
-            { path: 'loading', component: _loading_loading_demo__WEBPACK_IMPORTED_MODULE_16__["LoadingDemo"] },
-            { path: 'menu', component: _menu_menu_demo__WEBPACK_IMPORTED_MODULE_17__["MenuDemo"] },
-            { path: 'modal', component: _modal_modal_demo__WEBPACK_IMPORTED_MODULE_18__["ModalDemo"] },
-            { path: 'round-badge', component: _round_badge_round_badge_demo__WEBPACK_IMPORTED_MODULE_19__["RoundBadgeDemo"] },
-            { path: 'switcher', component: _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_20__["SwitcherDemo"] },
-            { path: 'toast', component: _toast_toast_demo__WEBPACK_IMPORTED_MODULE_21__["ToastDemo"] },
-            { path: 'tooltip', component: _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_22__["TooltipDemo"] },
+            { path: 'accessibility', component: _a11y_a11y__WEBPACK_IMPORTED_MODULE_7__["A11y"] },
+            { path: 'controls', component: _controls_controls_demo__WEBPACK_IMPORTED_MODULE_8__["ControlsDemo"] },
+            { path: 'grid', component: _grid_grid_demo__WEBPACK_IMPORTED_MODULE_9__["GridDemo"] },
+            { path: 'badge', component: _badge_badge_demo__WEBPACK_IMPORTED_MODULE_10__["BadgeDemo"] },
+            { path: 'button', component: _button_button_demo__WEBPACK_IMPORTED_MODULE_11__["ButtonDemo"] },
+            { path: 'card', component: _card_card_demo__WEBPACK_IMPORTED_MODULE_12__["CardDemo"] },
+            { path: 'data-grid', component: _data_grid_data_grid_demo__WEBPACK_IMPORTED_MODULE_13__["DataGridDemo"] },
+            { path: 'dropdown', component: _dropdown_dropdown_demo__WEBPACK_IMPORTED_MODULE_14__["DropdownDemo"] },
+            { path: 'icon', component: _icon_icon_demo__WEBPACK_IMPORTED_MODULE_15__["IconDemo"] },
+            { path: 'form-control', component: _form_control_form_control_demo__WEBPACK_IMPORTED_MODULE_16__["FormControlDemo"] },
+            { path: 'loading', component: _loading_loading_demo__WEBPACK_IMPORTED_MODULE_17__["LoadingDemo"] },
+            { path: 'menu', component: _menu_menu_demo__WEBPACK_IMPORTED_MODULE_18__["MenuDemo"] },
+            { path: 'modal', component: _modal_modal_demo__WEBPACK_IMPORTED_MODULE_19__["ModalDemo"] },
+            { path: 'round-badge', component: _round_badge_round_badge_demo__WEBPACK_IMPORTED_MODULE_20__["RoundBadgeDemo"] },
+            { path: 'switcher', component: _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_21__["SwitcherDemo"] },
+            { path: 'toast', component: _toast_toast_demo__WEBPACK_IMPORTED_MODULE_22__["ToastDemo"] },
+            { path: 'tooltip', component: _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_23__["TooltipDemo"] },
             { path: '', redirectTo: 'getting-started' },
             { path: '**', redirectTo: 'getting-started' }
         ]
@@ -915,28 +962,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _base_unit_base_unit_demo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./base-unit/base-unit-demo */ "./src/app/styleguide/base-unit/base-unit-demo.ts");
 /* harmony import */ var _colour_scheme_colour_scheme_demo__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./colour-scheme/colour-scheme-demo */ "./src/app/styleguide/colour-scheme/colour-scheme-demo.ts");
 /* harmony import */ var _typography_typography_demo__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./typography/typography-demo */ "./src/app/styleguide/typography/typography-demo.ts");
-/* harmony import */ var _controls_controls_demo__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./controls/controls-demo */ "./src/app/styleguide/controls/controls-demo.ts");
-/* harmony import */ var _grid_grid_demo__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./grid/grid-demo */ "./src/app/styleguide/grid/grid-demo.ts");
-/* harmony import */ var _badge_badge_demo__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./badge/badge-demo */ "./src/app/styleguide/badge/badge-demo.ts");
-/* harmony import */ var _button_button_demo__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./button/button-demo */ "./src/app/styleguide/button/button-demo.ts");
-/* harmony import */ var _card_card_demo__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./card/card-demo */ "./src/app/styleguide/card/card-demo.ts");
-/* harmony import */ var _data_grid_data_grid_demo__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./data-grid/data-grid-demo */ "./src/app/styleguide/data-grid/data-grid-demo.ts");
-/* harmony import */ var _dropdown_dropdown_demo__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./dropdown/dropdown-demo */ "./src/app/styleguide/dropdown/dropdown-demo.ts");
-/* harmony import */ var _icon_icon_demo__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./icon/icon-demo */ "./src/app/styleguide/icon/icon-demo.ts");
-/* harmony import */ var _form_control_form_control_demo__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./form-control/form-control-demo */ "./src/app/styleguide/form-control/form-control-demo.ts");
-/* harmony import */ var _loading_loading_demo__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./loading/loading-demo */ "./src/app/styleguide/loading/loading-demo.ts");
-/* harmony import */ var _menu_menu_demo__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./menu/menu-demo */ "./src/app/styleguide/menu/menu-demo.ts");
-/* harmony import */ var _modal_modal_demo__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./modal/modal-demo */ "./src/app/styleguide/modal/modal-demo.ts");
-/* harmony import */ var _round_badge_round_badge_demo__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./round-badge/round-badge-demo */ "./src/app/styleguide/round-badge/round-badge-demo.ts");
-/* harmony import */ var _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./switcher/switcher-demo */ "./src/app/styleguide/switcher/switcher-demo.ts");
-/* harmony import */ var _toast_toast_demo__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./toast/toast-demo */ "./src/app/styleguide/toast/toast-demo.ts");
-/* harmony import */ var _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./tooltip/tooltip-demo */ "./src/app/styleguide/tooltip/tooltip-demo.ts");
+/* harmony import */ var _a11y_a11y__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./a11y/a11y */ "./src/app/styleguide/a11y/a11y.ts");
+/* harmony import */ var _controls_controls_demo__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./controls/controls-demo */ "./src/app/styleguide/controls/controls-demo.ts");
+/* harmony import */ var _grid_grid_demo__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./grid/grid-demo */ "./src/app/styleguide/grid/grid-demo.ts");
+/* harmony import */ var _badge_badge_demo__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./badge/badge-demo */ "./src/app/styleguide/badge/badge-demo.ts");
+/* harmony import */ var _button_button_demo__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./button/button-demo */ "./src/app/styleguide/button/button-demo.ts");
+/* harmony import */ var _card_card_demo__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./card/card-demo */ "./src/app/styleguide/card/card-demo.ts");
+/* harmony import */ var _data_grid_data_grid_demo__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./data-grid/data-grid-demo */ "./src/app/styleguide/data-grid/data-grid-demo.ts");
+/* harmony import */ var _dropdown_dropdown_demo__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./dropdown/dropdown-demo */ "./src/app/styleguide/dropdown/dropdown-demo.ts");
+/* harmony import */ var _icon_icon_demo__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./icon/icon-demo */ "./src/app/styleguide/icon/icon-demo.ts");
+/* harmony import */ var _form_control_form_control_demo__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./form-control/form-control-demo */ "./src/app/styleguide/form-control/form-control-demo.ts");
+/* harmony import */ var _loading_loading_demo__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./loading/loading-demo */ "./src/app/styleguide/loading/loading-demo.ts");
+/* harmony import */ var _menu_menu_demo__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./menu/menu-demo */ "./src/app/styleguide/menu/menu-demo.ts");
+/* harmony import */ var _modal_modal_demo__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./modal/modal-demo */ "./src/app/styleguide/modal/modal-demo.ts");
+/* harmony import */ var _round_badge_round_badge_demo__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./round-badge/round-badge-demo */ "./src/app/styleguide/round-badge/round-badge-demo.ts");
+/* harmony import */ var _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./switcher/switcher-demo */ "./src/app/styleguide/switcher/switcher-demo.ts");
+/* harmony import */ var _toast_toast_demo__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./toast/toast-demo */ "./src/app/styleguide/toast/toast-demo.ts");
+/* harmony import */ var _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./tooltip/tooltip-demo */ "./src/app/styleguide/tooltip/tooltip-demo.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -988,22 +1037,23 @@ var StyleguideModule = /** @class */ (function () {
                 _base_unit_base_unit_demo__WEBPACK_IMPORTED_MODULE_8__["BaseUnitDemo"],
                 _colour_scheme_colour_scheme_demo__WEBPACK_IMPORTED_MODULE_9__["ColourSchemeDemo"],
                 _typography_typography_demo__WEBPACK_IMPORTED_MODULE_10__["TypographyDemo"],
-                _controls_controls_demo__WEBPACK_IMPORTED_MODULE_11__["ControlsDemo"],
-                _grid_grid_demo__WEBPACK_IMPORTED_MODULE_12__["GridDemo"],
-                _badge_badge_demo__WEBPACK_IMPORTED_MODULE_13__["BadgeDemo"],
-                _button_button_demo__WEBPACK_IMPORTED_MODULE_14__["ButtonDemo"],
-                _card_card_demo__WEBPACK_IMPORTED_MODULE_15__["CardDemo"],
-                _data_grid_data_grid_demo__WEBPACK_IMPORTED_MODULE_16__["DataGridDemo"],
-                _dropdown_dropdown_demo__WEBPACK_IMPORTED_MODULE_17__["DropdownDemo"],
-                _icon_icon_demo__WEBPACK_IMPORTED_MODULE_18__["IconDemo"],
-                _form_control_form_control_demo__WEBPACK_IMPORTED_MODULE_19__["FormControlDemo"],
-                _loading_loading_demo__WEBPACK_IMPORTED_MODULE_20__["LoadingDemo"],
-                _menu_menu_demo__WEBPACK_IMPORTED_MODULE_21__["MenuDemo"],
-                _modal_modal_demo__WEBPACK_IMPORTED_MODULE_22__["ModalDemo"],
-                _round_badge_round_badge_demo__WEBPACK_IMPORTED_MODULE_23__["RoundBadgeDemo"],
-                _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_24__["SwitcherDemo"],
-                _toast_toast_demo__WEBPACK_IMPORTED_MODULE_25__["ToastDemo"],
-                _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_26__["TooltipDemo"]
+                _a11y_a11y__WEBPACK_IMPORTED_MODULE_11__["A11y"],
+                _controls_controls_demo__WEBPACK_IMPORTED_MODULE_12__["ControlsDemo"],
+                _grid_grid_demo__WEBPACK_IMPORTED_MODULE_13__["GridDemo"],
+                _badge_badge_demo__WEBPACK_IMPORTED_MODULE_14__["BadgeDemo"],
+                _button_button_demo__WEBPACK_IMPORTED_MODULE_15__["ButtonDemo"],
+                _card_card_demo__WEBPACK_IMPORTED_MODULE_16__["CardDemo"],
+                _data_grid_data_grid_demo__WEBPACK_IMPORTED_MODULE_17__["DataGridDemo"],
+                _dropdown_dropdown_demo__WEBPACK_IMPORTED_MODULE_18__["DropdownDemo"],
+                _icon_icon_demo__WEBPACK_IMPORTED_MODULE_19__["IconDemo"],
+                _form_control_form_control_demo__WEBPACK_IMPORTED_MODULE_20__["FormControlDemo"],
+                _loading_loading_demo__WEBPACK_IMPORTED_MODULE_21__["LoadingDemo"],
+                _menu_menu_demo__WEBPACK_IMPORTED_MODULE_22__["MenuDemo"],
+                _modal_modal_demo__WEBPACK_IMPORTED_MODULE_23__["ModalDemo"],
+                _round_badge_round_badge_demo__WEBPACK_IMPORTED_MODULE_24__["RoundBadgeDemo"],
+                _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_25__["SwitcherDemo"],
+                _toast_toast_demo__WEBPACK_IMPORTED_MODULE_26__["ToastDemo"],
+                _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_27__["TooltipDemo"]
             ],
             providers: [
                 {
@@ -1052,7 +1102,7 @@ var Styleguide = /** @class */ (function () {
             {
                 title: 'Typography',
                 url: 'typography'
-            }
+            },
         ];
         this.objectsLinks = [
             {

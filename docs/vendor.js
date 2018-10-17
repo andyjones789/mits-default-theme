@@ -74526,7 +74526,7 @@ let PureSwitcher = class PureSwitcher extends _core__WEBPACK_IMPORTED_MODULE_1__
         this._disabled = false;
         this._required = false;
         this.change = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        this.id = this.componentNamer.generateId(nextUniqueId, this.elementName);
+        this.id = this.componentNamer.generateId(nextUniqueId++, this.elementName);
     }
     get checked() {
         return this._checked;

@@ -119,7 +119,7 @@ MIT
 MIT
 MIT
 
-pure-elements@1.0.12
+pure-elements@1.0.14
 ISC
 ISC
 
