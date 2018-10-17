@@ -1,0 +1,60 @@
+// =============================================================================
+// ACCESSIBILITY
+// =============================================================================
+
+
+
+
+
+// Outline Styles
+// =============================================================================
+
+// Basic styles for outline.
+
+outline-basic-styles($outline-offset = 0, $border-radius = $global-radius)
+  position relative
+  
+  &::after
+    content ''
+    position absolute
+    left -($outline-width + $outline-offset)
+    right @left
+    top @left
+    bottom @left
+    z-index 1
+    border $outline
+    border-radius $border-radius
+    pointer-events none
+    opacity 0
+    transform scale(1.06, 1.15)
+    transition $global-duration-lg
+    transition-timing-function $ease-out-back
+    
+
+// Styles that define how oultine should behave when element is focused.
+
+outline-focus-styles()
+  &::after
+    opacity 1
+    transform scale(1)
+
+
+// Mixin that conbines two mixins above.
+
+outline-styles($outline-offset = 0, $border-radius = $global-radius)
+  outline-basic-styles($outline-offset, $border-radius)
+  
+  &:focus
+    outline none
+    
+    outline-focus-styles()
+
+
+// If you want so that element doesn't have outline.
+
+no-outline()
+  &:focus
+    outline none
+
+  &::after
+    visibility hidden

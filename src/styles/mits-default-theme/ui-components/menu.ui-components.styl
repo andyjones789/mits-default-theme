@@ -4,6 +4,7 @@
 
 
 
+$menu-item-border-radius    = $global-radius
 $menu-item-transform-active = scale(.98, .95)
 
 
@@ -17,23 +18,26 @@ $menu-item-transform-active = scale(.98, .95)
 
 
   &__item
+    outline-styles(0, $menu-item-border-radius * 1.5)
+    
     display block
     padding $unit-4s $unit-lg
-    border-radius $global-radius
+    border-radius $menu-item-border-radius
     font-weight normal
     color $body-color
     cursor pointer
     user-select none
     transition $global-duration-out
 
-    &:not(.c-menu__item--active):hover
+    &:hover:not(.c-menu__item--active),
+    &:focus:not(.c-menu__item--active)
       background $color-accent-washed
       transition $global-duration-in
     
-    &:not(.c-menu__item--disabled):active
+    &:active:not(.c-menu__item--disabled)
       transform $menu-item-transform-active
       transition $global-duration-in
-
+      
 
     &--active
       background $color-accent
@@ -47,7 +51,8 @@ $menu-item-transform-active = scale(.98, .95)
       color $body-color-light
       cursor default
       
-      &:not(.c-menu__item--active):hover
+      &:hover:not(.c-menu__item--active),
+      &:focus:not(.c-menu__item--active)
         color @color
         background @background
     

@@ -117,31 +117,13 @@ _form-control-dynamic-width($start-width, $expanded-width)
 .c-pure-form-control:not(.c-pure-form-control--readonly)
   
   .c-pure-form-control__input-holder
-    position relative
-    
-    &::after
-      content ''
-      position absolute
-      left -($input-outline-width) + .1rem
-      right @left
-      top @left
-      bottom @left
-      border $input-outline-width solid $input-outline-color
-      border-radius ($input-border-radius * 1.25)
-      pointer-events none
-      opacity 0
-      transform scale(1.06, 1.15)
-      transition $global-duration-lg
-      transition-timing-function $ease-out-back
+    outline-basic-styles(-.1rem, $input-border-radius * 1.25)
   
 
   &.c-pure-form-control--focused
   
     .c-pure-form-control__input-holder
-      
-      &::after
-        opacity 1
-        transform scale(1)
+      outline-focus-styles()
 
 
   &.c-pure-form-control--search
@@ -266,16 +248,13 @@ $form-control-toggle-bg-color = darken($input-bg-color, 5%) // [1]
   
 
   .c-pure-input
-
-    /* Reset styles and hide completely. */  
-    visually-hidden()
-    display none
+    hidden-visually()
     
     &:checked + .c-pure-form-control__toggle
       background $color-accent
       box-shadow $pure-button-box-shadow-model rgba($color-accent, .38)
       
-      &::after
+      &::before
         transform scale(1)
     
     &:active + .c-pure-form-control__toggle
@@ -283,6 +262,9 @@ $form-control-toggle-bg-color = darken($input-bg-color, 5%) // [1]
       
     &:active:not(:checked) + .c-pure-form-control__toggle
       background mix($color-accent, $form-control-toggle-bg-color, 13%)
+    
+    &:focus + .c-pure-form-control__toggle
+      outline-focus-styles()
   
 
   .c-pure-label
@@ -297,7 +279,11 @@ $form-control-toggle-bg-color = darken($input-bg-color, 5%) // [1]
     margin 0
 
 
-  .c-pure-form-control__toggle
+  .c-pure-form-control__input-holder
+    no-outline()
+    
+
+  .c-pure-form-control__toggle    
     position absolute
     top 50%
     left 0
@@ -309,7 +295,7 @@ $form-control-toggle-bg-color = darken($input-bg-color, 5%) // [1]
     transition $global-duration-lg
     transition-timing-function $ease-out-expo
     
-    &::after
+    &::before
       content ''
       background $color-primary-white
       transition $global-duration-lg
@@ -321,7 +307,7 @@ $form-control-toggle-bg-color = darken($input-bg-color, 5%) // [1]
     .c-pure-form-control__input-holder
       position static
       
-      &::after
+      &::before
         display none
 
 
@@ -341,11 +327,14 @@ $radio-label-gap = $unit-2s - .1rem
 
 
   .c-pure-form-control__toggle
+    outline-basic-styles(0, 50%)
+
+    position absolute
     width $radio-width
     height $radio-height
     border-radius 50%
     
-    &::after
+    &::before
       transform scale(0)
       width $unit-5s
       height @width
@@ -356,9 +345,10 @@ $radio-label-gap = $unit-2s - .1rem
  * Checkbox-specific styles.
  */
  
-$checkbox-width     = $unit-lg
-$checkbox-height    = $checkbox-width
-$checkbox-label-gap = $unit-2s
+$checkbox-width         = $unit-lg
+$checkbox-height        = $checkbox-width
+$checkbox-label-gap     = $unit-2s
+$checkbox-border-radius = $global-radius-sm * 1.5
 
 
 .c-pure-form-control--checkbox
@@ -374,11 +364,14 @@ $checkbox-label-gap = $unit-2s
   
 
   .c-pure-form-control__toggle
+    outline-basic-styles(0, $checkbox-border-radius * 1.75)
+    
+    position absolute
     width $checkbox-width
     height $checkbox-height
-    border-radius .3rem
+    border-radius $checkbox-border-radius
     
-    &::after
+    &::before
       transform scale(0)
       width $unit-5s
       height @width

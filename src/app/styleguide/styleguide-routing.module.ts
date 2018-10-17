@@ -8,6 +8,7 @@ import { Intro } from './intro/intro';
 import { BaseUnitDemo } from './base-unit/base-unit-demo';
 import { ColourSchemeDemo } from './colour-scheme/colour-scheme-demo';
 import { TypographyDemo } from './typography/typography-demo';
+import { A11y } from './a11y/a11y';
 
 import { ControlsDemo } from './controls/controls-demo';
 import { GridDemo } from './grid/grid-demo';
@@ -37,6 +38,7 @@ const routes: Routes = [
       { path: 'sizes', component: BaseUnitDemo },
       { path: 'colour-scheme', component: ColourSchemeDemo },
       { path: 'typography', component: TypographyDemo },
+      { path: 'accessibility', component: A11y },
 
       { path: 'controls', component: ControlsDemo },
       { path: 'grid', component: GridDemo },

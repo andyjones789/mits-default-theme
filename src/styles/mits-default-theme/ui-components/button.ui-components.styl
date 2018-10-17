@@ -6,6 +6,7 @@
 
 $pure-button-padding-v        = $unit-5s
 $pure-button-padding-h        = $unit-xs
+$pure-button-border-radius    = $global-radius
 $pure-button-font-size        = $font-size
 $pure-button-line-height      = $line-height
 $pure-button-color            = $body-color-inverse
@@ -18,6 +19,7 @@ _button-theme($background, $color, $box-shadow-color-opacity = 0)
   box-shadow $pure-button-box-shadow-model rgba($background, $box-shadow-color-opacity)
 
   &:active,
+  &.js-active,
   /.js-active &
     background desaturate(darken($background, 15%), 15%)
 
@@ -38,30 +40,36 @@ _button-flat()
 /* Regular Button
    ========================================================================== */
 
+/*
+ * 1. Needed to show custom outline in pseudoelement.
+ * 2. Opacity changes when in .c-data-grid__hover-content element.
+ */
+
 .c-pure-button
+  outline-styles(0, $pure-button-border-radius * 1.5)
+  
   flex-shrink 0
   display inline-block
   min-width $unit-8x
+  max-width 100%
   padding $pure-button-padding-v $pure-button-padding-h
   border 0
-  border-radius $global-radius
+  border-radius $pure-button-border-radius
   line-height $pure-button-line-height
   font-size $pure-button-font-size
   text-align center
   text-decoration none
   white-space nowrap
-  overflow hidden
+  overflow visible /* [1] */
   text-overflow ellipsis
   font-weight 400
   letter-spacing $letter-spacing-lg
-  transition $global-duration 
+  transition background, color, box-shadow, transform, opacity $global-duration /* [2] */
   
   _button-theme($color-accent, $pure-button-color, .38)
 
-  &:focus
-    outline none
-
   &:active,
+  &.js-active,
   /.js-active &
     transform translateY(.1rem) scale(.98)
     transition 0

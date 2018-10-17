@@ -1,0 +1,24 @@
+/* ==========================================================================
+   ACCESSIBILITY
+   ========================================================================== */
+
+
+
+
+
+/* No Outline
+   ========================================================================== */
+
+.u-no-outline
+  
+  .c-pure-button,
+  .c-pure-form-control--checkbox .c-pure-form-control__toggle,
+  .c-pure-form-control--radio .c-pure-form-control__toggle,
+  .c-menu__item,
+  .c-pure-switcher__toggle-container
+    
+    &:focus
+      outline none !important
+
+    &::after
+      visibility hidden !important

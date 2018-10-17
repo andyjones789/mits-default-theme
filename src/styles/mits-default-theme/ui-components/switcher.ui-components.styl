@@ -31,6 +31,8 @@ $switcher-transition-duration     = $global-duration
 .c-pure-switcher
 
   &__toggle-container
+    outline-basic-styles(0, 999rem)
+    
     position relative
     width $switcher-toggle-container-width
     height $switcher-toggle-container-height
@@ -40,6 +42,11 @@ $switcher-transition-duration     = $global-duration
     box-shadow inset 0 0 .1rem rgba($box-shadow-color-black, .44)
     transition $switcher-transition-duration
     will-change background
+  
+  &__input:focus
+    
+    & + .c-pure-switcher__toggle-container
+      outline-focus-styles()
   
 
   &__toggle

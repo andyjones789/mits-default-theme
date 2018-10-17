@@ -80,17 +80,22 @@
 .c-data-grid
 
   &__hover-content
-    visibility hidden
-    opacity 0
-    transition $global-duration-out
+    
+    button,
+    a
+      opacity 0
+      
+      &:focus
+        opacity 1
 
 
   &__tr:hover
 
     .c-data-grid__hover-content
-      visibility visible
-      opacity 1
-      transition $global-duration-in
+      
+      button,
+      a
+        opacity 1
 
 
 
