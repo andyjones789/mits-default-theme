@@ -52,10 +52,31 @@
           </td>
           <td class="c-data-grid__td u-text-capitalize">{{user.role}}</td>
           <td class="c-data-grid__td u-text-right">
-            <div class="c-data-grid__hover-content">
-              <pure-button theme="iconic transparent">
+            <div class="c-data-grid__hover-content u-relative">
+              <pure-button theme="iconic transparent" [pureDropdownTriggerFor]="userDropdown">
                 <i class="c-icon">more_vert</i>
               </pure-button>
+
+              <pure-dropdown #userDropdown="pureDropdown" yPosition="before" xPosition="above">
+                <div pureDropdownItem>
+                  <div class="u-flex-row u-align-items-center">
+                    <i class="c-icon u-margin-right-4s">person</i>
+                    Edit Profile
+                  </div>
+                </div>
+                <div pureDropdownItem>
+                  <div class="u-flex-row u-align-items-center">
+                    <i class="c-icon u-margin-right-4s">attach_money</i>
+                    Pay
+                  </div>
+                </div>
+                <div pureDropdownItem>
+                  <div class="u-flex-row u-align-items-center u-color-accent-negative-dark">
+                    <i class="c-icon u-margin-right-4s">not_interested</i>
+                    Block
+                  </div>
+                </div>
+              </pure-dropdown>
             </div>
           </td>
         </tr>
