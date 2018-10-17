@@ -237,11 +237,6 @@ _form-control-dynamic-width($start-width, $expanded-width)
  * Common styles for type "radio" and "checkbox".
  */
 
-// 1. Add more contrast with background since it's smaller element.
-
-$form-control-toggle-bg-color = darken($input-bg-color, 5%) // [1]
-
-
 .c-pure-form-control--checkbox,
 .c-pure-form-control--radio
   margin-bottom $unit-5s
@@ -261,7 +256,7 @@ $form-control-toggle-bg-color = darken($input-bg-color, 5%) // [1]
       transform translateY(-50%) scale(.9)
       
     &:active:not(:checked) + .c-pure-form-control__toggle
-      background mix($color-accent, $form-control-toggle-bg-color, 13%)
+      background mix($color-accent, $input-toggle-bg-color, 13%)
     
     &:focus + .c-pure-form-control__toggle
       outline-focus-styles()
@@ -272,7 +267,7 @@ $form-control-toggle-bg-color = darken($input-bg-color, 5%) // [1]
   
 
   .c-pure-form-control__toggle
-    background $form-control-toggle-bg-color
+    background $input-toggle-bg-color
 
 
   .c-pure-form-control__label-holder
@@ -356,7 +351,7 @@ $checkbox-border-radius = $global-radius-sm * 1.5
   .c-pure-input
 
     &:active:checked + .c-pure-form-control__toggle
-      background mix($form-control-toggle-bg-color, $color-accent, 13%)
+      background mix($input-toggle-bg-color, $color-accent, 13%)
 
 
   .c-pure-label

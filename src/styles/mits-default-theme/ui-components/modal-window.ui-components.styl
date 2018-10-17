@@ -117,7 +117,7 @@ $modal-dialog-offsetY    = -($unit-7x)
 
   .c-modal-dialog
     animation modal-dialog-appear $global-duration-lg forwards
-    animation-timing-function $ease-out-back
+    animation-timing-function $ease-out-back-soft
 
 
 @keyframes modal-dialog-appear
@@ -249,8 +249,8 @@ $modal-window-space-left  = $unit-3x * 8 // [3]
 .c-pure-modal-window--shown
 
   .c-modal-window
-    animation modal-window-appear $global-duration-xl forwards
-    animation-timing-function $ease-out-back
+    animation modal-window-appear $global-duration-lg forwards
+    animation-timing-function $ease-out-back-soft
 
 
 $modal-window-transform = perspective(400rem) rotateY(40deg) scale(1.26) translateX("calc(30% + %s)" % $modal-window-extra-width)

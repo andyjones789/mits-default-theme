@@ -4,9 +4,9 @@
 
 
 
-$switcher-toggle-container-height = $unit-2x
+$switcher-toggle-container-height = $unit-xl
 $switcher-toggle-container-width  = $switcher-toggle-container-height * ($base-ratio ** 3)
-$switcher-border-width            = .1rem
+$switcher-border-width            = .2rem
 $switcher-toggle-height           = $switcher-toggle-container-height - $switcher-border-width * 2
 $switcher-toggle-width            = $switcher-toggle-height
 $switcher-transition-duration     = $global-duration
@@ -38,8 +38,7 @@ $switcher-transition-duration     = $global-duration
     height $switcher-toggle-container-height
     border-radius (@height / 2)
     margin-right $unit-xs
-    background $color-primary-light
-    box-shadow inset 0 0 .1rem rgba($box-shadow-color-black, .44)
+    background $input-toggle-bg-color
     transition $switcher-transition-duration
     will-change background
   
@@ -61,13 +60,13 @@ $switcher-transition-duration     = $global-duration
     background $card-bg-color
     box-shadow $box-shadow-model-level10 rgba($box-shadow-color-black, .19)
     transition $switcher-transition-duration
-    transition-timing-function $ease-out-back
+    transition-timing-function $ease-out-back-soft
     
 
   &--checked
     
     .c-pure-switcher__toggle-container
-      background $color-accent-positive
+      background $color-accent
       
 
     .c-pure-switcher__toggle
@@ -83,7 +82,7 @@ $switcher-transition-duration     = $global-duration
 
 .c-pure-switcher__label-content
   color $input-label-color
-  transition $switcher-transition-duration
+  transition color $switcher-transition-duration
 
 
 
@@ -94,10 +93,6 @@ $switcher-transition-duration     = $global-duration
 
 .c-pure-switcher--disabled
   
-  .c-pure-switcher__toggle-container
-    background $color-primary-soft
-    
-
   .c-pure-switcher__toggle
     background $color-primary-light
     box-shadow 0 .1rem .2rem rgba($box-shadow-color-black, .19)
@@ -110,4 +105,4 @@ $switcher-transition-duration     = $global-duration
   &.c-pure-switcher--checked
     
     .c-pure-switcher__toggle-container
-      background mix($color-primary-soft, $color-accent-positive)
+      background mix($input-toggle-bg-color, $color-accent)

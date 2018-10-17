@@ -8,7 +8,7 @@
           <i class="c-icon" style="margin-top: .1rem" purePrefix>search</i>
           <input type="search" placeholder="Search" pureInput>
         </pure-form-control>
-        <pure-button theme="iconic">
+        <pure-button theme="iconic" (onClick)="showAddWindow = !showAddWindow">
           <i class="c-icon">add</i>
         </pure-button>
       </span>
@@ -66,8 +66,8 @@
                 </div>
                 <div pureDropdownItem>
                   <div class="u-flex-row u-align-items-center">
-                    <i class="c-icon u-margin-right-4s">attach_money</i>
-                    Pay
+                    <i class="c-icon u-margin-right-4s">favorite</i>
+                    Favorite
                   </div>
                 </div>
                 <div pureDropdownItem>
@@ -85,3 +85,56 @@
   </main>
 </div>
 
+
+<!-- Add user modal -->
+<pure-modal-window [(show)]="showAddWindow">
+  <div class="c-modal-window">
+    <div class="c-modal-window__content-container">
+      <header class="c-modal-window__header">
+        <h1 class="c-modal-window__heading">New User</h1>
+      </header>
+      <div class="c-modal-window__content">
+        <div class="o-grid o-grid--no-outer-gap">
+          <div class="o-cell o-cell--1/3">
+            <pure-form-control label="First name">
+              <input type="text" placeholder="Enter first name" autofocus pureInput>
+            </pure-form-control>
+          </div>
+          <div class="o-cell o-cell--1/3">
+            <pure-form-control label="Last name">
+              <input type="text" placeholder="Enter last name" pureInput>
+            </pure-form-control>
+          </div>
+          <div class="o-cell o-cell--1/3"></div>
+
+          <div class="o-cell o-cell--1/3">
+            <pure-form-control label="Email">
+              <input type="email" placeholder="Enter email" pureInput>
+            </pure-form-control>
+          </div>
+          <div class="o-cell o-cell--1/3">
+            <pure-form-control label="Date of birth">
+              <input type="date" placeholder="Enter date" pureInput>
+            </pure-form-control>
+          </div>
+
+          <div class="o-cell o-cell--2/3">
+            <pure-form-control label="Notes">
+              <textarea placeholder="Enter notes" pureInput></textarea>
+            </pure-form-control>
+          </div>
+          <div class="o-cell o-cell--1/3">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-modal-window__footer-container">
+      <footer class="c-modal-window__footer">
+        <div class="o-controls">
+          <pure-button theme="ghost" (onClick)="showAddWindow = false">Cancel</pure-button>
+          <pure-button theme="success" (onClick)="showAddWindow = false">Add</pure-button>
+        </div>
+      </footer>
+    </div>
+  </div>
+</pure-modal-window>
