@@ -24,7 +24,7 @@
     "breeze.css": "^2.1.2",
     "core-js": "^2.5.4",
     "normalize.css": "^8.0.0",
-    "pure-elements": "^1.0.12",
+    "pure-elements": "^1.0.14",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
