@@ -19,10 +19,10 @@ export class Styleguide {
       title: 'Typography',
       url: 'typography'
     },
-    // {
-    //   title: 'Accessibility',
-    //   url: 'accessibility'
-    // }
+    {
+      title: 'Accessibility',
+      url: 'accessibility'
+    }
   ];
 
   objectsLinks: Links[] = [
