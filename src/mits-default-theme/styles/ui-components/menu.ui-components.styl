@@ -24,7 +24,8 @@ $menu-item-transform-active = scale(.98, .95)
     padding $unit-4s $unit-lg
     border-radius $menu-item-border-radius
     white-space nowrap
-    // overflow hidden
+    overflow hidden
+    text-overflow ellipsis
     font-weight normal
     color $body-color
     cursor pointer
@@ -68,7 +69,6 @@ $menu-item-transform-active = scale(.98, .95)
       margin-right $unit-3s
       margin-bottom .2rem
       opacity (1 / $golden)
-      transition $global-duration // TODO
   
 
   &__item-text
@@ -83,34 +83,3 @@ $menu-item-transform-active = scale(.98, .95)
     
   100%
     transform none
-
-
-
-
-
-/* Shrank
-   ========================================================================== */
-
-.c-menu--shrank
-
-  .c-menu__item
-    // margin-bottom $unit-6s
-    padding-left $unit-sm
-    padding-right @padding-left
-    
-
-    .c-icon
-      opacity .75
-    
-
-    &--active
-      
-      .c-icon
-        font-size $unit-em-xl
-        opacity .9
-    
-
-  .c-menu__item-text
-    opacity 0
-    visibility hidden
-    pointer-events none

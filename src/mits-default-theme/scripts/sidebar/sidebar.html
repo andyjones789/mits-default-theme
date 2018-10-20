@@ -7,7 +7,7 @@
 
       <div class="c-sidebar__section-container c-sidebar__section-container--sm" *ngFor="let menu of menus">
         <h3 *ngIf="menu.title" class="c-sidebar__heading">{{menu.title}}</h3>
-        <ul class="c-menu" [class.c-menu--shrank]="contentState === 'expanded'">
+        <ul class="c-menu">
           <li *ngFor="let menuItem of menu.items">
             <a class="c-menu__item" routerLinkActive="c-menu__item--active" [routerLink]="menuItem.url">
               <i *ngIf="menuItem.icon" class="c-icon">{{menuItem.icon}}</i>
@@ -17,7 +17,7 @@
         </ul>
       </div>
 
-      <footer class="c-sidebar__footer" (click)="toggleContentState()">
+      <footer class="c-sidebar__footer">
         <ng-content select="[mitsSidebarFooter]"></ng-content>
       </footer>
     </nav>
