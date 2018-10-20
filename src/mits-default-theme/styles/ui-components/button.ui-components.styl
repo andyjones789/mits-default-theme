@@ -64,7 +64,8 @@ _button-flat()
   text-overflow ellipsis
   font-weight 400
   letter-spacing $letter-spacing-lg
-  transition background, color, box-shadow, transform, opacity $global-duration /* [2] */
+  transition $global-duration
+  transition-property background, color, box-shadow, transform, opacity  /* [2] */
   
   _button-theme($color-accent, $pure-button-color, .38)
 
