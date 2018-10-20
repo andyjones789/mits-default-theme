@@ -25,7 +25,7 @@ var LibData = {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"c-item-container\">\n  <header class=\"c-item-container__header\">\n    <h1 class=\"c-item-container__heading\">Accessibility</h1>\n    <p class=\"c-item-container__desc\">The whole theme was developed with accessibility in mind and that's why each component has a visual focus indicator for navigating throughout the page using a Tab button. For aesthetic & usability reasons it is recommended to only enable focus indicator once the Tab key was pressed. In fact, this provides the same UX as with default browser styling.</p>\n    <p class=\"c-item-container__desc\">Theme doesn't provide such functionality to keep it simple and not include JavaScript in its package. If you are developer, you can investigate how it's made in the app's source.</p>\n  </header>\n</div>"
+module.exports = "<div class=\"c-item-container\">\n  <header class=\"c-item-container__header\">\n    <h1 class=\"c-item-container__heading\">Accessibility</h1>\n    <p class=\"c-item-container__desc\">The whole theme was developed with accessibility in mind and that's why each component has a visual focus indicator for navigating throughout the page using a Tab button. For aesthetic & usability reasons it is recommended to only enable focus indicator once the Tab key was pressed. In fact, this provides the same UX as with default browser styling.</p>\n    <p class=\"c-item-container__desc\">Theme doesn't provide such functionality to keep it simple and not include JavaScript in its package. If you are developer, you can toggle <code>u-no-outline</code> utility class for <code>&lt;body&gt;</code> on <code>keydown</code> event.</p>\n  </header>\n</div>"
 
 /***/ }),
 
@@ -248,7 +248,7 @@ var CardDemo = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"c-item-container\">\n  <header class=\"c-item-container__header\">\n    <h1 class=\"c-item-container__heading\">Colour Scheme</h1>\n  </header>\n\n  <div class=\"c-component\">\n    <span class=\"c-component__container c-component__container--full-width\">\n\n      <div class=\"o-grid o-grid--no-outer-gap\">\n        <div class=\"o-cell o-cell--1/4\">\n          <div class=\"c-color-well c-color-well--primary c-color-well--distinct\">\n            <p class=\"c-color-well__name\">French Grey</p>\n            <p class=\"c-color-well__hex\">#9b9ea9</p>\n          </div>\n        </div>\n        <div class=\"o-cell o-cell--1/4\">\n          <div class=\"c-color-well c-color-well--accent c-color-well--distinct\">\n            <p class=\"c-color-well__name\">Cerulean Blue</p>\n            <p class=\"c-color-well__hex\">#3751C5</p>\n          </div>\n        </div>\n        <div class=\"o-cell o-cell--1/4\">\n          <div class=\"c-color-well c-color-well--accent-positive c-color-well--distinct\">\n            <p class=\"c-color-well__name\">Puerto Rico</p>\n            <p class=\"c-color-well__hex\">#3ECAA9</p>\n          </div>\n        </div>\n        <div class=\"o-cell o-cell--1/4\">\n          <div class=\"c-color-well c-color-well--accent-negative c-color-well--distinct\">\n            <p class=\"c-color-well__name\">Burnt Sienna</p>\n            <p class=\"c-color-well__hex\">#EE7A68</p>\n          </div>\n        </div>\n      </div>\n\n    </span>\n  </div>\n\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Primary Palette</h2>\n\n    <span class=\"c-component__container c-component__container--full-width\">\n\n      <div class=\"o-grid o-grid--no-outer-gap\">\n        <div class=\"o-cell u-flex-row u-align-items-end\">\n          <div class=\"c-color-well c-color-well--sm c-color-well--primary-black u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Shark</p>\n            <p class=\"c-color-well__hex\">#1f2125</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--primary-darken u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Mako</p>\n            <p class=\"c-color-well__hex\">#3a3c44</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--primary-dark u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Shuttle Grey</p>\n            <p class=\"c-color-well__hex\">#555863</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--primary u-margin-right-xl\">\n            <p class=\"c-color-well__name\">French Grey</p>\n            <p class=\"c-color-well__hex\">#acafb7</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--primary-soft u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Iron</p>\n            <p class=\"c-color-well__hex\">#eaebed</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--primary-light u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Athens Grey</p>\n            <p class=\"c-color-well__hex\">#fafafb</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--primary-white u-margin-right-xl\">\n            <p class=\"c-color-well__name\">White</p>\n            <p class=\"c-color-well__hex\">#ffffff</p>\n          </div>\n        </div>\n      </div>\n    </span>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Accent Palette</h2>\n\n    <span class=\"c-component__container c-component__container--full-width\">\n\n      <div class=\"o-grid o-grid--no-outer-gap\">\n        <div class=\"o-cell u-flex-row u-align-items-end\">\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Cerulean Blue</p>\n            <p class=\"c-color-well__hex\">#3751c5</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-bright u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Malibu</p>\n            <p class=\"c-color-well__hex\">#91A7FF</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-washed u-margin-right-xl\">\n            <p class=\"c-color-well__name\">White Lilac</p>\n            <p class=\"c-color-well__hex\">#eff1fa</p>\n          </div>\n        </div>\n      </div>\n    </span>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Accent Positive Palette</h2>\n\n    <span class=\"c-component__container c-component__container--full-width\">\n\n      <div class=\"o-grid o-grid--no-outer-gap\">\n        <div class=\"o-cell u-flex-row u-align-items-end\">\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-positive-dark u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Mountain Meadow</p>\n            <p class=\"c-color-well__hex\">#15b18d</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-positive u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Puerto Rico</p>\n            <p class=\"c-color-well__hex\">#3ECAA9</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-positive-bright u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Charlotte</p>\n            <p class=\"c-color-well__hex\">#aef9e8</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-positive-washed u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Off Green</p>\n            <p class=\"c-color-well__hex\">#e5f8f3</p>\n          </div>\n        </div>\n      </div>\n    </span>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Accent Negative Palette</h2>\n\n    <span class=\"c-component__container c-component__container--full-width\">\n\n      <div class=\"o-grid o-grid--no-outer-gap\">\n        <div class=\"o-cell u-flex-row u-align-items-end\">\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-negative-dark u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Cinnabar</p>\n            <p class=\"c-color-well__hex\">#E7442B</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-negative u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Burnt Sienna</p>\n            <p class=\"c-color-well__hex\">#ee7a68</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-negative-bright u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Melon</p>\n            <p class=\"c-color-well__hex\">#ffbcb0</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-negative-washed u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Linen</p>\n            <p class=\"c-color-well__hex\">#fcefec</p>\n          </div>\n        </div>\n      </div>\n    </span>\n  </div>\n\n</div>\n"
+module.exports = "<div class=\"c-item-container\">\n  <header class=\"c-item-container__header\">\n    <h1 class=\"c-item-container__heading\">Colour Scheme</h1>\n  </header>\n\n  <div class=\"c-component\">\n    <span class=\"c-component__container c-component__container--full-width\">\n\n      <div class=\"o-grid o-grid--no-outer-gap\">\n        <div class=\"o-cell o-cell--1/4\">\n          <div class=\"c-color-well c-color-well--primary c-color-well--distinct\">\n            <p class=\"c-color-well__name\">French Grey</p>\n            <p class=\"c-color-well__hex\">#9b9ea9</p>\n          </div>\n        </div>\n        <div class=\"o-cell o-cell--1/4\">\n          <div class=\"c-color-well c-color-well--accent c-color-well--distinct\">\n            <p class=\"c-color-well__name\">Cerulean Blue</p>\n            <p class=\"c-color-well__hex\">#3751C5</p>\n          </div>\n        </div>\n        <div class=\"o-cell o-cell--1/4\">\n          <div class=\"c-color-well c-color-well--accent-positive c-color-well--distinct\">\n            <p class=\"c-color-well__name\">Puerto Rico</p>\n            <p class=\"c-color-well__hex\">#3ECAA9</p>\n          </div>\n        </div>\n        <div class=\"o-cell o-cell--1/4\">\n          <div class=\"c-color-well c-color-well--accent-negative c-color-well--distinct\">\n            <p class=\"c-color-well__name\">Burnt Sienna</p>\n            <p class=\"c-color-well__hex\">#EE7A68</p>\n          </div>\n        </div>\n      </div>\n\n    </span>\n  </div>\n\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Primary Palette</h2>\n\n    <span class=\"c-component__container c-component__container--full-width\">\n\n      <div class=\"o-grid o-grid--no-outer-gap\">\n        <div class=\"o-cell u-flex-row u-align-items-end\">\n          <div class=\"c-color-well c-color-well--sm c-color-well--primary-black u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Shark</p>\n            <p class=\"c-color-well__hex\">#1f2125</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--primary-darken u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Mako</p>\n            <p class=\"c-color-well__hex\">#3a3c44</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--primary-dark u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Shuttle Grey</p>\n            <p class=\"c-color-well__hex\">#555863</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--primary u-margin-right-xl\">\n            <p class=\"c-color-well__name\">French Grey</p>\n            <p class=\"c-color-well__hex\">#9b9ea9</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--primary-soft u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Iron</p>\n            <p class=\"c-color-well__hex\">#eaebed</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--primary-light u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Athens Grey</p>\n            <p class=\"c-color-well__hex\">#fafafb</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--primary-white u-margin-right-xl\">\n            <p class=\"c-color-well__name\">White</p>\n            <p class=\"c-color-well__hex\">#ffffff</p>\n          </div>\n        </div>\n      </div>\n    </span>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Accent Palette</h2>\n\n    <span class=\"c-component__container c-component__container--full-width\">\n\n      <div class=\"o-grid o-grid--no-outer-gap\">\n        <div class=\"o-cell u-flex-row u-align-items-end\">\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-dark u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Biscay</p>\n            <p class=\"c-color-well__hex\">#1f2e70</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Cerulean Blue</p>\n            <p class=\"c-color-well__hex\">#3751c5</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-bright u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Malibu</p>\n            <p class=\"c-color-well__hex\">#91A7FF</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-washed u-margin-right-xl\">\n            <p class=\"c-color-well__name\">White Lilac</p>\n            <p class=\"c-color-well__hex\">#eff1fa</p>\n          </div>\n        </div>\n      </div>\n    </span>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Accent Positive Palette</h2>\n\n    <span class=\"c-component__container c-component__container--full-width\">\n\n      <div class=\"o-grid o-grid--no-outer-gap\">\n        <div class=\"o-cell u-flex-row u-align-items-end\">\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-positive-dark u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Mountain Meadow</p>\n            <p class=\"c-color-well__hex\">#15b18d</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-positive u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Puerto Rico</p>\n            <p class=\"c-color-well__hex\">#3ECAA9</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-positive-bright u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Charlotte</p>\n            <p class=\"c-color-well__hex\">#aef9e8</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-positive-washed u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Off Green</p>\n            <p class=\"c-color-well__hex\">#e5f8f3</p>\n          </div>\n        </div>\n      </div>\n    </span>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Accent Negative Palette</h2>\n\n    <span class=\"c-component__container c-component__container--full-width\">\n\n      <div class=\"o-grid o-grid--no-outer-gap\">\n        <div class=\"o-cell u-flex-row u-align-items-end\">\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-negative-dark u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Cinnabar</p>\n            <p class=\"c-color-well__hex\">#E7442B</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-negative u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Burnt Sienna</p>\n            <p class=\"c-color-well__hex\">#ee7a68</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-negative-bright u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Melon</p>\n            <p class=\"c-color-well__hex\">#ffbcb0</p>\n          </div>\n          <div class=\"c-color-well c-color-well--sm c-color-well--accent-negative-washed u-margin-right-xl\">\n            <p class=\"c-color-well__name\">Linen</p>\n            <p class=\"c-color-well__hex\">#fcefec</p>\n          </div>\n        </div>\n      </div>\n    </span>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -937,7 +937,7 @@ var StyleguideRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"c-sidebar\">\n  <div class=\"c-sidebar__container\">\n    <nav class=\"c-sidebar__nav\">\n      <div class=\"c-sidebar__section-container\">\n        <brand-logo link=\"/styleguide\"></brand-logo>\n      </div>\n\n      <div class=\"c-sidebar__section-container c-sidebar__section-container--sm\">\n        <h3 class=\"c-sidebar__heading\">Introduction</h3>\n        <ul class=\"c-menu\">\n          <li>\n            <a class=\"c-menu__item\" routerLinkActive=\"c-menu__item--active\" routerLink=\"getting-started\">\n              Getting Started\n            </a>\n          </li>\n          <li>\n            <a class=\"c-menu__item\" routerLinkActive=\"c-menu__item--active\" routerLink=\"/demo\">\n              <i class=\"c-icon\">exit_to_app</i>\n              Demo Sample\n            </a>\n          </li>\n        </ul>\n      </div>\n\n      <div class=\"c-sidebar__section-container c-sidebar__section-container--sm\">\n        <h3 class=\"c-sidebar__heading\">Essentials</h3>\n        <ul class=\"c-menu\">\n          <li *ngFor=\"let link of commonLinks\">\n            <a class=\"c-menu__item\" routerLinkActive=\"c-menu__item--active\" [routerLink]=\"link.url\">\n              {{link.title}}\n            </a>\n          </li>\n        </ul>\n      </div>\n\n      <div class=\"c-sidebar__section-container c-sidebar__section-container--sm\">\n        <h3 class=\"c-sidebar__heading\">Objects</h3>\n        <ul class=\"c-menu\">\n          <li *ngFor=\"let link of objectsLinks\">\n            <a class=\"c-menu__item\" routerLinkActive=\"c-menu__item--active\" [routerLink]=\"link.url\">\n              {{link.title}}\n            </a>\n          </li>\n        </ul>\n      </div>\n\n      <div class=\"c-sidebar__section-container c-sidebar__section-container--sm\">\n        <h3 class=\"c-sidebar__heading\">Components</h3>\n        <ul class=\"c-menu\">\n          <li *ngFor=\"let link of componentsLinks\">\n            <a class=\"c-menu__item\" routerLinkActive=\"c-menu__item--active\" [routerLink]=\"link.url\">\n              {{link.title}}\n            </a>\n          </li>\n        </ul>\n      </div>\n    </nav>\n\n    <main class=\"c-sidebar__content\">\n      <router-outlet></router-outlet>\n    </main>\n  </div>\n</div>\n"
+module.exports = "<mits-sidebar [menus]=\"menus\">\n  <brand-logo mitsSidebarHeader link=\"/styleguide\"></brand-logo>\n  \n  <router-outlet mitsSidebarContent></router-outlet>\n</mits-sidebar>"
 
 /***/ }),
 
@@ -955,36 +955,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var pure_elements__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! pure-elements */ "./node_modules/pure-elements/dist/index.js");
-/* harmony import */ var _brand_logo_brand_logo_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../brand-logo/brand-logo.module */ "./src/app/brand-logo/brand-logo.module.ts");
-/* harmony import */ var _styleguide_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styleguide-routing.module */ "./src/app/styleguide/styleguide-routing.module.ts");
-/* harmony import */ var _styleguide__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styleguide */ "./src/app/styleguide/styleguide.ts");
-/* harmony import */ var _intro_intro__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./intro/intro */ "./src/app/styleguide/intro/intro.ts");
-/* harmony import */ var _base_unit_base_unit_demo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./base-unit/base-unit-demo */ "./src/app/styleguide/base-unit/base-unit-demo.ts");
-/* harmony import */ var _colour_scheme_colour_scheme_demo__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./colour-scheme/colour-scheme-demo */ "./src/app/styleguide/colour-scheme/colour-scheme-demo.ts");
-/* harmony import */ var _typography_typography_demo__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./typography/typography-demo */ "./src/app/styleguide/typography/typography-demo.ts");
-/* harmony import */ var _a11y_a11y__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./a11y/a11y */ "./src/app/styleguide/a11y/a11y.ts");
-/* harmony import */ var _controls_controls_demo__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./controls/controls-demo */ "./src/app/styleguide/controls/controls-demo.ts");
-/* harmony import */ var _grid_grid_demo__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./grid/grid-demo */ "./src/app/styleguide/grid/grid-demo.ts");
-/* harmony import */ var _badge_badge_demo__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./badge/badge-demo */ "./src/app/styleguide/badge/badge-demo.ts");
-/* harmony import */ var _button_button_demo__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./button/button-demo */ "./src/app/styleguide/button/button-demo.ts");
-/* harmony import */ var _card_card_demo__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./card/card-demo */ "./src/app/styleguide/card/card-demo.ts");
-/* harmony import */ var _data_grid_data_grid_demo__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./data-grid/data-grid-demo */ "./src/app/styleguide/data-grid/data-grid-demo.ts");
-/* harmony import */ var _dropdown_dropdown_demo__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./dropdown/dropdown-demo */ "./src/app/styleguide/dropdown/dropdown-demo.ts");
-/* harmony import */ var _icon_icon_demo__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./icon/icon-demo */ "./src/app/styleguide/icon/icon-demo.ts");
-/* harmony import */ var _form_control_form_control_demo__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./form-control/form-control-demo */ "./src/app/styleguide/form-control/form-control-demo.ts");
-/* harmony import */ var _loading_loading_demo__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./loading/loading-demo */ "./src/app/styleguide/loading/loading-demo.ts");
-/* harmony import */ var _menu_menu_demo__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./menu/menu-demo */ "./src/app/styleguide/menu/menu-demo.ts");
-/* harmony import */ var _modal_modal_demo__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./modal/modal-demo */ "./src/app/styleguide/modal/modal-demo.ts");
-/* harmony import */ var _round_badge_round_badge_demo__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./round-badge/round-badge-demo */ "./src/app/styleguide/round-badge/round-badge-demo.ts");
-/* harmony import */ var _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./switcher/switcher-demo */ "./src/app/styleguide/switcher/switcher-demo.ts");
-/* harmony import */ var _toast_toast_demo__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./toast/toast-demo */ "./src/app/styleguide/toast/toast-demo.ts");
-/* harmony import */ var _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./tooltip/tooltip-demo */ "./src/app/styleguide/tooltip/tooltip-demo.ts");
+/* harmony import */ var _mits_default_theme_scripts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../mits-default-theme/scripts */ "./src/mits-default-theme/scripts/index.ts");
+/* harmony import */ var _brand_logo_brand_logo_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../brand-logo/brand-logo.module */ "./src/app/brand-logo/brand-logo.module.ts");
+/* harmony import */ var _styleguide_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styleguide-routing.module */ "./src/app/styleguide/styleguide-routing.module.ts");
+/* harmony import */ var _styleguide__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./styleguide */ "./src/app/styleguide/styleguide.ts");
+/* harmony import */ var _intro_intro__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./intro/intro */ "./src/app/styleguide/intro/intro.ts");
+/* harmony import */ var _base_unit_base_unit_demo__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./base-unit/base-unit-demo */ "./src/app/styleguide/base-unit/base-unit-demo.ts");
+/* harmony import */ var _colour_scheme_colour_scheme_demo__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./colour-scheme/colour-scheme-demo */ "./src/app/styleguide/colour-scheme/colour-scheme-demo.ts");
+/* harmony import */ var _typography_typography_demo__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./typography/typography-demo */ "./src/app/styleguide/typography/typography-demo.ts");
+/* harmony import */ var _a11y_a11y__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./a11y/a11y */ "./src/app/styleguide/a11y/a11y.ts");
+/* harmony import */ var _controls_controls_demo__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./controls/controls-demo */ "./src/app/styleguide/controls/controls-demo.ts");
+/* harmony import */ var _grid_grid_demo__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./grid/grid-demo */ "./src/app/styleguide/grid/grid-demo.ts");
+/* harmony import */ var _badge_badge_demo__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./badge/badge-demo */ "./src/app/styleguide/badge/badge-demo.ts");
+/* harmony import */ var _button_button_demo__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./button/button-demo */ "./src/app/styleguide/button/button-demo.ts");
+/* harmony import */ var _card_card_demo__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./card/card-demo */ "./src/app/styleguide/card/card-demo.ts");
+/* harmony import */ var _data_grid_data_grid_demo__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./data-grid/data-grid-demo */ "./src/app/styleguide/data-grid/data-grid-demo.ts");
+/* harmony import */ var _dropdown_dropdown_demo__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./dropdown/dropdown-demo */ "./src/app/styleguide/dropdown/dropdown-demo.ts");
+/* harmony import */ var _icon_icon_demo__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./icon/icon-demo */ "./src/app/styleguide/icon/icon-demo.ts");
+/* harmony import */ var _form_control_form_control_demo__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./form-control/form-control-demo */ "./src/app/styleguide/form-control/form-control-demo.ts");
+/* harmony import */ var _loading_loading_demo__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./loading/loading-demo */ "./src/app/styleguide/loading/loading-demo.ts");
+/* harmony import */ var _menu_menu_demo__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./menu/menu-demo */ "./src/app/styleguide/menu/menu-demo.ts");
+/* harmony import */ var _modal_modal_demo__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./modal/modal-demo */ "./src/app/styleguide/modal/modal-demo.ts");
+/* harmony import */ var _round_badge_round_badge_demo__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./round-badge/round-badge-demo */ "./src/app/styleguide/round-badge/round-badge-demo.ts");
+/* harmony import */ var _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./switcher/switcher-demo */ "./src/app/styleguide/switcher/switcher-demo.ts");
+/* harmony import */ var _toast_toast_demo__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./toast/toast-demo */ "./src/app/styleguide/toast/toast-demo.ts");
+/* harmony import */ var _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./tooltip/tooltip-demo */ "./src/app/styleguide/tooltip/tooltip-demo.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1027,33 +1029,34 @@ var StyleguideModule = /** @class */ (function () {
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"],
-                _styleguide_routing_module__WEBPACK_IMPORTED_MODULE_5__["StyleguideRoutingModule"],
+                _styleguide_routing_module__WEBPACK_IMPORTED_MODULE_6__["StyleguideRoutingModule"],
                 pure_elements__WEBPACK_IMPORTED_MODULE_3__["PureElements"],
-                _brand_logo_brand_logo_module__WEBPACK_IMPORTED_MODULE_4__["BrandLogoModule"]
+                _mits_default_theme_scripts__WEBPACK_IMPORTED_MODULE_4__["MitsDefaultTheme"],
+                _brand_logo_brand_logo_module__WEBPACK_IMPORTED_MODULE_5__["BrandLogoModule"]
             ],
             declarations: [
-                _styleguide__WEBPACK_IMPORTED_MODULE_6__["Styleguide"],
-                _intro_intro__WEBPACK_IMPORTED_MODULE_7__["Intro"],
-                _base_unit_base_unit_demo__WEBPACK_IMPORTED_MODULE_8__["BaseUnitDemo"],
-                _colour_scheme_colour_scheme_demo__WEBPACK_IMPORTED_MODULE_9__["ColourSchemeDemo"],
-                _typography_typography_demo__WEBPACK_IMPORTED_MODULE_10__["TypographyDemo"],
-                _a11y_a11y__WEBPACK_IMPORTED_MODULE_11__["A11y"],
-                _controls_controls_demo__WEBPACK_IMPORTED_MODULE_12__["ControlsDemo"],
-                _grid_grid_demo__WEBPACK_IMPORTED_MODULE_13__["GridDemo"],
-                _badge_badge_demo__WEBPACK_IMPORTED_MODULE_14__["BadgeDemo"],
-                _button_button_demo__WEBPACK_IMPORTED_MODULE_15__["ButtonDemo"],
-                _card_card_demo__WEBPACK_IMPORTED_MODULE_16__["CardDemo"],
-                _data_grid_data_grid_demo__WEBPACK_IMPORTED_MODULE_17__["DataGridDemo"],
-                _dropdown_dropdown_demo__WEBPACK_IMPORTED_MODULE_18__["DropdownDemo"],
-                _icon_icon_demo__WEBPACK_IMPORTED_MODULE_19__["IconDemo"],
-                _form_control_form_control_demo__WEBPACK_IMPORTED_MODULE_20__["FormControlDemo"],
-                _loading_loading_demo__WEBPACK_IMPORTED_MODULE_21__["LoadingDemo"],
-                _menu_menu_demo__WEBPACK_IMPORTED_MODULE_22__["MenuDemo"],
-                _modal_modal_demo__WEBPACK_IMPORTED_MODULE_23__["ModalDemo"],
-                _round_badge_round_badge_demo__WEBPACK_IMPORTED_MODULE_24__["RoundBadgeDemo"],
-                _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_25__["SwitcherDemo"],
-                _toast_toast_demo__WEBPACK_IMPORTED_MODULE_26__["ToastDemo"],
-                _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_27__["TooltipDemo"]
+                _styleguide__WEBPACK_IMPORTED_MODULE_7__["Styleguide"],
+                _intro_intro__WEBPACK_IMPORTED_MODULE_8__["Intro"],
+                _base_unit_base_unit_demo__WEBPACK_IMPORTED_MODULE_9__["BaseUnitDemo"],
+                _colour_scheme_colour_scheme_demo__WEBPACK_IMPORTED_MODULE_10__["ColourSchemeDemo"],
+                _typography_typography_demo__WEBPACK_IMPORTED_MODULE_11__["TypographyDemo"],
+                _a11y_a11y__WEBPACK_IMPORTED_MODULE_12__["A11y"],
+                _controls_controls_demo__WEBPACK_IMPORTED_MODULE_13__["ControlsDemo"],
+                _grid_grid_demo__WEBPACK_IMPORTED_MODULE_14__["GridDemo"],
+                _badge_badge_demo__WEBPACK_IMPORTED_MODULE_15__["BadgeDemo"],
+                _button_button_demo__WEBPACK_IMPORTED_MODULE_16__["ButtonDemo"],
+                _card_card_demo__WEBPACK_IMPORTED_MODULE_17__["CardDemo"],
+                _data_grid_data_grid_demo__WEBPACK_IMPORTED_MODULE_18__["DataGridDemo"],
+                _dropdown_dropdown_demo__WEBPACK_IMPORTED_MODULE_19__["DropdownDemo"],
+                _icon_icon_demo__WEBPACK_IMPORTED_MODULE_20__["IconDemo"],
+                _form_control_form_control_demo__WEBPACK_IMPORTED_MODULE_21__["FormControlDemo"],
+                _loading_loading_demo__WEBPACK_IMPORTED_MODULE_22__["LoadingDemo"],
+                _menu_menu_demo__WEBPACK_IMPORTED_MODULE_23__["MenuDemo"],
+                _modal_modal_demo__WEBPACK_IMPORTED_MODULE_24__["ModalDemo"],
+                _round_badge_round_badge_demo__WEBPACK_IMPORTED_MODULE_25__["RoundBadgeDemo"],
+                _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_26__["SwitcherDemo"],
+                _toast_toast_demo__WEBPACK_IMPORTED_MODULE_27__["ToastDemo"],
+                _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_28__["TooltipDemo"]
             ],
             providers: [
                 {
@@ -1090,86 +1093,115 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 var Styleguide = /** @class */ (function () {
     function Styleguide() {
-        this.commonLinks = [
-            // {
-            //   title: 'Sizes',
-            //   url: 'sizes'
-            // },
+        this.menus = [
             {
-                title: 'Colour Scheme',
-                url: 'colour-scheme'
+                title: 'Introduction',
+                items: [
+                    {
+                        title: 'Getting Started',
+                        url: 'getting-started'
+                    },
+                    {
+                        title: 'Demo Sample',
+                        url: '/demo',
+                        icon: 'exit_to_app'
+                    }
+                ]
             },
             {
-                title: 'Typography',
-                url: 'typography'
-            },
-        ];
-        this.objectsLinks = [
-            {
-                title: 'Grid',
-                url: 'grid'
-            },
-            {
-                title: 'Controls',
-                url: 'controls'
-            }
-        ];
-        this.componentsLinks = [
-            {
-                title: 'Badge',
-                url: 'badge'
-            },
-            {
-                title: 'Button',
-                url: 'button'
+                title: 'Essentials',
+                items: [
+                    // {
+                    //   title: 'Sizes',
+                    //   url: 'sizes'
+                    // },
+                    {
+                        title: 'Colour Scheme',
+                        url: 'colour-scheme'
+                    },
+                    {
+                        title: 'Typography',
+                        url: 'typography'
+                    },
+                    {
+                        title: 'Accessibility',
+                        url: 'accessibility'
+                    }
+                ]
             },
             {
-                title: 'Card',
-                url: 'card'
+                title: 'Objects',
+                items: [
+                    {
+                        title: 'Grid',
+                        url: 'grid'
+                    },
+                    {
+                        title: 'Controls',
+                        url: 'controls'
+                    }
+                ]
             },
             {
-                title: 'Data Grid',
-                url: 'data-grid'
-            },
-            {
-                title: 'Dropdown',
-                url: 'dropdown'
-            },
-            {
-                title: 'Form Control',
-                url: 'form-control'
-            },
-            {
-                title: 'Icon',
-                url: 'icon'
-            },
-            {
-                title: 'Loading',
-                url: 'loading'
-            },
-            {
-                title: 'Menu',
-                url: 'menu'
-            },
-            {
-                title: 'Modal',
-                url: 'modal'
-            },
-            {
-                title: 'Round Badge',
-                url: 'round-badge'
-            },
-            {
-                title: 'Switcher',
-                url: 'switcher'
-            },
-            {
-                title: 'Toast',
-                url: 'toast'
-            },
-            {
-                title: 'Tooltip',
-                url: 'tooltip'
+                title: 'Components',
+                items: [
+                    {
+                        title: 'Badge',
+                        url: 'badge'
+                    },
+                    {
+                        title: 'Button',
+                        url: 'button'
+                    },
+                    {
+                        title: 'Card',
+                        url: 'card'
+                    },
+                    {
+                        title: 'Data Grid',
+                        url: 'data-grid'
+                    },
+                    {
+                        title: 'Dropdown',
+                        url: 'dropdown'
+                    },
+                    {
+                        title: 'Form Control',
+                        url: 'form-control'
+                    },
+                    {
+                        title: 'Icon',
+                        url: 'icon'
+                    },
+                    {
+                        title: 'Loading',
+                        url: 'loading'
+                    },
+                    {
+                        title: 'Menu',
+                        url: 'menu'
+                    },
+                    {
+                        title: 'Modal',
+                        url: 'modal'
+                    },
+                    {
+                        title: 'Round Badge',
+                        url: 'round-badge'
+                    },
+                    {
+                        title: 'Switcher',
+                        url: 'switcher'
+                    },
+                    {
+                        title: 'Toast',
+                        url: 'toast'
+                    },
+                    {
+                        title: 'Tooltip',
+                        url: 'tooltip'
+                    }
+                ]
             }
         ];
     }

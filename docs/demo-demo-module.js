@@ -62,7 +62,7 @@ var DemoRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"c-sidebar\">\n  <div class=\"c-sidebar__container\">\n    <nav class=\"c-sidebar__nav\">\n      <div class=\"c-sidebar__section-container\">\n        <brand-logo theme=\"washed\" link=\"/styleguide\"></brand-logo>\n      </div>\n\n      <div class=\"c-sidebar__section-container c-sidebar__section-container--sm\">\n        <ul class=\"c-menu\">\n          <li *ngFor=\"let section of sections\">\n            <a class=\"c-menu__item\" routerLinkActive=\"c-menu__item--active\" [routerLink]=\"section.url\">\n              {{section.title}}\n              <sup *ngIf=\"section.newItems\" class=\"c-round-badge\"></sup>\n            </a>\n          </li>\n        </ul>\n      </div>\n\n      <footer class=\"c-sidebar__footer\">\n        <div class=\"c-user-panel\">\n          <img [src]=\"user.picture.large\" alt=\"User logo\" class=\"c-user-panel__avatar\">\n          <span class=\"c-user-panel__name\">\n            Hi, <span class=\"c-user-panel__name-container u-text-capitalize\">{{user.name.first + ' ' + user.name.last}}</span>\n          </span>\n          <span class=\"c-user-panel__controls\">\n            <span class=\"u-relative\">\n              <pure-button theme=\"iconic transparent\" [pureDropdownTriggerFor]=\"userDropdown\">\n                <i class=\"c-icon\">more_vert</i>\n              </pure-button> \n\n              <pure-dropdown #userDropdown=\"pureDropdown\" yPosition=\"before\" xPosition=\"above\">\n                <div pureDropdownItem>\n                  <div class=\"u-flex-row u-align-items-center\">\n                    <i class=\"c-icon u-margin-right-4s\">person</i>\n                    Profile\n                  </div>\n                </div>\n                <div pureDropdownItem>\n                  <div class=\"u-flex-row u-align-items-center\">\n                    <i class=\"c-icon u-margin-right-4s\">settings</i>\n                    Settings\n                  </div>\n                </div>\n                <div pureDropdownItem>\n                  <div class=\"u-flex-row u-align-items-center\">\n                    <i class=\"c-icon u-margin-right-4s\">power_settings_new</i>\n                    Log Out\n                  </div>\n                </div>\n              </pure-dropdown>\n            </span>\n          </span>\n        </div>\n      </footer>\n    </nav>\n\n    <main class=\"c-sidebar__content\">\n      <router-outlet></router-outlet>\n    </main>\n  </div>\n</div>"
+module.exports = "<mits-sidebar [menus]=\"[sections]\">\n  <brand-logo mitsSidebarHeader theme=\"washed\" link=\"/styleguide\"></brand-logo>\n\n  <div mitsSidebarFooter class=\"c-user-panel\">\n    <img [src]=\"user.picture.large\" alt=\"User logo\" class=\"c-user-panel__avatar\">\n    <span class=\"c-user-panel__name\">\n      Hi, <span class=\"c-user-panel__name-container u-text-capitalize\">{{user.name.first + ' ' + user.name.last}}</span>\n    </span>\n    <span class=\"c-user-panel__controls\">\n      <span class=\"u-relative\">\n        <pure-button theme=\"iconic transparent\" [pureDropdownTriggerFor]=\"userDropdown\">\n          <i class=\"c-icon\">more_vert</i>\n        </pure-button> \n\n        <pure-dropdown #userDropdown=\"pureDropdown\" yPosition=\"before\" xPosition=\"above\">\n          <div pureDropdownItem>\n            <div class=\"u-flex-row u-align-items-center\">\n              <i class=\"c-icon u-margin-right-4s\">person</i>\n              Profile\n            </div>\n          </div>\n          <div pureDropdownItem>\n            <div class=\"u-flex-row u-align-items-center\">\n              <i class=\"c-icon u-margin-right-4s\">settings</i>\n              Settings\n            </div>\n          </div>\n          <div pureDropdownItem>\n            <div class=\"u-flex-row u-align-items-center\">\n              <i class=\"c-icon u-margin-right-4s\">power_settings_new</i>\n              Log Out\n            </div>\n          </div>\n        </pure-dropdown>\n      </span>\n    </span>\n  </div>\n\n  <router-outlet mitsSidebarContent></router-outlet>\n</mits-sidebar>"
 
 /***/ }),
 
@@ -79,16 +79,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var pure_elements__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! pure-elements */ "./node_modules/pure-elements/dist/index.js");
-/* harmony import */ var _brand_logo_brand_logo_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../brand-logo/brand-logo.module */ "./src/app/brand-logo/brand-logo.module.ts");
+/* harmony import */ var _mits_default_theme_scripts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../mits-default-theme/scripts */ "./src/mits-default-theme/scripts/index.ts");
 /* harmony import */ var _demo_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./demo-routing.module */ "./src/app/demo/demo-routing.module.ts");
 /* harmony import */ var _demo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./demo */ "./src/app/demo/demo.ts");
-/* harmony import */ var _users_users_list__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./users/users-list */ "./src/app/demo/users/users-list.ts");
+/* harmony import */ var _brand_logo_brand_logo_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../brand-logo/brand-logo.module */ "./src/app/brand-logo/brand-logo.module.ts");
+/* harmony import */ var _users_users_list__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./users/users-list */ "./src/app/demo/users/users-list.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -103,13 +105,14 @@ var DemoModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [
                 _demo__WEBPACK_IMPORTED_MODULE_5__["DemoComponent"],
-                _users_users_list__WEBPACK_IMPORTED_MODULE_6__["UsersList"]
+                _users_users_list__WEBPACK_IMPORTED_MODULE_7__["UsersList"]
             ],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                 _demo_routing_module__WEBPACK_IMPORTED_MODULE_4__["DemoRoutingModule"],
                 pure_elements__WEBPACK_IMPORTED_MODULE_2__["PureElements"],
-                _brand_logo_brand_logo_module__WEBPACK_IMPORTED_MODULE_3__["BrandLogoModule"]
+                _mits_default_theme_scripts__WEBPACK_IMPORTED_MODULE_3__["MitsDefaultTheme"],
+                _brand_logo_brand_logo_module__WEBPACK_IMPORTED_MODULE_6__["BrandLogoModule"]
             ]
         })
     ], DemoModule);
@@ -142,33 +145,41 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 var DemoComponent = /** @class */ (function () {
     function DemoComponent() {
-        this.sections = [
-            {
-                title: 'Dashboard',
-                url: 'dashboard'
-            },
-            {
-                title: 'Users',
-                url: 'users'
-            },
-            {
-                title: 'Customers',
-                url: 'customers'
-            },
-            {
-                title: 'Timesheets',
-                url: 'timesheets',
-                newItems: 3
-            },
-            {
-                title: 'Administration',
-                url: 'administration'
-            },
-            {
-                title: 'Reports',
-                url: 'reports'
-            }
-        ];
+        this.sections = {
+            items: [
+                {
+                    title: 'Dashboard',
+                    url: 'dashboard',
+                    icon: 'home'
+                },
+                {
+                    title: 'Users',
+                    url: 'users',
+                    icon: 'supervisor_account'
+                },
+                {
+                    title: 'Customers',
+                    url: 'customers',
+                    icon: 'dns'
+                },
+                {
+                    title: 'Timesheets',
+                    url: 'timesheets',
+                    newItems: 3,
+                    icon: 'access_time'
+                },
+                {
+                    title: 'Administration',
+                    url: 'administration',
+                    icon: 'build'
+                },
+                {
+                    title: 'Reports',
+                    url: 'reports',
+                    icon: 'insert_chart_outlined'
+                }
+            ]
+        };
         this.user = _user__WEBPACK_IMPORTED_MODULE_1__["USER"];
     }
     DemoComponent = __decorate([

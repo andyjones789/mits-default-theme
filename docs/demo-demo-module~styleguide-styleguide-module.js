@@ -640,6 +640,210 @@ var USERS = [
 ];
 
 
+/***/ }),
+
+/***/ "./src/mits-default-theme/scripts/index.ts":
+/*!*************************************************!*\
+  !*** ./src/mits-default-theme/scripts/index.ts ***!
+  \*************************************************/
+/*! exports provided: MitsDefaultTheme, MitsSidebar, MitsSidebarModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _sidebar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sidebar */ "./src/mits-default-theme/scripts/sidebar/index.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MitsSidebar", function() { return _sidebar__WEBPACK_IMPORTED_MODULE_0__["MitsSidebar"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MitsSidebarModule", function() { return _sidebar__WEBPACK_IMPORTED_MODULE_0__["MitsSidebarModule"]; });
+
+/* harmony import */ var _mits_default_theme_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mits-default-theme.module */ "./src/mits-default-theme/scripts/mits-default-theme.module.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MitsDefaultTheme", function() { return _mits_default_theme_module__WEBPACK_IMPORTED_MODULE_1__["MitsDefaultTheme"]; });
+
+/** Export components */
+
+/** Export main module */
+
+
+
+/***/ }),
+
+/***/ "./src/mits-default-theme/scripts/mits-default-theme.module.ts":
+/*!*********************************************************************!*\
+  !*** ./src/mits-default-theme/scripts/mits-default-theme.module.ts ***!
+  \*********************************************************************/
+/*! exports provided: MitsDefaultTheme */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MitsDefaultTheme", function() { return MitsDefaultTheme; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sidebar */ "./src/mits-default-theme/scripts/sidebar/index.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var MitsDefaultTheme = /** @class */ (function () {
+    function MitsDefaultTheme() {
+    }
+    MitsDefaultTheme = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            exports: [
+                _sidebar__WEBPACK_IMPORTED_MODULE_1__["MitsSidebarModule"]
+            ]
+        })
+    ], MitsDefaultTheme);
+    return MitsDefaultTheme;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/mits-default-theme/scripts/sidebar/index.ts":
+/*!*********************************************************!*\
+  !*** ./src/mits-default-theme/scripts/sidebar/index.ts ***!
+  \*********************************************************/
+/*! exports provided: MitsSidebar, MitsSidebarModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./src/mits-default-theme/scripts/sidebar/public-api.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MitsSidebar", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["MitsSidebar"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MitsSidebarModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["MitsSidebarModule"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./src/mits-default-theme/scripts/sidebar/public-api.ts":
+/*!**************************************************************!*\
+  !*** ./src/mits-default-theme/scripts/sidebar/public-api.ts ***!
+  \**************************************************************/
+/*! exports provided: MitsSidebar, MitsSidebarModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _sidebar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sidebar */ "./src/mits-default-theme/scripts/sidebar/sidebar.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MitsSidebar", function() { return _sidebar__WEBPACK_IMPORTED_MODULE_0__["MitsSidebar"]; });
+
+/* harmony import */ var _sidebar_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sidebar.module */ "./src/mits-default-theme/scripts/sidebar/sidebar.module.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MitsSidebarModule", function() { return _sidebar_module__WEBPACK_IMPORTED_MODULE_1__["MitsSidebarModule"]; });
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/mits-default-theme/scripts/sidebar/sidebar.html":
+/*!*************************************************************!*\
+  !*** ./src/mits-default-theme/scripts/sidebar/sidebar.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"c-sidebar\" [class.c-sidebar--expanded]=\"contentState === 'expanded'\">\n  <div class=\"c-sidebar__container\">\n    <nav class=\"c-sidebar__nav\">\n      <header class=\"c-sidebar__section-container\">\n        <ng-content select=\"[mitsSidebarHeader]\"></ng-content>\n      </header>\n\n      <div class=\"c-sidebar__section-container c-sidebar__section-container--sm\" *ngFor=\"let menu of menus\">\n        <h3 *ngIf=\"menu.title\" class=\"c-sidebar__heading\">{{menu.title}}</h3>\n        <ul class=\"c-menu\">\n          <li *ngFor=\"let menuItem of menu.items\">\n            <a class=\"c-menu__item\" routerLinkActive=\"c-menu__item--active\" [routerLink]=\"menuItem.url\">\n              <i *ngIf=\"menuItem.icon\" class=\"c-icon\">{{menuItem.icon}}</i>\n              <span class=\"c-menu__item-text\"> {{menuItem.title}} <sup *ngIf=\"menuItem.newItems\" class=\"c-round-badge\"></sup></span>\n            </a>\n          </li>\n        </ul>\n      </div>\n\n      <footer class=\"c-sidebar__footer\">\n        <ng-content select=\"[mitsSidebarFooter]\"></ng-content>\n      </footer>\n    </nav>\n\n    <main class=\"c-sidebar__content\">\n      <ng-content select=\"[mitsSidebarContent]\"></ng-content>\n    </main>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/mits-default-theme/scripts/sidebar/sidebar.module.ts":
+/*!******************************************************************!*\
+  !*** ./src/mits-default-theme/scripts/sidebar/sidebar.module.ts ***!
+  \******************************************************************/
+/*! exports provided: MitsSidebarModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MitsSidebarModule", function() { return MitsSidebarModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _sidebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sidebar */ "./src/mits-default-theme/scripts/sidebar/sidebar.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var MitsSidebarModule = /** @class */ (function () {
+    function MitsSidebarModule() {
+    }
+    MitsSidebarModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]],
+            declarations: [_sidebar__WEBPACK_IMPORTED_MODULE_3__["MitsSidebar"]],
+            exports: [_sidebar__WEBPACK_IMPORTED_MODULE_3__["MitsSidebar"]]
+        })
+    ], MitsSidebarModule);
+    return MitsSidebarModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/mits-default-theme/scripts/sidebar/sidebar.ts":
+/*!***********************************************************!*\
+  !*** ./src/mits-default-theme/scripts/sidebar/sidebar.ts ***!
+  \***********************************************************/
+/*! exports provided: MitsSidebar */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MitsSidebar", function() { return MitsSidebar; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MitsSidebar = /** @class */ (function () {
+    function MitsSidebar() {
+        this.menus = [];
+        this.contentState = 'default';
+    }
+    MitsSidebar.prototype.toggleContentState = function () {
+        this.contentState === 'default' ? this.contentState = 'expanded' : this.contentState = 'default';
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], MitsSidebar.prototype, "menus", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
+    ], MitsSidebar.prototype, "contentState", void 0);
+    MitsSidebar = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'mits-sidebar',
+            template: __webpack_require__(/*! ./sidebar.html */ "./src/mits-default-theme/scripts/sidebar/sidebar.html")
+        })
+    ], MitsSidebar);
+    return MitsSidebar;
+}());
+
+
+
 /***/ })
 
 }]);
