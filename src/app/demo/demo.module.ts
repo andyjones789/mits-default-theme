@@ -2,13 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PureElements } from 'pure-elements';
-import { BrandLogoModule } from '../brand-logo/brand-logo.module';
+import { MitsDefaultTheme } from '../../mits-default-theme/scripts'
 
 import { DemoRoutingModule } from './demo-routing.module';
-
 import { DemoComponent } from './demo';
 
+import { BrandLogoModule } from '../brand-logo/brand-logo.module';
 import { UsersList } from './users/users-list';
+
 @NgModule({
   declarations: [
     DemoComponent, 
@@ -18,7 +19,8 @@ import { UsersList } from './users/users-list';
     CommonModule,
     DemoRoutingModule,
     PureElements,
+    MitsDefaultTheme,
     BrandLogoModule
   ]
 })
-export class DemoModule { }
+export class DemoModule {}

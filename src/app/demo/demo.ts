@@ -1,39 +1,47 @@
 import { Component } from '@angular/core';
 
-import { Links } from '../links';
 import { USER } from '../user';
+import { SidebarMenu } from '../../mits-default-theme/scripts';
 
 @Component({
   templateUrl: './demo.html'
 })
 export class DemoComponent {
-  sections: Links[] = [
-    {
-      title: 'Dashboard',
-      url: 'dashboard'
-    },
-    {
-      title: 'Users',
-      url: 'users'
-    },
-    {
-      title: 'Customers',
-      url: 'customers'
-    },
-    {
-      title: 'Timesheets',
-      url: 'timesheets',
-      newItems: 3
-    },
-    {
-      title: 'Administration',
-      url: 'administration'
-    },
-    {
-      title: 'Reports',
-      url: 'reports'
-    }
-  ];
+  sections: SidebarMenu = {
+    items: [
+      {
+        title: 'Dashboard',
+        url: 'dashboard',
+        icon: 'home'
+      },
+      {
+        title: 'Users',
+        url: 'users',
+        icon: 'supervisor_account'
+      },
+      {
+        title: 'Customers',
+        url: 'customers',
+        icon: 'dns'
+      },
+      {
+        title: 'Timesheets',
+        url: 'timesheets',
+        newItems: 3,
+        icon: 'access_time'
+      },
+      {
+        title: 'Administration',
+        url: 'administration',
+        icon: 'build'
+      },
+      {
+        title: 'Reports',
+        url: 'reports',
+        icon: 'insert_chart_outlined'
+      }
+    ]
+  };
 
   user = USER;
 }

@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { PureElements, PureToastDefaultOptions, PureToastConfig } from 'pure-elements';
+import { MitsDefaultTheme } from '../../mits-default-theme/scripts';
 import { BrandLogoModule } from '../brand-logo/brand-logo.module';
 
 import { StyleguideRoutingModule } from './styleguide-routing.module';
@@ -47,6 +48,7 @@ const toastConfig: PureToastConfig = {
     FormsModule,
     StyleguideRoutingModule,
     PureElements,
+    MitsDefaultTheme,
     BrandLogoModule
   ],
   declarations: [

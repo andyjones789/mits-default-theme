@@ -1,0 +1,29 @@
+<div class="c-sidebar" [class.c-sidebar--expanded]="contentState === 'expanded'">
+  <div class="c-sidebar__container">
+    <nav class="c-sidebar__nav">
+      <header class="c-sidebar__section-container">
+        <ng-content select="[mitsSidebarHeader]"></ng-content>
+      </header>
+
+      <div class="c-sidebar__section-container c-sidebar__section-container--sm" *ngFor="let menu of menus">
+        <h3 *ngIf="menu.title" class="c-sidebar__heading">{{menu.title}}</h3>
+        <ul class="c-menu" [class.c-menu--shrank]="contentState === 'expanded'">
+          <li *ngFor="let menuItem of menu.items">
+            <a class="c-menu__item" routerLinkActive="c-menu__item--active" [routerLink]="menuItem.url">
+              <i *ngIf="menuItem.icon" class="c-icon">{{menuItem.icon}}</i>
+              <span class="c-menu__item-text"> {{menuItem.title}} <sup *ngIf="menuItem.newItems" class="c-round-badge"></sup></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <footer class="c-sidebar__footer" (click)="toggleContentState()">
+        <ng-content select="[mitsSidebarFooter]"></ng-content>
+      </footer>
+    </nav>
+
+    <main class="c-sidebar__content">
+      <ng-content select="[mitsSidebarContent]"></ng-content>
+    </main>
+  </div>
+</div>

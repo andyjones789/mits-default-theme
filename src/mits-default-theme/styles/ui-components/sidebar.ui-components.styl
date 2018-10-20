@@ -45,6 +45,7 @@ $sidebar-nav-padding-v = $unit-lg
     width $sidebar-nav-width
     min-height 100vh
     padding $sidebar-nav-padding-v $sidebar-nav-padding-h
+    transition $global-duration
     
 
   &__section-container
@@ -85,3 +86,22 @@ $sidebar-nav-padding-v = $unit-lg
   height 100%
   background $body-bg-color
   box-shadow $box-shadow-model-level30-straight rgba($box-shadow-color-black, .1)
+
+
+
+
+
+/* Expanded
+   ========================================================================== */
+
+.c-sidebar--expanded
+  
+  .c-sidebar__nav
+    width 7.8rem
+    
+    // &:hover + .c-sidebar__content
+    //   transform translateX(20px)
+
+
+  .c-sidebar__content
+    transition $global-duration

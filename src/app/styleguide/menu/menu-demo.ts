@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 
-import { Links } from '../../links';
-
 @Component({
   templateUrl: './menu-demo.html'
 })
 export class MenuDemo {
-  links: Links[] = [
+  links = [
     {
       title: 'Menu item #1'
     },
