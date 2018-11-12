@@ -8,11 +8,9 @@
     <div class="o-grid o-grid--no-outer-gap">
       <span class="o-cell o-cell--1/4 c-component__container">
 
-        <pure-form-control>
-          <pure-select [placeholder]="placeholder">
-            <pure-option *ngFor="let option of options" [value]="option">{{option.label}}</pure-option>
-          </pure-select>
-        </pure-form-control>
+        <pure-select [placeholder]="placeholder">
+          <pure-option *ngFor="let option of options" [value]="option">{{option.label}}</pure-option>
+        </pure-select>
 
       </span>
     </div>
@@ -50,11 +48,9 @@
     <div class="o-grid o-grid--no-outer-gap">
       <span class="o-cell o-cell--1/4 c-component__container">
 
-        <pure-form-control>
-          <pure-select [placeholder]="placeholder" [search]="true">
-            <pure-option *ngFor="let option of options" [value]="option">{{option.label}}</pure-option>
-          </pure-select>
-        </pure-form-control>
+        <pure-select [placeholder]="placeholder" [search]="true">
+          <pure-option *ngFor="let option of options" [value]="option">{{option.label}}</pure-option>
+        </pure-select>
 
       </span>
     </div>
@@ -66,11 +62,9 @@
     <div class="o-grid o-grid--no-outer-gap">
       <span class="o-cell o-cell--1/4 c-component__container">
 
-        <pure-form-control>
-          <pure-select placeholder="Select countries" [multiple]="true">
-            <pure-option *ngFor="let option of options" [value]="option">{{option.label}}</pure-option>
-          </pure-select>
-        </pure-form-control>
+        <pure-select placeholder="Select countries" [multiple]="true">
+          <pure-option *ngFor="let option of options" [value]="option">{{option.label}}</pure-option>
+        </pure-select>
 
       </span>
     </div>
@@ -82,11 +76,9 @@
     <div class="o-grid o-grid--no-outer-gap">
       <span class="o-cell o-cell--1/4 c-component__container">
 
-        <pure-form-control>
-          <pure-select placeholder="Select or type country" [addNew]="true">
-            <pure-option *ngFor="let option of options" [value]="option">{{option.label}}</pure-option>
-          </pure-select>
-        </pure-form-control>
+        <pure-select placeholder="Select or type country" [addNew]="true">
+          <pure-option *ngFor="let option of options" [value]="option">{{option.label}}</pure-option>
+        </pure-select>
 
       </span>
     </div>
@@ -98,11 +90,9 @@
     <div class="o-grid o-grid--no-outer-gap">
       <span class="o-cell o-cell--1/4 c-component__container">
 
-        <pure-form-control>
-          <pure-select #apiSelect placeholder="Type to search user" [addNew]="true" [hideNewItem]="true" (input)="searchUsers($event)">
-            <pure-option *ngFor="let user of users" [value]="user">{{user.first_name + " " + user.last_name}}</pure-option>
-          </pure-select>
-        </pure-form-control>
+        <pure-select #apiSelect placeholder="Type to search user" [addNew]="true" [hideNewItem]="true" (input)="searchUsers($event)">
+          <pure-option *ngFor="let user of users" [value]="user">{{user.first_name + " " + user.last_name}}</pure-option>
+        </pure-select>
 
       </span>
     </div>
