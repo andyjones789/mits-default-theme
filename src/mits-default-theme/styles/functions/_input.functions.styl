@@ -1,0 +1,53 @@
+// =============================================================================
+// INPUT
+// =============================================================================
+
+// Functions for Input abstract component.
+
+
+
+
+
+// Hover/Active/Focus Functions
+// =============================================================================
+
+style-input-hover()
+  background $input-hover-bg-color
+
+
+style-input-active()
+  background $input-active-bg-color
+  
+
+style-input-disabled()
+  /*
+   * 1. Fix for Safari.
+   */
+  background $input-disabled-bg-color
+  color $input-disabled-color
+  -webkit-text-fill-color @color /* [1] */
+  opacity 1 /* [1] */
+  
+  &:hover
+    background @background
+
+
+
+
+
+// Input Icon Functions
+// =============================================================================
+
+style-input-icon($content = '')
+  y-centered()
+  style-icon()
+  
+  content $content
+  pointer-events none
+
+
+style-input-dropdown-arrow()
+  style-input-icon('arrow_drop_down')
+  
+  right .4rem
+  margin-top .1rem

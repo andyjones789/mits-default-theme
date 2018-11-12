@@ -4,14 +4,19 @@
 
 
 
-$dropdown-y-position = calc(100% + .1rem)
-$dropdown-x-position = .1rem
+$dropdown-y-position              = calc(100% + .1rem)
+$dropdown-x-position              = .1rem
+
+$dropdown-menu-appear-duration    = $global-duration
+$dropdown-menu-disappear-duration = $global-duration-lg
+
+$dropdown-item-padding-h          = $unit-sm
+$dropdown-item-padding-v          = $unit-5s
 
 
 .c-pure-dropdown
   visibility hidden
-  transition $global-duration
-
+  
 
   &__backdrop
     position fixed
@@ -32,12 +37,12 @@ $dropdown-x-position = .1rem
     width $unit-5x * 4
     max-height $unit-8x * 3
     overflow-y auto
-    overflow-x hidden
+    overflow-x visible
     padding $unit-4s 0
     border-radius $global-radius
     background $card-bg-color
     box-shadow $box-shadow-model-level10 rgba(mix($color-accent, $box-shadow-color-black, 25%), .15)
-    animation dropdown-menu-disappear $global-duration
+    animation dropdown-menu-disappear $dropdown-menu-appear-duration
     animation-timing-function $ease-in-quad
     
     
@@ -55,11 +60,12 @@ $dropdown-x-position = .1rem
 
 
   /*
-   * Shown
+   * Opened
    */
      
-  &--shown
+  &--opened
     visibility visible
+    transition-delay 0
     
 
     .c-pure-dropdown__backdrop
@@ -67,7 +73,7 @@ $dropdown-x-position = .1rem
       
 
     .c-pure-dropdown__menu
-      animation dropdown-menu-appear $global-duration-lg
+      animation dropdown-menu-appear $dropdown-menu-disappear-duration
       animation-timing-function $ease-out-back
 
 
@@ -94,11 +100,11 @@ $dropdown-x-position = .1rem
 
 
 
-// Dropdown Item
-// =============================================================================
+/* Dropdown Item
+   ========================================================================== */
 
 .c-pure-dropdown-item
-  padding $unit-5s $unit-sm
+  padding $dropdown-item-padding-v $dropdown-item-padding-h
   color $body-color
   user-select none
   cursor default
@@ -111,3 +117,69 @@ $dropdown-x-position = .1rem
 
   &--focused
     background $color-accent-washed
+
+
+
+
+
+/* Dropdown Indide Select
+   ========================================================================== */
+
+.c-pure-select
+  
+  .c-pure-dropdown__menu
+    left $dropdown-x-position
+    right @left
+    width auto
+  
+
+
+
+
+/* Search Input
+   ========================================================================== */
+
+$dropdown-search-color = $color-primary
+
+
+.c-pure-dropdown__prefix-container
+  position relative
+  margin 0 $dropdown-item-padding-h $unit-2s
+  
+  &::before
+    style-input-icon('search')
+    left -.1rem
+    color $dropdown-search-color
+  
+
+.c-pure-dropdown
+  
+  .c-pure-dropdown__prefix-container
+    
+    /*
+     * 1. Made to match icon color because it's lighter due to different rendering.
+     */
+    .c-pure-input
+      height $input-sm-height
+      padding 0 0 0 $unit-lg
+      background transparent 
+      border-bottom .15rem solid rgba($dropdown-search-color, .61) /* [1] */
+      border-radius 0
+      
+      &:hover,
+      &:focus
+        background @background
+        
+      &:focus
+        border-bottom-color $color-accent-bright
+
+
+
+
+
+/* No Items Panel
+   ========================================================================== */
+
+.c-pure-dropdown__suffix-container
+  padding $dropdown-item-padding-v $dropdown-item-padding-h
+  color $body-color-light

@@ -15,13 +15,13 @@
   color $input-color
   background $input-bg-color
   box-shadow $input-box-shadow
-  transition background $global-duration, color $global-duration
+  transition-duration $global-duration
+  transition-property background, color, border
   
   placeholder($input-placeholder-color, $input-disabled-placeholder-color)
     
   
   /* Add `box-shadow` when input is autofilled by browser to add contrast. */
-    
   &:-webkit-autofill
     box-shadow inset 0 0 0 .1rem rgba(0,0,0, .14)
     
@@ -35,11 +35,16 @@
   
   &:not([readonly])
     
-    /* Include `active` to avoid flickering during <textarea> resizing. */
 
-    &:hover,
+    &:hover
+      style-input-hover()
+      
+    /*
+     * Style `active` also (which looks the same as hover) to avoid flickering
+     * during <textarea> resizing.
+     */
     &:active
-      background $input-hover-bg-color
+      style-input-active()
       
     &:focus
       background $input-focus-bg-color
@@ -49,18 +54,8 @@
     color $input-readonly-color
   
 
-  /*
-   * 1. Fix for Safari.
-   */
-
   &[disabled]
-    background $input-disabled-bg-color
-    color $input-disabled-color
-    -webkit-text-fill-color @color /* [1] */
-    opacity 1 /* [1] */
-    
-    &:hover
-      background @background
+    style-input-disabled()
 
 
 
@@ -78,7 +73,6 @@ $input-textarea-row-height  = $input-font-size * $input-textarea-line-height
 /*
  * 1. Make it equal to the height of 3 text rows.
  */
-
 textarea.c-pure-input
   padding $input-textarea-padding-v $input-textarea-padding-h
   min-height $input-textarea-padding-v * 2 + $input-textarea-row-height * 3 /* [1] */

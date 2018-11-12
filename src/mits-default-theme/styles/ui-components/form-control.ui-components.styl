@@ -216,11 +216,7 @@ _form-control-dynamic-width($start-width, $expanded-width)
   .c-pure-form-control__input-holder
     
     &::before
-      content 'arrow_drop_down'
-      y-centered()
-      right .4rem
-      style-icon()
-      pointer-events none
+      style-input-dropdown-arrow()
       
 
     select.c-pure-input
@@ -278,7 +274,7 @@ _form-control-dynamic-width($start-width, $expanded-width)
     no-outline()
     
 
-  .c-pure-form-control__toggle    
+  .c-pure-form-control__toggle
     position absolute
     top 50%
     left 0
@@ -371,3 +367,23 @@ $checkbox-border-radius = $global-radius-sm * 1.5
       width $unit-5s
       height @width
       border-radius .1rem
+
+
+/*
+ * Checkbox inside a Dropdown.
+ *
+ * 1. Fix animation bug when dropdown menu closes.
+ */
+
+.c-pure-dropdown
+  
+  .c-pure-form-control--checkbox
+    margin-bottom 0
+
+
+  &:not(.c-pure-dropdown--opened)
+    
+    .c-pure-form-control--checkbox
+      
+      .c-pure-form-control__toggle
+        transition 0 /* [1] */

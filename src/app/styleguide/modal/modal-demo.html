@@ -9,7 +9,7 @@
     <span class="c-component__container">
 
       <pure-button (onClick)="showDialog = !showDialog">Open Dialogue</pure-button>
-      <pure-modal-window [(show)]="showDialog">
+      <pure-modal [(show)]="showDialog">
         <div class="c-modal-dialog">
           <div class="c-modal-dialog__container">
             <header class="c-modal-dialog__header">
@@ -26,7 +26,7 @@
             </div>
           </footer>
         </div>
-      </pure-modal-window>
+      </pure-modal>
 
     </span>
   </div>
@@ -36,7 +36,7 @@
     <span class="c-component__container">
 
       <pure-button (onClick)="showWindow = !showWindow">Open Window</pure-button>
-      <pure-modal-window [(show)]="showWindow">
+      <pure-modal [(show)]="showWindow">
         <div class="c-modal-window">
           <div class="c-modal-window__content-container">
             <header class="c-modal-window__header">
@@ -86,7 +86,7 @@
             </footer>
           </div>
         </div>
-      </pure-modal-window>
+      </pure-modal>
 
     </span>
   </div>

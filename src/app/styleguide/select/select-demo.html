@@ -1,0 +1,110 @@
+<div class="c-item-container">
+  <header class="c-item-container__header">
+    <h1 class="c-item-container__heading">Select</h1>
+    <p class="c-item-container__desc">Styles on top of the <a href="{{LibData.pureDemoLink}}select" target="_blank" rel="noopener">Pure Select</a> element.</p>
+  </header>
+
+  <div class="c-component">
+    <div class="o-grid o-grid--no-outer-gap">
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control>
+          <pure-select [placeholder]="placeholder">
+            <pure-option *ngFor="let option of options" [value]="option">{{option.label}}</pure-option>
+          </pure-select>
+        </pure-form-control>
+
+      </span>
+    </div>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">States</h2>
+
+    <div class="o-grid o-grid--no-outer-gap">
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control label="Select country">
+          <pure-select placeholder="Required" [required]="true">
+            <pure-option *ngFor="let option of options" [value]="option">{{option.label}}</pure-option>
+          </pure-select>
+        </pure-form-control>
+
+      </span>
+
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control label="Select country">
+          <pure-select placeholder="Disabled" [disabled]="true">
+            <pure-option *ngFor="let option of options" [value]="option">{{option.label}}</pure-option>
+          </pure-select>
+        </pure-form-control>
+
+      </span>
+    </div>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">With Search</h2>
+
+    <div class="o-grid o-grid--no-outer-gap">
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control>
+          <pure-select [placeholder]="placeholder" [search]="true">
+            <pure-option *ngFor="let option of options" [value]="option">{{option.label}}</pure-option>
+          </pure-select>
+        </pure-form-control>
+
+      </span>
+    </div>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">Multiple</h2>
+
+    <div class="o-grid o-grid--no-outer-gap">
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control>
+          <pure-select placeholder="Select countries" [multiple]="true">
+            <pure-option *ngFor="let option of options" [value]="option">{{option.label}}</pure-option>
+          </pure-select>
+        </pure-form-control>
+
+      </span>
+    </div>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">Add New Option</h2>
+
+    <div class="o-grid o-grid--no-outer-gap">
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control>
+          <pure-select placeholder="Select or type country" [addNew]="true">
+            <pure-option *ngFor="let option of options" [value]="option">{{option.label}}</pure-option>
+          </pure-select>
+        </pure-form-control>
+
+      </span>
+    </div>
+  </div>
+
+  <div class="c-component">
+    <h2 class="c-component__heading">Get Options From API (Simulated)</h2>
+
+    <div class="o-grid o-grid--no-outer-gap">
+      <span class="o-cell o-cell--1/4 c-component__container">
+
+        <pure-form-control>
+          <pure-select #apiSelect placeholder="Type to search user" [addNew]="true" [hideNewItem]="true" (input)="searchUsers($event)">
+            <pure-option *ngFor="let user of users" [value]="user">{{user.first_name + " " + user.last_name}}</pure-option>
+          </pure-select>
+        </pure-form-control>
+
+      </span>
+    </div>
+  </div>
+</div>

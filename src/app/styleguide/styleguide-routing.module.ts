@@ -24,6 +24,7 @@ import { LoadingDemo } from './loading/loading-demo';
 import { MenuDemo } from './menu/menu-demo';
 import { ModalDemo } from './modal/modal-demo';
 import { RoundBadgeDemo } from './round-badge/round-badge-demo';
+import { SelectDemo } from './select/select-demo';
 import { SwitcherDemo } from './switcher/switcher-demo';
 import { ToastDemo } from './toast/toast-demo';
 import { TooltipDemo } from './tooltip/tooltip-demo';
@@ -54,6 +55,7 @@ const routes: Routes = [
       { path: 'menu', component: MenuDemo },
       { path: 'modal', component: ModalDemo },
       { path: 'round-badge', component: RoundBadgeDemo },
+      { path: 'select', component: SelectDemo },
       { path: 'switcher', component: SwitcherDemo },
       { path: 'toast', component: ToastDemo },
       { path: 'tooltip', component: TooltipDemo },

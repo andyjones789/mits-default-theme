@@ -1,0 +1,58 @@
+/* ==========================================================================
+   PURE SELECT
+   ========================================================================== */
+
+
+
+
+
+/* Hover/Focus/Active States
+   ========================================================================== */
+
+.c-pure-select
+  outline-basic-styles(-.1rem, $input-border-radius * 1.25)
+  
+
+  &--focused
+    outline-focus-styles()
+    
+
+    &:active::after
+      opacity 0
+  
+
+  &--active,
+  &--focused
+    
+    .c-pure-input
+      style-input-active()
+
+
+  /*
+   * 1. Redefine styles for readonly input set in Pure Input styles.
+   */
+  .c-pure-input
+       
+    /* [1] */
+    &::active
+      style-input-active()
+    
+    /* [1] */
+    &:hover
+      style-input-hover()
+    
+    &[disabled]
+      style-input-disabled()
+
+  
+
+
+
+/* Arrow Menu Icon
+   ========================================================================== */
+
+.c-pure-select__input-holder
+  position relative
+  
+  &::after
+    style-input-dropdown-arrow()

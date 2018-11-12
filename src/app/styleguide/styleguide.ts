@@ -106,6 +106,10 @@ export class Styleguide {
           url: 'round-badge'
         },
         {
+          title: 'Select',
+          url: 'select'
+        },
+        {
           title: 'Switcher',
           url: 'switcher'
         },
