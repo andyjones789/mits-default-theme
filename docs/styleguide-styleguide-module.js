@@ -433,7 +433,7 @@ var DropdownDemo = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"c-item-container\">\n  <header class=\"c-item-container__header\">\n    <h1 class=\"c-item-container__heading\">Form Control</h1>\n    <p class=\"c-item-container__desc\">Styles on top of the <a href=\"{{LibData.pureDemoLink}}form-control\" target=\"_blank\" rel=\"noopener\">Pure Form Control</a> and <a href=\"{{LibData.pureDemoLink}}input\" target=\"_blank\" rel=\"noopener\">Pure Input</a> elements.</p>\n  </header>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Input Based</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <input type=\"text\" placeholder=\"Enter something\" pureInput>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Textarea Based</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <textarea placeholder=\"Write some story here\" pureInput></textarea>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Select Based</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control label=\"Nationality\">\n          <select pureInput>\n            <option value=\"Germany\">Canada</option>\n            <option value=\"Germany\">Germany</option>\n            <option value=\"Japan\">Japan</option>\n            <option value=\"Japan\">Russia</option>\n            <option value=\"UK\">UK</option>\n            <option value=\"USA\">USA</option>\n          </select>\n        </pure-form-control>\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Radio & Checkbox</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control label=\"Coffee\">\n          <input type=\"radio\" name=\"drink\" checked pureInput>\n        </pure-form-control>\n        <pure-form-control label=\"Tea\">\n          <input type=\"radio\" name=\"drink\" pureInput>\n        </pure-form-control>\n        <pure-form-control label=\"Cacao\">\n          <input type=\"radio\" name=\"drink\" pureInput>\n        </pure-form-control>\n        <pure-form-control label=\"Milk\">\n          <input type=\"radio\" name=\"drink\" disabled pureInput>\n        </pure-form-control>\n\n      </span>\n\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control label=\"Cookies\">\n          <input type=\"checkbox\" name=\"desert\" checked pureInput>\n        </pure-form-control>\n        <pure-form-control label=\"Waffles\">\n          <input type=\"checkbox\" name=\"desert\" pureInput>\n        </pure-form-control>\n        <pure-form-control label=\"Jam\">\n          <input type=\"checkbox\" name=\"desert\" pureInput>\n        </pure-form-control>\n        <pure-form-control label=\"Fruits\">\n          <input type=\"checkbox\" name=\"desert\" disabled pureInput>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Required</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control label=\"National ID\">\n          <input type=\"text\" placeholder=\"Enter ID\" required pureInput>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Readonly</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <input type=\"text\" placeholder=\"You can not edit me\" readonly value=\"You can not edit me\" pureInput>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">States</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n        \n        <pure-form-control theme=\"correct\">\n          <input type=\"text\" placeholder=\"Correct\" pureInput>\n          <i class=\"c-icon\" pureSuffix>done</i>\n        </pure-form-control>\n\n      </span>\n\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n        \n        <pure-form-control theme=\"wrong\">\n          <input type=\"text\" placeholder=\"Wrong\" pureInput>\n          <i class=\"c-icon\" pureSuffix>clear</i>\n        </pure-form-control>\n\n      </span>\n\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n  \n        <pure-form-control>\n          <input type=\"text\" placeholder=\"Disabled\" disabled pureInput>\n        </pure-form-control>\n  \n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">With Icon</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <i class=\"c-icon\" purePrefix>email</i>\n          <input type=\"email\" placeholder=\"Email\" pureInput>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">With Button</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <input type=\"text\" placeholder=\"Filter\" pureInput>\n          <pure-button theme=\"iconic transparent\" pureSuffix>\n            <i class=\"c-icon\">more_vert</i>\n          </pure-button>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">With Hint</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <input type=\"password\" placeholder=\"Password\" pureInput>\n          <pure-message>Password should contain at least one number and capital letter.</pure-message>\n        </pure-form-control>\n      \n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">With Label</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control label=\"Label\">\n          <input type=\"text\" placeholder=\"I have a label on top\" pureInput>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"c-item-container\">\n  <header class=\"c-item-container__header\">\n    <h1 class=\"c-item-container__heading\">Form Control</h1>\n    <p class=\"c-item-container__desc\">Styles on top of the <a href=\"{{LibData.pureDemoLink}}form-control\" target=\"_blank\" rel=\"noopener\">Pure Form Control</a> and <a href=\"{{LibData.pureDemoLink}}input\" target=\"_blank\" rel=\"noopener\">Pure Input</a> elements.</p>\n  </header>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Input Based</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <input type=\"text\" placeholder=\"Enter something\" pureInput>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Textarea Based</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <textarea placeholder=\"Write some story here\" pureInput></textarea>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Select Based</h2>\n    <p class=\"c-component__desc\"><b>Note:</b> Form Control suports both native HTML Select and Select from Pure Elements package. While Pure Select has rich functionality and flexibility, native one has performance benefits so it is recommended to use native Select for simple apps and <a routerLink=\"/styleguide/select\">Pure Select</a> for apps with complex business logic.</p>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control label=\"Nationality\">\n          <select pureInput>\n            <option value=\"Germany\">Canada</option>\n            <option value=\"Germany\">Germany</option>\n            <option value=\"Japan\">Japan</option>\n            <option value=\"Japan\">Russia</option>\n            <option value=\"UK\">UK</option>\n            <option value=\"USA\">USA</option>\n          </select>\n        </pure-form-control>\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Radio & Checkbox</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control label=\"Coffee\">\n          <input type=\"radio\" name=\"drink\" checked pureInput>\n        </pure-form-control>\n        <pure-form-control label=\"Tea\">\n          <input type=\"radio\" name=\"drink\" pureInput>\n        </pure-form-control>\n        <pure-form-control label=\"Cacao\">\n          <input type=\"radio\" name=\"drink\" pureInput>\n        </pure-form-control>\n        <pure-form-control label=\"Milk\">\n          <input type=\"radio\" name=\"drink\" disabled pureInput>\n        </pure-form-control>\n\n      </span>\n\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control label=\"Cookies\">\n          <input type=\"checkbox\" name=\"desert\" checked pureInput>\n        </pure-form-control>\n        <pure-form-control label=\"Waffles\">\n          <input type=\"checkbox\" name=\"desert\" pureInput>\n        </pure-form-control>\n        <pure-form-control label=\"Jam\">\n          <input type=\"checkbox\" name=\"desert\" pureInput>\n        </pure-form-control>\n        <pure-form-control label=\"Fruits\">\n          <input type=\"checkbox\" name=\"desert\" disabled pureInput>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Required</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control label=\"National ID\">\n          <input type=\"text\" placeholder=\"Enter ID\" required pureInput>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Readonly</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <input type=\"text\" placeholder=\"You can not edit me\" readonly=\"true\" value=\"You can not edit me\" pureInput>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">States</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n        \n        <pure-form-control theme=\"correct\">\n          <input type=\"text\" placeholder=\"Correct\" pureInput>\n          <i class=\"c-icon\" pureSuffix>done</i>\n        </pure-form-control>\n\n      </span>\n\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n        \n        <pure-form-control theme=\"wrong\">\n          <input type=\"text\" placeholder=\"Wrong\" pureInput>\n          <i class=\"c-icon\" pureSuffix>clear</i>\n        </pure-form-control>\n\n      </span>\n\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n  \n        <pure-form-control>\n          <input type=\"text\" placeholder=\"Disabled\" disabled pureInput>\n        </pure-form-control>\n  \n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">With Icon</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <i class=\"c-icon\" purePrefix>email</i>\n          <input type=\"email\" placeholder=\"Email\" pureInput>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">With Button</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <input type=\"text\" placeholder=\"Filter\" pureInput>\n          <pure-button theme=\"iconic transparent\" pureSuffix>\n            <i class=\"c-icon\">more_vert</i>\n          </pure-button>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">With Hint</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <input type=\"password\" placeholder=\"Password\" pureInput>\n          <pure-message>Password should contain at least one number and capital letter.</pure-message>\n        </pure-form-control>\n      \n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">With Label</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control label=\"Label\">\n          <input type=\"text\" placeholder=\"I have a label on top\" pureInput>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -723,7 +723,7 @@ var MenuDemo = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"c-item-container\">\n  <header class=\"c-item-container__header\">\n    <h1 class=\"c-item-container__heading\">Modal</h1>\n    <p class=\"c-item-container__desc\">Uses <a href=\"{{LibData.pureDemoLink}}modal-window\" target=\"_blank\" rel=\"noopener\">Pure Modal</a> as a base for both Dialogue and Window.</p>\n  </header>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Modal Dialogue</h2>\n    <span class=\"c-component__container\">\n\n      <pure-button (onClick)=\"showDialog = !showDialog\">Open Dialogue</pure-button>\n      <pure-modal-window [(show)]=\"showDialog\">\n        <div class=\"c-modal-dialog\">\n          <div class=\"c-modal-dialog__container\">\n            <header class=\"c-modal-dialog__header\">\n              <h1 class=\"c-modal-dialog__heading\">Deactivate account?</h1>\n            </header>\n            <div class=\"c-modal-dialog__content\">\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, repellat saepe cumque. Itaque laborum dolore, consequatur atque beatae officiis ut.\n            </div>\n          </div>\n          <footer class=\"c-modal-dialog__footer\">\n            <div class=\"o-controls\">\n              <pure-button theme=\"ghost\" (onClick)=\"showDialog = false\">Cancel</pure-button>\n              <pure-button theme=\"warning\" (onClick)=\"deactivate()\">Deactivate</pure-button>\n            </div>\n          </footer>\n        </div>\n      </pure-modal-window>\n\n    </span>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Modal Window</h2>\n    <span class=\"c-component__container\">\n\n      <pure-button (onClick)=\"showWindow = !showWindow\">Open Window</pure-button>\n      <pure-modal-window [(show)]=\"showWindow\">\n        <div class=\"c-modal-window\">\n          <div class=\"c-modal-window__content-container\">\n            <header class=\"c-modal-window__header\">\n              <h1 class=\"c-modal-window__heading\">New User</h1>\n            </header>\n            <div class=\"c-modal-window__content\">\n              <div class=\"o-grid o-grid--no-outer-gap\">\n                <div class=\"o-cell o-cell--1/3\">\n                  <pure-form-control label=\"First name\">\n                    <input type=\"text\" placeholder=\"Enter first name\" autofocus pureInput>\n                  </pure-form-control>\n                </div>\n                <div class=\"o-cell o-cell--1/3\">\n                  <pure-form-control label=\"Last name\">\n                    <input type=\"text\" placeholder=\"Enter last name\" pureInput>\n                  </pure-form-control>\n                </div>\n                <div class=\"o-cell o-cell--1/3\"></div>\n\n                <div class=\"o-cell o-cell--2/3\">\n                  <pure-form-control label=\"Biography\">\n                    <textarea placeholder=\"Enter biography\" pureInput></textarea>\n                  </pure-form-control>\n                </div>\n                <div class=\"o-cell o-cell--1/3\">\n                </div>\n\n                <div class=\"o-cell o-cell--1/3\">\n                  <pure-form-control label=\"Title\">\n                    <input type=\"text\" placeholder=\"Enter title\" pureInput>\n                  </pure-form-control>\n                </div>\n                <div class=\"o-cell o-cell--1/3\">\n                  <pure-form-control label=\"Date of birth\">\n                    <input type=\"date\" placeholder=\"Enter date\" pureInput>\n                  </pure-form-control>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"c-modal-window__footer-container\">\n            <footer class=\"c-modal-window__footer\">\n              <div class=\"o-controls\">\n                <pure-button theme=\"ghost\" (onClick)=\"showWindow = false\">Cancel</pure-button>\n                <pure-button theme=\"success\" (onClick)=\"create()\">Create</pure-button>\n              </div>\n            </footer>\n          </div>\n        </div>\n      </pure-modal-window>\n\n    </span>\n  </div>\n</div>\n"
+module.exports = "<div class=\"c-item-container\">\n  <header class=\"c-item-container__header\">\n    <h1 class=\"c-item-container__heading\">Modal</h1>\n    <p class=\"c-item-container__desc\">Uses <a href=\"{{LibData.pureDemoLink}}modal-window\" target=\"_blank\" rel=\"noopener\">Pure Modal</a> as a base for both Dialogue and Window.</p>\n  </header>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Modal Dialogue</h2>\n    <span class=\"c-component__container\">\n\n      <pure-button (onClick)=\"showDialog = !showDialog\">Open Dialogue</pure-button>\n      <pure-modal [(show)]=\"showDialog\">\n        <div class=\"c-modal-dialog\">\n          <div class=\"c-modal-dialog__container\">\n            <header class=\"c-modal-dialog__header\">\n              <h1 class=\"c-modal-dialog__heading\">Deactivate account?</h1>\n            </header>\n            <div class=\"c-modal-dialog__content\">\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, repellat saepe cumque. Itaque laborum dolore, consequatur atque beatae officiis ut.\n            </div>\n          </div>\n          <footer class=\"c-modal-dialog__footer\">\n            <div class=\"o-controls\">\n              <pure-button theme=\"ghost\" (onClick)=\"showDialog = false\">Cancel</pure-button>\n              <pure-button theme=\"warning\" (onClick)=\"deactivate()\">Deactivate</pure-button>\n            </div>\n          </footer>\n        </div>\n      </pure-modal>\n\n    </span>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Modal Window</h2>\n    <span class=\"c-component__container\">\n\n      <pure-button (onClick)=\"showWindow = !showWindow\">Open Window</pure-button>\n      <pure-modal [(show)]=\"showWindow\">\n        <div class=\"c-modal-window\">\n          <div class=\"c-modal-window__content-container\">\n            <header class=\"c-modal-window__header\">\n              <h1 class=\"c-modal-window__heading\">New User</h1>\n            </header>\n            <div class=\"c-modal-window__content\">\n              <div class=\"o-grid o-grid--no-outer-gap\">\n                <div class=\"o-cell o-cell--1/3\">\n                  <pure-form-control label=\"First name\">\n                    <input type=\"text\" placeholder=\"Enter first name\" autofocus pureInput>\n                  </pure-form-control>\n                </div>\n                <div class=\"o-cell o-cell--1/3\">\n                  <pure-form-control label=\"Last name\">\n                    <input type=\"text\" placeholder=\"Enter last name\" pureInput>\n                  </pure-form-control>\n                </div>\n                <div class=\"o-cell o-cell--1/3\"></div>\n\n                <div class=\"o-cell o-cell--2/3\">\n                  <pure-form-control label=\"Biography\">\n                    <textarea placeholder=\"Enter biography\" pureInput></textarea>\n                  </pure-form-control>\n                </div>\n                <div class=\"o-cell o-cell--1/3\">\n                </div>\n\n                <div class=\"o-cell o-cell--1/3\">\n                  <pure-form-control label=\"Title\">\n                    <input type=\"text\" placeholder=\"Enter title\" pureInput>\n                  </pure-form-control>\n                </div>\n                <div class=\"o-cell o-cell--1/3\">\n                  <pure-form-control label=\"Date of birth\">\n                    <input type=\"date\" placeholder=\"Enter date\" pureInput>\n                  </pure-form-control>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"c-modal-window__footer-container\">\n            <footer class=\"c-modal-window__footer\">\n              <div class=\"o-controls\">\n                <pure-button theme=\"ghost\" (onClick)=\"showWindow = false\">Cancel</pure-button>\n                <pure-button theme=\"success\" (onClick)=\"create()\">Create</pure-button>\n              </div>\n            </footer>\n          </div>\n        </div>\n      </pure-modal>\n\n    </span>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -815,6 +815,103 @@ var RoundBadgeDemo = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/styleguide/select/select-demo.html":
+/*!****************************************************!*\
+  !*** ./src/app/styleguide/select/select-demo.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"c-item-container\">\n  <header class=\"c-item-container__header\">\n    <h1 class=\"c-item-container__heading\">Select</h1>\n    <p class=\"c-item-container__desc\">Styles on top of the <a href=\"{{LibData.pureDemoLink}}select\" target=\"_blank\" rel=\"noopener\">Pure Select</a> element.</p>\n  </header>\n\n  <div class=\"c-component\">\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <pure-select [placeholder]=\"placeholder\">\n            <pure-option *ngFor=\"let option of options\" [value]=\"option\">{{option.label}}</pure-option>\n          </pure-select>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">States</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control label=\"Select country\">\n          <pure-select placeholder=\"Required\" [required]=\"true\">\n            <pure-option *ngFor=\"let option of options\" [value]=\"option\">{{option.label}}</pure-option>\n          </pure-select>\n        </pure-form-control>\n\n      </span>\n\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control label=\"Select country\">\n          <pure-select placeholder=\"Disabled\" [disabled]=\"true\">\n            <pure-option *ngFor=\"let option of options\" [value]=\"option\">{{option.label}}</pure-option>\n          </pure-select>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">With Search</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <pure-select [placeholder]=\"placeholder\" [search]=\"true\">\n            <pure-option *ngFor=\"let option of options\" [value]=\"option\">{{option.label}}</pure-option>\n          </pure-select>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Multiple</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <pure-select placeholder=\"Select countries\" [multiple]=\"true\">\n            <pure-option *ngFor=\"let option of options\" [value]=\"option\">{{option.label}}</pure-option>\n          </pure-select>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Add New Option</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <pure-select placeholder=\"Select or type country\" [addNew]=\"true\">\n            <pure-option *ngFor=\"let option of options\" [value]=\"option\">{{option.label}}</pure-option>\n          </pure-select>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n\n  <div class=\"c-component\">\n    <h2 class=\"c-component__heading\">Get Options From API (Simulated)</h2>\n\n    <div class=\"o-grid o-grid--no-outer-gap\">\n      <span class=\"o-cell o-cell--1/4 c-component__container\">\n\n        <pure-form-control>\n          <pure-select #apiSelect placeholder=\"Type to search user\" [addNew]=\"true\" [hideNewItem]=\"true\" (input)=\"searchUsers($event)\">\n            <pure-option *ngFor=\"let user of users\" [value]=\"user\">{{user.first_name + \" \" + user.last_name}}</pure-option>\n          </pure-select>\n        </pure-form-control>\n\n      </span>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/styleguide/select/select-demo.ts":
+/*!**************************************************!*\
+  !*** ./src/app/styleguide/select/select-demo.ts ***!
+  \**************************************************/
+/*! exports provided: SelectDemo */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectDemo", function() { return SelectDemo; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var pure_elements__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! pure-elements */ "./node_modules/pure-elements/dist/index.js");
+/* harmony import */ var _lib_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../lib-data */ "./src/app/lib-data.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var USERS = [
+    {
+        "first_name": "Eve",
+        "last_name": "Holt",
+        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg"
+    },
+    {
+        "first_name": "Charles",
+        "last_name": "Morris",
+        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg"
+    },
+    {
+        "first_name": "Tracey",
+        "last_name": "Ramos",
+        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg"
+    }
+];
+var SelectDemo = /** @class */ (function () {
+    function SelectDemo() {
+        this.LibData = _lib_data__WEBPACK_IMPORTED_MODULE_2__["LibData"];
+        this.placeholder = 'Select country';
+        this.options = [
+            { label: 'Canada', country: 'canada' },
+            { label: 'China', country: 'china' },
+            { label: 'Japan', country: 'japan' },
+            { label: 'UK', country: 'uk' }
+        ];
+        this.users = [];
+        this.searchTimeout = null;
+    }
+    SelectDemo.prototype.searchUsers = function (event) {
+        var _this = this;
+        if (this.searchTimeout)
+            clearTimeout(this.searchTimeout);
+        // Simulate API request.
+        this.searchTimeout = setTimeout(function () {
+            console.info(event);
+            _this.users = _this.getUsersList(_this.apiSelect.baseInput.value);
+        }, 1000);
+    };
+    SelectDemo.prototype.getUsersList = function (searchStr) {
+        if (!searchStr)
+            return [];
+        return USERS;
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('apiSelect'),
+        __metadata("design:type", pure_elements__WEBPACK_IMPORTED_MODULE_1__["PureSelect"])
+    ], SelectDemo.prototype, "apiSelect", void 0);
+    SelectDemo = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            template: __webpack_require__(/*! ./select-demo.html */ "./src/app/styleguide/select/select-demo.html")
+        })
+    ], SelectDemo);
+    return SelectDemo;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/styleguide/styleguide-routing.module.ts":
 /*!*********************************************************!*\
   !*** ./src/app/styleguide/styleguide-routing.module.ts ***!
@@ -846,15 +943,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _menu_menu_demo__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./menu/menu-demo */ "./src/app/styleguide/menu/menu-demo.ts");
 /* harmony import */ var _modal_modal_demo__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modal/modal-demo */ "./src/app/styleguide/modal/modal-demo.ts");
 /* harmony import */ var _round_badge_round_badge_demo__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./round-badge/round-badge-demo */ "./src/app/styleguide/round-badge/round-badge-demo.ts");
-/* harmony import */ var _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./switcher/switcher-demo */ "./src/app/styleguide/switcher/switcher-demo.ts");
-/* harmony import */ var _toast_toast_demo__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./toast/toast-demo */ "./src/app/styleguide/toast/toast-demo.ts");
-/* harmony import */ var _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./tooltip/tooltip-demo */ "./src/app/styleguide/tooltip/tooltip-demo.ts");
+/* harmony import */ var _select_select_demo__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./select/select-demo */ "./src/app/styleguide/select/select-demo.ts");
+/* harmony import */ var _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./switcher/switcher-demo */ "./src/app/styleguide/switcher/switcher-demo.ts");
+/* harmony import */ var _toast_toast_demo__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./toast/toast-demo */ "./src/app/styleguide/toast/toast-demo.ts");
+/* harmony import */ var _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./tooltip/tooltip-demo */ "./src/app/styleguide/tooltip/tooltip-demo.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -902,9 +1001,10 @@ var routes = [
             { path: 'menu', component: _menu_menu_demo__WEBPACK_IMPORTED_MODULE_18__["MenuDemo"] },
             { path: 'modal', component: _modal_modal_demo__WEBPACK_IMPORTED_MODULE_19__["ModalDemo"] },
             { path: 'round-badge', component: _round_badge_round_badge_demo__WEBPACK_IMPORTED_MODULE_20__["RoundBadgeDemo"] },
-            { path: 'switcher', component: _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_21__["SwitcherDemo"] },
-            { path: 'toast', component: _toast_toast_demo__WEBPACK_IMPORTED_MODULE_22__["ToastDemo"] },
-            { path: 'tooltip', component: _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_23__["TooltipDemo"] },
+            { path: 'select', component: _select_select_demo__WEBPACK_IMPORTED_MODULE_21__["SelectDemo"] },
+            { path: 'switcher', component: _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_22__["SwitcherDemo"] },
+            { path: 'toast', component: _toast_toast_demo__WEBPACK_IMPORTED_MODULE_23__["ToastDemo"] },
+            { path: 'tooltip', component: _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_24__["TooltipDemo"] },
             { path: '', redirectTo: 'getting-started' },
             { path: '**', redirectTo: 'getting-started' }
         ]
@@ -977,15 +1077,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _menu_menu_demo__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./menu/menu-demo */ "./src/app/styleguide/menu/menu-demo.ts");
 /* harmony import */ var _modal_modal_demo__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./modal/modal-demo */ "./src/app/styleguide/modal/modal-demo.ts");
 /* harmony import */ var _round_badge_round_badge_demo__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./round-badge/round-badge-demo */ "./src/app/styleguide/round-badge/round-badge-demo.ts");
-/* harmony import */ var _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./switcher/switcher-demo */ "./src/app/styleguide/switcher/switcher-demo.ts");
-/* harmony import */ var _toast_toast_demo__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./toast/toast-demo */ "./src/app/styleguide/toast/toast-demo.ts");
-/* harmony import */ var _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./tooltip/tooltip-demo */ "./src/app/styleguide/tooltip/tooltip-demo.ts");
+/* harmony import */ var _select_select_demo__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./select/select-demo */ "./src/app/styleguide/select/select-demo.ts");
+/* harmony import */ var _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./switcher/switcher-demo */ "./src/app/styleguide/switcher/switcher-demo.ts");
+/* harmony import */ var _toast_toast_demo__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./toast/toast-demo */ "./src/app/styleguide/toast/toast-demo.ts");
+/* harmony import */ var _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./tooltip/tooltip-demo */ "./src/app/styleguide/tooltip/tooltip-demo.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1054,9 +1156,10 @@ var StyleguideModule = /** @class */ (function () {
                 _menu_menu_demo__WEBPACK_IMPORTED_MODULE_23__["MenuDemo"],
                 _modal_modal_demo__WEBPACK_IMPORTED_MODULE_24__["ModalDemo"],
                 _round_badge_round_badge_demo__WEBPACK_IMPORTED_MODULE_25__["RoundBadgeDemo"],
-                _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_26__["SwitcherDemo"],
-                _toast_toast_demo__WEBPACK_IMPORTED_MODULE_27__["ToastDemo"],
-                _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_28__["TooltipDemo"]
+                _select_select_demo__WEBPACK_IMPORTED_MODULE_26__["SelectDemo"],
+                _switcher_switcher_demo__WEBPACK_IMPORTED_MODULE_27__["SwitcherDemo"],
+                _toast_toast_demo__WEBPACK_IMPORTED_MODULE_28__["ToastDemo"],
+                _tooltip_tooltip_demo__WEBPACK_IMPORTED_MODULE_29__["TooltipDemo"]
             ],
             providers: [
                 {
@@ -1188,6 +1291,10 @@ var Styleguide = /** @class */ (function () {
                     {
                         title: 'Round Badge',
                         url: 'round-badge'
+                    },
+                    {
+                        title: 'Select',
+                        url: 'select'
                     },
                     {
                         title: 'Switcher',

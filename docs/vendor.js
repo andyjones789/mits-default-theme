@@ -70822,244 +70822,6 @@ var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.1.7')
 
 /***/ }),
 
-/***/ "./node_modules/pure-elements/dist/asterisk/asterisk-config-token.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/pure-elements/dist/asterisk/asterisk-config-token.js ***!
-  \***************************************************************************/
-/*! exports provided: PureAsteriskConfigToken */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskConfigToken", function() { return PureAsteriskConfigToken; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-const PureAsteriskConfigToken = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('PureAsteriskConfig');
-
-
-/***/ }),
-
-/***/ "./node_modules/pure-elements/dist/asterisk/asterisk-config.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/pure-elements/dist/asterisk/asterisk-config.js ***!
-  \*********************************************************************/
-/*! exports provided: PureAsteriskDefaultConfig */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskDefaultConfig", function() { return PureAsteriskDefaultConfig; });
-;
-const PureAsteriskDefaultConfig = {
-    content: '*'
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/pure-elements/dist/asterisk/asterisk-content.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/pure-elements/dist/asterisk/asterisk-content.js ***!
-  \**********************************************************************/
-/*! exports provided: PureAsteriskContent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskContent", function() { return PureAsteriskContent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-/** Custom content to substitute the default one. */
-let PureAsteriskContent = class PureAsteriskContent {
-};
-PureAsteriskContent = __decorate([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({
-        selector: '[pureAsteriskContent]',
-    })
-], PureAsteriskContent);
-
-
-
-/***/ }),
-
-/***/ "./node_modules/pure-elements/dist/asterisk/asterisk.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/pure-elements/dist/asterisk/asterisk.js ***!
-  \**************************************************************/
-/*! exports provided: PureAsterisk */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureAsterisk", function() { return PureAsterisk; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
-/* harmony import */ var _asterisk_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./asterisk-config */ "./node_modules/pure-elements/dist/asterisk/asterisk-config.js");
-/* harmony import */ var _asterisk_config_token__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./asterisk-config-token */ "./node_modules/pure-elements/dist/asterisk/asterisk-config-token.js");
-/* harmony import */ var _asterisk_content__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./asterisk-content */ "./node_modules/pure-elements/dist/asterisk/asterisk-content.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-
-
-
-
-
-let PureAsterisk = class PureAsterisk extends _core__WEBPACK_IMPORTED_MODULE_1__["PureComponent"] {
-    constructor(elementRef, componentNamer, config) {
-        super(elementRef, componentNamer);
-        this.elementRef = elementRef;
-        this.componentNamer = componentNamer;
-        this.config = config;
-        this.elementName = 'Asterisk';
-        const finalConfig = Object.assign(_asterisk_config__WEBPACK_IMPORTED_MODULE_2__["PureAsteriskDefaultConfig"], config);
-        this.applyConfig(finalConfig);
-    }
-    applyConfig(config) {
-        for (let key in config) {
-            this[key] = config[key];
-        }
-    }
-    ngOnInit() {
-        super.ngOnInit();
-    }
-};
-__decorate([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChildren"])(_asterisk_content__WEBPACK_IMPORTED_MODULE_4__["PureAsteriskContent"]),
-    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["QueryList"])
-], PureAsterisk.prototype, "asteriskContentChildren", void 0);
-PureAsterisk = __decorate([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-        selector: 'pure-asterisk',
-        template: `
-    <span [ngClass]="elementClasses">
-      <ng-container *ngIf="content && !asteriskContentChildren.length">
-        {{content}}
-      </ng-container>
-
-      <ng-content 
-        *ngIf="asteriskContentChildren.length" 
-        select="[pureAsteriskContent]">
-      </ng-content>
-    </span>
-  `
-    }),
-    __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_asterisk_config_token__WEBPACK_IMPORTED_MODULE_3__["PureAsteriskConfigToken"])),
-    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
-        _core__WEBPACK_IMPORTED_MODULE_1__["ComponentNamer"], Object])
-], PureAsterisk);
-
-
-
-/***/ }),
-
-/***/ "./node_modules/pure-elements/dist/asterisk/asterisk.module.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/pure-elements/dist/asterisk/asterisk.module.js ***!
-  \*********************************************************************/
-/*! exports provided: PureAsteriskModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskModule", function() { return PureAsteriskModule; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
-/* harmony import */ var _asterisk__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./asterisk */ "./node_modules/pure-elements/dist/asterisk/asterisk.js");
-/* harmony import */ var _asterisk_content__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./asterisk-content */ "./node_modules/pure-elements/dist/asterisk/asterisk-content.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-let PureAsteriskModule = class PureAsteriskModule {
-};
-PureAsteriskModule = __decorate([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _core__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerModule"].forRoot()],
-        declarations: [_asterisk__WEBPACK_IMPORTED_MODULE_3__["PureAsterisk"], _asterisk_content__WEBPACK_IMPORTED_MODULE_4__["PureAsteriskContent"]],
-        exports: [_asterisk__WEBPACK_IMPORTED_MODULE_3__["PureAsterisk"], _asterisk_content__WEBPACK_IMPORTED_MODULE_4__["PureAsteriskContent"]]
-    })
-], PureAsteriskModule);
-
-
-
-/***/ }),
-
-/***/ "./node_modules/pure-elements/dist/asterisk/index.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/pure-elements/dist/asterisk/index.js ***!
-  \***********************************************************/
-/*! exports provided: PureAsteriskConfigToken, PureAsteriskDefaultConfig, PureAsteriskModule, PureAsterisk */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/asterisk/public-api.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskConfigToken", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureAsteriskConfigToken"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskDefaultConfig", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureAsteriskDefaultConfig"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureAsteriskModule"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsterisk", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureAsterisk"]; });
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/pure-elements/dist/asterisk/public-api.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/pure-elements/dist/asterisk/public-api.js ***!
-  \****************************************************************/
-/*! exports provided: PureAsteriskConfigToken, PureAsteriskDefaultConfig, PureAsteriskModule, PureAsterisk */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _asterisk_config_token__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./asterisk-config-token */ "./node_modules/pure-elements/dist/asterisk/asterisk-config-token.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskConfigToken", function() { return _asterisk_config_token__WEBPACK_IMPORTED_MODULE_0__["PureAsteriskConfigToken"]; });
-
-/* harmony import */ var _asterisk_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./asterisk-config */ "./node_modules/pure-elements/dist/asterisk/asterisk-config.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskDefaultConfig", function() { return _asterisk_config__WEBPACK_IMPORTED_MODULE_1__["PureAsteriskDefaultConfig"]; });
-
-/* harmony import */ var _asterisk_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./asterisk.module */ "./node_modules/pure-elements/dist/asterisk/asterisk.module.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskModule", function() { return _asterisk_module__WEBPACK_IMPORTED_MODULE_2__["PureAsteriskModule"]; });
-
-/* harmony import */ var _asterisk__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./asterisk */ "./node_modules/pure-elements/dist/asterisk/asterisk.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsterisk", function() { return _asterisk__WEBPACK_IMPORTED_MODULE_3__["PureAsterisk"]; });
-
-
-
-
-
-
-
-/***/ }),
-
 /***/ "./node_modules/pure-elements/dist/button/button.js":
 /*!**********************************************************!*\
   !*** ./node_modules/pure-elements/dist/button/button.js ***!
@@ -71092,7 +70854,19 @@ let PureButton = class PureButton extends _core__WEBPACK_IMPORTED_MODULE_1__["Pu
         this.renderAs = 'button';
         this.onClick = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this._disabled = false;
-        this.disabledClassName = this.componentNamer.generateClassName(this.elementName, '', 'disabled');
+        this.disabledClassName = this.componentNamer.generateClassName(this.elementName, '', 'Disabled');
+    }
+    get height() {
+        return this._height;
+    }
+    set height(value) {
+        this._height = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceNumberProperty"])(value);
+    }
+    get width() {
+        return this._width;
+    }
+    set width(value) {
+        this._width = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceNumberProperty"])(value);
     }
     get disabled() {
         return this._disabled;
@@ -71165,16 +70939,18 @@ __decorate([
 ], PureButton.prototype, "alt", void 0);
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-    __metadata("design:type", Number)
-], PureButton.prototype, "height", void 0);
-__decorate([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
     __metadata("design:type", String)
 ], PureButton.prototype, "src", void 0);
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-    __metadata("design:type", Number)
-], PureButton.prototype, "width", void 0);
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Object])
+], PureButton.prototype, "height", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Object])
+], PureButton.prototype, "width", null);
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
     __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
@@ -71466,12 +71242,30 @@ let PureCollapse = class PureCollapse extends _core__WEBPACK_IMPORTED_MODULE_1__
         this.footerClasses = {};
         this.open = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.close = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        this.collapsedClassName = this.componentNamer.generateClassName(this.elementName, '', 'collapsed');
-        this.disabledClassName = this.componentNamer.generateClassName(this.elementName, '', 'disabled');
+        this.collapsedClassName = this.componentNamer.generateClassName(this.elementName, '', 'Collapsed');
+        this.disabledClassName = this.componentNamer.generateClassName(this.elementName, '', 'Disabled');
         this.config = Object.assign({}, _collapse_config__WEBPACK_IMPORTED_MODULE_4__["PureCollapseDefaultConfig"], userConfig);
         this.collapsedOnInit = this.config.collapsedOnInit;
         this.openAnimationDuration = this.config.openAnimationDuration;
         this.closeAnimationDuration = this.config.closeAnimationDuration;
+    }
+    get collapsedOnInit() {
+        return this._collapsedOnInit;
+    }
+    set collapsedOnInit(value) {
+        this._collapsedOnInit = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceBooleanProperty"])(value);
+    }
+    get openAnimationDuration() {
+        return this._openAnimationDuration;
+    }
+    set openAnimationDuration(value) {
+        this._openAnimationDuration = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceNumberProperty"])(value);
+    }
+    get closeAnimationDuration() {
+        return this._closeAnimationDuration;
+    }
+    set closeAnimationDuration(value) {
+        this._closeAnimationDuration = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceNumberProperty"])(value);
     }
     get disabled() {
         return this._disabled;
@@ -71533,8 +71327,9 @@ let PureCollapse = class PureCollapse extends _core__WEBPACK_IMPORTED_MODULE_1__
 };
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-    __metadata("design:type", Boolean)
-], PureCollapse.prototype, "collapsedOnInit", void 0);
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureCollapse.prototype, "collapsedOnInit", null);
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChild"])(_collapse_header__WEBPACK_IMPORTED_MODULE_2__["PureCollapseHeader"]),
     __metadata("design:type", _collapse_header__WEBPACK_IMPORTED_MODULE_2__["PureCollapseHeader"])
@@ -71553,12 +71348,14 @@ __decorate([
 ], PureCollapse.prototype, "close", void 0);
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-    __metadata("design:type", Number)
-], PureCollapse.prototype, "openAnimationDuration", void 0);
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Object])
+], PureCollapse.prototype, "openAnimationDuration", null);
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-    __metadata("design:type", Number)
-], PureCollapse.prototype, "closeAnimationDuration", void 0);
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Object])
+], PureCollapse.prototype, "closeAnimationDuration", null);
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
     __metadata("design:type", Boolean),
@@ -71717,9 +71514,13 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "coerceBooleanProperty", function() { return coerceBooleanProperty; });
-/** Coerces a data-bound value (typically a string) to a boolean. */
+/* harmony import */ var _angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/cdk/coercion */ "./node_modules/@angular/cdk/esm5/coercion.es5.js");
+
+/**
+ * Coerces a data-bound value to a boolean.
+ */
 function coerceBooleanProperty(value) {
-    return value != null && `${value}` !== 'false';
+    return Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_0__["coerceBooleanProperty"])(value);
 }
 
 
@@ -71729,7 +71530,7 @@ function coerceBooleanProperty(value) {
 /*!****************************************************************!*\
   !*** ./node_modules/pure-elements/dist/core/coercion/index.js ***!
   \****************************************************************/
-/*! exports provided: coerceBooleanProperty, coerceModelValue */
+/*! exports provided: coerceBooleanProperty, coerceNumberProperty */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71737,8 +71538,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _boolean__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./boolean */ "./node_modules/pure-elements/dist/core/coercion/boolean.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceBooleanProperty", function() { return _boolean__WEBPACK_IMPORTED_MODULE_0__["coerceBooleanProperty"]; });
 
-/* harmony import */ var _model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model */ "./node_modules/pure-elements/dist/core/coercion/model.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceModelValue", function() { return _model__WEBPACK_IMPORTED_MODULE_1__["coerceModelValue"]; });
+/* harmony import */ var _number__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./number */ "./node_modules/pure-elements/dist/core/coercion/number.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceNumberProperty", function() { return _number__WEBPACK_IMPORTED_MODULE_1__["coerceNumberProperty"]; });
 
 
 
@@ -71746,36 +71547,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/pure-elements/dist/core/coercion/model.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/pure-elements/dist/core/coercion/model.js ***!
-  \****************************************************************/
-/*! exports provided: coerceModelValue */
+/***/ "./node_modules/pure-elements/dist/core/coercion/number.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/core/coercion/number.js ***!
+  \*****************************************************************/
+/*! exports provided: coerceNumberProperty */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "coerceModelValue", function() { return coerceModelValue; });
-/** Coerces a form model value to a string. */
-function coerceModelValue(value) {
-    switch (typeof value) {
-        case 'string':
-            break;
-        case 'number':
-            if (Number.isNaN(value)) {
-                value = '';
-            }
-            else {
-                value = '' + value;
-            }
-            break;
-        case 'boolean':
-            value = String(value);
-            break;
-        default:
-            value = '';
-    }
-    return value;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "coerceNumberProperty", function() { return coerceNumberProperty; });
+/* harmony import */ var _angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/cdk/coercion */ "./node_modules/@angular/cdk/esm5/coercion.es5.js");
+
+/**
+ * Coerces a data-bound value to a number.
+ */
+function coerceNumberProperty(value) {
+    return Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_0__["coerceNumberProperty"])(value);
 }
 
 
@@ -72194,7 +71982,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!*******************************************************!*\
   !*** ./node_modules/pure-elements/dist/core/index.js ***!
   \*******************************************************/
-/*! exports provided: coerceBooleanProperty, coerceModelValue, PureComponent, ComponentNamer, ComponentNamerConfigToken, ComponentNamerDefaultConfig, ComponentNamerModule, KEY_CODES, EventHandler, StringFormatter */
+/*! exports provided: coerceBooleanProperty, coerceNumberProperty, PureComponent, ComponentNamer, ComponentNamerConfigToken, ComponentNamerDefaultConfig, ComponentNamerModule, KEY_CODES, EventHandler, StringFormatter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72202,7 +71990,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/core/public-api.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceBooleanProperty", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["coerceBooleanProperty"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceModelValue", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["coerceModelValue"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceNumberProperty", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["coerceNumberProperty"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureComponent", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureComponent"]; });
 
@@ -72276,7 +72064,7 @@ const KEY_CODES = {
 /*!************************************************************!*\
   !*** ./node_modules/pure-elements/dist/core/public-api.js ***!
   \************************************************************/
-/*! exports provided: coerceBooleanProperty, coerceModelValue, PureComponent, ComponentNamer, ComponentNamerConfigToken, ComponentNamerDefaultConfig, ComponentNamerModule, KEY_CODES, EventHandler, StringFormatter */
+/*! exports provided: coerceBooleanProperty, coerceNumberProperty, PureComponent, ComponentNamer, ComponentNamerConfigToken, ComponentNamerDefaultConfig, ComponentNamerModule, KEY_CODES, EventHandler, StringFormatter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72284,7 +72072,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _coercion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./coercion */ "./node_modules/pure-elements/dist/core/coercion/index.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceBooleanProperty", function() { return _coercion__WEBPACK_IMPORTED_MODULE_0__["coerceBooleanProperty"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceModelValue", function() { return _coercion__WEBPACK_IMPORTED_MODULE_0__["coerceModelValue"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceNumberProperty", function() { return _coercion__WEBPACK_IMPORTED_MODULE_0__["coerceNumberProperty"]; });
 
 /* harmony import */ var _common_behaviors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./common-behaviors */ "./node_modules/pure-elements/dist/core/common-behaviors/index.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureComponent", function() { return _common_behaviors__WEBPACK_IMPORTED_MODULE_1__["PureComponent"]; });
@@ -72420,8 +72208,8 @@ let PureDropdownItem = class PureDropdownItem extends _core__WEBPACK_IMPORTED_MO
         this._focused = false;
         this.onClickChanges = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
         this.onMousedownChanges = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
-        this.disabledClassName = this.componentNamer.generateClassName(this.elementName, '', 'disabled');
-        this.focusedClassName = this.componentNamer.generateClassName(this.elementName, '', 'focused');
+        this.disabledClassName = this.componentNamer.generateClassName(this.elementName, '', 'Disabled');
+        this.focusedClassName = this.componentNamer.generateClassName(this.elementName, '', 'Focused');
     }
     get disabled() {
         return this._disabled;
@@ -72525,7 +72313,7 @@ let PureDropdownTrigger = class PureDropdownTrigger {
         this.openMenu();
     }
     onKeydown(event) {
-        if (event.which === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].ESCAPE && this.isOpened) {
+        if (event.which === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].ESCAPE && this.menu.show) {
             this.closeMenu();
         }
     }
@@ -72575,6 +72363,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
 /* harmony import */ var _dropdown_item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dropdown-item */ "./node_modules/pure-elements/dist/dropdown/dropdown-item.js");
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helpers */ "./node_modules/pure-elements/dist/helpers/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -72587,6 +72376,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 let PureDropdown = class PureDropdown extends _core__WEBPACK_IMPORTED_MODULE_1__["PureComponent"] {
     constructor(elementRef, componentNamer) {
         super(elementRef, componentNamer);
@@ -72596,14 +72386,54 @@ let PureDropdown = class PureDropdown extends _core__WEBPACK_IMPORTED_MODULE_1__
         this.backdropName = 'Backdrop';
         this.menuName = 'Menu';
         this.appendixName = 'Appendix';
+        this.prefixContainerName = 'Prefix Container';
+        this.itemsContainerName = 'Items Container';
+        this.suffixContainerName = 'Suffix Container';
         this.backdropClasses = {};
         this.menuClasses = {};
         this.appendixClasses = {};
-        this.focusedItemNumber = 0;
+        this.prefixContainerClasses = {};
+        this.itemsContainerClasses = {};
+        this.suffixContainerClasses = {};
+        this.noItemsClassName = this.componentNamer.generateClassName(this.elementName, this.menuName, 'No Items');
+        this.itemsContainerFocusedClassName = this.componentNamer.generateClassName(this.elementName, this.itemsContainerName, 'Focused');
+        this.focusedItemNumber = -1;
+        this.isItemsContainerFocused = false;
+        this.open = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.close = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.toggle = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this._closeOnSelect = true;
+        this._focusOnShow = true;
+        this._tabindex = 0;
         this._show = false;
-        this.shownClassName = this.componentNamer.generateClassName(this.elementName, '', 'shown');
+        this.shownClassName = this.componentNamer.generateClassName(this.elementName, '', 'Opened');
         this.yPosition = 'below';
         this.xPosition = 'after';
+    }
+    get items() {
+        return this._items;
+    }
+    set items(value) {
+        this._items = value;
+        this.menuClasses[this.noItemsClassName] = this._items.length < 1;
+    }
+    get closeOnSelect() {
+        return this._closeOnSelect;
+    }
+    set closeOnSelect(value) {
+        this._closeOnSelect = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceBooleanProperty"])(value);
+    }
+    get focusOnShow() {
+        return this._focusOnShow;
+    }
+    set focusOnShow(value) {
+        this._focusOnShow = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceBooleanProperty"])(value);
+    }
+    get tabindex() {
+        return this._tabindex;
+    }
+    set tabindex(value) {
+        this._tabindex = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceNumberProperty"])(value);
     }
     get yPosition() {
         return this._yPosition;
@@ -72627,28 +72457,59 @@ let PureDropdown = class PureDropdown extends _core__WEBPACK_IMPORTED_MODULE_1__
         return this._show;
     }
     set show(value) {
-        this._show = value;
+        this._show = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceBooleanProperty"])(value);
         this.elementClasses[this.shownClassName] = this._show;
         if (this._show) {
-            this.setItemFocus(this.focusedItemNumber);
+            setTimeout(() => {
+                if (this.focusOnShow)
+                    this.itemsContainer.nativeElement.focus();
+            });
         }
+        this.toggle.emit();
+        this._show ? this.open.emit() : this.close.emit();
     }
     onBackdropClick() {
         this.show = false;
     }
-    onDocumentKeyup(event) {
-        if (this.show) {
-            event.preventDefault();
-            event.stopPropagation();
+    onItemsContainerFocus() {
+        this.isItemsContainerFocused = true;
+        this.setItemFocus(this.focusedItemNumber);
+        this.itemsContainerClasses[this.itemsContainerFocusedClassName] = true;
+    }
+    onItemsContainerBlur() {
+        this.isItemsContainerFocused = false;
+        this.unfocusItems();
+        this.itemsContainerClasses[this.itemsContainerFocusedClassName] = false;
+    }
+    onKeydown(event) {
+        event.stopPropagation();
+        if (this.show && this.isItemsContainerFocused) {
             if (event.which === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].DOWN_ARROW) {
+                event.preventDefault();
                 this.setItemFocus(++this.focusedItemNumber, 'down');
             }
             else if (event.which === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].UP_ARROW) {
+                event.preventDefault();
                 this.setItemFocus(--this.focusedItemNumber, 'up');
             }
-            if (event.which === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].SPACE || event.which === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].ENTER) {
+            else if (event.which === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].SPACE || event.which === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].ENTER) {
+                event.preventDefault();
                 this.clickItem(this.focusedItemNumber);
             }
+        }
+        if (this.show && event.which === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].ESCAPE) {
+            this.show = false;
+        }
+    }
+    clickItem(item) {
+        if (item === -1)
+            return;
+        if (this.show) {
+            const itemsArray = this.items.toArray(), itemNumber = this.initItemNumber(itemsArray, item);
+            if (itemsArray[itemNumber])
+                itemsArray[itemNumber].click();
+            if (this.closeOnSelect)
+                this.show = false;
         }
     }
     /**
@@ -72657,44 +72518,59 @@ let PureDropdown = class PureDropdown extends _core__WEBPACK_IMPORTED_MODULE_1__
      */
     setItemFocus(item, direction = 'down') {
         const itemsArray = this.items.toArray();
-        let itemNumber;
-        if (typeof item !== 'number') {
-            itemNumber = itemsArray.indexOf(item);
-        }
-        else {
-            itemNumber = item;
-        }
-        if (itemNumber > itemsArray.length - 1)
-            itemNumber = 0;
-        if (itemNumber < 0)
-            itemNumber = itemsArray.length - 1;
-        this.unfocusItems();
-        if (!itemsArray[itemNumber].disabled) {
-            itemsArray[itemNumber].focused = true;
-        }
-        else {
-            if (direction === 'up') {
-                this.setItemFocus(--itemNumber, direction);
-            }
-            else {
-                this.setItemFocus(++itemNumber, direction);
-            }
+        if (!itemsArray.length)
             return;
+        let itemNumber = this.initItemNumber(itemsArray, item);
+        if (itemNumber > itemsArray.length - 1) {
+            itemNumber = itemsArray.length - 1;
         }
+        else if (itemNumber < 0) {
+            itemNumber = 0;
+        }
+        this.unfocusItems();
+        // If it's disabled — get first enabled item below or above (depending on `direction`).
+        if (itemsArray[itemNumber].disabled) {
+            itemNumber = this.getFirstEnabledItem(itemsArray, itemNumber, direction);
+        }
+        if (itemNumber > -1)
+            itemsArray[itemNumber].focused = true;
+        // Update # of focused item so component knows which item is currently in focus.
         this.focusedItemNumber = itemNumber;
     }
-    clickItem(item) {
-        if (this.show) {
-            const itemsArray = this.items.toArray();
-            let itemNumber;
-            if (typeof item !== 'number') {
-                itemNumber = itemsArray.indexOf(item);
-            }
-            else {
-                itemNumber = item;
-            }
-            itemsArray[itemNumber].click();
-            this.show = false;
+    getFirstEnabledItem(items, startingPoint = 0, direction = 'down') {
+        let i;
+        // Loop through items. Return on first enabled one. Break if we got to
+        // the bottom.
+        for (i = startingPoint; i < items.length; i) {
+            if (!(items[i] && items[i].disabled))
+                return i;
+            if (i === 0 || i === items.length - 1)
+                break;
+            direction === 'down' ? i++ : i--;
+        }
+        // If we got to the top or bottom and there's still no enabled items — go
+        // find enabled item to the opposite side.
+        if (i === 0) {
+            return this.getFirstEnabledItem(items, ++startingPoint, 'down');
+        }
+        else if (i === items.length - 1) {
+            return this.getFirstEnabledItem(items, --startingPoint, 'up');
+        }
+        // If no enabled items return -1.
+        return -1;
+    }
+    /**
+     * If it's item, return its number in items array. If it's item number, just
+     * return it.
+     */
+    initItemNumber(itemsArray, item) {
+        if (typeof item !== 'number') {
+            // If it's PureDropdownItem.
+            return itemsArray.indexOf(item);
+        }
+        else {
+            // If it's number.
+            return item;
         }
     }
     unfocusItems() {
@@ -72702,11 +72578,15 @@ let PureDropdown = class PureDropdown extends _core__WEBPACK_IMPORTED_MODULE_1__
         for (const item of itemsArray) {
             item.focused = false;
         }
+        this.focusedItemNumber = -1;
     }
     setInnerElementsClasses(flag = true) {
         this.backdropClasses[this.componentNamer.generateClassName(this.elementName, this.backdropName)] = flag;
         this.menuClasses[this.componentNamer.generateClassName(this.elementName, this.menuName)] = flag;
         this.appendixClasses[this.componentNamer.generateClassName(this.elementName, this.appendixName)] = flag;
+        this.prefixContainerClasses[this.componentNamer.generateClassName(this.elementName, this.prefixContainerName)] = flag;
+        this.itemsContainerClasses[this.componentNamer.generateClassName(this.elementName, this.itemsContainerName)] = flag;
+        this.suffixContainerClasses[this.componentNamer.generateClassName(this.elementName, this.suffixContainerName)] = flag;
     }
     ngOnInit() {
         super.ngOnInit();
@@ -72714,11 +72594,13 @@ let PureDropdown = class PureDropdown extends _core__WEBPACK_IMPORTED_MODULE_1__
     }
     ngAfterContentInit() {
         this.items.forEach((item) => {
-            /** Close menu on item click. */
+            // Close menu on item click.
             item.onClickChanges.subscribe(() => {
-                this.show = false;
+                if (this.closeOnSelect) {
+                    this.show = false;
+                }
             });
-            /** Focus item on mousedown. */
+            // Focus item on mousedown.
             item.onMousedownChanges.subscribe(() => {
                 this.setItemFocus(item);
             });
@@ -72727,8 +72609,48 @@ let PureDropdown = class PureDropdown extends _core__WEBPACK_IMPORTED_MODULE_1__
 };
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChildren"])(_dropdown_item__WEBPACK_IMPORTED_MODULE_2__["PureDropdownItem"]),
-    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["QueryList"])
-], PureDropdown.prototype, "items", void 0);
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["QueryList"]),
+    __metadata("design:paramtypes", [Object])
+], PureDropdown.prototype, "items", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChild"])(_helpers__WEBPACK_IMPORTED_MODULE_3__["PurePrefix"]),
+    __metadata("design:type", _helpers__WEBPACK_IMPORTED_MODULE_3__["PurePrefix"])
+], PureDropdown.prototype, "prefix", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChild"])(_helpers__WEBPACK_IMPORTED_MODULE_3__["PureSuffix"]),
+    __metadata("design:type", _helpers__WEBPACK_IMPORTED_MODULE_3__["PureSuffix"])
+], PureDropdown.prototype, "suffix", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('itemsContainer'),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+], PureDropdown.prototype, "itemsContainer", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+], PureDropdown.prototype, "open", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+], PureDropdown.prototype, "close", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+], PureDropdown.prototype, "toggle", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureDropdown.prototype, "closeOnSelect", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureDropdown.prototype, "focusOnShow", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Object])
+], PureDropdown.prototype, "tabindex", null);
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
     __metadata("design:type", String),
@@ -72740,11 +72662,11 @@ __decorate([
     __metadata("design:paramtypes", [String])
 ], PureDropdown.prototype, "xPosition", null);
 __decorate([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('document:keydown', ['$event']),
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('keydown', ['$event']),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [KeyboardEvent]),
     __metadata("design:returntype", void 0)
-], PureDropdown.prototype, "onDocumentKeyup", null);
+], PureDropdown.prototype, "onKeydown", null);
 PureDropdown = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
         selector: 'pure-dropdown',
@@ -72753,7 +72675,18 @@ PureDropdown = __decorate([
       <div [ngClass]="backdropClasses" (click)="onBackdropClick()"></div>
 
       <div [ngClass]="menuClasses">
-        <ng-content select="[pureDropdownItem]"></ng-content>
+        <div [ngClass]="prefixContainerClasses" *ngIf="prefix">
+          <ng-content select="[purePrefix]"></ng-content>
+        </div>
+
+        <div [ngClass]="itemsContainerClasses" [tabindex]="tabindex" #itemsContainer (focus)="onItemsContainerFocus()" (blur)="onItemsContainerBlur()">
+          <ng-content select="[pureDropdownItem]"></ng-content>
+        </div>
+
+        <div [ngClass]="suffixContainerClasses" *ngIf="suffix">
+          <ng-content select="[pureSuffix]"></ng-content>
+        </div>
+
         <span [ngClass]="appendixClasses"></span>
       </div>
     </div>
@@ -72890,8 +72823,24 @@ const PureFormControlConfigToken = new _angular_core__WEBPACK_IMPORTED_MODULE_0_
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureFormControlDefaultConfig", function() { return PureFormControlDefaultConfig; });
 const PureFormControlDefaultConfig = {
-    asteriskPosition: 'label'
+    requiredMarkPosition: 'label'
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/form-control/form-control-input.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/form-control/form-control-input.js ***!
+  \****************************************************************************/
+/*! exports provided: PureFormControlInput */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureFormControlInput", function() { return PureFormControlInput; });
+class PureFormControlInput {
+}
 
 
 /***/ }),
@@ -72911,10 +72860,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
 /* harmony import */ var _form_control_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./form-control-config */ "./node_modules/pure-elements/dist/form-control/form-control-config.js");
 /* harmony import */ var _form_control_config_token__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./form-control-config-token */ "./node_modules/pure-elements/dist/form-control/form-control-config-token.js");
-/* harmony import */ var _label__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../label */ "./node_modules/pure-elements/dist/label/index.js");
-/* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../input */ "./node_modules/pure-elements/dist/input/index.js");
-/* harmony import */ var _prefix__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./prefix */ "./node_modules/pure-elements/dist/form-control/prefix.js");
-/* harmony import */ var _suffix__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./suffix */ "./node_modules/pure-elements/dist/form-control/suffix.js");
+/* harmony import */ var _form_control_input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./form-control-input */ "./node_modules/pure-elements/dist/form-control/form-control-input.js");
+/* harmony import */ var _label_content__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./label-content */ "./node_modules/pure-elements/dist/form-control/label-content.js");
+/* harmony import */ var _label__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../label */ "./node_modules/pure-elements/dist/label/index.js");
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../helpers */ "./node_modules/pure-elements/dist/helpers/index.js");
 /* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../message */ "./node_modules/pure-elements/dist/message/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -72959,18 +72908,19 @@ let PureFormControl = class PureFormControl extends _core__WEBPACK_IMPORTED_MODU
         this.suffixContainerClasses = {};
         this.messageContainerClasses = {};
         this.inputStateClasses = {
-            disabled: this.componentNamer.generateClassName(this.elementName, '', 'disabled'),
-            required: this.componentNamer.generateClassName(this.elementName, '', 'required'),
-            readonly: this.componentNamer.generateClassName(this.elementName, '', 'readonly'),
-            placeholder: this.componentNamer.generateClassName(this.elementName, '', 'has-placeholder'),
-            empty: this.componentNamer.generateClassName(this.elementName, '', 'empty'),
-            focused: this.componentNamer.generateClassName(this.elementName, '', 'focused')
+            disabled: this.componentNamer.generateClassName(this.elementName, '', 'Disabled'),
+            required: this.componentNamer.generateClassName(this.elementName, '', 'Required'),
+            readonly: this.componentNamer.generateClassName(this.elementName, '', 'Readonly'),
+            placeholder: this.componentNamer.generateClassName(this.elementName, '', 'Has Placeholder'),
+            empty: this.componentNamer.generateClassName(this.elementName, '', 'Empty'),
+            focused: this.componentNamer.generateClassName(this.elementName, '', 'Focused'),
+            active: this.componentNamer.generateClassName(this.elementName, '', 'Active')
         };
         this.formControlStateClasses = {
-            label: this.componentNamer.generateClassName(this.elementName, '', 'has-label'),
-            prefix: this.componentNamer.generateClassName(this.elementName, '', 'has-prefix'),
-            suffix: this.componentNamer.generateClassName(this.elementName, '', 'has-suffix'),
-            message: this.componentNamer.generateClassName(this.elementName, '', 'has-message')
+            label: this.componentNamer.generateClassName(this.elementName, '', 'Has Label'),
+            prefix: this.componentNamer.generateClassName(this.elementName, '', 'Has Prefix'),
+            suffix: this.componentNamer.generateClassName(this.elementName, '', 'Has Suffix'),
+            message: this.componentNamer.generateClassName(this.elementName, '', 'Has Message')
         };
         const finalConfig = Object.assign({}, _form_control_config__WEBPACK_IMPORTED_MODULE_3__["PureFormControlDefaultConfig"], config);
         this.applyConfig(finalConfig);
@@ -72990,6 +72940,7 @@ let PureFormControl = class PureFormControl extends _core__WEBPACK_IMPORTED_MODU
     updateInputStateClasses() {
         this.elementClasses[this.inputStateClasses.empty] = this.inputChild.empty;
         this.elementClasses[this.inputStateClasses.focused] = this.inputChild.focused;
+        this.elementClasses[this.inputStateClasses.active] = this.inputChild.active;
         this.elementClasses[this.inputStateClasses.disabled] = this.inputChild.disabled;
         this.elementClasses[this.inputStateClasses.required] = this.inputChild.required;
         this.elementClasses[this.inputStateClasses.readonly] = this.inputChild.readonly;
@@ -73032,13 +72983,24 @@ let PureFormControl = class PureFormControl extends _core__WEBPACK_IMPORTED_MODU
             this.inputChild.id = this.id;
         }
     }
+    /** Label that can be set through `label` input. */
+    get hasTextLabel() {
+        return this.label && this.label.length > 0;
+    }
+    /** Label that can be set through ng-content using the PureLabelContainer directive. */
+    get hasContentLabel() {
+        return !!this.labelContentChild;
+    }
+    get hasLabel() {
+        return this.hasTextLabel || this.hasContentLabel;
+    }
     ngOnInit() {
         super.ngOnInit();
         this.setChildrenClasses();
     }
     ngAfterContentInit() {
         this.setStaticStateClasses();
-        if (this.label) {
+        if (this.hasLabel) {
             this.setIds();
         }
         this.inputChild.stateChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["startWith"])(null)).subscribe(() => {
@@ -73052,19 +73014,23 @@ __decorate([
     __metadata("design:paramtypes", [Object])
 ], PureFormControl.prototype, "label", null);
 __decorate([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_label__WEBPACK_IMPORTED_MODULE_5__["PureLabel"]),
-    __metadata("design:type", _label__WEBPACK_IMPORTED_MODULE_5__["PureLabel"])
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_label__WEBPACK_IMPORTED_MODULE_7__["PureLabel"]),
+    __metadata("design:type", _label__WEBPACK_IMPORTED_MODULE_7__["PureLabel"])
 ], PureFormControl.prototype, "labelChild", void 0);
 __decorate([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChild"])(_input__WEBPACK_IMPORTED_MODULE_6__["PureInput"]),
-    __metadata("design:type", _input__WEBPACK_IMPORTED_MODULE_6__["PureInput"])
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChild"])(_form_control_input__WEBPACK_IMPORTED_MODULE_5__["PureFormControlInput"]),
+    __metadata("design:type", _form_control_input__WEBPACK_IMPORTED_MODULE_5__["PureFormControlInput"])
 ], PureFormControl.prototype, "inputChild", void 0);
 __decorate([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChildren"])(_prefix__WEBPACK_IMPORTED_MODULE_7__["PurePrefix"]),
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChild"])(_label_content__WEBPACK_IMPORTED_MODULE_6__["PureLabelContent"]),
+    __metadata("design:type", _label_content__WEBPACK_IMPORTED_MODULE_6__["PureLabelContent"])
+], PureFormControl.prototype, "labelContentChild", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChildren"])(_helpers__WEBPACK_IMPORTED_MODULE_8__["PurePrefix"]),
     __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["QueryList"])
 ], PureFormControl.prototype, "prefixChildren", void 0);
 __decorate([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChildren"])(_suffix__WEBPACK_IMPORTED_MODULE_8__["PureSuffix"]),
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChildren"])(_helpers__WEBPACK_IMPORTED_MODULE_8__["PureSuffix"]),
     __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["QueryList"])
 ], PureFormControl.prototype, "suffixChildren", void 0);
 __decorate([
@@ -73078,14 +73044,15 @@ PureFormControl = __decorate([
     <div [ngClass]="elementClasses">
 
       <pure-label 
-        *ngIf="label"
+        *ngIf="hasLabel"
         [for]="id"
         [ngClass]="labelContainerClasses"
         theme="form-control">
-        {{label}}
+        <ng-container *ngIf="hasTextLabel">{{label}}</ng-container>
+        <ng-content *ngIf="hasContentLabel" select="[pureLabelContent]"></ng-content>
 
-        <ng-container *ngIf="inputChild.required && asteriskPosition === 'label'">
-          <ng-container *ngTemplateOutlet="asterisk"></ng-container>
+        <ng-container *ngIf="inputChild.required && requiredMarkPosition === 'label'">
+          <ng-container *ngTemplateOutlet="requiredMark"></ng-container>
         </ng-container>
       </pure-label>
       
@@ -73095,7 +73062,7 @@ PureFormControl = __decorate([
           <ng-content select="[purePrefix]"></ng-content>
         </div>
 
-        <ng-content select="[pureInput]"></ng-content>
+        <ng-content></ng-content>
 
         <span *ngIf="inputChild.type === 'checkbox' || inputChild.type === 'radio'" [ngClass]="toggleClasses"></span>
 
@@ -73103,14 +73070,14 @@ PureFormControl = __decorate([
           <ng-content select="[pureSuffix]"></ng-content>
         </div>
 
-        <ng-container *ngIf="inputChild.required && asteriskPosition === 'input'">
-          <ng-container *ngTemplateOutlet="asterisk"></ng-container>
+        <ng-container *ngIf="inputChild.required && requiredMarkPosition === 'input'">
+          <ng-container *ngTemplateOutlet="requiredMark"></ng-container>
         </ng-container>
       </div>
 
 
-      <ng-container *ngIf="inputChild.required && asteriskPosition === 'parent'">
-        <ng-container *ngTemplateOutlet="asterisk"></ng-container>
+      <ng-container *ngIf="inputChild.required && requiredMarkPosition === 'parent'">
+        <ng-container *ngTemplateOutlet="requiredMark"></ng-container>
       </ng-container>
 
       <div *ngIf="messageChildren.length" [ngClass]="messageContainerClasses">
@@ -73119,8 +73086,8 @@ PureFormControl = __decorate([
     </div>
 
 
-    <ng-template #asterisk>
-      <pure-asterisk theme="form-control"></pure-asterisk>
+    <ng-template #requiredMark>
+      <pure-required-mark theme="form-control"></pure-required-mark>
     </ng-template>
 `
     }),
@@ -73148,11 +73115,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
 /* harmony import */ var _form_control__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./form-control */ "./node_modules/pure-elements/dist/form-control/form-control.js");
-/* harmony import */ var _prefix__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./prefix */ "./node_modules/pure-elements/dist/form-control/prefix.js");
-/* harmony import */ var _suffix__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./suffix */ "./node_modules/pure-elements/dist/form-control/suffix.js");
-/* harmony import */ var _asterisk_asterisk_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../asterisk/asterisk.module */ "./node_modules/pure-elements/dist/asterisk/asterisk.module.js");
-/* harmony import */ var _label_label_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../label/label.module */ "./node_modules/pure-elements/dist/label/label.module.js");
-/* harmony import */ var _message_message_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../message/message.module */ "./node_modules/pure-elements/dist/message/message.module.js");
+/* harmony import */ var _label_content__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./label-content */ "./node_modules/pure-elements/dist/form-control/label-content.js");
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../helpers */ "./node_modules/pure-elements/dist/helpers/index.js");
+/* harmony import */ var _required_mark__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../required-mark */ "./node_modules/pure-elements/dist/required-mark/index.js");
+/* harmony import */ var _label__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../label */ "./node_modules/pure-elements/dist/label/index.js");
+/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../message */ "./node_modules/pure-elements/dist/message/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -73178,13 +73145,14 @@ PureFormControlModule = __decorate([
             _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
             _core__WEBPACK_IMPORTED_MODULE_3__["ComponentNamerModule"].forRoot(),
-            _asterisk_asterisk_module__WEBPACK_IMPORTED_MODULE_7__["PureAsteriskModule"],
-            _label_label_module__WEBPACK_IMPORTED_MODULE_8__["PureLabelModule"],
-            _message_message_module__WEBPACK_IMPORTED_MODULE_9__["PureMessageModule"]
+            _required_mark__WEBPACK_IMPORTED_MODULE_7__["PureRequiredMarkModule"],
+            _label__WEBPACK_IMPORTED_MODULE_8__["PureLabelModule"],
+            _message__WEBPACK_IMPORTED_MODULE_9__["PureMessageModule"],
+            _helpers__WEBPACK_IMPORTED_MODULE_6__["PureHelpersModule"]
         ],
-        declarations: [_form_control__WEBPACK_IMPORTED_MODULE_4__["PureFormControl"], _prefix__WEBPACK_IMPORTED_MODULE_5__["PurePrefix"], _suffix__WEBPACK_IMPORTED_MODULE_6__["PureSuffix"]],
+        declarations: [_form_control__WEBPACK_IMPORTED_MODULE_4__["PureFormControl"], _label_content__WEBPACK_IMPORTED_MODULE_5__["PureLabelContent"]],
         providers: [_core__WEBPACK_IMPORTED_MODULE_3__["StringFormatter"]],
-        exports: [_form_control__WEBPACK_IMPORTED_MODULE_4__["PureFormControl"], _prefix__WEBPACK_IMPORTED_MODULE_5__["PurePrefix"], _suffix__WEBPACK_IMPORTED_MODULE_6__["PureSuffix"]]
+        exports: [_form_control__WEBPACK_IMPORTED_MODULE_4__["PureFormControl"], _label_content__WEBPACK_IMPORTED_MODULE_5__["PureLabelContent"]]
     })
 ], PureFormControlModule);
 
@@ -73196,7 +73164,7 @@ PureFormControlModule = __decorate([
 /*!***************************************************************!*\
   !*** ./node_modules/pure-elements/dist/form-control/index.js ***!
   \***************************************************************/
-/*! exports provided: PureFormControlConfigToken, PureFormControlDefaultConfig, PureFormControlModule, PureFormControl, PurePrefix, PureSuffix */
+/*! exports provided: PureFormControlConfigToken, PureFormControlDefaultConfig, PureFormControlModule, PureFormControl, PureFormControlInput, PureLabelContent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -73210,25 +73178,25 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControl", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureFormControl"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PurePrefix", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PurePrefix"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlInput", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureFormControlInput"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSuffix", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureSuffix"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureLabelContent", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureLabelContent"]; });
 
 
 
 
 /***/ }),
 
-/***/ "./node_modules/pure-elements/dist/form-control/prefix.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/pure-elements/dist/form-control/prefix.js ***!
-  \****************************************************************/
-/*! exports provided: PurePrefix */
+/***/ "./node_modules/pure-elements/dist/form-control/label-content.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/form-control/label-content.js ***!
+  \***********************************************************************/
+/*! exports provided: PureLabelContent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PurePrefix", function() { return PurePrefix; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureLabelContent", function() { return PureLabelContent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -73237,14 +73205,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-/** Prefix to be placed at the beginning of the form control. */
-let PurePrefix = class PurePrefix {
+let PureLabelContent = class PureLabelContent {
 };
-PurePrefix = __decorate([
+PureLabelContent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({
-        selector: '[purePrefix]',
+        selector: '[pureLabelContent]',
     })
-], PurePrefix);
+], PureLabelContent);
 
 
 
@@ -73254,7 +73221,7 @@ PurePrefix = __decorate([
 /*!********************************************************************!*\
   !*** ./node_modules/pure-elements/dist/form-control/public-api.js ***!
   \********************************************************************/
-/*! exports provided: PureFormControlConfigToken, PureFormControlDefaultConfig, PureFormControlModule, PureFormControl, PurePrefix, PureSuffix */
+/*! exports provided: PureFormControlConfigToken, PureFormControlDefaultConfig, PureFormControlModule, PureFormControl, PureFormControlInput, PureLabelContent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -73271,11 +73238,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _form_control__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./form-control */ "./node_modules/pure-elements/dist/form-control/form-control.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControl", function() { return _form_control__WEBPACK_IMPORTED_MODULE_3__["PureFormControl"]; });
 
-/* harmony import */ var _prefix__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./prefix */ "./node_modules/pure-elements/dist/form-control/prefix.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PurePrefix", function() { return _prefix__WEBPACK_IMPORTED_MODULE_4__["PurePrefix"]; });
+/* harmony import */ var _form_control_input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./form-control-input */ "./node_modules/pure-elements/dist/form-control/form-control-input.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlInput", function() { return _form_control_input__WEBPACK_IMPORTED_MODULE_4__["PureFormControlInput"]; });
 
-/* harmony import */ var _suffix__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./suffix */ "./node_modules/pure-elements/dist/form-control/suffix.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSuffix", function() { return _suffix__WEBPACK_IMPORTED_MODULE_5__["PureSuffix"]; });
+/* harmony import */ var _label_content__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./label-content */ "./node_modules/pure-elements/dist/form-control/label-content.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureLabelContent", function() { return _label_content__WEBPACK_IMPORTED_MODULE_5__["PureLabelContent"]; });
 
 
 
@@ -73287,10 +73254,125 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/pure-elements/dist/form-control/suffix.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/pure-elements/dist/form-control/suffix.js ***!
-  \****************************************************************/
+/***/ "./node_modules/pure-elements/dist/helpers/helpers.module.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/helpers/helpers.module.js ***!
+  \*******************************************************************/
+/*! exports provided: PureHelpersModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureHelpersModule", function() { return PureHelpersModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _prefix__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./prefix */ "./node_modules/pure-elements/dist/helpers/prefix.js");
+/* harmony import */ var _suffix__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./suffix */ "./node_modules/pure-elements/dist/helpers/suffix.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+let PureHelpersModule = class PureHelpersModule {
+};
+PureHelpersModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        declarations: [_prefix__WEBPACK_IMPORTED_MODULE_2__["PurePrefix"], _suffix__WEBPACK_IMPORTED_MODULE_3__["PureSuffix"]],
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
+        exports: [_prefix__WEBPACK_IMPORTED_MODULE_2__["PurePrefix"], _suffix__WEBPACK_IMPORTED_MODULE_3__["PureSuffix"]]
+    })
+], PureHelpersModule);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/helpers/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/helpers/index.js ***!
+  \**********************************************************/
+/*! exports provided: PurePrefix, PureSuffix, PureHelpersModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/helpers/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PurePrefix", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PurePrefix"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSuffix", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureSuffix"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureHelpersModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureHelpersModule"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/helpers/prefix.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/helpers/prefix.js ***!
+  \***********************************************************/
+/*! exports provided: PurePrefix */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PurePrefix", function() { return PurePrefix; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+/** Prefix to be placed at the beginning of the element. */
+let PurePrefix = class PurePrefix {
+};
+PurePrefix = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({
+        selector: '[purePrefix]',
+    })
+], PurePrefix);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/helpers/public-api.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/helpers/public-api.js ***!
+  \***************************************************************/
+/*! exports provided: PurePrefix, PureSuffix, PureHelpersModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _prefix__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./prefix */ "./node_modules/pure-elements/dist/helpers/prefix.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PurePrefix", function() { return _prefix__WEBPACK_IMPORTED_MODULE_0__["PurePrefix"]; });
+
+/* harmony import */ var _suffix__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./suffix */ "./node_modules/pure-elements/dist/helpers/suffix.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSuffix", function() { return _suffix__WEBPACK_IMPORTED_MODULE_1__["PureSuffix"]; });
+
+/* harmony import */ var _helpers_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers.module */ "./node_modules/pure-elements/dist/helpers/helpers.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureHelpersModule", function() { return _helpers_module__WEBPACK_IMPORTED_MODULE_2__["PureHelpersModule"]; });
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/helpers/suffix.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/helpers/suffix.js ***!
+  \***********************************************************/
 /*! exports provided: PureSuffix */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -73305,7 +73387,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-/** Suffix to be placed at the end of the form control. */
+/** Suffix to be placed at the end of the element. */
 let PureSuffix = class PureSuffix {
 };
 PureSuffix = __decorate([
@@ -73322,7 +73404,7 @@ PureSuffix = __decorate([
 /*!**************************************************!*\
   !*** ./node_modules/pure-elements/dist/index.js ***!
   \**************************************************/
-/*! exports provided: PureElements, PureAsteriskConfigToken, PureAsteriskDefaultConfig, PureAsteriskModule, PureAsterisk, PureButtonModule, PureButton, PureCollapseModule, PureCollapse, PureCollapseHeader, PureCollapseFooter, PureDropdown, PureDropdownTrigger, PureDropdownItem, PureDropdownModule, PureFormControlConfigToken, PureFormControlDefaultConfig, PureFormControlModule, PureFormControl, PurePrefix, PureSuffix, PureMessageModule, PureMessage, PureLabelModule, PureLabel, PureModalWindowModule, PureModalWindow, PureSwitcherModule, PureSwitcher, PureToastModule, PureToastDefaultOptions, PureToastDefaultOptionsFactory, PureToast, PureToastContainer, PureToastData, PureToastConfig, PureToastRef, PureSimpleToast, PureTooltipModule, PureTooltipDefaultConfig, PureTooltipConfigToken, PureTooltipConfigFactory, PureTooltip, PureTooltipComponent, coerceBooleanProperty, coerceModelValue, PureComponent, ComponentNamer, ComponentNamerConfigToken, ComponentNamerDefaultConfig, ComponentNamerModule, KEY_CODES, EventHandler, StringFormatter */
+/*! exports provided: PureElements, PureButtonModule, PureButton, PureCollapseModule, PureCollapse, PureCollapseHeader, PureCollapseFooter, PureDropdown, PureDropdownTrigger, PureDropdownItem, PureDropdownModule, PureFormControlConfigToken, PureFormControlDefaultConfig, PureFormControlModule, PureFormControl, PureFormControlInput, PureLabelContent, PurePrefix, PureSuffix, PureHelpersModule, PureInput, PureInputModule, PureLabelModule, PureLabel, PureMessageModule, PureMessage, PureModalModule, PureModal, PureRequiredMarkConfigToken, PureRequiredMarkDefaultConfig, PureRequiredMarkModule, PureRequiredMark, PureSelectDefaultConfig, PureSelectConfigToken, PureSelect, PureOption, PureSelectModule, PureSwitcherModule, PureSwitcher, PureToastModule, PureToastDefaultOptions, PureToastDefaultOptionsFactory, PureToast, PureToastContainer, PureToastData, PureToastConfig, PureToastRef, PureSimpleToast, PureTooltipModule, PureTooltipDefaultConfig, PureTooltipConfigToken, PureTooltipConfigFactory, PureTooltip, PureTooltipComponent, coerceBooleanProperty, coerceNumberProperty, PureComponent, ComponentNamer, ComponentNamerConfigToken, ComponentNamerDefaultConfig, ComponentNamerModule, KEY_CODES, EventHandler, StringFormatter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -73330,7 +73412,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./core */ "./node_modules/pure-elements/dist/core/index.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceBooleanProperty", function() { return _core__WEBPACK_IMPORTED_MODULE_0__["coerceBooleanProperty"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceModelValue", function() { return _core__WEBPACK_IMPORTED_MODULE_0__["coerceModelValue"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coerceNumberProperty", function() { return _core__WEBPACK_IMPORTED_MODULE_0__["coerceNumberProperty"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureComponent", function() { return _core__WEBPACK_IMPORTED_MODULE_0__["PureComponent"]; });
 
@@ -73348,109 +73430,135 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StringFormatter", function() { return _core__WEBPACK_IMPORTED_MODULE_0__["StringFormatter"]; });
 
-/* harmony import */ var _asterisk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./asterisk */ "./node_modules/pure-elements/dist/asterisk/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskConfigToken", function() { return _asterisk__WEBPACK_IMPORTED_MODULE_1__["PureAsteriskConfigToken"]; });
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./button */ "./node_modules/pure-elements/dist/button/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureButtonModule", function() { return _button__WEBPACK_IMPORTED_MODULE_1__["PureButtonModule"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskDefaultConfig", function() { return _asterisk__WEBPACK_IMPORTED_MODULE_1__["PureAsteriskDefaultConfig"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureButton", function() { return _button__WEBPACK_IMPORTED_MODULE_1__["PureButton"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsteriskModule", function() { return _asterisk__WEBPACK_IMPORTED_MODULE_1__["PureAsteriskModule"]; });
+/* harmony import */ var _collapse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./collapse */ "./node_modules/pure-elements/dist/collapse/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapseModule", function() { return _collapse__WEBPACK_IMPORTED_MODULE_2__["PureCollapseModule"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureAsterisk", function() { return _asterisk__WEBPACK_IMPORTED_MODULE_1__["PureAsterisk"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapse", function() { return _collapse__WEBPACK_IMPORTED_MODULE_2__["PureCollapse"]; });
 
-/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./button */ "./node_modules/pure-elements/dist/button/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureButtonModule", function() { return _button__WEBPACK_IMPORTED_MODULE_2__["PureButtonModule"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapseHeader", function() { return _collapse__WEBPACK_IMPORTED_MODULE_2__["PureCollapseHeader"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureButton", function() { return _button__WEBPACK_IMPORTED_MODULE_2__["PureButton"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapseFooter", function() { return _collapse__WEBPACK_IMPORTED_MODULE_2__["PureCollapseFooter"]; });
 
-/* harmony import */ var _collapse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./collapse */ "./node_modules/pure-elements/dist/collapse/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapseModule", function() { return _collapse__WEBPACK_IMPORTED_MODULE_3__["PureCollapseModule"]; });
+/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dropdown */ "./node_modules/pure-elements/dist/dropdown/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdown", function() { return _dropdown__WEBPACK_IMPORTED_MODULE_3__["PureDropdown"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapse", function() { return _collapse__WEBPACK_IMPORTED_MODULE_3__["PureCollapse"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdownTrigger", function() { return _dropdown__WEBPACK_IMPORTED_MODULE_3__["PureDropdownTrigger"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapseHeader", function() { return _collapse__WEBPACK_IMPORTED_MODULE_3__["PureCollapseHeader"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdownItem", function() { return _dropdown__WEBPACK_IMPORTED_MODULE_3__["PureDropdownItem"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureCollapseFooter", function() { return _collapse__WEBPACK_IMPORTED_MODULE_3__["PureCollapseFooter"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdownModule", function() { return _dropdown__WEBPACK_IMPORTED_MODULE_3__["PureDropdownModule"]; });
 
-/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./dropdown */ "./node_modules/pure-elements/dist/dropdown/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdown", function() { return _dropdown__WEBPACK_IMPORTED_MODULE_4__["PureDropdown"]; });
+/* harmony import */ var _form_control__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./form-control */ "./node_modules/pure-elements/dist/form-control/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlConfigToken", function() { return _form_control__WEBPACK_IMPORTED_MODULE_4__["PureFormControlConfigToken"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdownTrigger", function() { return _dropdown__WEBPACK_IMPORTED_MODULE_4__["PureDropdownTrigger"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlDefaultConfig", function() { return _form_control__WEBPACK_IMPORTED_MODULE_4__["PureFormControlDefaultConfig"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdownItem", function() { return _dropdown__WEBPACK_IMPORTED_MODULE_4__["PureDropdownItem"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlModule", function() { return _form_control__WEBPACK_IMPORTED_MODULE_4__["PureFormControlModule"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureDropdownModule", function() { return _dropdown__WEBPACK_IMPORTED_MODULE_4__["PureDropdownModule"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControl", function() { return _form_control__WEBPACK_IMPORTED_MODULE_4__["PureFormControl"]; });
 
-/* harmony import */ var _form_control__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./form-control */ "./node_modules/pure-elements/dist/form-control/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlConfigToken", function() { return _form_control__WEBPACK_IMPORTED_MODULE_5__["PureFormControlConfigToken"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlInput", function() { return _form_control__WEBPACK_IMPORTED_MODULE_4__["PureFormControlInput"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlDefaultConfig", function() { return _form_control__WEBPACK_IMPORTED_MODULE_5__["PureFormControlDefaultConfig"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureLabelContent", function() { return _form_control__WEBPACK_IMPORTED_MODULE_4__["PureLabelContent"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControlModule", function() { return _form_control__WEBPACK_IMPORTED_MODULE_5__["PureFormControlModule"]; });
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./helpers */ "./node_modules/pure-elements/dist/helpers/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PurePrefix", function() { return _helpers__WEBPACK_IMPORTED_MODULE_5__["PurePrefix"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureFormControl", function() { return _form_control__WEBPACK_IMPORTED_MODULE_5__["PureFormControl"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSuffix", function() { return _helpers__WEBPACK_IMPORTED_MODULE_5__["PureSuffix"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PurePrefix", function() { return _form_control__WEBPACK_IMPORTED_MODULE_5__["PurePrefix"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureHelpersModule", function() { return _helpers__WEBPACK_IMPORTED_MODULE_5__["PureHelpersModule"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSuffix", function() { return _form_control__WEBPACK_IMPORTED_MODULE_5__["PureSuffix"]; });
+/* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./input */ "./node_modules/pure-elements/dist/input/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureInput", function() { return _input__WEBPACK_IMPORTED_MODULE_6__["PureInput"]; });
 
-/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./message */ "./node_modules/pure-elements/dist/message/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureMessageModule", function() { return _message__WEBPACK_IMPORTED_MODULE_6__["PureMessageModule"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureMessage", function() { return _message__WEBPACK_IMPORTED_MODULE_6__["PureMessage"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureInputModule", function() { return _input__WEBPACK_IMPORTED_MODULE_6__["PureInputModule"]; });
 
 /* harmony import */ var _label__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./label */ "./node_modules/pure-elements/dist/label/index.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureLabelModule", function() { return _label__WEBPACK_IMPORTED_MODULE_7__["PureLabelModule"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureLabel", function() { return _label__WEBPACK_IMPORTED_MODULE_7__["PureLabel"]; });
 
-/* harmony import */ var _modal_window__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modal-window */ "./node_modules/pure-elements/dist/modal-window/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModalWindowModule", function() { return _modal_window__WEBPACK_IMPORTED_MODULE_8__["PureModalWindowModule"]; });
+/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./message */ "./node_modules/pure-elements/dist/message/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureMessageModule", function() { return _message__WEBPACK_IMPORTED_MODULE_8__["PureMessageModule"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModalWindow", function() { return _modal_window__WEBPACK_IMPORTED_MODULE_8__["PureModalWindow"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureMessage", function() { return _message__WEBPACK_IMPORTED_MODULE_8__["PureMessage"]; });
 
-/* harmony import */ var _switcher__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./switcher */ "./node_modules/pure-elements/dist/switcher/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSwitcherModule", function() { return _switcher__WEBPACK_IMPORTED_MODULE_9__["PureSwitcherModule"]; });
+/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modal */ "./node_modules/pure-elements/dist/modal/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModalModule", function() { return _modal__WEBPACK_IMPORTED_MODULE_9__["PureModalModule"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSwitcher", function() { return _switcher__WEBPACK_IMPORTED_MODULE_9__["PureSwitcher"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModal", function() { return _modal__WEBPACK_IMPORTED_MODULE_9__["PureModal"]; });
 
-/* harmony import */ var _toast__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./toast */ "./node_modules/pure-elements/dist/toast/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastModule", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureToastModule"]; });
+/* harmony import */ var _required_mark__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./required-mark */ "./node_modules/pure-elements/dist/required-mark/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMarkConfigToken", function() { return _required_mark__WEBPACK_IMPORTED_MODULE_10__["PureRequiredMarkConfigToken"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastDefaultOptions", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureToastDefaultOptions"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMarkDefaultConfig", function() { return _required_mark__WEBPACK_IMPORTED_MODULE_10__["PureRequiredMarkDefaultConfig"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastDefaultOptionsFactory", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureToastDefaultOptionsFactory"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMarkModule", function() { return _required_mark__WEBPACK_IMPORTED_MODULE_10__["PureRequiredMarkModule"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToast", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureToast"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMark", function() { return _required_mark__WEBPACK_IMPORTED_MODULE_10__["PureRequiredMark"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastContainer", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureToastContainer"]; });
+/* harmony import */ var _select__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./select */ "./node_modules/pure-elements/dist/select/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSelectDefaultConfig", function() { return _select__WEBPACK_IMPORTED_MODULE_11__["PureSelectDefaultConfig"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastData", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureToastData"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSelectConfigToken", function() { return _select__WEBPACK_IMPORTED_MODULE_11__["PureSelectConfigToken"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastConfig", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureToastConfig"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSelect", function() { return _select__WEBPACK_IMPORTED_MODULE_11__["PureSelect"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastRef", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureToastRef"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureOption", function() { return _select__WEBPACK_IMPORTED_MODULE_11__["PureOption"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSimpleToast", function() { return _toast__WEBPACK_IMPORTED_MODULE_10__["PureSimpleToast"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSelectModule", function() { return _select__WEBPACK_IMPORTED_MODULE_11__["PureSelectModule"]; });
 
-/* harmony import */ var _tooltip__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./tooltip */ "./node_modules/pure-elements/dist/tooltip/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipModule", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_11__["PureTooltipModule"]; });
+/* harmony import */ var _switcher__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./switcher */ "./node_modules/pure-elements/dist/switcher/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSwitcherModule", function() { return _switcher__WEBPACK_IMPORTED_MODULE_12__["PureSwitcherModule"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipDefaultConfig", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_11__["PureTooltipDefaultConfig"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSwitcher", function() { return _switcher__WEBPACK_IMPORTED_MODULE_12__["PureSwitcher"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipConfigToken", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_11__["PureTooltipConfigToken"]; });
+/* harmony import */ var _toast__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./toast */ "./node_modules/pure-elements/dist/toast/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastModule", function() { return _toast__WEBPACK_IMPORTED_MODULE_13__["PureToastModule"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipConfigFactory", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_11__["PureTooltipConfigFactory"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastDefaultOptions", function() { return _toast__WEBPACK_IMPORTED_MODULE_13__["PureToastDefaultOptions"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltip", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_11__["PureTooltip"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastDefaultOptionsFactory", function() { return _toast__WEBPACK_IMPORTED_MODULE_13__["PureToastDefaultOptionsFactory"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipComponent", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_11__["PureTooltipComponent"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToast", function() { return _toast__WEBPACK_IMPORTED_MODULE_13__["PureToast"]; });
 
-/* harmony import */ var _pure_elements_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pure-elements.module */ "./node_modules/pure-elements/dist/pure-elements.module.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureElements", function() { return _pure_elements_module__WEBPACK_IMPORTED_MODULE_12__["PureElements"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastContainer", function() { return _toast__WEBPACK_IMPORTED_MODULE_13__["PureToastContainer"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastData", function() { return _toast__WEBPACK_IMPORTED_MODULE_13__["PureToastData"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastConfig", function() { return _toast__WEBPACK_IMPORTED_MODULE_13__["PureToastConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureToastRef", function() { return _toast__WEBPACK_IMPORTED_MODULE_13__["PureToastRef"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSimpleToast", function() { return _toast__WEBPACK_IMPORTED_MODULE_13__["PureSimpleToast"]; });
+
+/* harmony import */ var _tooltip__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./tooltip */ "./node_modules/pure-elements/dist/tooltip/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipModule", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_14__["PureTooltipModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipDefaultConfig", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_14__["PureTooltipDefaultConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipConfigToken", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_14__["PureTooltipConfigToken"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipConfigFactory", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_14__["PureTooltipConfigFactory"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltip", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_14__["PureTooltip"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureTooltipComponent", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_14__["PureTooltipComponent"]; });
+
+/* harmony import */ var _pure_elements_module__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pure-elements.module */ "./node_modules/pure-elements/dist/pure-elements.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureElements", function() { return _pure_elements_module__WEBPACK_IMPORTED_MODULE_15__["PureElements"]; });
 
 /** Export core code */
 
 /** Export elements */
+
+
+
 
 
 
@@ -73519,6 +73627,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
 /* harmony import */ var _input_errors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./input-errors */ "./node_modules/pure-elements/dist/input/input-errors.js");
+/* harmony import */ var _form_control_form_control_input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../form-control/form-control-input */ "./node_modules/pure-elements/dist/form-control/form-control-input.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -73531,12 +73640,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+var PureInput_1;
 
 
 
 
 
-// Invalid input type. Using one of these will throw an MatInputUnsupportedTypeError.
+
+// Invalid input types. Using one of these will throw an PureInputUnsupportedTypeError.
 const PureInputIvalidTypes = [
     'button',
     'file',
@@ -73547,7 +73658,7 @@ const PureInputIvalidTypes = [
     'submit'
 ];
 /** Directive that allows a native input to work inside a Pure Form Control. */
-let PureInput = class PureInput extends _core__WEBPACK_IMPORTED_MODULE_3__["PureComponent"] {
+let PureInput = PureInput_1 = class PureInput extends _core__WEBPACK_IMPORTED_MODULE_3__["PureComponent"] {
     constructor(elementRef, componentNamer, ngControl) {
         super(elementRef, componentNamer);
         this.elementRef = elementRef;
@@ -73562,15 +73673,18 @@ let PureInput = class PureInput extends _core__WEBPACK_IMPORTED_MODULE_3__["Pure
             'time',
             'week'
         ];
+        /** Implemented as part of PureFormControlInput. */
         this.stateChanges = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
         this._disabled = false;
-        /** Whether element is focused. */
+        /** Implemented as part of PureFormControlInput. */
         this.focused = false;
+        /** Implemented as part of PureFormControlInput. */
+        this.active = false;
         this._required = false;
         this._readonly = false;
         this._checked = false;
     }
-    /** Whether element is disabled. */
+    /** Implemented as part of PureFormControlInput. */
     get disabled() {
         if (this.ngControl && this.ngControl.disabled !== null) {
             return this.ngControl.disabled;
@@ -73590,7 +73704,7 @@ let PureInput = class PureInput extends _core__WEBPACK_IMPORTED_MODULE_3__["Pure
         this.elementRef.nativeElement.blur();
         this.onFocusChange(false);
     }
-    /** Whether element is required. */
+    /** Implemented as part of PureFormControlInput. */
     get required() {
         return this._required;
     }
@@ -73598,7 +73712,7 @@ let PureInput = class PureInput extends _core__WEBPACK_IMPORTED_MODULE_3__["Pure
         this._required = Object(_core__WEBPACK_IMPORTED_MODULE_3__["coerceBooleanProperty"])(value);
         this.stateChanges.next();
     }
-    /** Whether element is readonly. */
+    /** Implemented as part of PureFormControlInput. */
     get readonly() {
         return this._readonly;
     }
@@ -73616,7 +73730,7 @@ let PureInput = class PureInput extends _core__WEBPACK_IMPORTED_MODULE_3__["Pure
         }
         this.stateChanges.next();
     }
-    /** Checks whether current element has value. */
+    /** Implemented as part of PureFormControlInput. */
     get empty() {
         return !this.isNeverEmpty() && !this.value;
     }
@@ -73625,9 +73739,10 @@ let PureInput = class PureInput extends _core__WEBPACK_IMPORTED_MODULE_3__["Pure
         return this._checked;
     }
     set checked(value) {
-        this._checked = value;
+        this._checked = Object(_core__WEBPACK_IMPORTED_MODULE_3__["coerceBooleanProperty"])(value);
+        this.elementRef.nativeElement.checked = this._checked;
     }
-    /** Input type of the element. */
+    /** Implemented as part of PureFormControlInput. */
     get type() {
         return this._type;
     }
@@ -73644,12 +73759,14 @@ let PureInput = class PureInput extends _core__WEBPACK_IMPORTED_MODULE_3__["Pure
         }
         this.stateChanges.next();
     }
+    /** Implemented as part of PureFormControlInput. */
     get nodeName() {
         return this.elementRef.nativeElement.nodeName.toLowerCase();
     }
     onFocusChange(value) {
         if (value !== this.focused) {
             this.focused = value;
+            this.active = value;
             this.stateChanges.next();
         }
     }
@@ -73733,7 +73850,7 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], PureInput.prototype, "onInput", null);
-PureInput = __decorate([
+PureInput = PureInput_1 = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({
         selector: 'input[pureInput], textarea[pureInput], select[pureInput]',
         exportAs: 'pureInput',
@@ -73744,10 +73861,12 @@ PureInput = __decorate([
             '[attr.placeholder]': 'placeholder',
             '[disabled]': 'disabled',
             '[required]': 'required',
+            '[value]': 'value',
             '[attr.readonly]': 'readonly && !isSelect() || null',
             '(focus)': 'onFocusChange(true)',
             '(blur)': 'onFocusChange(false)'
-        }
+        },
+        providers: [{ provide: _form_control_form_control_input__WEBPACK_IMPORTED_MODULE_5__["PureFormControlInput"], useExisting: PureInput_1 }]
     }),
     __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Self"])()),
     __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
@@ -74088,54 +74207,54 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/pure-elements/dist/modal-window/index.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/pure-elements/dist/modal-window/index.js ***!
-  \***************************************************************/
-/*! exports provided: PureModalWindowModule, PureModalWindow */
+/***/ "./node_modules/pure-elements/dist/modal/index.js":
+/*!********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/modal/index.js ***!
+  \********************************************************/
+/*! exports provided: PureModalModule, PureModal */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/modal-window/public-api.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModalWindowModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureModalWindowModule"]; });
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/modal/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModalModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureModalModule"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModalWindow", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureModalWindow"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModal", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureModal"]; });
 
 
 
 
 /***/ }),
 
-/***/ "./node_modules/pure-elements/dist/modal-window/modal-window-config-token.js":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/pure-elements/dist/modal-window/modal-window-config-token.js ***!
-  \***********************************************************************************/
-/*! exports provided: PureModalWindowConfigToken */
+/***/ "./node_modules/pure-elements/dist/modal/modal-config-token.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/modal/modal-config-token.js ***!
+  \*********************************************************************/
+/*! exports provided: PureModalConfigToken */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureModalWindowConfigToken", function() { return PureModalWindowConfigToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureModalConfigToken", function() { return PureModalConfigToken; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
-const PureModalWindowConfigToken = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('PureModalWindowConfig');
+const PureModalConfigToken = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('PureModalConfig');
 
 
 /***/ }),
 
-/***/ "./node_modules/pure-elements/dist/modal-window/modal-window-config.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/pure-elements/dist/modal-window/modal-window-config.js ***!
-  \*****************************************************************************/
-/*! exports provided: PureModalWindowDefaultConfig */
+/***/ "./node_modules/pure-elements/dist/modal/modal-config.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/modal/modal-config.js ***!
+  \***************************************************************/
+/*! exports provided: PureModalDefaultConfig */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureModalWindowDefaultConfig", function() { return PureModalWindowDefaultConfig; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureModalDefaultConfig", function() { return PureModalDefaultConfig; });
 ;
-const PureModalWindowDefaultConfig = {
+const PureModalDefaultConfig = {
     closeOnEsc: true,
     openAnimationDuration: 0,
     closeAnimationDuration: 0
@@ -74144,20 +74263,20 @@ const PureModalWindowDefaultConfig = {
 
 /***/ }),
 
-/***/ "./node_modules/pure-elements/dist/modal-window/modal-window.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/pure-elements/dist/modal-window/modal-window.js ***!
-  \**********************************************************************/
-/*! exports provided: PureModalWindow */
+/***/ "./node_modules/pure-elements/dist/modal/modal.js":
+/*!********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/modal/modal.js ***!
+  \********************************************************/
+/*! exports provided: PureModal */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureModalWindow", function() { return PureModalWindow; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureModal", function() { return PureModal; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
-/* harmony import */ var _modal_window_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modal-window-config */ "./node_modules/pure-elements/dist/modal-window/modal-window-config.js");
-/* harmony import */ var _modal_window_config_token__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modal-window-config-token */ "./node_modules/pure-elements/dist/modal-window/modal-window-config-token.js");
+/* harmony import */ var _modal_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modal-config */ "./node_modules/pure-elements/dist/modal/modal-config.js");
+/* harmony import */ var _modal_config_token__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modal-config-token */ "./node_modules/pure-elements/dist/modal/modal-config-token.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -74174,13 +74293,13 @@ var __param = (undefined && undefined.__param) || function (paramIndex, decorato
 
 
 
-let PureModalWindow = class PureModalWindow extends _core__WEBPACK_IMPORTED_MODULE_1__["PureComponent"] {
+let PureModal = class PureModal extends _core__WEBPACK_IMPORTED_MODULE_1__["PureComponent"] {
     constructor(elementRef, componentNamer, userConfig) {
         super(elementRef, componentNamer);
         this.elementRef = elementRef;
         this.componentNamer = componentNamer;
         this.userConfig = userConfig;
-        this.elementName = 'Modal Window';
+        this.elementName = 'Modal';
         this.backdropName = 'Backdrop';
         this.contentName = 'Content';
         this.contentContainerName = 'Content Container';
@@ -74190,12 +74309,18 @@ let PureModalWindow = class PureModalWindow extends _core__WEBPACK_IMPORTED_MODU
         this.open = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.close = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this._show = false;
-        this.shownClassName = this.componentNamer.generateClassName(this.elementName, '', 'shown');
+        this.shownClassName = this.componentNamer.generateClassName(this.elementName, '', 'Shown');
         this.keyListenerBound = this.keyListener.bind(this);
-        this.config = Object.assign({}, _modal_window_config__WEBPACK_IMPORTED_MODULE_2__["PureModalWindowDefaultConfig"], userConfig);
+        this.config = Object.assign({}, _modal_config__WEBPACK_IMPORTED_MODULE_2__["PureModalDefaultConfig"], userConfig);
         this.closeOnEsc = this.config.closeOnEsc;
         this.openAnimationDuration = this.config.openAnimationDuration;
         this.closeAnimationDuration = this.config.closeAnimationDuration;
+    }
+    get closeOnEsc() {
+        return this._closeOnEsc;
+    }
+    set closeOnEsc(value) {
+        this._closeOnEsc = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceBooleanProperty"])(value);
     }
     set show(value) {
         const previousValue = this.show;
@@ -74244,36 +74369,37 @@ let PureModalWindow = class PureModalWindow extends _core__WEBPACK_IMPORTED_MODU
 };
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-    __metadata("design:type", Boolean)
-], PureModalWindow.prototype, "closeOnEsc", void 0);
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [Object])
+], PureModal.prototype, "closeOnEsc", null);
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
     __metadata("design:type", Number)
-], PureModalWindow.prototype, "openAnimationDuration", void 0);
+], PureModal.prototype, "openAnimationDuration", void 0);
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
     __metadata("design:type", Number)
-], PureModalWindow.prototype, "closeAnimationDuration", void 0);
+], PureModal.prototype, "closeAnimationDuration", void 0);
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
     __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
-], PureModalWindow.prototype, "showChange", void 0);
+], PureModal.prototype, "showChange", void 0);
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
     __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
-], PureModalWindow.prototype, "open", void 0);
+], PureModal.prototype, "open", void 0);
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
     __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
-], PureModalWindow.prototype, "close", void 0);
+], PureModal.prototype, "close", void 0);
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
     __metadata("design:type", Boolean),
     __metadata("design:paramtypes", [Object])
-], PureModalWindow.prototype, "show", null);
-PureModalWindow = __decorate([
+], PureModal.prototype, "show", null);
+PureModal = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-        selector: 'pure-modal-window',
+        selector: 'pure-modal',
         template: `
     <div 
       [ngClass]="elementClasses">
@@ -74295,29 +74421,29 @@ PureModalWindow = __decorate([
     </div>
   `
     }),
-    __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_modal_window_config_token__WEBPACK_IMPORTED_MODULE_3__["PureModalWindowConfigToken"])),
+    __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_modal_config_token__WEBPACK_IMPORTED_MODULE_3__["PureModalConfigToken"])),
     __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
         _core__WEBPACK_IMPORTED_MODULE_1__["ComponentNamer"], Object])
-], PureModalWindow);
+], PureModal);
 
 
 
 /***/ }),
 
-/***/ "./node_modules/pure-elements/dist/modal-window/modal-window.module.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/pure-elements/dist/modal-window/modal-window.module.js ***!
-  \*****************************************************************************/
-/*! exports provided: PureModalWindowModule */
+/***/ "./node_modules/pure-elements/dist/modal/modal.module.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/modal/modal.module.js ***!
+  \***************************************************************/
+/*! exports provided: PureModalModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureModalWindowModule", function() { return PureModalWindowModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureModalModule", function() { return PureModalModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
-/* harmony import */ var _modal_window__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modal-window */ "./node_modules/pure-elements/dist/modal-window/modal-window.js");
+/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modal */ "./node_modules/pure-elements/dist/modal/modal.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -74328,34 +74454,34 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-let PureModalWindowModule = class PureModalWindowModule {
+let PureModalModule = class PureModalModule {
 };
-PureModalWindowModule = __decorate([
+PureModalModule = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
         imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _core__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerModule"].forRoot()],
-        declarations: [_modal_window__WEBPACK_IMPORTED_MODULE_3__["PureModalWindow"]],
-        exports: [_modal_window__WEBPACK_IMPORTED_MODULE_3__["PureModalWindow"]]
+        declarations: [_modal__WEBPACK_IMPORTED_MODULE_3__["PureModal"]],
+        exports: [_modal__WEBPACK_IMPORTED_MODULE_3__["PureModal"]]
     })
-], PureModalWindowModule);
+], PureModalModule);
 
 
 
 /***/ }),
 
-/***/ "./node_modules/pure-elements/dist/modal-window/public-api.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/pure-elements/dist/modal-window/public-api.js ***!
-  \********************************************************************/
-/*! exports provided: PureModalWindowModule, PureModalWindow */
+/***/ "./node_modules/pure-elements/dist/modal/public-api.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/modal/public-api.js ***!
+  \*************************************************************/
+/*! exports provided: PureModalModule, PureModal */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modal_window_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modal-window.module */ "./node_modules/pure-elements/dist/modal-window/modal-window.module.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModalWindowModule", function() { return _modal_window_module__WEBPACK_IMPORTED_MODULE_0__["PureModalWindowModule"]; });
+/* harmony import */ var _modal_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modal.module */ "./node_modules/pure-elements/dist/modal/modal.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModalModule", function() { return _modal_module__WEBPACK_IMPORTED_MODULE_0__["PureModalModule"]; });
 
-/* harmony import */ var _modal_window__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal-window */ "./node_modules/pure-elements/dist/modal-window/modal-window.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModalWindow", function() { return _modal_window__WEBPACK_IMPORTED_MODULE_1__["PureModalWindow"]; });
+/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal */ "./node_modules/pure-elements/dist/modal/modal.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureModal", function() { return _modal__WEBPACK_IMPORTED_MODULE_1__["PureModal"]; });
 
 
 
@@ -74374,26 +74500,30 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureElements", function() { return PureElements; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _asterisk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./asterisk */ "./node_modules/pure-elements/dist/asterisk/index.js");
-/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./button */ "./node_modules/pure-elements/dist/button/index.js");
-/* harmony import */ var _collapse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./collapse */ "./node_modules/pure-elements/dist/collapse/index.js");
-/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./dropdown */ "./node_modules/pure-elements/dist/dropdown/index.js");
-/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./message */ "./node_modules/pure-elements/dist/message/index.js");
-/* harmony import */ var _label__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./label */ "./node_modules/pure-elements/dist/label/index.js");
-/* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./input */ "./node_modules/pure-elements/dist/input/index.js");
-/* harmony import */ var _modal_window__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modal-window */ "./node_modules/pure-elements/dist/modal-window/index.js");
-/* harmony import */ var _form_control__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./form-control */ "./node_modules/pure-elements/dist/form-control/index.js");
-/* harmony import */ var _switcher__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./switcher */ "./node_modules/pure-elements/dist/switcher/index.js");
-/* harmony import */ var _toast__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./toast */ "./node_modules/pure-elements/dist/toast/index.js");
-/* harmony import */ var _tooltip__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./tooltip */ "./node_modules/pure-elements/dist/tooltip/index.js");
-/* harmony import */ var _core_component_namer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./core/component-namer */ "./node_modules/pure-elements/dist/core/component-namer/index.js");
-/* harmony import */ var _core_string_formatter__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./core/string-formatter */ "./node_modules/pure-elements/dist/core/string-formatter/index.js");
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./button */ "./node_modules/pure-elements/dist/button/index.js");
+/* harmony import */ var _collapse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./collapse */ "./node_modules/pure-elements/dist/collapse/index.js");
+/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dropdown */ "./node_modules/pure-elements/dist/dropdown/index.js");
+/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./message */ "./node_modules/pure-elements/dist/message/index.js");
+/* harmony import */ var _label__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./label */ "./node_modules/pure-elements/dist/label/index.js");
+/* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./input */ "./node_modules/pure-elements/dist/input/index.js");
+/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modal */ "./node_modules/pure-elements/dist/modal/index.js");
+/* harmony import */ var _form_control__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./form-control */ "./node_modules/pure-elements/dist/form-control/index.js");
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./helpers */ "./node_modules/pure-elements/dist/helpers/index.js");
+/* harmony import */ var _required_mark__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./required-mark */ "./node_modules/pure-elements/dist/required-mark/index.js");
+/* harmony import */ var _select__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./select */ "./node_modules/pure-elements/dist/select/index.js");
+/* harmony import */ var _switcher__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./switcher */ "./node_modules/pure-elements/dist/switcher/index.js");
+/* harmony import */ var _toast__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./toast */ "./node_modules/pure-elements/dist/toast/index.js");
+/* harmony import */ var _tooltip__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./tooltip */ "./node_modules/pure-elements/dist/tooltip/index.js");
+/* harmony import */ var _core_component_namer__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./core/component-namer */ "./node_modules/pure-elements/dist/core/component-namer/index.js");
+/* harmony import */ var _core_string_formatter__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./core/string-formatter */ "./node_modules/pure-elements/dist/core/string-formatter/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -74414,28 +74544,1266 @@ let PureElements = class PureElements {
 PureElements = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
         imports: [
-            _core_component_namer__WEBPACK_IMPORTED_MODULE_13__["ComponentNamerModule"].forRoot()
+            _core_component_namer__WEBPACK_IMPORTED_MODULE_15__["ComponentNamerModule"].forRoot()
         ],
         exports: [
-            _asterisk__WEBPACK_IMPORTED_MODULE_1__["PureAsteriskModule"],
-            _button__WEBPACK_IMPORTED_MODULE_2__["PureButtonModule"],
-            _collapse__WEBPACK_IMPORTED_MODULE_3__["PureCollapseModule"],
-            _dropdown__WEBPACK_IMPORTED_MODULE_4__["PureDropdownModule"],
-            _message__WEBPACK_IMPORTED_MODULE_5__["PureMessageModule"],
-            _label__WEBPACK_IMPORTED_MODULE_6__["PureLabelModule"],
-            _modal_window__WEBPACK_IMPORTED_MODULE_8__["PureModalWindowModule"],
-            _form_control__WEBPACK_IMPORTED_MODULE_9__["PureFormControlModule"],
-            _switcher__WEBPACK_IMPORTED_MODULE_10__["PureSwitcherModule"],
-            _toast__WEBPACK_IMPORTED_MODULE_11__["PureToastModule"],
-            _tooltip__WEBPACK_IMPORTED_MODULE_12__["PureTooltipModule"],
-            _input__WEBPACK_IMPORTED_MODULE_7__["PureInputModule"]
+            _button__WEBPACK_IMPORTED_MODULE_1__["PureButtonModule"],
+            _collapse__WEBPACK_IMPORTED_MODULE_2__["PureCollapseModule"],
+            _dropdown__WEBPACK_IMPORTED_MODULE_3__["PureDropdownModule"],
+            _message__WEBPACK_IMPORTED_MODULE_4__["PureMessageModule"],
+            _label__WEBPACK_IMPORTED_MODULE_5__["PureLabelModule"],
+            _modal__WEBPACK_IMPORTED_MODULE_7__["PureModalModule"],
+            _form_control__WEBPACK_IMPORTED_MODULE_8__["PureFormControlModule"],
+            _required_mark__WEBPACK_IMPORTED_MODULE_10__["PureRequiredMarkModule"],
+            _select__WEBPACK_IMPORTED_MODULE_11__["PureSelectModule"],
+            _switcher__WEBPACK_IMPORTED_MODULE_12__["PureSwitcherModule"],
+            _toast__WEBPACK_IMPORTED_MODULE_13__["PureToastModule"],
+            _tooltip__WEBPACK_IMPORTED_MODULE_14__["PureTooltipModule"],
+            _input__WEBPACK_IMPORTED_MODULE_6__["PureInputModule"],
+            _helpers__WEBPACK_IMPORTED_MODULE_9__["PureHelpersModule"]
         ],
         providers: [
-            _core_string_formatter__WEBPACK_IMPORTED_MODULE_14__["StringFormatter"],
-            _toast__WEBPACK_IMPORTED_MODULE_11__["PureToast"]
+            _core_string_formatter__WEBPACK_IMPORTED_MODULE_16__["StringFormatter"],
+            _toast__WEBPACK_IMPORTED_MODULE_13__["PureToast"]
         ]
     })
 ], PureElements);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/required-mark/index.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/required-mark/index.js ***!
+  \****************************************************************/
+/*! exports provided: PureRequiredMarkConfigToken, PureRequiredMarkDefaultConfig, PureRequiredMarkModule, PureRequiredMark */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/required-mark/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMarkConfigToken", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureRequiredMarkConfigToken"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMarkDefaultConfig", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureRequiredMarkDefaultConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMarkModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureRequiredMarkModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMark", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureRequiredMark"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/required-mark/public-api.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/required-mark/public-api.js ***!
+  \*********************************************************************/
+/*! exports provided: PureRequiredMarkConfigToken, PureRequiredMarkDefaultConfig, PureRequiredMarkModule, PureRequiredMark */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _required_mark_config_token__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./required-mark-config-token */ "./node_modules/pure-elements/dist/required-mark/required-mark-config-token.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMarkConfigToken", function() { return _required_mark_config_token__WEBPACK_IMPORTED_MODULE_0__["PureRequiredMarkConfigToken"]; });
+
+/* harmony import */ var _required_mark_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./required-mark-config */ "./node_modules/pure-elements/dist/required-mark/required-mark-config.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMarkDefaultConfig", function() { return _required_mark_config__WEBPACK_IMPORTED_MODULE_1__["PureRequiredMarkDefaultConfig"]; });
+
+/* harmony import */ var _required_mark_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./required-mark.module */ "./node_modules/pure-elements/dist/required-mark/required-mark.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMarkModule", function() { return _required_mark_module__WEBPACK_IMPORTED_MODULE_2__["PureRequiredMarkModule"]; });
+
+/* harmony import */ var _required_mark__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./required-mark */ "./node_modules/pure-elements/dist/required-mark/required-mark.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMark", function() { return _required_mark__WEBPACK_IMPORTED_MODULE_3__["PureRequiredMark"]; });
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/required-mark/required-mark-config-token.js":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/required-mark/required-mark-config-token.js ***!
+  \*************************************************************************************/
+/*! exports provided: PureRequiredMarkConfigToken */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMarkConfigToken", function() { return PureRequiredMarkConfigToken; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+const PureRequiredMarkConfigToken = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('PureRequiredMarkConfig');
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/required-mark/required-mark-config.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/required-mark/required-mark-config.js ***!
+  \*******************************************************************************/
+/*! exports provided: PureRequiredMarkDefaultConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMarkDefaultConfig", function() { return PureRequiredMarkDefaultConfig; });
+;
+const PureRequiredMarkDefaultConfig = {
+    content: '*'
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/required-mark/required-mark-content.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/required-mark/required-mark-content.js ***!
+  \********************************************************************************/
+/*! exports provided: PureRequiredMarkContent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMarkContent", function() { return PureRequiredMarkContent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+/** Custom content to substitute the default one. */
+let PureRequiredMarkContent = class PureRequiredMarkContent {
+};
+PureRequiredMarkContent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({
+        selector: '[pureRequiredMarkContent]',
+    })
+], PureRequiredMarkContent);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/required-mark/required-mark.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/required-mark/required-mark.js ***!
+  \************************************************************************/
+/*! exports provided: PureRequiredMark */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMark", function() { return PureRequiredMark; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _required_mark_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./required-mark-config */ "./node_modules/pure-elements/dist/required-mark/required-mark-config.js");
+/* harmony import */ var _required_mark_config_token__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./required-mark-config-token */ "./node_modules/pure-elements/dist/required-mark/required-mark-config-token.js");
+/* harmony import */ var _required_mark_content__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./required-mark-content */ "./node_modules/pure-elements/dist/required-mark/required-mark-content.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+let PureRequiredMark = class PureRequiredMark extends _core__WEBPACK_IMPORTED_MODULE_1__["PureComponent"] {
+    constructor(elementRef, componentNamer, config) {
+        super(elementRef, componentNamer);
+        this.elementRef = elementRef;
+        this.componentNamer = componentNamer;
+        this.config = config;
+        this.elementName = 'Required Mark';
+        const finalConfig = Object.assign(_required_mark_config__WEBPACK_IMPORTED_MODULE_2__["PureRequiredMarkDefaultConfig"], config);
+        this.applyConfig(finalConfig);
+    }
+    applyConfig(config) {
+        for (let key in config) {
+            this[key] = config[key];
+        }
+    }
+    ngOnInit() {
+        super.ngOnInit();
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChildren"])(_required_mark_content__WEBPACK_IMPORTED_MODULE_4__["PureRequiredMarkContent"]),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["QueryList"])
+], PureRequiredMark.prototype, "requiredMarkContentChildren", void 0);
+PureRequiredMark = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'pure-required-mark',
+        template: `
+    <span [ngClass]="elementClasses">
+      <ng-container *ngIf="content && !requiredMarkContentChildren.length">
+        {{content}}
+      </ng-container>
+
+      <ng-content 
+        *ngIf="requiredMarkContentChildren.length" 
+        select="[pureRequiredMarkContent]">
+      </ng-content>
+    </span>
+  `
+    }),
+    __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_required_mark_config_token__WEBPACK_IMPORTED_MODULE_3__["PureRequiredMarkConfigToken"])),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
+        _core__WEBPACK_IMPORTED_MODULE_1__["ComponentNamer"], Object])
+], PureRequiredMark);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/required-mark/required-mark.module.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/required-mark/required-mark.module.js ***!
+  \*******************************************************************************/
+/*! exports provided: PureRequiredMarkModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureRequiredMarkModule", function() { return PureRequiredMarkModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _required_mark__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./required-mark */ "./node_modules/pure-elements/dist/required-mark/required-mark.js");
+/* harmony import */ var _required_mark_content__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./required-mark-content */ "./node_modules/pure-elements/dist/required-mark/required-mark-content.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+let PureRequiredMarkModule = class PureRequiredMarkModule {
+};
+PureRequiredMarkModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _core__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerModule"].forRoot()],
+        declarations: [_required_mark__WEBPACK_IMPORTED_MODULE_3__["PureRequiredMark"], _required_mark_content__WEBPACK_IMPORTED_MODULE_4__["PureRequiredMarkContent"]],
+        exports: [_required_mark__WEBPACK_IMPORTED_MODULE_3__["PureRequiredMark"], _required_mark_content__WEBPACK_IMPORTED_MODULE_4__["PureRequiredMarkContent"]]
+    })
+], PureRequiredMarkModule);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/select/index.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/select/index.js ***!
+  \*********************************************************/
+/*! exports provided: PureSelectDefaultConfig, PureSelectConfigToken, PureSelect, PureOption, PureSelectModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _public_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public-api */ "./node_modules/pure-elements/dist/select/public-api.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSelectDefaultConfig", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureSelectDefaultConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSelectConfigToken", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureSelectConfigToken"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSelect", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureSelect"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureOption", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureOption"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSelectModule", function() { return _public_api__WEBPACK_IMPORTED_MODULE_0__["PureSelectModule"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/select/option.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/select/option.js ***!
+  \**********************************************************/
+/*! exports provided: PureOption */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureOption", function() { return PureOption; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/** Element to use inside a Pure Select. */
+let PureOption = class PureOption {
+    constructor(elementRef) {
+        this.elementRef = elementRef;
+        this.elementName = 'Option';
+        this._disabled = false;
+        this._selected = false;
+    }
+    /** Whether option should be disabled. */
+    get disabled() {
+        return this._disabled;
+    }
+    set disabled(value) {
+        this._disabled = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceBooleanProperty"])(value);
+    }
+    /** Whether option is selected. */
+    get selected() {
+        return this._selected;
+    }
+    set selected(value) {
+        this._selected = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceBooleanProperty"])(value);
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Object)
+], PureOption.prototype, "value", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureOption.prototype, "disabled", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureOption.prototype, "selected", null);
+PureOption = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({
+        selector: 'pure-option'
+    }),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]])
+], PureOption);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/select/public-api.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/select/public-api.js ***!
+  \**************************************************************/
+/*! exports provided: PureSelectDefaultConfig, PureSelectConfigToken, PureSelect, PureOption, PureSelectModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _select_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./select-config */ "./node_modules/pure-elements/dist/select/select-config.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSelectDefaultConfig", function() { return _select_config__WEBPACK_IMPORTED_MODULE_0__["PureSelectDefaultConfig"]; });
+
+/* harmony import */ var _select_config_token__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./select-config-token */ "./node_modules/pure-elements/dist/select/select-config-token.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSelectConfigToken", function() { return _select_config_token__WEBPACK_IMPORTED_MODULE_1__["PureSelectConfigToken"]; });
+
+/* harmony import */ var _select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./select */ "./node_modules/pure-elements/dist/select/select.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSelect", function() { return _select__WEBPACK_IMPORTED_MODULE_2__["PureSelect"]; });
+
+/* harmony import */ var _option__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./option */ "./node_modules/pure-elements/dist/select/option.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureOption", function() { return _option__WEBPACK_IMPORTED_MODULE_3__["PureOption"]; });
+
+/* harmony import */ var _select_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./select.module */ "./node_modules/pure-elements/dist/select/select.module.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PureSelectModule", function() { return _select_module__WEBPACK_IMPORTED_MODULE_4__["PureSelectModule"]; });
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/select/select-config-token.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/select/select-config-token.js ***!
+  \***********************************************************************/
+/*! exports provided: PureSelectConfigToken */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureSelectConfigToken", function() { return PureSelectConfigToken; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+const PureSelectConfigToken = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('PureSelectConfig');
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/select/select-config.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/select/select-config.js ***!
+  \*****************************************************************/
+/*! exports provided: PureSelectDefaultConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureSelectDefaultConfig", function() { return PureSelectDefaultConfig; });
+const PureSelectDefaultConfig = {
+    noItemsText: 'No items to display.',
+    noItemsSearchText: 'Nothing was found.',
+    searchInputPlaceholder: 'Type to search',
+    searchInputType: 'search',
+    hideSearchIfNoItems: true,
+    showBadgesIfMultiple: false
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/select/select-errors.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/select/select-errors.js ***!
+  \*****************************************************************/
+/*! exports provided: getPureSelectAddNewMultipleError */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPureSelectAddNewMultipleError", function() { return getPureSelectAddNewMultipleError; });
+function getPureSelectAddNewMultipleError() {
+    return Error(`Add new option can not be used with multiple set to true.`);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/select/select-items.pipe.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/select/select-items.pipe.js ***!
+  \*********************************************************************/
+/*! exports provided: PureSelectItemsPipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureSelectItemsPipe", function() { return PureSelectItemsPipe; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+/**
+ * Returns an array of Select items which include string provided in `searchStr`
+ *  in their `label` property.
+ *
+ * Example usage:
+ *   {{ optionsTransformed | selectItemsPipe: searchStr }}
+ */
+let PureSelectItemsPipe = class PureSelectItemsPipe {
+    transform(items, searchStr) {
+        if (!items)
+            return [];
+        if (!searchStr)
+            return items;
+        searchStr = searchStr.toLowerCase();
+        return items.filter((item) => {
+            return item.label.toLowerCase().includes(searchStr);
+        });
+    }
+};
+PureSelectItemsPipe = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
+        name: 'selectItemsPipe'
+    })
+], PureSelectItemsPipe);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/select/select.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/pure-elements/dist/select/select.js ***!
+  \**********************************************************/
+/*! exports provided: PureSelect */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureSelect", function() { return PureSelect; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _option__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./option */ "./node_modules/pure-elements/dist/select/option.js");
+/* harmony import */ var _select_config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./select-config */ "./node_modules/pure-elements/dist/select/select-config.js");
+/* harmony import */ var _select_config_token__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./select-config-token */ "./node_modules/pure-elements/dist/select/select-config-token.js");
+/* harmony import */ var _select_items_pipe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./select-items.pipe */ "./node_modules/pure-elements/dist/select/select-items.pipe.js");
+/* harmony import */ var _select_errors__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./select-errors */ "./node_modules/pure-elements/dist/select/select-errors.js");
+/* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../input */ "./node_modules/pure-elements/dist/input/index.js");
+/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../dropdown */ "./node_modules/pure-elements/dist/dropdown/index.js");
+/* harmony import */ var _form_control__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../form-control */ "./node_modules/pure-elements/dist/form-control/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+var PureSelect_1;
+
+
+
+
+
+
+
+
+
+
+
+
+;
+let PureSelect = PureSelect_1 = class PureSelect extends _core__WEBPACK_IMPORTED_MODULE_3__["PureComponent"] {
+    constructor(elementRef, componentNamer, config) {
+        super(elementRef, componentNamer);
+        this.elementRef = elementRef;
+        this.componentNamer = componentNamer;
+        this.config = config;
+        this.elementName = 'Select';
+        this.inputHolderName = 'Input Holder';
+        this.selectedItemsHolderName = 'Selected Items';
+        this.selectedItemName = 'Item';
+        this.dropdownItemName = 'Dropdown Item';
+        this.dropdownItemHighlightName = 'Highlight';
+        this.noItemsName = 'No Items';
+        this.inputHolderClasses = {};
+        this.selectedItemsHolderClasses = {};
+        this.selectedItemClasses = {};
+        this.dropdownItemHighlightClasses = {};
+        this.noItemsClasses = {};
+        this.stateClasses = {
+            openedClassName: this.componentNamer.generateClassName(this.elementName, '', 'Opened'),
+            hasSearchClassName: this.componentNamer.generateClassName(this.elementName, '', 'Has Search'),
+            multipleClassName: this.componentNamer.generateClassName(this.elementName, '', 'Multiple'),
+            addNewClassName: this.componentNamer.generateClassName(this.elementName, '', 'Add New'),
+            focusedClassName: this.componentNamer.generateClassName(this.elementName, '', 'Focused'),
+            activeClassName: this.componentNamer.generateClassName(this.elementName, '', 'Active'),
+            emptyClassName: this.componentNamer.generateClassName(this.elementName, '', 'Empty'),
+            disabledClassName: this.componentNamer.generateClassName(this.elementName, '', 'Disabled'),
+            requiredClassName: this.componentNamer.generateClassName(this.elementName, '', 'Required'),
+            noItemsClassName: this.componentNamer.generateClassName(this.elementName, '', 'No Items')
+        };
+        /** Implemented as part of PureFormControlInput. */
+        this.id = '';
+        this.searchStr = '';
+        /** Options that went through the transformation. */
+        this.options = [];
+        /** Selected options. */
+        this.selectedOptions = [];
+        this.update = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this._focused = false;
+        this._active = false;
+        /** Implemented as part of PureFormControlInput. */
+        this.readonly = true;
+        /** Implemented as part of PureFormControlInput. */
+        this.type = 'text';
+        /** Implemented as part of PureFormControlInput. */
+        this.nodeName = 'pure-select';
+        /** Implemented as part of PureFormControlInput. */
+        this.stateChanges = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
+        /** Event emits when Select's menu opens. */
+        this.open = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        /** Event emits when Select's menu closes. */
+        this.close = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        /** Event emits when Select's menu toggles. */
+        this.toggle = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        /** Value of base input. */
+        this.visibleValue = '';
+        this._hasSearch = false;
+        this._required = false;
+        this._disabled = false;
+        this._multiple = false;
+        this._addNew = false;
+        this._hideNewItem = false;
+        this._hideNoItemsPlaceholder = false;
+        const finalConfig = Object.assign({}, _select_config__WEBPACK_IMPORTED_MODULE_5__["PureSelectDefaultConfig"], config);
+        this.applyConfig(finalConfig);
+    }
+    /** All options passed to the component. */
+    get optionsChild() {
+        return this._optionsChild;
+    }
+    ;
+    set optionsChild(value) {
+        this._optionsChild = value;
+        // Push options.
+        this.options = [];
+        this._optionsChild.forEach((optionChild) => {
+            const option = this.transformOption(optionChild);
+            this.options.push(option);
+            // If option has `selected` property — set it to the Select's value.
+            if (option.selected) {
+                this.updateValue(option);
+            }
+        });
+        // Update no items state class.
+        this.elementClasses[this.stateClasses.noItemsClassName] = this._optionsChild.length < 1;
+    }
+    get value() {
+        let value = [];
+        this.selectedOptions.forEach((option) => {
+            value.push({
+                value: option.value,
+                label: option.label
+            });
+        });
+        return value;
+    }
+    /** Implemented as part of PureFormControlInput. */
+    get empty() {
+        return !(this.selectedOptions[0] && this.selectedOptions[0].label);
+    }
+    /** Implemented as part of PureFormControlInput. */
+    get focused() {
+        return this._focused;
+    }
+    set focused(value) {
+        this._focused = Object(_core__WEBPACK_IMPORTED_MODULE_3__["coerceBooleanProperty"])(value);
+        this.elementClasses[this.stateClasses.focusedClassName] = this._focused;
+    }
+    /** Implemented as part of PureFormControlInput. */
+    get active() {
+        return this._active;
+    }
+    set active(value) {
+        this._active = Object(_core__WEBPACK_IMPORTED_MODULE_3__["coerceBooleanProperty"])(value);
+        this.elementClasses[this.stateClasses.activeClassName] = this._active;
+    }
+    /** Whether Select should have search input. */
+    get hasSearch() {
+        return this._hasSearch;
+    }
+    set hasSearch(value) {
+        this._hasSearch = Object(_core__WEBPACK_IMPORTED_MODULE_3__["coerceBooleanProperty"])(value);
+        this.elementClasses[this.stateClasses.hasSearchClassName] = this._hasSearch;
+    }
+    /** Implemented as part of PureFormControlInput. */
+    get required() {
+        return this._required;
+    }
+    set required(value) {
+        this._required = Object(_core__WEBPACK_IMPORTED_MODULE_3__["coerceBooleanProperty"])(value);
+        this.elementClasses[this.stateClasses.requiredClassName] = this._required;
+    }
+    /** Implemented as part of PureFormControlInput. */
+    get disabled() {
+        return this._disabled;
+    }
+    set disabled(value) {
+        this._disabled = Object(_core__WEBPACK_IMPORTED_MODULE_3__["coerceBooleanProperty"])(value);
+        this.elementClasses[this.stateClasses.disabledClassName] = this._disabled;
+    }
+    /** Whether user can select multiple options in menu. */
+    get multiple() {
+        return this._multiple;
+    }
+    set multiple(value) {
+        this._multiple = Object(_core__WEBPACK_IMPORTED_MODULE_3__["coerceBooleanProperty"])(value);
+        this.elementClasses[this.stateClasses.multipleClassName] = this._multiple;
+    }
+    /** Whether user can add his own value. */
+    get addNew() {
+        return this._addNew;
+    }
+    set addNew(value) {
+        this._addNew = Object(_core__WEBPACK_IMPORTED_MODULE_3__["coerceBooleanProperty"])(value);
+        if (this._addNew && this.multiple)
+            throw Object(_select_errors__WEBPACK_IMPORTED_MODULE_8__["getPureSelectAddNewMultipleError"])();
+        this.readonly = !this._addNew;
+        this.elementClasses[this.stateClasses.addNewClassName] = this._addNew;
+    }
+    /**
+     * Whether to hide new item (item that was added by user). Can be used
+     * together with `addNew` to e.g. reach some API based on string in
+     * base input and get menu items from API's response.
+     */
+    get hideNewItem() {
+        return this._hideNewItem;
+    }
+    set hideNewItem(value) {
+        this._hideNewItem = Object(_core__WEBPACK_IMPORTED_MODULE_3__["coerceBooleanProperty"])(value);
+    }
+    /** Whether to hide placeholder that is shown when menu doesn't have items. */
+    get hideNoItemsPlaceholder() {
+        return this._hideNoItemsPlaceholder;
+    }
+    set hideNoItemsPlaceholder(value) {
+        this._hideNoItemsPlaceholder = Object(_core__WEBPACK_IMPORTED_MODULE_3__["coerceBooleanProperty"])(value);
+    }
+    /** Update Select value. */
+    updateValue(option) {
+        if (!option) {
+            // If null is passed — clear selected options.
+            this.selectedOptions = [];
+            this.dropdownChild.setItemFocus(-1);
+        }
+        else {
+            // If option is passed — update selected options.
+            // If multiple is not set.
+            if (!this.multiple) {
+                this.deselectItems();
+                option.selected = true;
+                this.selectedOptions = [option];
+                // If multiple is set.
+            }
+            else {
+                if (option.selected) {
+                    // If user selected checkbox — add it to selected options.
+                    this.selectedOptions.push(option);
+                }
+                else {
+                    // If user deselected checkbox — remove it from selected options.
+                    const index = this.getOptionIndex(option, this.selectedOptions);
+                    this.selectedOptions.splice(index, 1);
+                }
+            }
+            // If `add new` is enabled and there is a new option in options list (added
+            // by user) and user selected predefined option, remove new option (first
+            // item in the list).
+            if (this.addNew && this.options[0] && this.options[0].new && !option.new) {
+                this.options = this.options.slice(1);
+            }
+        }
+        this.visibleValue = this.formatVisibleOptions();
+        this.updateEmptyState();
+        this.update.emit(this.value);
+    }
+    deselectItems() {
+        for (const option of this.options) {
+            option.selected = false;
+        }
+    }
+    onDropdownToggle() {
+        this.toggle.emit();
+    }
+    onDropdownOpen() {
+        this.elementClasses[this.stateClasses.openedClassName] = true;
+        this.active = true;
+        this.open.emit();
+        if (this.addNew)
+            this.readonly = false;
+        setTimeout(() => {
+            if (this.addNew)
+                this.baseInput.focus();
+            if (this.hasSearch && !this.addNew)
+                this.searchInput.focus();
+            const selectedItemNumber = this.getSelectedItemIndex();
+            if (selectedItemNumber > -1)
+                this.dropdownChild.setItemFocus(selectedItemNumber);
+        });
+    }
+    onDropdownClose() {
+        this.elementClasses[this.stateClasses.openedClassName] = false;
+        this.active = false;
+        this.baseInput.focus();
+        if (this.hasSearch) {
+            this.searchInput.value = '';
+        }
+        this.searchStr = '';
+        if (this.addNew) {
+            this.readonly = true;
+            // Update value if user entered new item and closed menu without choosing
+            // it.
+            const focusedItem = this.getFocusedItem();
+            if (focusedItem && focusedItem.new)
+                this.updateValue(focusedItem);
+        }
+        this.close.emit();
+    }
+    onKeydown(event) {
+        event.stopPropagation();
+        if (!this.dropdownChild.show) {
+            if (event.which === _core__WEBPACK_IMPORTED_MODULE_3__["KEY_CODES"].SPACE || event.which === _core__WEBPACK_IMPORTED_MODULE_3__["KEY_CODES"].DOWN_ARROW || event.which === _core__WEBPACK_IMPORTED_MODULE_3__["KEY_CODES"].UP_ARROW) {
+                event.preventDefault();
+                // Close menu.
+                setTimeout(() => {
+                    this.dropdownChild.show = true;
+                });
+            }
+            if (event.which === _core__WEBPACK_IMPORTED_MODULE_3__["KEY_CODES"].BACKSPACE) {
+                // Clear selected value.
+                this.updateValue(null);
+                // Clear value added by user.
+                if (this.addNew && this.options[0] && this.options[0].new) {
+                    this.options = this.options.slice(1);
+                }
+            }
+        }
+        else {
+            if (event.which === _core__WEBPACK_IMPORTED_MODULE_3__["KEY_CODES"].SPACE || event.which === _core__WEBPACK_IMPORTED_MODULE_3__["KEY_CODES"].ENTER) {
+                // Select/deselect focused item and update value.
+                let focusedItem = this.getFocusedItem();
+                if (focusedItem) {
+                    focusedItem.selected = !focusedItem.selected;
+                    this.updateValue(focusedItem);
+                }
+            }
+            else if (event.which === _core__WEBPACK_IMPORTED_MODULE_3__["KEY_CODES"].ESCAPE) {
+                if (this.addNew && this.baseInput.focused)
+                    this.dropdownChild.show = false;
+            }
+        }
+    }
+    onItemClick(option, event) {
+        if (this.multiple) {
+            event.stopPropagation();
+            event.preventDefault();
+            option.selected = !option.selected;
+            setTimeout(() => {
+                this.updateValue(option);
+            });
+        }
+        if (!this.multiple && !(this.searchInput && this.searchInput.focused)) {
+            setTimeout(() => {
+                option.selected = !option.selected;
+                this.updateValue(option);
+                this.dropdownChild.show = false;
+            });
+        }
+    }
+    onCheckboxClick(option, event) {
+        event.stopPropagation();
+        event.preventDefault();
+        // Reset focus.
+        this.dropdownChild.itemsContainer.nativeElement.focus();
+        this.dropdownChild.setItemFocus(this.options.indexOf(option));
+    }
+    onBaseInput() {
+        // Return if there is no need to display option that is created by user.
+        if (this.hideNewItem)
+            return;
+        const value = this.baseInput.value;
+        // Add new option to the beginning of the list or update existing one.
+        if (!this.options[0] || (this.options[0] && !this.options[0].new)) {
+            this.options.unshift({
+                value: value,
+                label: value,
+                new: true
+            });
+            setTimeout(() => {
+                // Focus first item.
+                this.dropdownChild.setItemFocus(0);
+            });
+        }
+        else {
+            this.options[0].value = value;
+            this.options[0].label = value;
+            // Delete first item if no value.
+            if (!value)
+                this.options = this.options.slice(1);
+        }
+    }
+    onSearchInput(searchStr) {
+        this.searchStr = searchStr;
+    }
+    /**
+     * Takes option label on input and returns substring from the string start to
+     * the position of search string.
+     */
+    getSubstrStart(str) {
+        if (!this.searchStr)
+            return str;
+        return str.substr(0, str.toLowerCase().indexOf(this.searchStr));
+    }
+    /**
+     * Takes option label on input and returns substring that equals to the search
+     * string.
+     */
+    getSubstrMiddle(str) {
+        if (!this.searchStr)
+            return '';
+        return str.substr(str.toLowerCase().indexOf(this.searchStr), this.searchStr.length);
+    }
+    /**
+     * Takes option label on input and returns substring from the end of the
+     * position of search string to the string end.
+     */
+    getSubstrEnd(str) {
+        if (!this.searchStr)
+            return '';
+        return str.substr((str.toLowerCase().indexOf(this.searchStr) + this.searchStr.length), str.length);
+    }
+    /** Format value for base input so it can show multiple selected values. */
+    formatVisibleOptions() {
+        let str = '';
+        if (!this.selectedOptions.length)
+            return str;
+        let i = 0;
+        for (const option of this.selectedOptions) {
+            if (i > 0 && this.selectedOptions.length > 1)
+                str += ', ';
+            str += option.label;
+            i++;
+        }
+        return str;
+    }
+    getSelectedItemIndex() {
+        let i = 0, j = -1;
+        for (const option of this.options) {
+            if (option.selected)
+                j = i;
+            i++;
+        }
+        return j;
+    }
+    getOptionIndex(option, options) {
+        let index = 0;
+        for (const selectedOption of options) {
+            if (selectedOption.value == option.value && selectedOption.label == option.label) {
+                return index;
+            }
+            index++;
+        }
+        return -1;
+    }
+    /** Get states from base input and apply them to this component. */
+    updateStatesFromBaseInput() {
+        this.focused = this.baseInput.focused;
+    }
+    /** Transform options so this component can work with them. */
+    transformOption(option) {
+        return {
+            value: option.value,
+            label: option.elementRef.nativeElement.innerText,
+            selected: option.selected,
+            disabled: option.disabled
+        };
+    }
+    /** Return focused item from the menu list. */
+    getFocusedItem() {
+        const focusedItemNumber = this.dropdownChild.focusedItemNumber;
+        if (focusedItemNumber === -1)
+            return;
+        const filteredItems = new _select_items_pipe__WEBPACK_IMPORTED_MODULE_7__["PureSelectItemsPipe"]().transform(this.options, this.searchStr);
+        return filteredItems[focusedItemNumber];
+    }
+    /** Toggle empty state class. */
+    updateEmptyState() {
+        this.elementClasses[this.stateClasses.emptyClassName] = this.empty;
+    }
+    /** Toggle classes for children. */
+    setInnerElementsClasses(flag = true) {
+        this.inputHolderClasses[this.componentNamer.generateClassName(this.elementName, this.inputHolderName)] = flag;
+        this.selectedItemsHolderClasses[this.componentNamer.generateClassName(this.elementName, this.selectedItemsHolderName)] = flag;
+        this.selectedItemClasses[this.componentNamer.generateClassName(this.elementName, this.selectedItemName)] = flag;
+        this.dropdownItemHighlightClasses[this.componentNamer.generateClassName(this.dropdownItemName, this.dropdownItemHighlightName)] = flag;
+        this.noItemsClasses[this.componentNamer.generateClassName(this.dropdownItemName, this.noItemsName)] = flag;
+    }
+    applyConfig(config) {
+        for (let key in config) {
+            this[key] = config[key];
+        }
+    }
+    ngOnInit() {
+        super.ngOnInit();
+        this.setInnerElementsClasses();
+    }
+    ngAfterViewInit() {
+        this.baseInput.stateChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["startWith"])(null)).subscribe(() => {
+            this.updateStatesFromBaseInput();
+            this.stateChanges.next();
+        });
+        this.updateEmptyState();
+    }
+    ngOnDestroy() {
+        this.stateChanges.complete();
+    }
+};
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureSelect.prototype, "noItemsText", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureSelect.prototype, "noItemsSearchText", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureSelect.prototype, "id", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ContentChildren"])(_option__WEBPACK_IMPORTED_MODULE_4__["PureOption"]),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["QueryList"]),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["QueryList"]])
+], PureSelect.prototype, "optionsChild", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('baseInput', { read: _input__WEBPACK_IMPORTED_MODULE_9__["PureInput"] }),
+    __metadata("design:type", _input__WEBPACK_IMPORTED_MODULE_9__["PureInput"])
+], PureSelect.prototype, "baseInput", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('searchInput', { read: _input__WEBPACK_IMPORTED_MODULE_9__["PureInput"] }),
+    __metadata("design:type", _input__WEBPACK_IMPORTED_MODULE_9__["PureInput"])
+], PureSelect.prototype, "searchInput", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_dropdown__WEBPACK_IMPORTED_MODULE_10__["PureDropdown"]),
+    __metadata("design:type", _dropdown__WEBPACK_IMPORTED_MODULE_10__["PureDropdown"])
+], PureSelect.prototype, "dropdownChild", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+], PureSelect.prototype, "update", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", String)
+], PureSelect.prototype, "placeholder", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+], PureSelect.prototype, "open", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+], PureSelect.prototype, "close", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+    __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+], PureSelect.prototype, "toggle", void 0);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('search'),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureSelect.prototype, "hasSearch", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureSelect.prototype, "required", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureSelect.prototype, "disabled", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureSelect.prototype, "multiple", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureSelect.prototype, "addNew", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureSelect.prototype, "hideNewItem", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Object])
+], PureSelect.prototype, "hideNoItemsPlaceholder", null);
+__decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('keydown', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [KeyboardEvent]),
+    __metadata("design:returntype", void 0)
+], PureSelect.prototype, "onKeydown", null);
+PureSelect = PureSelect_1 = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'pure-select',
+        template: `
+    <div [ngClass]="elementClasses">
+      <!-- Main input element. -->
+      <div [ngClass]="inputHolderClasses">
+        <input
+          #baseInput
+          pureInput
+          autocomplete="off"
+          (input)="onBaseInput($event)"
+          [pureDropdownTriggerFor]="selectDropdown" 
+          [type]="type"
+          [id]="id"
+          [value]="visibleValue"
+          [placeholder]="placeholder" 
+          [readonly]="readonly" 
+          [required]="required"
+          [disabled]="disabled">
+
+        <!-- Duplicate selected options in <span>'s so they can be displayed like
+          badges (multiple only). -->
+        <div [ngClass]="selectedItemsHolderClasses" *ngIf="multiple && showBadgesIfMultiple">
+          <span *ngFor="let item of selectedOptions" [ngClass]="selectedItemClasses">
+            {{item.label}}
+          </span>
+        </div>
+      </div>
+
+      <!-- Select's dropdown. -->
+      <pure-dropdown 
+        #selectDropdown="pureDropdown" 
+        (toggle)="onDropdownToggle()" 
+        (open)="onDropdownOpen()" 
+        (close)="onDropdownClose()"
+        [tabindex]="0"
+        [closeOnSelect]="!multiple && !(searchInput && searchInput.focused)"
+        [focusOnShow]="!hasSearch">
+        
+        <!-- Options filter (placed into purePrefix element). -->
+        <input
+          #searchInput
+          *ngIf="hasSearch"
+          pureInput
+          purePrefix
+          tabindex="0"
+          [type]="searchInputType"
+          [placeholder]="searchInputPlaceholder"
+          [style.display]="options.length < 1 && hideSearchIfNoItems ? 'none' : 'block'"
+          (input)="onSearchInput(searchInput.value)">
+
+        <!-- Dropdown items (options). -->
+        <div
+          *ngFor="let option of options | selectItemsPipe: searchStr"
+          pureDropdownItem 
+          [pureDropdownItemDisabled]="option.disabled"
+          (click)="onItemClick(option, $event)">
+
+          <!-- Show checkbox in case if 'multiple' is truthy. -->
+          <pure-form-control *ngIf="multiple">
+            <input 
+              pureInput
+              type="checkbox"
+              tabindex="-1"
+              [disabled]="option.disabled"
+              [checked]="option.selected"
+              (change)="option.selected = $event.target.checked"
+              (click)="onCheckboxClick(option, $event)">
+
+            <!-- Place item text into Form Control's Label -->
+            <div pureLabelContent>
+              <ng-container *ngTemplateOutlet="optionText"></ng-container>
+            </div>
+          </pure-form-control>
+
+          <!-- If not multiple, show regular option text. -->
+          <span *ngIf="!multiple">
+            <ng-container *ngTemplateOutlet="optionText"></ng-container>
+          </span>
+
+          <ng-template #optionText>
+            {{getSubstrStart(option.label)}}<b *ngIf="searchStr" [ngClass]="dropdownItemHighlightClasses">{{getSubstrMiddle(option.label)}}</b>{{getSubstrEnd(option.label)}}
+          </ng-template>
+        </div>
+
+        <!-- Placeholder for the cases when Dropdown menu doesn't have items. -->
+        <div 
+          *ngIf="!(options | selectItemsPipe: searchStr).length && !hideNoItemsPlaceholder" 
+          pureSuffix>
+          <span [ngClass]="noItemsClasses">
+            <ng-container *ngIf="options.length < 1">{{noItemsText}}</ng-container>
+            <ng-container *ngIf="options.length > 0">{{noItemsSearchText}}</ng-container>
+          </span>
+        </div>
+      </pure-dropdown>
+    </div>`,
+        providers: [{ provide: _form_control__WEBPACK_IMPORTED_MODULE_11__["PureFormControlInput"], useExisting: PureSelect_1 }]
+    }),
+    __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_select_config_token__WEBPACK_IMPORTED_MODULE_6__["PureSelectConfigToken"])),
+    __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"],
+        _core__WEBPACK_IMPORTED_MODULE_3__["ComponentNamer"], Object])
+], PureSelect);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/pure-elements/dist/select/select.module.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/pure-elements/dist/select/select.module.js ***!
+  \*****************************************************************/
+/*! exports provided: PureSelectModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PureSelectModule", function() { return PureSelectModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core */ "./node_modules/pure-elements/dist/core/index.js");
+/* harmony import */ var _select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./select */ "./node_modules/pure-elements/dist/select/select.js");
+/* harmony import */ var _option__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./option */ "./node_modules/pure-elements/dist/select/option.js");
+/* harmony import */ var _select_items_pipe__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./select-items.pipe */ "./node_modules/pure-elements/dist/select/select-items.pipe.js");
+/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../dropdown */ "./node_modules/pure-elements/dist/dropdown/index.js");
+/* harmony import */ var _form_control__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../form-control */ "./node_modules/pure-elements/dist/form-control/index.js");
+/* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../input */ "./node_modules/pure-elements/dist/input/index.js");
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../helpers */ "./node_modules/pure-elements/dist/helpers/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+let PureSelectModule = class PureSelectModule {
+};
+PureSelectModule = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+            _core__WEBPACK_IMPORTED_MODULE_2__["ComponentNamerModule"].forRoot(),
+            _dropdown__WEBPACK_IMPORTED_MODULE_6__["PureDropdownModule"],
+            _form_control__WEBPACK_IMPORTED_MODULE_7__["PureFormControlModule"],
+            _input__WEBPACK_IMPORTED_MODULE_8__["PureInputModule"],
+            _helpers__WEBPACK_IMPORTED_MODULE_9__["PureHelpersModule"]
+        ],
+        declarations: [
+            _select__WEBPACK_IMPORTED_MODULE_3__["PureSelect"],
+            _option__WEBPACK_IMPORTED_MODULE_4__["PureOption"],
+            _select_items_pipe__WEBPACK_IMPORTED_MODULE_5__["PureSelectItemsPipe"],
+        ],
+        exports: [
+            _select__WEBPACK_IMPORTED_MODULE_3__["PureSelect"],
+            _option__WEBPACK_IMPORTED_MODULE_4__["PureOption"]
+        ]
+    })
+], PureSelectModule);
 
 
 
@@ -74519,9 +75887,9 @@ let PureSwitcher = class PureSwitcher extends _core__WEBPACK_IMPORTED_MODULE_1__
         this.toggleContainerClasses = {};
         this.toggleClasses = {};
         this.labelContentClasses = {};
-        this.checkedClassName = this.componentNamer.generateClassName(this.elementName, '', 'checked');
-        this.disabledClassName = this.componentNamer.generateClassName(this.elementName, '', 'disabled');
-        this.requiredClassName = this.componentNamer.generateClassName(this.elementName, '', 'required');
+        this.checkedClassName = this.componentNamer.generateClassName(this.elementName, '', 'Checked');
+        this.disabledClassName = this.componentNamer.generateClassName(this.elementName, '', 'Disabled');
+        this.requiredClassName = this.componentNamer.generateClassName(this.elementName, '', 'Required');
         this._checked = false;
         this._disabled = false;
         this._required = false;
@@ -75641,6 +77009,18 @@ let PureTooltip = class PureTooltip {
         this.triggerEvent = this.config.triggerEvent;
         this.closeOnEsc = this.config.closeOnEsc;
     }
+    get showDelay() {
+        return this._showDelay;
+    }
+    set showDelay(value) {
+        this._showDelay = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceNumberProperty"])(value);
+    }
+    get hideDelay() {
+        return this._hideDelay;
+    }
+    set hideDelay(value) {
+        this._hideDelay = Object(_core__WEBPACK_IMPORTED_MODULE_1__["coerceNumberProperty"])(value);
+    }
     get content() {
         return this._content;
     }
@@ -75699,9 +77079,7 @@ let PureTooltip = class PureTooltip {
     onMouseout() {
         if (this.triggerEvent === 'hover') {
             this.triggeredToShow = false;
-            if (this.isTooltipVisible()) {
-                this.hide();
-            }
+            this.hide();
         }
     }
     onLongpress() {
@@ -75713,8 +77091,7 @@ let PureTooltip = class PureTooltip {
     onTouchend() {
         if (this.triggerEvent === 'hover') {
             this.triggeredToShow = false;
-            if (this.isTooltipVisible())
-                this.hide(this.touchendHideDelay);
+            this.hide(this.touchendHideDelay);
         }
     }
     onFocus() {
@@ -75726,8 +77103,7 @@ let PureTooltip = class PureTooltip {
     onBlur() {
         if (this.triggerEvent === 'focus') {
             this.triggeredToShow = false;
-            if (this.isTooltipVisible())
-                this.hide();
+            this.hide();
         }
     }
     /**
@@ -75736,6 +77112,7 @@ let PureTooltip = class PureTooltip {
      */
     onBodyClick() {
         if (this.triggerEvent === 'hover') {
+            this.triggeredToShow = false;
             if (this.isTooltipVisible())
                 this.hide(0);
         }
@@ -75743,13 +77120,14 @@ let PureTooltip = class PureTooltip {
     onKeydown(event) {
         if (event.keyCode === _core__WEBPACK_IMPORTED_MODULE_1__["KEY_CODES"].ESCAPE) {
             if (this.closeOnEsc) {
+                this.triggeredToShow = false;
                 if (this.isTooltipVisible())
                     this.hide(0);
             }
         }
     }
     isTooltipVisible() {
-        return this.componentRef && this.componentRef.instance.show;
+        return !!(this.componentRef && this.componentRef.instance.show);
     }
     toggle() {
         this.isTooltipVisible() ? this.hide(0) : this.show(0);
@@ -75770,6 +77148,7 @@ let PureTooltip = class PureTooltip {
         }
     }
     hide(delay = this.hideDelay) {
+        clearTimeout(this.hideTimeoutId);
         if (this.showTimeoutId) {
             clearTimeout(this.showTimeoutId);
         }
@@ -75820,12 +77199,14 @@ let PureTooltip = class PureTooltip {
 };
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('pureTooltipShowDelay'),
-    __metadata("design:type", Number)
-], PureTooltip.prototype, "showDelay", void 0);
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Object])
+], PureTooltip.prototype, "showDelay", null);
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('pureTooltipHideDelay'),
-    __metadata("design:type", Number)
-], PureTooltip.prototype, "hideDelay", void 0);
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Object])
+], PureTooltip.prototype, "hideDelay", null);
 __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('pureTooltipPosition'),
     __metadata("design:type", String)
