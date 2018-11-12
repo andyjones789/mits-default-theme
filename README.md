@@ -19,7 +19,7 @@ Design system & styled components set for Make I.T. Simple projects.
 - [Breeze.css 2](https://github.com/antonskyba/Breeze.css)
 - [Rupture](https://github.com/jescalan/rupture)
 - [Normalize.css](https://necolas.github.io/normalize.css)
-- [Pure Elements 1](https://makeitsimpleuk.github.io/pure-elements/#/)
+- [Pure Elements 2](https://makeitsimpleuk.github.io/pure-elements/#/)
 
 
 ## Source
