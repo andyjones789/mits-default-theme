@@ -1,6 +1,6 @@
 {
   "name": "mits-default-theme",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Styled components set for Make I.T. Simple projects",
   "main": "main.styl",
   "scripts": {
